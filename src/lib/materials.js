@@ -61,7 +61,7 @@ export const M = {
   // Ta sama farba dla brył zaokrąglonych (toczonych, sprężyn) – bez rdzy „na krawędziach”,
   // bo ich normalne nie są równoległe do osi; tylko drobne plamki
   paintDarkRound: std({ color: 0x24272b, roughness: 0.6, metalness: 0.25 }, { rust: RUST, edges: false, amount: 0.6 }),
-  // Farba pudła wagonu (brąz) – placeholder do etapu 3
+  // Farba pudła wagonu (brąz)
   paintBody: std({ color: 0x6a3a28, roughness: 0.7, metalness: 0.1 }, { rust: RUST, edges: true, amount: 0.7 }),
   // Stal surowa / kuta (oś, dźwignie) – ciemna, matowa, trochę rdzy
   steelRaw: std({ color: 0x4d4b48, roughness: 0.55, metalness: 0.85 }, { rust: RUST, edges: false, amount: 0.5 }),
@@ -85,6 +85,10 @@ export const M = {
   polyamide: std({ color: 0x2c2622, roughness: 0.45, metalness: 0 }, null, { textured: false }),
   // Wstawka hamulcowa (kompozytowa) – ciemnoszara, bardzo matowa
   brakeInsert: std({ color: 0x2b2b2b, roughness: 0.95, metalness: 0 }, null),
+  // Farba czerwona (rękojeści kurków, uchwyty – dla wyróżnienia elementów obsługowych)
+  paintRed: std({ color: 0x9e1f1a, roughness: 0.55, metalness: 0.1 }, { rust: RUST, edges: false, amount: 0.3 }),
+  // Farba biała / jasna (tabliczki, oznaczenia)
+  paintWhite: std({ color: 0xd9d6cf, roughness: 0.6, metalness: 0.05 }, { rust: RUST, edges: false, amount: 0.25 }),
   // Materiał zastępczy, gdy brakuje buildera
   placeholder: std({ color: 0xd0473a, roughness: 0.6, metalness: 0, transparent: true, opacity: 0.6 }, null, { textured: false }),
 };

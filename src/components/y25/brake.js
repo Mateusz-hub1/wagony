@@ -8,6 +8,8 @@ import { WHEEL_R, BACK_TO_BACK } from './wheelset.js';
 const BEAM_X = 0.34;                        // oś belki hamulcowej od środka wózka
 const TREAD_Z = BACK_TO_BACK / 2 + 0.07;    // okrąg toczny koła (70 mm od wewn. powierzchni)
 const SPAN = 0.33;                          // pół kąta obejmowania klocka [rad]
+// Koniec cięgła wózka, do którego dochodzi cięgło hamulca wagonu (układ wózka; środek wagonu jest po stronie −x)
+export const LEVER_ROD_END = [-0.55, 0.5, 0];
 
 export function buildBogieBrake() {
   const g = part('hamulec_wozka');
@@ -90,8 +92,8 @@ export function buildLevers() {
   }
   // cięgło między dźwigniami (dół)
   rod([-0.2, 0.2, 0], [0.2, 0.2, 0], 0.014, M.steelRaw, { parent: g });
-  // fragment cięgła do hamulca wagonu
-  rod([0.2, 0.5, 0], [0.55, 0.5, 0], 0.014, M.steelRaw, { parent: g });
+  // fragment cięgła do hamulca wagonu (od dźwigni bliższej środka wagonu, w stronę środka wagonu)
+  rod([-0.2, 0.5, 0], LEVER_ROD_END, 0.014, M.steelRaw, { parent: g });
   return g;
 }
 

@@ -451,6 +451,15 @@
         "id": "ciegla_zderzaki_2",
         "ref": "components/ciegla_zderzaki.json",
         "dopisek": "koniec 2"
+      },
+      {
+        "id": "hamulec",
+        "ref": "components/hamulec.json",
+        "param": {
+          "dlugosc": 12.8,
+          "x_wozka": 4.5,
+          "hamulec_reczny": true
+        }
       }
     ]
   }

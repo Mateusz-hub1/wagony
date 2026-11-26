@@ -9,6 +9,7 @@
 import { THREE, M, part, slot, mesh, box, boxFromTo, merged, boxGeom, cylinder, rod, lathe, bolts, boltCircle, rivets, weld } from '../lib/geom.js';
 import { y25Builders } from '../components/y25/index.js';
 import { drawGearBuilders } from '../components/ciegla_zderzaki/index.js';
+import { airBrakeBuilders } from '../components/hamulec/index.js';
 
 export const PIVOT_X = 4.5;   // pół rozstawu czopów skrętu (9000 / 2)
 export const HALF_LEN = 6.4;  // lico belki czołowej: (14 040 − 2 × 620 mm długości zderzaka) / 2 – długość zderzaka SZACUNKOWA
@@ -55,6 +56,8 @@ export function buildEaos() {
   // urządzenia cięgłowo-zderzakowe na obu końcach (na licu belki czołowej, w osi zderzaków)
   slot(g, 'ciegla_zderzaki_1', { pos: [HALF_LEN, BUF_Y, 0], explode: [2.6, 0, 0] });
   slot(g, 'ciegla_zderzaki_2', { pos: [-HALF_LEN, BUF_Y, 0], rot: [0, Math.PI, 0], explode: [-2.6, 0, 0] });
+  // hamulec zespolony – budowany w układzie wagonu (parametry w data/eaos.json)
+  slot(g, 'hamulec', { explode: [0, 0.1, 0] });
   return g;
 }
 
@@ -393,6 +396,7 @@ export function buildHandrail(node) {
 export const builders = {
   ...y25Builders,
   ...drawGearBuilders,
+  ...airBrakeBuilders,
   eaos: buildEaos,
   ostoja_eaos: buildUnderframe,
   pudlo_eaos: buildBody,
