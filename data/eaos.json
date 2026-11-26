@@ -1,0 +1,51 @@
+{
+  "seria": "Eaos",
+  "opisy": {
+    "eaos": {
+      "nazwa_pl": "Eaos",
+      "nazwa_en": "Eaos open wagon",
+      "funkcja": "Węglarka czteroosiowa (wagon odkryty wysokoburtowy) do przewozu ładunków masowych, np. węgla, kruszyw, złomu.",
+      "budowa": "Pudło stalowe z drzwiami bocznymi, ostoja spawana, dwa wózki Y25, urządzenia cięgłowo-zderzakowe, hamulec zespolony. W tej wersji pudło i ostoja są uproszczone (pełny model w etapie 3).",
+      "typowe_uszkodzenia": "[uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "Oznaczenie literowe wg UIC 438-2 [uzupełnić: sprawdzić znaczenie liter]. GCU – Załącznik 9 [uzupełnić].",
+      "zdjecia": [],
+      "zrodla": ["[uzupełnić]"],
+      "status": "do weryfikacji"
+    },
+    "pudlo_eaos": {
+      "nazwa_pl": "pudło",
+      "nazwa_en": "body",
+      "funkcja": "Przestrzeń ładunkowa wagonu.",
+      "budowa": "Ściany boczne, drzwi dwuskrzydłowe, ściany czołowe, podłoga stalowa, pas górny. Model uproszczony – szczegóły w etapie 3.",
+      "typowe_uszkodzenia": "[uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "ostoja_eaos": {
+      "nazwa_pl": "ostoja",
+      "nazwa_en": "underframe",
+      "funkcja": "Nośna konstrukcja wagonu: przenosi masę pudła i ładunku na wózki oraz siły pociągowe i zderzakowe.",
+      "budowa": "Ostojnice, belki czołowe, belki skrętowe z czopami skrętu, belka środkowa, poprzecznice. Model uproszczony – szczegóły w etapie 3.",
+      "typowe_uszkodzenia": "[uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    }
+  },
+  "drzewo": {
+    "id": "eaos",
+    "typ": "eaos",
+    "children": [
+      { "id": "pudlo", "typ": "pudlo_eaos" },
+      { "id": "ostoja", "typ": "ostoja_eaos" },
+      { "id": "wozek_1", "ref": "components/y25.json", "dopisek": "nr 1" },
+      { "id": "wozek_2", "ref": "components/y25.json", "dopisek": "nr 2" }
+    ]
+  }
+}
