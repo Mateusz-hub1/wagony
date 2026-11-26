@@ -22,9 +22,9 @@ export function buildMainPipe(node) {
   const lay = layout(cfg(node));
   const pts = mainPipePoints(lay);
   merged(pipeGeoms(pts, 0.021, 14), M.paintDarkRound, { parent: g });
-  // obejmy rury z wieszakami do poprzecznic ostoi (spód poprzecznic ok. 1,05 m – SZACUNKOWE)
+  // obejmy rury z wieszakami do poprzecznic ostoi (położenia x: lay.pipeHangersX – SZACUNKOWE)
   const holders = [];
-  for (const x of [-3.3, -2.0, -0.7, 0.7, 2.0, 3.3, 5.45, -5.45]) {
+  for (const x of lay.pipeHangersX) {
     if (Math.abs(x) > lay.L - 0.9) continue;
     holders.push(boxGeom(0.04, 0.05, 0.06, [x, lay.pipeY, lay.pipeZ]));
     holders.push(boxGeom(0.03, lay.mountY - lay.pipeY, 0.012, [x, (lay.pipeY + lay.mountY) / 2, lay.pipeZ - 0.035]));
