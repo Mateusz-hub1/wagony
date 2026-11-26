@@ -1,0 +1,37 @@
+// Przyciski nad widokiem 3D i skróty klawiszowe.
+export class Toolbar {
+  constructor(el, nav, actions) {
+    this.el = el;
+    this.nav = nav;
+    this.btn = {};
+    this.abort = new AbortController(); // pozwala odpiąć wszystkie zdarzenia przy zmianie wagonu
+    const signal = this.abort.signal;
+    el.querySelectorAll('[data-act]').forEach((b) => {
+      this.btn[b.dataset.act] = b;
+      b.addEventListener('click', () => actions[b.dataset.act]?.(), { signal });
+    });
+    // Esc = poziom wyżej (gdy nie piszemy w polu tekstowym)
+    this.onKey = (e) => {
+      if (e.key === 'Escape' && !e.target.closest?.('input, textarea')) actions.up();
+    };
+    window.addEventListener('keydown', this.onKey, { signal });
+  }
+
+  destroy() { this.abort.abort(); }
+
+  // Włącza / wyłącza przyciski zależnie od stanu
+  update() {
+    const { focus, selected, root, isolated } = this.nav;
+    const sel = selected && selected !== focus ? selected : null;
+    this.btn.explode.disabled = !((sel && sel.children.length) || (!focus.exploded && focus.children.length));
+    this.btn.collapse.disabled = !focus.exploded;
+    this.btn.up.disabled = focus === root && !focus.exploded && !selected;
+    this.btn.hide.disabled = !sel;
+    this.btn.isolate.disabled = !selected;
+    let anyHidden = !!isolated;
+    (function scan(n) { if (n.hidden) anyHidden = true; n.children.forEach(scan); })(root);
+    this.btn.showall.disabled = !anyHidden;
+    this.btn.remove.disabled = !selected?.zdejmowalny;
+    this.btn.remove.textContent = selected?.removed ? 'Załóż' : 'Zdejmij';
+  }
+}

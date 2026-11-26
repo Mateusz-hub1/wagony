@@ -1,0 +1,146 @@
+/* Atlas budowy wagonów – style strony */
+:root {
+  --bg: #eef0f2;
+  --panel: #ffffff;
+  --text: #1f2328;
+  --muted: #5f6b76;
+  --line: #d8dde2;
+  --accent: #1f6feb;
+  --accent-soft: #e3edfd;
+  --select: #d97a00;
+  --warn-bg: #fff4d6;
+  --warn-text: #7a5a00;
+  --ok-bg: #dcf5e3;
+  --ok-text: #1a6b35;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html, body { height: 100%; margin: 0; }
+body {
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Pasek górny --- */
+#topbar {
+  display: flex; align-items: center; gap: 16px;
+  padding: 8px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  min-height: 52px;
+}
+#topbar h1 { font-size: 16px; margin: 0; white-space: nowrap; }
+
+#breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-size: 14px; }
+#breadcrumb a { color: var(--accent); text-decoration: none; cursor: pointer; padding: 2px 4px; border-radius: 4px; }
+#breadcrumb a:hover { background: var(--accent-soft); }
+#breadcrumb .current { font-weight: 600; padding: 2px 4px; }
+#breadcrumb .sep { color: var(--muted); }
+
+/* --- Przyciski --- */
+.btn {
+  font: inherit; font-size: 13px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+}
+.btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.btn:disabled { opacity: .45; cursor: default; }
+.btn.ghost { border-color: transparent; background: transparent; }
+
+/* --- Ekran wyboru wagonu --- */
+#screen-select { padding: 32px; max-width: 1100px; margin: 0 auto; width: 100%; }
+#screen-select h2 { margin-top: 0; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 16px; text-align: left; font: inherit; color: inherit; cursor: pointer;
+}
+.card:hover:not(:disabled) { border-color: var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+.card:disabled { cursor: default; opacity: .55; }
+.card .seria { font-size: 22px; font-weight: 700; }
+.card .opis { color: var(--muted); margin-top: 4px; }
+.card .badge { display: inline-block; margin-top: 10px; font-size: 12px; padding: 2px 8px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+.card:disabled .badge { background: #eceff1; color: var(--muted); }
+.note { color: var(--muted); margin-top: 24px; }
+
+/* --- Ekran przeglądarki 3D: 3 kolumny --- */
+#screen-viewer {
+  flex: 1; min-height: 0;
+  display: grid;
+  grid-template-columns: 280px 1fr 360px;
+}
+#tree-panel, #info-panel {
+  background: var(--panel);
+  overflow: auto;
+  padding: 12px 14px;
+}
+#tree-panel { border-right: 1px solid var(--line); }
+#info-panel { border-left: 1px solid var(--line); }
+#tree-panel h2 { font-size: 14px; margin: 0 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+
+#viewport { position: relative; min-width: 0; min-height: 0; overflow: hidden; }
+#c { display: block; width: 100%; height: 100%; outline: none; }
+
+#toolbar {
+  position: absolute; top: 10px; left: 10px; right: 10px;
+  display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+  pointer-events: none; /* puste miejsca paska nie blokują myszki w widoku 3D */
+}
+#toolbar .btn { box-shadow: 0 1px 3px rgba(0,0,0,.08); pointer-events: auto; }
+#toolbar .sep { width: 8px; }
+
+#hint {
+  position: absolute; bottom: 10px; left: 10px;
+  font-size: 12px; color: var(--muted);
+  background: rgba(255,255,255,.85); padding: 4px 8px; border-radius: 6px;
+  pointer-events: none;
+}
+#loading {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(238,240,242,.8); font-size: 16px; color: var(--muted);
+}
+#toast {
+  position: absolute; bottom: 44px; left: 50%; transform: translateX(-50%);
+  background: #1f2328; color: #fff; padding: 8px 14px; border-radius: 8px; font-size: 13px;
+}
+
+/* --- Drzewo części --- */
+.tree, .tree ul { list-style: none; margin: 0; padding: 0; }
+.tree ul { padding-left: 14px; border-left: 1px dashed var(--line); margin-left: 7px; }
+.tree .row {
+  display: flex; align-items: center; gap: 2px;
+  padding: 2px 4px; border-radius: 4px; cursor: pointer; user-select: none;
+}
+.tree .row:hover { background: #f3f5f7; }
+.tree .caret { width: 16px; text-align: center; color: var(--muted); flex: none; font-size: 10px; }
+.tree .label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tree .label .en { color: var(--muted); font-size: 12px; }
+.tree .eye { border: 0; background: none; cursor: pointer; padding: 0 4px; color: var(--muted); font-size: 12px; opacity: 0; }
+.tree .row:hover .eye, .tree li.is-hidden > .row .eye { opacity: 1; }
+.tree li.collapsed > ul { display: none; }
+.tree li.is-focus > .row { font-weight: 600; }
+.tree li.is-focus > .row::after { content: "◉"; color: var(--accent); font-size: 10px; margin-left: 4px; }
+.tree li.is-selected > .row { background: #fdebd3; outline: 1px solid var(--select); }
+.tree li.is-hidden > .row .label, .tree li.is-removed > .row .label { opacity: .45; text-decoration: line-through; }
+
+/* --- Panel opisu --- */
+#info-panel h2 { font-size: 18px; margin: 0; }
+#info-panel .en { color: var(--muted); font-weight: 400; }
+#info-panel .path { color: var(--muted); font-size: 11px; margin: 2px 0 10px; word-break: break-all; }
+#info-panel h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 14px 0 4px; }
+#info-panel p { margin: 0; white-space: pre-line; }
+#info-panel ul { margin: 0; padding-left: 18px; }
+#info-panel .missing { color: var(--warn-text); }
+.status { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 10px; margin-top: 6px; }
+.status.todo { background: var(--warn-bg); color: var(--warn-text); }
+.status.ok { background: var(--ok-bg); color: var(--ok-text); }
+.children-list a { color: var(--accent); cursor: pointer; }

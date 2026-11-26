@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlas budowy wagonów towarowych</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Three.js z CDN. "three" i "three/addons/" MUSZĄ mieć tę samą wersję. -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header id="topbar">
+    <button id="btn-home" class="btn ghost" hidden>← Wybór wagonu</button>
+    <h1>Atlas budowy wagonów towarowych</h1>
+    <nav id="breadcrumb" aria-label="Ścieżka"></nav>
+  </header>
+
+  <!-- Ekran 1: wybór wagonu -->
+  <section id="screen-select">
+    <h2>Wybierz typ wagonu</h2>
+    <div id="wagon-list" class="cards"></div>
+    <p class="note">Treści mają status „do weryfikacji”, dopóki nie zostaną sprawdzone.</p>
+  </section>
+
+  <!-- Ekran 2: przeglądarka 3D -->
+  <main id="screen-viewer" hidden>
+    <aside id="tree-panel">
+      <h2>Części</h2>
+      <div id="tree"></div>
+    </aside>
+
+    <div id="viewport">
+      <canvas id="c"></canvas>
+      <div id="toolbar">
+        <button class="btn" data-act="explode" title="Wejdź w zaznaczoną część (lub rozłóż bieżący poziom)">Rozłóż</button>
+        <button class="btn" data-act="collapse" title="Złóż bieżący poziom">Złóż</button>
+        <button class="btn" data-act="up" title="Poziom wyżej (Esc)">↑ Poziom wyżej</button>
+        <span class="sep"></span>
+        <button class="btn" data-act="hide" title="Ukryj zaznaczoną część">Ukryj</button>
+        <button class="btn" data-act="isolate" title="Pokaż tylko zaznaczoną część">Pokaż tylko tę</button>
+        <button class="btn" data-act="showall" title="Pokaż wszystkie ukryte części">Pokaż wszystko</button>
+        <button class="btn" data-act="remove" title="Zdejmij / załóż część (np. pokrywę maźnicy)">Zdejmij</button>
+        <span class="sep"></span>
+        <button class="btn" data-act="reset" title="Wróć do widoku całego wagonu">Reset widoku</button>
+      </div>
+      <div id="hint">Lewy przycisk: obrót · prawy: przesuwanie · kółko: przybliżanie · klik: zaznacz · dwuklik: rozłóż · Esc: poziom wyżej</div>
+      <div id="loading">Wczytywanie…</div>
+      <div id="toast" hidden></div>
+    </div>
+
+    <aside id="info-panel"></aside>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
