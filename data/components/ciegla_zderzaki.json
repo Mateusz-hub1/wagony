@@ -1,0 +1,284 @@
+{
+  "podzespol": "Urządzenia cięgłowo-zderzakowe",
+  "uwaga": "Opisy skrócone, wersja robocza. Wszystkie do weryfikacji. Liczby tylko ze źródeł, w innym wypadku [uzupełnić].",
+  "szablony": {
+    "zderzak": {
+      "typ": "zderzak",
+      "ukryj_otoczenie": true,
+      "children": [
+        {
+          "id": "tuleja",
+          "typ": "tuleja_zderzaka"
+        },
+        {
+          "id": "wklad_sprezysty",
+          "typ": "wklad_sprezysty_zderzaka"
+        },
+        {
+          "id": "tlok",
+          "typ": "tlok_zderzaka",
+          "zdejmowalny": true,
+          "children": [
+            {
+              "id": "talerz",
+              "typ": "talerz_zderzaka"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "drzewo": {
+    "id": "urzadzenia_ciaglowo_zderzakowe",
+    "typ": "urzadzenia_ciaglowo_zderzakowe",
+    "children": [
+      {
+        "id": "zderzak_1",
+        "szablon": "zderzak",
+        "dopisek": "strona 1"
+      },
+      {
+        "id": "zderzak_2",
+        "szablon": "zderzak",
+        "dopisek": "strona 2"
+      },
+      {
+        "id": "hak_ciagowy",
+        "typ": "hak_ciagowy",
+        "children": [
+          {
+            "id": "hak",
+            "typ": "hak"
+          },
+          {
+            "id": "prowadnica_haka",
+            "typ": "prowadnica_haka"
+          },
+          {
+            "id": "urzadzenie_sprezyste",
+            "typ": "urzadzenie_sprezyste_ciegla"
+          }
+        ]
+      },
+      {
+        "id": "sprzeg_srubowy",
+        "typ": "sprzeg_srubowy",
+        "children": [
+          {
+            "id": "ogniwa",
+            "typ": "ogniwa_sprzegu"
+          },
+          {
+            "id": "nakretki",
+            "typ": "nakretki_sprzegu"
+          },
+          {
+            "id": "sruba",
+            "typ": "sruba_sprzegu"
+          },
+          {
+            "id": "kablak",
+            "typ": "kablak_sprzegu"
+          }
+        ]
+      }
+    ]
+  },
+  "opisy": {
+    "urzadzenia_ciaglowo_zderzakowe": {
+      "nazwa_pl": "urządzenia cięgłowo-zderzakowe",
+      "nazwa_en": "draw and buffing gear",
+      "funkcja": "Łączą wagony w pociągu, przenoszą siły rozciągające (pociągowe) i ściskające (zderzakowe) oraz łagodzą uderzenia.",
+      "budowa": "Na każdym końcu wagonu: dwa zderzaki, hak cięgłowy z urządzeniem sprężystym, sprzęg śrubowy.",
+      "typowe_uszkodzenia": "Zużyte lub pęknięte talerze zderzaków, osłabione wkłady sprężyste, pęknięcia haka, zużyty lub skrzywiony sprzęg. [uzupełnić]",
+      "wymiary_graniczne": "Rozstaw osi zderzaków 1 750 ± 10 mm; wysokość osi zderzaków nad główką szyny – nie więcej niż 1 065 mm w stanie próżnym (UIC 528) [uzupełnić: dolna granica wg EN 16839, pkt 5.2.2]. Pozostałe [uzupełnić].",
+      "przepisy": "EN 15551 (zderzaki), EN 15566 (urządzenie cięgłowe i sprzęg śrubowy), EN 16839 (rozmieszczenie na belce czołowej); karty UIC [uzupełnić]; GCU / VPI [uzupełnić].",
+      "zdjecia": [],
+      "zrodla": [
+        "UIC 528 – rozstaw osi zderzaków 1 750 ± 10 mm, wysokość osi zderzaków nie więcej niż 1 065 mm (wagon próżny) [uzupełnić: sprawdzić aktualne wydanie i zastosowanie do wagonów towarowych]",
+        "DIN EN 15551 – Zderzaki (streszczenie normy: skok 105 mm w wagonach towarowych, 150 mm w niektórych wagonach towarowych): https://www.din.de/en/wdc-beuth:din21:254307735",
+        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016",
+        "EN 16839 – Rozmieszczenie elementów na belce czołowej (opis normy): https://knowledge.bsigroup.com/products/railway-applications-rolling-stock-head-stock-layout-3"
+      ],
+      "status": "do weryfikacji"
+    },
+    "zderzak": {
+      "nazwa_pl": "zderzak",
+      "nazwa_en": "buffer",
+      "funkcja": "Przejmuje siły ściskające między wagonami i tłumi uderzenia (np. przy manewrach i hamowaniu).",
+      "budowa": "Tuleja przykręcona do belki czołowej, tłok z talerzem wsuwany w tuleję, wkład sprężysty wewnątrz.",
+      "typowe_uszkodzenia": "Pęknięty lub zużyty talerz, brak smaru na talerzu, osłabiony wkład (zderzak „zapadnięty”), luźne śruby mocujące. [uzupełnić]",
+      "wymiary_graniczne": "Skok 105 mm (zderzaki wagonów towarowych wg EN 15551; występują też zderzaki o skoku 150 mm). Pozostałe [uzupełnić].",
+      "przepisy": "EN 15551; karty UIC [uzupełnić]; GCU / VPI [uzupełnić].",
+      "zdjecia": [],
+      "zrodla": [
+        "DIN EN 15551 – Zderzaki (streszczenie normy: skok 105 mm w wagonach towarowych, 150 mm w niektórych wagonach towarowych): https://www.din.de/en/wdc-beuth:din21:254307735"
+      ],
+      "status": "do weryfikacji"
+    },
+    "tuleja_zderzaka": {
+      "nazwa_pl": "tuleja zderzaka",
+      "nazwa_en": "buffer casing",
+      "funkcja": "Korpus zderzaka – prowadzi tłok i mocuje zderzak do belki czołowej.",
+      "budowa": "Płyta podstawy z żebrami i tuleja; mocowana czterema śrubami.",
+      "typowe_uszkodzenia": "Pęknięcia przy płycie, luźne lub brakujące śruby. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "tlok_zderzaka": {
+      "nazwa_pl": "tłok zderzaka",
+      "nazwa_en": "buffer plunger",
+      "funkcja": "Przesuwa się w tulei i przekazuje nacisk z talerza na wkład sprężysty.",
+      "budowa": "Rura stalowa z pierścieniem oporowym, z przyspawanym talerzem.",
+      "typowe_uszkodzenia": "Zatarcie, zużycie powierzchni ślizgowej. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "talerz_zderzaka": {
+      "nazwa_pl": "talerz zderzaka",
+      "nazwa_en": "buffer head (plate)",
+      "funkcja": "Styka się z talerzem zderzaka sąsiedniego wagonu.",
+      "budowa": "Stalowa płyta (lekko wypukła), powierzchnia smarowana.",
+      "typowe_uszkodzenia": "Zużycie, pęknięcia, brak smaru. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić: wymiary talerza wg EN 15551 / UIC]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "wklad_sprezysty_zderzaka": {
+      "nazwa_pl": "wkład sprężysty",
+      "nazwa_en": "buffer spring element",
+      "funkcja": "Pochłania energię uderzenia i oddaje ją z tłumieniem.",
+      "budowa": "Pakiet krążków elastomerowych przedzielonych płytkami stalowymi (w innych wykonaniach sprężyny pierścieniowe lub stalowo-gumowe).",
+      "typowe_uszkodzenia": "Utrata sprężystości, pęknięcia elastomeru. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "hak_ciagowy": {
+      "nazwa_pl": "hak cięgłowy",
+      "nazwa_en": "draw hook",
+      "funkcja": "Przenosi siły pociągowe; zakłada się na niego kabłąk sprzęgu sąsiedniego wagonu.",
+      "budowa": "Hak z trzonem przechodzącym przez belkę czołową, prowadnica haka, urządzenie sprężyste cięgłowe za belką.",
+      "typowe_uszkodzenia": "Pęknięcia haka (zwłaszcza w gardzieli), zużycie gardzieli, osłabione urządzenie sprężyste. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "EN 15566; GCU / VPI [uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [
+        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016"
+      ],
+      "status": "do weryfikacji"
+    },
+    "hak": {
+      "nazwa_pl": "hak",
+      "nazwa_en": "hook",
+      "funkcja": "Element, na który zakłada się kabłąk sprzęgu; z otworem na sworzeń własnego sprzęgu.",
+      "budowa": "Odkuwka stalowa: głowa z gardzielą i trzon zakończony gwintem z nakrętką.",
+      "typowe_uszkodzenia": "Pęknięcia, zużycie gardzieli i otworu sworznia. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [
+        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016"
+      ],
+      "status": "do weryfikacji"
+    },
+    "prowadnica_haka": {
+      "nazwa_pl": "prowadnica haka",
+      "nazwa_en": "draw hook guide",
+      "funkcja": "Prowadzi trzon haka w otworze belki czołowej.",
+      "budowa": "Ramka przykręcona do belki czołowej z nakładkami ślizgowymi.",
+      "typowe_uszkodzenia": "Zużycie nakładek, pęknięcia. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "urzadzenie_sprezyste_ciegla": {
+      "nazwa_pl": "urządzenie sprężyste cięgłowe",
+      "nazwa_en": "draw gear spring",
+      "funkcja": "Łagodzi szarpnięcia przy ruszaniu i zmianach siły pociągowej.",
+      "budowa": "Pakiet sprężysty (sprężyna lub elastomer) między płytami oporowymi na trzonie haka, w belce środkowej.",
+      "typowe_uszkodzenia": "Osłabienie, pęknięcie sprężyny, luzy wzdłużne. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [
+        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016"
+      ],
+      "status": "do weryfikacji"
+    },
+    "sprzeg_srubowy": {
+      "nazwa_pl": "sprzęg śrubowy",
+      "nazwa_en": "screw coupling",
+      "funkcja": "Łączy wagony; śrubą skraca się sprzęg, żeby dociągnąć talerze zderzaków.",
+      "budowa": "Ogniwa na sworzniu w haku, dwie nakrętki czopowe, śruba z gwintem prawym i lewym z rękojeścią, kabłąk.",
+      "typowe_uszkodzenia": "Wydłużenie, zgięcie, zużycie gwintu, pęknięcia kabłąka i ogniw. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "EN 15566; GCU / VPI [uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [
+        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016"
+      ],
+      "status": "do weryfikacji"
+    },
+    "ogniwa_sprzegu": {
+      "nazwa_pl": "ogniwa sprzęgu",
+      "nazwa_en": "coupling links",
+      "funkcja": "Łączą sprzęg z hakiem własnego wagonu.",
+      "budowa": "Dwa płaskowniki z oczkami i sworzeń przechodzący przez hak.",
+      "typowe_uszkodzenia": "Zużycie oczek i sworznia, pęknięcia. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "nakretki_sprzegu": {
+      "nazwa_pl": "nakrętki czopowe",
+      "nazwa_en": "trunnion nuts",
+      "funkcja": "Zamieniają obrót śruby na skracanie lub wydłużanie sprzęgu.",
+      "budowa": "Dwie nakrętki z czopami – jedna z gwintem prawym, druga z lewym.",
+      "typowe_uszkodzenia": "Zużycie gwintu, wyrobione czopy. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "sruba_sprzegu": {
+      "nazwa_pl": "śruba sprzęgu z rękojeścią",
+      "nazwa_en": "coupling screw with handle",
+      "funkcja": "Obracana rękojeścią skraca lub wydłuża sprzęg.",
+      "budowa": "Śruba z gwintem prawym i lewym, piasta z rękojeścią zakończoną ciężarkiem.",
+      "typowe_uszkodzenia": "Zgięcie, zużyty gwint, brak ciężarka. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "kablak_sprzegu": {
+      "nazwa_pl": "kabłąk",
+      "nazwa_en": "shackle",
+      "funkcja": "Zakładany na hak sąsiedniego wagonu.",
+      "budowa": "Pręt stalowy wygięty w kształt litery U, osadzony na czopach drugiej nakrętki.",
+      "typowe_uszkodzenia": "Pęknięcia, zużycie w miejscu styku z hakiem. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    }
+  }
+}

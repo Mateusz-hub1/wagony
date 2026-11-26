@@ -441,6 +441,16 @@
         "id": "wozek_2",
         "ref": "components/y25.json",
         "dopisek": "nr 2"
+      },
+      {
+        "id": "ciegla_zderzaki_1",
+        "ref": "components/ciegla_zderzaki.json",
+        "dopisek": "koniec 1"
+      },
+      {
+        "id": "ciegla_zderzaki_2",
+        "ref": "components/ciegla_zderzaki.json",
+        "dopisek": "koniec 2"
       }
     ]
   }

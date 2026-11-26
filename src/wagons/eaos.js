@@ -8,6 +8,7 @@
 // Pozostałe wymiary (profile, drzwi, słupki) – SZACUNKOWE, do sprawdzenia.
 import { THREE, M, part, slot, mesh, box, boxFromTo, merged, boxGeom, cylinder, rod, lathe, bolts, boltCircle, rivets, weld } from '../lib/geom.js';
 import { y25Builders } from '../components/y25/index.js';
+import { drawGearBuilders } from '../components/ciegla_zderzaki/index.js';
 
 export const PIVOT_X = 4.5;   // pół rozstawu czopów skrętu (9000 / 2)
 export const HALF_LEN = 6.4;  // lico belki czołowej: (14 040 − 2 × 620 mm długości zderzaka) / 2 – długość zderzaka SZACUNKOWA
@@ -51,6 +52,9 @@ export function buildEaos() {
   slot(g, 'ostoja', { explode: [0, 0.7, 0] });
   slot(g, 'wozek_1', { pos: [PIVOT_X, 0, 0], explode: [1.8, 0, 0] });
   slot(g, 'wozek_2', { pos: [-PIVOT_X, 0, 0], rot: [0, Math.PI, 0], explode: [-1.8, 0, 0] });
+  // urządzenia cięgłowo-zderzakowe na obu końcach (na licu belki czołowej, w osi zderzaków)
+  slot(g, 'ciegla_zderzaki_1', { pos: [HALF_LEN, BUF_Y, 0], explode: [2.6, 0, 0] });
+  slot(g, 'ciegla_zderzaki_2', { pos: [-HALF_LEN, BUF_Y, 0], rot: [0, Math.PI, 0], explode: [-2.6, 0, 0] });
   return g;
 }
 
@@ -388,6 +392,7 @@ export function buildHandrail(node) {
 // Wszystkie buildery, których potrzebuje Eaos (wagon + wspólne podzespoły)
 export const builders = {
   ...y25Builders,
+  ...drawGearBuilders,
   eaos: buildEaos,
   ostoja_eaos: buildUnderframe,
   pudlo_eaos: buildBody,
