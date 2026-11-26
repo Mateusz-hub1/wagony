@@ -4,15 +4,48 @@
     "drzwi": {
       "typ": "drzwi_eaos",
       "children": [
-        { "id": "skrzydlo_1", "typ": "skrzydlo_drzwi_eaos", "dopisek": "nr 1", "zdejmowalny": true, "param": { "strona": 1 } },
-        { "id": "skrzydlo_2", "typ": "skrzydlo_drzwi_eaos", "dopisek": "nr 2", "zdejmowalny": true, "param": { "strona": -1 } }
+        {
+          "id": "skrzydlo_1",
+          "typ": "skrzydlo_drzwi_eaos",
+          "dopisek": "nr 1",
+          "zdejmowalny": true,
+          "param": {
+            "strona": 1
+          }
+        },
+        {
+          "id": "skrzydlo_2",
+          "typ": "skrzydlo_drzwi_eaos",
+          "dopisek": "nr 2",
+          "zdejmowalny": true,
+          "param": {
+            "strona": -1
+          }
+        }
       ]
     },
     "sciana_boczna": {
       "typ": "sciana_boczna_eaos",
       "children": [
-        { "id": "drzwi_1", "szablon": "drzwi", "dopisek": "nr 1" },
-        { "id": "drzwi_2", "szablon": "drzwi", "dopisek": "nr 2" }
+        {
+          "id": "drzwi_1",
+          "szablon": "drzwi",
+          "dopisek": "nr 1"
+        },
+        {
+          "id": "drzwi_2",
+          "szablon": "drzwi",
+          "dopisek": "nr 2"
+        }
+      ]
+    },
+    "belka_skretowa": {
+      "typ": "belka_skretowa_eaos",
+      "children": [
+        {
+          "id": "czop_skretu",
+          "typ": "czop_skretu_eaos"
+        }
       ]
     }
   },
@@ -41,7 +74,9 @@
       "wymiary_graniczne": "[uzupełnić]",
       "przepisy": "[uzupełnić]",
       "zdjecia": [],
-      "zrodla": ["DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny, dwie pary drzwi na stronę, podłoga stalowa): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"],
+      "zrodla": [
+        "DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny, dwie pary drzwi na stronę, podłoga stalowa): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
+      ],
       "status": "do weryfikacji"
     },
     "podloga_eaos": {
@@ -53,7 +88,9 @@
       "wymiary_graniczne": "[uzupełnić]",
       "przepisy": "[uzupełnić]",
       "zdjecia": [],
-      "zrodla": ["VTG – karta wagonu Eaos B41.072C (wysokość podłogi 1 200 mm): https://www.vtg.com/fileadmin/VTG/Dokumente/waggon_datenblaetter/Boxwagen-Eaos-B41.072C.pdf"],
+      "zrodla": [
+        "VTG – karta wagonu Eaos B41.072C (wysokość podłogi 1 200 mm): https://www.vtg.com/fileadmin/VTG/Dokumente/waggon_datenblaetter/Boxwagen-Eaos-B41.072C.pdf"
+      ],
       "status": "do weryfikacji"
     },
     "sciana_boczna_eaos": {
@@ -113,19 +150,125 @@
       "wymiary_graniczne": "[uzupełnić]",
       "przepisy": "[uzupełnić]",
       "zdjecia": [],
-      "zrodla": ["DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"],
+      "zrodla": [
+        "DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
+      ],
       "status": "do weryfikacji"
     },
     "ostoja_eaos": {
       "nazwa_pl": "ostoja",
       "nazwa_en": "underframe",
       "funkcja": "Nośna konstrukcja wagonu: przenosi masę pudła i ładunku na wózki oraz siły pociągowe i zderzakowe.",
-      "budowa": "Ostojnice, belki czołowe, belki skrętowe z czopami skrętu, belka środkowa, poprzecznice. Model uproszczony – szczegóły w kolejnym kroku.",
-      "typowe_uszkodzenia": "[uzupełnić]",
+      "budowa": "Spawana rama z dwóch ostojnic, dwóch belek czołowych, dwóch belek skrętowych z czopami skrętu, belki środkowej i poprzecznic. Na końcach stopnie i poręcze manewrowe.",
+      "typowe_uszkodzenia": "Pęknięcia spoin (zwłaszcza przy belkach skrętowych i czołowych), odkształcenia belek czołowych po uderzeniach, korozja. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – katalog wagonów, Eaos-x 051 (rozstaw czopów skrętu 9 000 mm): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
+      ],
+      "status": "do weryfikacji"
+    },
+    "ostojnica_eaos": {
+      "nazwa_pl": "ostojnica",
+      "nazwa_en": "sole bar",
+      "funkcja": "Główna podłużna belka ostoi po boku wagonu; podpiera ścianę boczną.",
+      "budowa": "Kształtownik (ceownik) z przeponami wewnątrz, przyspawany do belek czołowych, skrętowych i poprzecznic.",
+      "typowe_uszkodzenia": "Pęknięcia, odkształcenia, korozja półki dolnej. [uzupełnić]",
       "wymiary_graniczne": "[uzupełnić]",
       "przepisy": "[uzupełnić]",
       "zdjecia": [],
       "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "belka_czolowa_eaos": {
+      "nazwa_pl": "belka czołowa",
+      "nazwa_en": "headstock",
+      "funkcja": "Zamyka ostoję na końcu wagonu; na niej mocowane są zderzaki i przez nią przechodzi hak cięgłowy.",
+      "budowa": "Belka skrzynkowa z blachy czołowej, półek i żeber; nakładki wzmacniające pod zderzaki, otwór haka.",
+      "typowe_uszkodzenia": "Odkształcenia po uderzeniach (najechania), pęknięcia przy mocowaniu zderzaków. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "belka_skretowa_eaos": {
+      "nazwa_pl": "belka skrętowa",
+      "nazwa_en": "body bolster",
+      "funkcja": "Przenosi masę pudła z ostojnic na czop skrętu i ślizgi boczne wózka.",
+      "budowa": "Belka skrzynkowa w poprzek wagonu nad wózkiem; w środku czop skrętu, po bokach przeciwślizgi.",
+      "typowe_uszkodzenia": "Pęknięcia spoin z ostojnicami, zużycie przeciwślizgów. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – katalog wagonów, Eaos-x 051 (rozstaw czopów skrętu 9 000 mm): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
+      ],
+      "status": "do weryfikacji"
+    },
+    "czop_skretu_eaos": {
+      "nazwa_pl": "czop skrętu",
+      "nazwa_en": "centre pivot (body centre plate)",
+      "funkcja": "Opiera pudło na gnieździe skrętu wózka i pozwala wózkowi obracać się w łukach.",
+      "budowa": "Toczony czop z kołnierzem przykręcony do spodu belki skrętowej.",
+      "typowe_uszkodzenia": "Zużycie powierzchni oporowej i bocznej, pęknięcia, luzy w gnieździe. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "belka_srodkowa_eaos": {
+      "nazwa_pl": "belka środkowa",
+      "nazwa_en": "centre sill",
+      "funkcja": "Przenosi siły pociągowe i ściskające między końcami wagonu; mieści urządzenie cięgłowe.",
+      "budowa": "Dwa ceowniki wzdłuż osi wagonu połączone przewiązkami.",
+      "typowe_uszkodzenia": "Pęknięcia, odkształcenia w rejonie urządzenia cięgłowego. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "poprzecznice_eaos": {
+      "nazwa_pl": "poprzecznice",
+      "nazwa_en": "cross bearers",
+      "funkcja": "Łączą belkę środkową z ostojnicami i podpierają podłogę.",
+      "budowa": "Dwuteowniki spawane między belką środkową a ostojnicami.",
+      "typowe_uszkodzenia": "Pęknięcia spoin, korozja. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "stopien_manewrowy_eaos": {
+      "nazwa_pl": "stopień manewrowy",
+      "nazwa_en": "shunter's step",
+      "funkcja": "Miejsce, na którym stoi manewrowy podczas jazdy na wagonie.",
+      "budowa": "Kratowy stopień na dwóch wspornikach przy narożniku ostoi.",
+      "typowe_uszkodzenia": "Wygięte wsporniki, urwany lub skorodowany stopień. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [
+        "UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych [uzupełnić: wymiary]"
+      ],
+      "status": "do weryfikacji"
+    },
+    "porecz_manewrowa_eaos": {
+      "nazwa_pl": "poręcze manewrowe",
+      "nazwa_en": "shunter's handrails",
+      "funkcja": "Uchwyty do trzymania się przez manewrowego na stopniu.",
+      "budowa": "Poręcz pionowa na ścianie czołowej i pozioma na ostojnicy, z prętów okrągłych.",
+      "typowe_uszkodzenia": "Wygięte lub urwane poręcze, pęknięte mocowania. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [
+        "UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych [uzupełnić: wymiary]"
+      ],
       "status": "do weryfikacji"
     }
   },
@@ -133,18 +276,172 @@
     "id": "eaos",
     "typ": "eaos",
     "children": [
-      { "id": "pudlo", "typ": "pudlo_eaos", "children": [
-        { "id": "podloga", "typ": "podloga_eaos" },
-        { "id": "sciana_boczna_1", "szablon": "sciana_boczna", "dopisek": "strona 1" },
-        { "id": "sciana_boczna_2", "szablon": "sciana_boczna", "dopisek": "strona 2" },
-        { "id": "sciana_czolowa_1", "typ": "sciana_czolowa_eaos", "dopisek": "nr 1" },
-        { "id": "sciana_czolowa_2", "typ": "sciana_czolowa_eaos", "dopisek": "nr 2" },
-        { "id": "pas_gorny_1", "typ": "pas_gorny_eaos", "dopisek": "strona 1" },
-        { "id": "pas_gorny_2", "typ": "pas_gorny_eaos", "dopisek": "strona 2" }
-      ] },
-      { "id": "ostoja", "typ": "ostoja_eaos" },
-      { "id": "wozek_1", "ref": "components/y25.json", "dopisek": "nr 1" },
-      { "id": "wozek_2", "ref": "components/y25.json", "dopisek": "nr 2" }
+      {
+        "id": "pudlo",
+        "typ": "pudlo_eaos",
+        "children": [
+          {
+            "id": "podloga",
+            "typ": "podloga_eaos"
+          },
+          {
+            "id": "sciana_boczna_1",
+            "szablon": "sciana_boczna",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "sciana_boczna_2",
+            "szablon": "sciana_boczna",
+            "dopisek": "strona 2"
+          },
+          {
+            "id": "sciana_czolowa_1",
+            "typ": "sciana_czolowa_eaos",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "sciana_czolowa_2",
+            "typ": "sciana_czolowa_eaos",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "pas_gorny_1",
+            "typ": "pas_gorny_eaos",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "pas_gorny_2",
+            "typ": "pas_gorny_eaos",
+            "dopisek": "strona 2"
+          }
+        ]
+      },
+      {
+        "id": "ostoja",
+        "typ": "ostoja_eaos",
+        "children": [
+          {
+            "id": "ostojnica_1",
+            "typ": "ostojnica_eaos",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "ostojnica_2",
+            "typ": "ostojnica_eaos",
+            "dopisek": "strona 2"
+          },
+          {
+            "id": "belka_czolowa_1",
+            "typ": "belka_czolowa_eaos",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "belka_czolowa_2",
+            "typ": "belka_czolowa_eaos",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "belka_skretowa_1",
+            "szablon": "belka_skretowa",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "belka_skretowa_2",
+            "szablon": "belka_skretowa",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "belka_srodkowa",
+            "typ": "belka_srodkowa_eaos"
+          },
+          {
+            "id": "poprzecznice",
+            "typ": "poprzecznice_eaos"
+          },
+          {
+            "id": "stopien_manewrowy_1",
+            "typ": "stopien_manewrowy_eaos",
+            "dopisek": "narożnik 1",
+            "param": {
+              "sx": 1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_2",
+            "typ": "stopien_manewrowy_eaos",
+            "dopisek": "narożnik 2",
+            "param": {
+              "sx": 1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_3",
+            "typ": "stopien_manewrowy_eaos",
+            "dopisek": "narożnik 3",
+            "param": {
+              "sx": -1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_4",
+            "typ": "stopien_manewrowy_eaos",
+            "dopisek": "narożnik 4",
+            "param": {
+              "sx": -1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_1",
+            "typ": "porecz_manewrowa_eaos",
+            "dopisek": "narożnik 1",
+            "param": {
+              "sx": 1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_2",
+            "typ": "porecz_manewrowa_eaos",
+            "dopisek": "narożnik 2",
+            "param": {
+              "sx": 1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_3",
+            "typ": "porecz_manewrowa_eaos",
+            "dopisek": "narożnik 3",
+            "param": {
+              "sx": -1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_4",
+            "typ": "porecz_manewrowa_eaos",
+            "dopisek": "narożnik 4",
+            "param": {
+              "sx": -1,
+              "sz": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "wozek_1",
+        "ref": "components/y25.json",
+        "dopisek": "nr 1"
+      },
+      {
+        "id": "wozek_2",
+        "ref": "components/y25.json",
+        "dopisek": "nr 2"
+      }
     ]
   }
 }

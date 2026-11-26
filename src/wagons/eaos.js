@@ -6,7 +6,7 @@
 //   długość ładunkowa 12 800 mm, szerokość ładunkowa 2 800 mm,
 //   wysokość podłogi nad główką szyny 1 200 mm, wysokość ścian (ładunkowa) 2 000 mm.
 // Pozostałe wymiary (profile, drzwi, słupki) – SZACUNKOWE, do sprawdzenia.
-import { M, part, slot, box, boxFromTo, merged, boxGeom, cylinder, bolts, rivets, weld } from '../lib/geom.js';
+import { THREE, M, part, slot, mesh, box, boxFromTo, merged, boxGeom, cylinder, rod, lathe, bolts, boltCircle, rivets, weld } from '../lib/geom.js';
 import { y25Builders } from '../components/y25/index.js';
 
 export const PIVOT_X = 4.5;   // pół rozstawu czopów skrętu (9000 / 2)
@@ -208,21 +208,180 @@ export function buildTopChord() {
   return g;
 }
 
-// ======================= OSTOJA (uproszczona – rozbudowa w kroku 2) =======================
+// ======================= OSTOJA =======================
+// Wysokości ostoi (SZACUNKOWE): spód ostojnicy 0,90 m, góra = spód blachy podłogi.
+const UF_TOP = FLOOR_Y - 0.008;
+const SOLE_Z = IN_W;          // zewnętrzna ściana ostojnicy pod poszyciem ściany bocznej
+export const HEAD_X = HALF_LEN - 0.2; // wewnętrzna krawędź belki czołowej
+export const BUF_Y = 1.03;    // oś zderzaków i haka nad główką szyny (SZACUNKOWE; UIC 528: maks. 1065 mm wagon próżny)
+export const BUF_Z = 0.875;   // pół rozstawu osi zderzaków (1750 / 2, UIC 528)
+const CORNERS = { 1: [1, 1], 2: [1, -1], 3: [-1, 1], 4: [-1, -1] }; // nr narożnika → [sx, sz]
 
 export function buildUnderframe() {
   const g = part('ostoja');
-  const P = M.paintBody;
-  const top = FLOOR_Y - 0.008;
-  for (const s of [1, -1]) {
-    boxFromTo([-HALF_LEN, HALF_LEN], [0.95, top], sorted(s * 1.38 - 0.06, s * 1.38 + 0.06), P, { r: 0.01, parent: g });
-    boxFromTo([s * HALF_LEN - 0.1, s * HALF_LEN + 0.1], [0.88, top], [-1.45, 1.45], P, { r: 0.012, parent: g });
-    boxFromTo([s * PIVOT_X - 0.2, s * PIVOT_X + 0.2], [0.95, top], [-1.38, 1.38], P, { r: 0.012, parent: g });
-    cylinder(0.15, 0.17, M.paintDarkRound, { pos: [s * PIVOT_X, 0.865, 0], seg: 48, parent: g });
-    for (const z of [0.82, -0.82]) box(0.2, 0.13, 0.12, P, { pos: [s * PIVOT_X, 0.88, z], parent: g });
+  slot(g, 'ostojnica_1', { explode: [0, 0, 0.6] });
+  slot(g, 'ostojnica_2', { rot: [0, Math.PI, 0], explode: [0, 0, -0.6] });
+  slot(g, 'belka_czolowa_1', { explode: [0.7, 0, 0] });
+  slot(g, 'belka_czolowa_2', { rot: [0, Math.PI, 0], explode: [-0.7, 0, 0] });
+  slot(g, 'belka_skretowa_1', { pos: [PIVOT_X, 0, 0], explode: [0, -0.45, 0] });
+  slot(g, 'belka_skretowa_2', { pos: [-PIVOT_X, 0, 0], rot: [0, Math.PI, 0], explode: [0, -0.45, 0] });
+  slot(g, 'belka_srodkowa', { explode: [0, -0.25, 0] });
+  slot(g, 'poprzecznice', { explode: [0, 0.3, 0] });
+  for (const [n, [sx, sz]] of Object.entries(CORNERS)) {
+    slot(g, `stopien_manewrowy_${n}`, { explode: [sx * 0.3, -0.25, sz * 0.5] });
+    slot(g, `porecz_manewrowa_${n}`, { explode: [sx * 0.5, 0.2, sz * 0.4] });
   }
-  boxFromTo([-HALF_LEN, HALF_LEN], [1.0, top], [-0.15, 0.15], P, { r: 0.01, parent: g });
-  merged([-3, -1.5, 0, 1.5, 3].map((x) => boxGeom(0.12, 0.18, 2.64, [x, 1.1, 0])), P, { parent: g });
+  return g;
+}
+
+// Ostojnica (dla strony +z): ceownik – środnik pionowy + półki skierowane do środka
+export function buildSoleBar() {
+  const g = part('ostojnica');
+  const P = M.paintBody;
+  const y0 = 0.9, t = 0.012, fl = 0.1;
+  const zw = [SOLE_Z - t, SOLE_Z];
+  boxFromTo([-HEAD_X, HEAD_X], [y0, UF_TOP], zw, P, { r: 0.004, parent: g });
+  boxFromTo([-HEAD_X, HEAD_X], [y0, y0 + t], [SOLE_Z - fl, SOLE_Z], P, { r: 0.004, parent: g });
+  boxFromTo([-HEAD_X, HEAD_X], [UF_TOP - t, UF_TOP], [SOLE_Z - fl, SOLE_Z], P, { r: 0.004, parent: g });
+  // żebra (przepony) wewnątrz ceownika przy słupkach ścian – co ok. 1 m
+  const ribs = [];
+  for (let x = -HEAD_X + 0.5; x < HEAD_X - 0.3; x += 1.0) ribs.push(boxGeom(0.01, UF_TOP - y0 - 2 * t, fl - t, [x, (y0 + UF_TOP) / 2, SOLE_Z - t - (fl - t) / 2]));
+  merged(ribs, P, { parent: g });
+  // spoina ostojnica – blacha podłogi (od wewnątrz)
+  weld([-HEAD_X, UF_TOP - 0.004, SOLE_Z - fl - 0.003], [HEAD_X, UF_TOP - 0.004, SOLE_Z - fl - 0.003], 0.005, { parent: g });
+  // tabliczki / uchwyty do podnoszenia wagonu nad belkami skrętowymi (SZACUNKOWE)
+  for (const sx of [1, -1]) box(0.3, 0.06, 0.04, M.paintDark, { pos: [sx * (PIVOT_X + 0.3), y0 + 0.03, SOLE_Z + 0.02], r: 0.006, parent: g });
+  return g;
+}
+
+// Belka czołowa (dla końca +x): blacha czołowa z półkami, nakładki pod zderzaki, otwór haka
+export function buildHeadstock() {
+  const g = part('belka_czolowa');
+  const P = M.paintBody;
+  const y0 = 0.84, t = 0.012, xf = HALF_LEN - 0.012; // lico blachy (nakładki dochodzą do HALF_LEN)
+  const zr = [-(SOLE_Z + 0.04), SOLE_Z + 0.04];
+  boxFromTo([xf - t, xf], [y0, UF_TOP], zr, P, { r: 0.004, parent: g });            // blacha czołowa
+  boxFromTo([HEAD_X, xf - t], [UF_TOP - t, UF_TOP], zr, P, { r: 0.004, parent: g }); // półka górna
+  boxFromTo([HEAD_X, xf - t], [y0, y0 + t], zr, P, { r: 0.004, parent: g });         // półka dolna
+  boxFromTo([HEAD_X, HEAD_X + t], [y0, UF_TOP], zr, P, { r: 0.004, parent: g });     // ścianka tylna
+  // nakładki wzmacniające pod zderzaki
+  for (const s of [1, -1]) {
+    boxFromTo([xf, HALF_LEN], [BUF_Y - 0.19, Math.min(BUF_Y + 0.19, UF_TOP)], [s * BUF_Z - 0.2, s * BUF_Z + 0.2], P, { r: 0.004, parent: g });
+    // żebra wewnętrzne za zderzakiem
+    merged([-0.12, 0.12].map((dz) => boxGeom(0.18, UF_TOP - y0 - 2 * t, 0.01, [(HEAD_X + xf) / 2, (y0 + UF_TOP) / 2, s * BUF_Z + dz])), P, { parent: g });
+  }
+  // rama otworu haka cięgłowego
+  const hy = [BUF_Y - 0.1, BUF_Y + 0.1], hz = 0.08;
+  merged([
+    boxGeom(0.02, 0.03, 2 * hz + 0.06, [xf + 0.006, hy[1] + 0.015, 0]),
+    boxGeom(0.02, 0.03, 2 * hz + 0.06, [xf + 0.006, hy[0] - 0.015, 0]),
+    boxGeom(0.02, hy[1] - hy[0], 0.03, [xf + 0.006, BUF_Y, hz + 0.015]),
+    boxGeom(0.02, hy[1] - hy[0], 0.03, [xf + 0.006, BUF_Y, -hz - 0.015]),
+  ], P, { parent: g });
+  // otwór (ciemne wnętrze)
+  box(0.006, hy[1] - hy[0], 2 * hz, M.rubber, { pos: [xf + 0.001, BUF_Y, 0], r: 0.002, parent: g });
+  // spoiny belka czołowa – ostojnice
+  for (const s of [1, -1]) weld([HEAD_X, y0 + 0.01, s * (SOLE_Z - 0.006)], [HEAD_X, UF_TOP - 0.01, s * (SOLE_Z - 0.006)], 0.006, { parent: g });
+  return g;
+}
+
+// Belka skrętowa: belka skrzynkowa w poprzek wagonu, nad wózkiem. Początek: oś czopa skrętu.
+// Spód płaski w środku (czop, przeciwślizgi), przy ostojnicach podniesiony.
+export function buildBolster() {
+  const g = part('belka_skretowa');
+  const P = M.paintBody;
+  slot(g, 'czop_skretu', { pos: [0, 0.865, 0], explode: [0, -0.35, 0] });
+  const sh = new THREE.Shape();
+  const zc = 0.95, ze = SOLE_Z - 0.012, yb = 0.95, ye = 1.06;
+  sh.moveTo(-ze, UF_TOP); sh.lineTo(ze, UF_TOP); sh.lineTo(ze, ye); sh.lineTo(zc, yb);
+  sh.lineTo(-zc, yb); sh.lineTo(-ze, ye); sh.closePath();
+  const geo = new THREE.ExtrudeGeometry(sh, { depth: 0.36, bevelEnabled: true, bevelSize: 0.006, bevelThickness: 0.006, bevelSegments: 1 });
+  geo.translate(0, 0, -0.18);
+  geo.rotateY(Math.PI / 2); // kształt w płaszczyźnie ZY, grubość wzdłuż X
+  mesh(geo, P, { parent: g });
+  // przeciwślizgi nad ślizgami bocznymi wózka
+  for (const z of [0.82, -0.82]) {
+    box(0.2, 0.13, 0.12, M.paintBody, { pos: [0, 0.88, z], r: 0.008, parent: g });
+    box(0.18, 0.012, 0.1, M.steelMachined, { pos: [0, 0.809, z], r: 0.002, parent: g });
+  }
+  // spoiny belka skrętowa – ostojnice
+  for (const s of [1, -1]) for (const dx of [-0.186, 0.186]) weld([dx, ye, s * (ze - 0.004)], [dx, UF_TOP - 0.01, s * (ze - 0.004)], 0.006, { parent: g });
+  return g;
+}
+
+// Czop skrętu (od strony pudła) – wchodzi w gniazdo skrętu wózka. Początek: środek walca.
+export function buildPivot() {
+  const g = part('czop_skretu');
+  lathe([[0, -0.085], [0.142, -0.085], [0.15, -0.077], [0.15, 0.06], [0.21, 0.06], [0.21, 0.085], [0, 0.085]], M.paintDarkRound, { seg: 64, rot: [-Math.PI / 2, 0, 0], parent: g });
+  boltCircle(6, 0.185, 0.06, 0.018, { parent: g, rot: [-Math.PI / 2, 0, 0], flip: true, start: 0 });
+  return g;
+}
+
+// Belka środkowa: dwa ceowniki wzdłuż osi wagonu (wewnątrz – urządzenie cięgłowe)
+export function buildCenterSill() {
+  const g = part('belka_srodkowa');
+  const P = M.paintBody;
+  const y0 = 0.96, t = 0.01, fl = 0.08;
+  for (const s of [1, -1]) {
+    const zw = sorted(s * 0.13, s * (0.13 + t));
+    boxFromTo([-HEAD_X, HEAD_X], [y0, UF_TOP], zw, P, { r: 0.003, parent: g });
+    boxFromTo([-HEAD_X, HEAD_X], [y0, y0 + t], sorted(s * 0.13, s * (0.13 + fl)), P, { r: 0.003, parent: g });
+  }
+  // przewiązki dolne (co ok. 1,5 m)
+  const ties = [];
+  for (let x = -HEAD_X + 0.9; x < HEAD_X - 0.5; x += 1.5) ties.push(boxGeom(0.08, 0.01, 0.26, [x, y0 - 0.005, 0]));
+  merged(ties, P, { parent: g });
+  return g;
+}
+
+// Poprzecznice: dwuteowniki między belką środkową a ostojnicami (rozstaw SZACUNKOWY)
+export function buildCrossBearers() {
+  const g = part('poprzecznice');
+  const xs = [-3.3, -2.0, -0.7, 0.7, 2.0, 3.3, -5.45, 5.45];
+  const geoms = [];
+  const y0 = 1.05;
+  for (const x of xs) for (const s of [1, -1]) {
+    const zc = s * (0.14 + SOLE_Z - 0.012) / 2, len = SOLE_Z - 0.012 - 0.14;
+    geoms.push(boxGeom(0.008, UF_TOP - y0, len, [x, (y0 + UF_TOP) / 2, zc]));   // środnik
+    geoms.push(boxGeom(0.1, 0.01, len, [x, y0 + 0.005, zc]));                   // półka dolna
+  }
+  merged(geoms, M.paintBody, { parent: g });
+  return g;
+}
+
+// Stopień manewrowy w narożniku. param: { sx, sz } – który narożnik (±1).
+// Budowany od razu w układzie wagonu (stąd gniazdo bez przesunięcia).
+export function buildStep(node) {
+  const g = part('stopien_manewrowy');
+  const { sx = 1, sz = 1 } = node?.param ?? {};
+  const x = sx * (HALF_LEN - 0.4), z = sz * SOLE_Z;
+  const yTread = 0.45; // wysokość stopnia nad główką szyny – SZACUNKOWE, sprawdzić w UIC 535-2 / EN 16116-2
+  // dwa wsporniki z płaskownika
+  for (const dx of [-0.2, 0.2]) {
+    rod([x + dx, 0.92, z + sz * 0.01], [x + dx, yTread, z + sz * 0.06], 0.012, M.paintDark, { seg: 8, parent: g });
+  }
+  // stopień kratowy (płaskowniki na krawędź)
+  const bars = [];
+  for (let i = 0; i < 5; i++) bars.push(boxGeom(0.44, 0.03, 0.008, [x, yTread, z + sz * (0.0 + i * 0.045)]));
+  bars.push(boxGeom(0.012, 0.03, 0.2, [x - 0.21, yTread, z + sz * 0.09]));
+  bars.push(boxGeom(0.012, 0.03, 0.2, [x + 0.21, yTread, z + sz * 0.09]));
+  merged(bars, M.paintDark, { parent: g });
+  return g;
+}
+
+// Poręcze manewrowe w narożniku: pionowa na ścianie czołowej i pozioma na boku. param: { sx, sz }
+export function buildHandrail(node) {
+  const g = part('porecz_manewrowa');
+  const { sx = 1, sz = 1 } = node?.param ?? {};
+  const R = 0.014;
+  // pionowa – na licu ściany czołowej przy narożniku (SZACUNKOWE)
+  const xo = sx * (HALF_LEN + 0.06), zv = sz * (IN_W - 0.08);
+  rod([xo, 1.35, zv], [xo, 2.15, zv], R, M.paintDark, { seg: 12, parent: g });
+  for (const y of [1.35, 2.15]) rod([xo, y, zv], [sx * (HALF_LEN - 0.01), y, zv], R, M.paintDark, { seg: 12, parent: g });
+  // pozioma – na ostojnicy nad stopniem
+  const zs = sz * (SOLE_Z + 0.07), x0 = sx * (HALF_LEN - 0.7), x1 = sx * (HALF_LEN - 0.15);
+  rod([x0, 1.12, zs], [x1, 1.12, zs], R, M.paintDark, { seg: 12, parent: g });
+  for (const x of [x0, x1]) rod([x, 1.12, zs], [x, 1.12, sz * SOLE_Z], R, M.paintDark, { seg: 12, parent: g });
   return g;
 }
 
@@ -238,4 +397,12 @@ export const builders = {
   skrzydlo_drzwi_eaos: buildDoorLeaf,
   sciana_czolowa_eaos: buildEndWall,
   pas_gorny_eaos: buildTopChord,
+  ostojnica_eaos: buildSoleBar,
+  belka_czolowa_eaos: buildHeadstock,
+  belka_skretowa_eaos: buildBolster,
+  czop_skretu_eaos: buildPivot,
+  belka_srodkowa_eaos: buildCenterSill,
+  poprzecznice_eaos: buildCrossBearers,
+  stopien_manewrowy_eaos: buildStep,
+  porecz_manewrowa_eaos: buildHandrail,
 };
