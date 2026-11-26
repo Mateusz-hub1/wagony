@@ -31,7 +31,9 @@ async function route() {
     return;
   }
   const id = location.hash.slice(1);
-  const w = list.wagony.find((x) => x.id === id && x.aktywny);
+  // w trybie ?debug można otworzyć też wagon jeszcze nieaktywny (do sprawdzania w trakcie budowy)
+  const debug = new URLSearchParams(location.search).has('debug');
+  const w = list.wagony.find((x) => x.id === id && (x.aktywny || (debug && x.modul)));
   if (w) await openWagon(w);
   else showSelect(list);
 }
