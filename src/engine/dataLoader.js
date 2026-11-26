@@ -7,6 +7,7 @@
 // wstawiane jest całe drzewo z tamtego pliku (z opisami z tamtego pliku).
 // Węzeł może też mieć "szablon": "maznica" – wtedy jego dzieci są brane z sekcji
 // "szablony" tego samego pliku (żeby nie powtarzać 4 razy tej samej maźnicy).
+// Opcjonalne "param": { ... } trafia do buildera (node.param) – np. wymiary zależne od wagonu.
 
 const cache = new Map();
 
@@ -61,6 +62,8 @@ async function resolveNode(raw, ctx, parent) {
     typ: src.typ,
     dopisek: src.dopisek ?? '',             // np. "lewa", "nr 1"
     model: src.model ?? null,                // opcjonalny plik .glb zamiast modelu z kodu
+    // parametry dla buildera (np. długość wagonu dla hamulca, strona zawiasów skrzydła drzwi)
+    param: src.param ?? {},
     zdejmowalny: !!src.zdejmowalny,
     // od tego poziomu w dół reszta wagonu jest ukrywana (żeby nie zasłaniała widoku)
     ukryjOtoczenie: !!src.ukryj_otoczenie,

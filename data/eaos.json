@@ -1,35 +1,126 @@
 {
   "seria": "Eaos",
+  "szablony": {
+    "drzwi": {
+      "typ": "drzwi_eaos",
+      "children": [
+        { "id": "skrzydlo_1", "typ": "skrzydlo_drzwi_eaos", "dopisek": "nr 1", "zdejmowalny": true, "param": { "strona": 1 } },
+        { "id": "skrzydlo_2", "typ": "skrzydlo_drzwi_eaos", "dopisek": "nr 2", "zdejmowalny": true, "param": { "strona": -1 } }
+      ]
+    },
+    "sciana_boczna": {
+      "typ": "sciana_boczna_eaos",
+      "children": [
+        { "id": "drzwi_1", "szablon": "drzwi", "dopisek": "nr 1" },
+        { "id": "drzwi_2", "szablon": "drzwi", "dopisek": "nr 2" }
+      ]
+    }
+  },
   "opisy": {
     "eaos": {
       "nazwa_pl": "Eaos",
       "nazwa_en": "Eaos open wagon",
       "funkcja": "Węglarka czteroosiowa (wagon odkryty wysokoburtowy) do przewozu ładunków masowych, np. węgla, kruszyw, złomu.",
-      "budowa": "Pudło stalowe z drzwiami bocznymi, ostoja spawana, dwa wózki Y25, urządzenia cięgłowo-zderzakowe, hamulec zespolony. W tej wersji pudło i ostoja są uproszczone (pełny model w etapie 3).",
+      "budowa": "Pudło stalowe z dwiema parami drzwi dwuskrzydłowych na każdym boku, ciągłym pasem górnym i podłogą stalową; spawana ostoja; dwa wózki Y25; urządzenia cięgłowo-zderzakowe; hamulec zespolony. Długość ze zderzakami 14 040 mm, rozstaw czopów skrętu 9 000 mm, długość ładunkowa 12 800 mm, szerokość ładunkowa 2 800 mm, wysokość podłogi ok. 1 200 mm.",
       "typowe_uszkodzenia": "[uzupełnić]",
       "wymiary_graniczne": "[uzupełnić]",
       "przepisy": "Oznaczenie literowe wg UIC 438-2 [uzupełnić: sprawdzić znaczenie liter]. GCU – Załącznik 9 [uzupełnić].",
       "zdjecia": [],
-      "zrodla": ["[uzupełnić]"],
+      "zrodla": [
+        "DB Cargo – katalog wagonów, Eaos-x 051: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456",
+        "VTG – karta wagonu Eaos B41.072C: https://www.vtg.com/fileadmin/VTG/Dokumente/waggon_datenblaetter/Boxwagen-Eaos-B41.072C.pdf"
+      ],
       "status": "do weryfikacji"
     },
     "pudlo_eaos": {
       "nazwa_pl": "pudło",
       "nazwa_en": "body",
-      "funkcja": "Przestrzeń ładunkowa wagonu.",
-      "budowa": "Ściany boczne, drzwi dwuskrzydłowe, ściany czołowe, podłoga stalowa, pas górny. Model uproszczony – szczegóły w etapie 3.",
-      "typowe_uszkodzenia": "[uzupełnić]",
+      "funkcja": "Przestrzeń ładunkowa wagonu; ściany przenoszą parcie ładunku.",
+      "budowa": "Podłoga stalowa, dwie ściany boczne (każda z dwiema parami drzwi dwuskrzydłowych), dwie ściany czołowe, ciągły pas górny po obu stronach. Konstrukcja spawana, przyspawana do ostoi.",
+      "typowe_uszkodzenia": "Wgniecenia i wybrzuszenia ścian, pęknięcia spoin słupków, korozja dolnej części ścian. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": ["DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny, dwie pary drzwi na stronę, podłoga stalowa): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"],
+      "status": "do weryfikacji"
+    },
+    "podloga_eaos": {
+      "nazwa_pl": "podłoga stalowa",
+      "nazwa_en": "steel floor",
+      "funkcja": "Przenosi masę ładunku na ostoję.",
+      "budowa": "Blachy stalowe zespawane ze sobą, oparte na poprzecznicach i belkach ostoi, z podłużnicami usztywniającymi.",
+      "typowe_uszkodzenia": "Wgniecenia od ładunku (np. złomu), perforacja korozyjna, pęknięcia spoin. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": ["VTG – karta wagonu Eaos B41.072C (wysokość podłogi 1 200 mm): https://www.vtg.com/fileadmin/VTG/Dokumente/waggon_datenblaetter/Boxwagen-Eaos-B41.072C.pdf"],
+      "status": "do weryfikacji"
+    },
+    "sciana_boczna_eaos": {
+      "nazwa_pl": "ściana boczna",
+      "nazwa_en": "side wall",
+      "funkcja": "Zamyka przestrzeń ładunkową z boku i przenosi parcie ładunku.",
+      "budowa": "Poszycie z blachy stalowej, słupki pośrednie z profili, wzmocnione słupki drzwiowe, listwa dolna z zaczepami. Dwa otwory drzwiowe.",
+      "typowe_uszkodzenia": "Wybrzuszenia poszycia, pęknięte lub odgięte słupki, pęknięcia spoin przy ostoi. [uzupełnić]",
       "wymiary_graniczne": "[uzupełnić]",
       "przepisy": "[uzupełnić]",
       "zdjecia": [],
       "zrodla": [],
       "status": "do weryfikacji"
     },
+    "drzwi_eaos": {
+      "nazwa_pl": "drzwi dwuskrzydłowe",
+      "nazwa_en": "double-leaf door",
+      "funkcja": "Umożliwiają ręczny wyładunek i czyszczenie wnętrza z boku wagonu.",
+      "budowa": "Dwa skrzydła na zawiasach przy słupkach drzwiowych, zamykane ryglami pionowymi zaczepiającymi o podłogę i pas górny.",
+      "typowe_uszkodzenia": "Wygięte skrzydła, zatarte lub urwane zawiasy, niedomykające się rygle, brak zabezpieczenia zamknięcia. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "skrzydlo_drzwi_eaos": {
+      "nazwa_pl": "skrzydło drzwi",
+      "nazwa_en": "door leaf",
+      "funkcja": "Ruchoma część drzwi; otwiera się na zewnątrz wagonu.",
+      "budowa": "Blacha z ramą i użebrowaniem z profili, trzy zawiasy, rygiel pionowy z dźwignią.",
+      "typowe_uszkodzenia": "Odkształcenia, pęknięcia przy zawiasach, luzy w zawiasach, uszkodzony rygiel. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "sciana_czolowa_eaos": {
+      "nazwa_pl": "ściana czołowa",
+      "nazwa_en": "end wall",
+      "funkcja": "Zamyka przestrzeń ładunkową od czoła i przejmuje parcie ładunku przy hamowaniu i uderzeniach.",
+      "budowa": "Poszycie z blachy, użebrowanie pionowe i poziome, rama górna, słupki narożne łączące ze ścianami bocznymi.",
+      "typowe_uszkodzenia": "Wybrzuszenia od przesuniętego ładunku, pęknięcia słupków narożnych. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "pas_gorny_eaos": {
+      "nazwa_pl": "pas górny",
+      "nazwa_en": "top chord",
+      "funkcja": "Usztywnia górną krawędź ściany bocznej; nad drzwiami stanowi ich górne oparcie.",
+      "budowa": "Ciągły profil zamknięty przyspawany do poszycia i słupków na całej długości ściany.",
+      "typowe_uszkodzenia": "Wygięcia od chwytaków i urządzeń wyładowczych, pęknięcia, korozja wewnątrz profilu. [uzupełnić]",
+      "wymiary_graniczne": "[uzupełnić]",
+      "przepisy": "[uzupełnić]",
+      "zdjecia": [],
+      "zrodla": ["DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"],
+      "status": "do weryfikacji"
+    },
     "ostoja_eaos": {
       "nazwa_pl": "ostoja",
       "nazwa_en": "underframe",
       "funkcja": "Nośna konstrukcja wagonu: przenosi masę pudła i ładunku na wózki oraz siły pociągowe i zderzakowe.",
-      "budowa": "Ostojnice, belki czołowe, belki skrętowe z czopami skrętu, belka środkowa, poprzecznice. Model uproszczony – szczegóły w etapie 3.",
+      "budowa": "Ostojnice, belki czołowe, belki skrętowe z czopami skrętu, belka środkowa, poprzecznice. Model uproszczony – szczegóły w kolejnym kroku.",
       "typowe_uszkodzenia": "[uzupełnić]",
       "wymiary_graniczne": "[uzupełnić]",
       "przepisy": "[uzupełnić]",
@@ -42,7 +133,15 @@
     "id": "eaos",
     "typ": "eaos",
     "children": [
-      { "id": "pudlo", "typ": "pudlo_eaos" },
+      { "id": "pudlo", "typ": "pudlo_eaos", "children": [
+        { "id": "podloga", "typ": "podloga_eaos" },
+        { "id": "sciana_boczna_1", "szablon": "sciana_boczna", "dopisek": "strona 1" },
+        { "id": "sciana_boczna_2", "szablon": "sciana_boczna", "dopisek": "strona 2" },
+        { "id": "sciana_czolowa_1", "typ": "sciana_czolowa_eaos", "dopisek": "nr 1" },
+        { "id": "sciana_czolowa_2", "typ": "sciana_czolowa_eaos", "dopisek": "nr 2" },
+        { "id": "pas_gorny_1", "typ": "pas_gorny_eaos", "dopisek": "strona 1" },
+        { "id": "pas_gorny_2", "typ": "pas_gorny_eaos", "dopisek": "strona 2" }
+      ] },
       { "id": "ostoja", "typ": "ostoja_eaos" },
       { "id": "wozek_1", "ref": "components/y25.json", "dopisek": "nr 1" },
       { "id": "wozek_2", "ref": "components/y25.json", "dopisek": "nr 2" }
