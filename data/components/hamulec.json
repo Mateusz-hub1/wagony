@@ -1,6 +1,6 @@
 {
   "podzespol": "Hamulec zespolony",
-  "uwaga": "Opisy skrócone, wersja robocza. Wszystkie do weryfikacji. Liczby tylko ze źródeł, w innym wypadku [uzupełnić]. Wagon podaje w węźle \"param\": dlugosc (między licami belek czołowych), x_wozka (pół rozstawu czopów), hamulec_reczny (true/false – gdy false, usuń też węzeł hamulec_reczny).",
+  "uwaga": "Opisy skrócone, wersja robocza. Wszystkie do weryfikacji. Liczby tylko ze źródeł; pola bez danych są pomijane, a notatki do sprawdzenia są w ukrytym polu \"do_sprawdzenia\". Wagon podaje w węźle \"param\": dlugosc (między licami belek czołowych), x_wozka (pół rozstawu czopów), hamulec_reczny (true/false – gdy false, usuń też węzeł hamulec_reczny).",
   "drzewo": {
     "id": "hamulec",
     "typ": "hamulec",
@@ -91,11 +91,15 @@
       "nazwa_en": "air brake (automatic brake)",
       "funkcja": "Hamuje wagon razem z całym pociągiem; działa samoczynnie – spadek ciśnienia w przewodzie głównym (także przy rozerwaniu pociągu) powoduje hamowanie.",
       "budowa": "Przewód główny z kurkami końcowymi i sprzęgami hamulcowymi, zawór rozrządczy, zbiornik pomocniczy, cylinder hamulcowy, przestawiacz próżny/ładowny, luzownik, nastawiacz skoku tłoka, cięgła i dźwignie do wózków, hamulec ręczny (w części wagonów).",
-      "typowe_uszkodzenia": "Nieszczelności, uszkodzone węże, niesprawny zawór rozrządczy lub luzownik, źle ustawiony przestawiacz, nieprawidłowy skok tłoka. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzone węże, niesprawny zawór rozrządczy lub luzownik, źle ustawiony przestawiacz, nieprawidłowy skok tłoka.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "zawor_rozrzadczy": {
@@ -103,11 +107,14 @@
       "nazwa_en": "distributor (control valve)",
       "funkcja": "Steruje napełnianiem i opróżnianiem cylindra hamulcowego w zależności od zmian ciśnienia w przewodzie głównym; napełnia zbiornik pomocniczy.",
       "budowa": "Korpus z mechanizmem zaworowym na płycie przyłączeniowej, z rękojeścią przestawiacza G/P (pociąg towarowy / osobowy).",
-      "typowe_uszkodzenia": "Nieszczelności, zbyt wolne lub zbyt szybkie luzowanie, zabrudzenia. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 15355; UIC 540 [uzupełnić]",
+      "typowe_uszkodzenia": "Nieszczelności, zbyt wolne lub zbyt szybkie luzowanie, zabrudzenia.",
+      "przepisy": "EN 15355; UIC 540",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: UIC 540 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "cylinder_hamulcowy": {
@@ -115,11 +122,16 @@
       "nazwa_en": "brake cylinder",
       "funkcja": "Zamienia ciśnienie powietrza na siłę, która przez dźwignie i cięgła dociska klocki do kół.",
       "budowa": "Korpus z tylną pokrywą, tłok z uszczelnieniem, tłoczysko, sprężyna powrotna, pokrywa przednia.",
-      "typowe_uszkodzenia": "Nieszczelność uszczelnienia tłoka, uszkodzona sprężyna powrotna, korozja. [uzupełnić]",
-      "wymiary_graniczne": "Skok tłoka [uzupełnić]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Nieszczelność uszczelnienia tłoka, uszkodzona sprężyna powrotna, korozja.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "wymiary_graniczne: Skok tłoka – uzupełnić",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "tlok_cylindra": {
@@ -127,11 +139,12 @@
       "nazwa_en": "piston with push rod",
       "funkcja": "Przenosi siłę z powietrza na dźwignię cylindrową.",
       "budowa": "Tłok z mankietem uszczelniającym, tłoczysko z widełkami, sprężyna powrotna.",
-      "typowe_uszkodzenia": "Zużyty mankiet, skrzywione tłoczysko, pęknięta sprężyna. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Zużyty mankiet, skrzywione tłoczysko, pęknięta sprężyna.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "pokrywa_cylindra": {
@@ -139,11 +152,12 @@
       "nazwa_en": "cylinder cover",
       "funkcja": "Zamyka cylinder od strony tłoczyska i je prowadzi.",
       "budowa": "Pokrywa przykręcona do kołnierza cylindra, z otworem odpowietrzającym.",
-      "typowe_uszkodzenia": "Pęknięcia, luźne śruby, zatkany otwór odpowietrzający. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcia, luźne śruby, zatkany otwór odpowietrzający.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "nastawiacz": {
@@ -151,11 +165,15 @@
       "nazwa_en": "slack adjuster",
       "funkcja": "Samoczynnie kasuje luz powstający przez zużycie wstawek hamulcowych, dzięki czemu skok tłoka pozostaje stały.",
       "budowa": "Korpus z gwintowanym wrzecionem i mechanizmem regulacyjnym, włączony w cięgło hamulcowe, z dźwignią sterującą.",
-      "typowe_uszkodzenia": "Zablokowanie, niewłaściwa regulacja, uszkodzenia mechaniczne. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Zablokowanie, niewłaściwa regulacja, uszkodzenia mechaniczne.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "przestawiacz_prozny_ladowny": {
@@ -163,11 +181,16 @@
       "nazwa_en": "empty/load changeover device",
       "funkcja": "Zmienia siłę hamowania zależnie od tego, czy wagon jest próżny, czy ładowny (żeby nie blokować kół wagonu próżnego i skutecznie hamować ładowny).",
       "budowa": "Zawór przełączający przy cylindrze / zaworze rozrządczym, z dźwignią wyprowadzoną na bok wagonu i tabliczką położeń.",
-      "typowe_uszkodzenia": "Dźwignia w złym położeniu, zatarcie, brak lub nieczytelna tabliczka. [uzupełnić]",
-      "wymiary_graniczne": "Masa przestawienia [uzupełnić – z napisów na wagonie]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Dźwignia w złym położeniu, zatarcie, brak lub nieczytelna tabliczka.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "wymiary_graniczne: Masa przestawienia – z napisów na wagonie",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "dzwignia_przestawiacza": {
@@ -175,11 +198,12 @@
       "nazwa_en": "changeover lever",
       "funkcja": "Ręczne przełączanie położenia próżny / ładowny z boku wagonu.",
       "budowa": "Wałek z rękojeścią przy ostojnicy i tabliczka położeń.",
-      "typowe_uszkodzenia": "Wygięta lub zablokowana dźwignia, brak tabliczki. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Wygięta lub zablokowana dźwignia, brak tabliczki.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "luzownik": {
@@ -187,11 +211,15 @@
       "nazwa_en": "release valve",
       "funkcja": "Pozwala ręcznie odluźnić hamulec wagonu (np. odstawionego bez powietrza w przewodzie głównym).",
       "budowa": "Zawór przy zbiorniku / zaworze rozrządczym z cięgłem wyprowadzonym na oba boki wagonu, zakończonym uchwytami.",
-      "typowe_uszkodzenia": "Nieszczelność, urwane lub zablokowane cięgło. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Nieszczelność, urwane lub zablokowane cięgło.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "zbiornik_pomocniczy": {
@@ -199,11 +227,16 @@
       "nazwa_en": "auxiliary reservoir",
       "funkcja": "Gromadzi sprężone powietrze, które przy hamowaniu trafia do cylindra hamulcowego.",
       "budowa": "Stalowy zbiornik z wypukłymi dennicami, mocowany opaskami do ostoi, z korkiem spustowym.",
-      "typowe_uszkodzenia": "Korozja, nieszczelności, uszkodzone opaski. [uzupełnić]",
-      "wymiary_graniczne": "Pojemność [uzupełnić]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Korozja, nieszczelności, uszkodzone opaski.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "wymiary_graniczne: Pojemność – uzupełnić",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "przewod_glowny": {
@@ -211,11 +244,15 @@
       "nazwa_en": "brake pipe",
       "funkcja": "Biegnie przez cały pociąg; zasila hamulce wagonów i przekazuje sygnał hamowania (spadek ciśnienia).",
       "budowa": "Rura stalowa wzdłuż wagonu, mocowana obejmami do ostoi, zakończona kurkami końcowymi.",
-      "typowe_uszkodzenia": "Nieszczelności połączeń, korozja, uszkodzone obejmy. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Nieszczelności połączeń, korozja, uszkodzone obejmy.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "rury_laczace": {
@@ -223,11 +260,12 @@
       "nazwa_en": "branch pipes",
       "funkcja": "Łączą przewód główny z zaworem rozrządczym oraz zawór z cylindrem, zbiornikiem i przestawiaczem.",
       "budowa": "Rury stalowe z połączeniami gwintowanymi, kurek odcinający na odgałęzieniu do zaworu.",
-      "typowe_uszkodzenia": "Nieszczelności, pęknięcia, uszkodzenia mechaniczne. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Nieszczelności, pęknięcia, uszkodzenia mechaniczne.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "ciegla_hamulcowe": {
@@ -235,11 +273,15 @@
       "nazwa_en": "brake rigging",
       "funkcja": "Przenoszą siłę z cylindra hamulcowego na układy hamulcowe obu wózków.",
       "budowa": "Dźwignia cylindrowa i dźwignia stała połączone cięgłem; od każdej z nich cięgło do dźwigni hamulca wózka.",
-      "typowe_uszkodzenia": "Zużyte sworznie i tuleje, brak zabezpieczeń sworzni, skrzywione cięgła. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Zużyte sworznie i tuleje, brak zabezpieczeń sworzni, skrzywione cięgła.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "kurek_koncowy": {
@@ -247,11 +289,15 @@
       "nazwa_en": "end cock",
       "funkcja": "Zamyka lub otwiera przewód główny na końcu wagonu (przy łączeniu i rozłączaniu wagonów).",
       "budowa": "Zawór kulowy z rękojeścią; rękojeść wzdłuż przewodu – kurek otwarty.",
-      "typowe_uszkodzenia": "Nieszczelność, zablokowana lub urwana rękojeść. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Nieszczelność, zablokowana lub urwana rękojeść.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "sprzeg_hamulcowy": {
@@ -259,11 +305,15 @@
       "nazwa_en": "brake hose coupling",
       "funkcja": "Łączy przewody główne sąsiednich wagonów.",
       "budowa": "Gumowy wąż z opaskami i głowicą z uszczelką.",
-      "typowe_uszkodzenia": "Pęknięcia i starzenie gumy, uszkodzona uszczelka głowicy, przetarcia. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Pęknięcia i starzenie gumy, uszkodzona uszczelka głowicy, przetarcia.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "hamulec_reczny": {
@@ -271,11 +321,15 @@
       "nazwa_en": "hand brake",
       "funkcja": "Zabezpiecza odstawiony wagon przed zbiegnięciem. Występuje tylko w części wagonów.",
       "budowa": "Koło ręczne na ścianie czołowej, przekładnia, cięgło do dźwigni hamulca wagonu.",
-      "typowe_uszkodzenia": "Zatarta przekładnia, urwane cięgło, brak koła. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze) [uzupełnić: sprawdzić numery i rozdziały]; GCU / VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Zatarta przekładnia, urwane cięgło, brak koła.",
+      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
+        "przepisy: GCU / VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     }
   }

@@ -27,7 +27,7 @@ export function buildMainPipe(node) {
   for (const x of [-3.3, -2.0, -0.7, 0.7, 2.0, 3.3, 5.45, -5.45]) {
     if (Math.abs(x) > lay.L - 0.9) continue;
     holders.push(boxGeom(0.04, 0.05, 0.06, [x, lay.pipeY, lay.pipeZ]));
-    holders.push(boxGeom(0.03, 1.05 - lay.pipeY, 0.012, [x, (lay.pipeY + 1.05) / 2, lay.pipeZ - 0.035]));
+    holders.push(boxGeom(0.03, lay.mountY - lay.pipeY, 0.012, [x, (lay.pipeY + lay.mountY) / 2, lay.pipeZ - 0.035]));
   }
   merged(holders, M.paintDark, { parent: g });
   return g;
@@ -93,7 +93,7 @@ export function buildAuxReservoir(node) {
   // opaski i wsporniki do poprzecznic
   for (const dx of [-h * 0.55, h * 0.55]) {
     mesh(latheGeom([[R + 0.001, -0.02], [R + 0.008, -0.02], [R + 0.008, 0.02], [R + 0.001, 0.02]], { seg: 48 }), M.steelRaw, { rot: ALONG_X, pos: [x + dx, y, z], parent: g });
-    box(0.04, 1.05 - (y + R) + 0.01, 0.04, M.paintDark, { pos: [x + dx, (y + R + 1.05) / 2, z], r: 0.004, parent: g });
+    box(0.04, lay.mountY - (y + R) + 0.01, 0.04, M.paintDark, { pos: [x + dx, (y + R + lay.mountY) / 2, z], r: 0.004, parent: g });
   }
   // korek spustowy na spodzie
   cylinder(0.015, 0.03, M.steelMachined, { pos: [x, y - R - 0.01, z], parent: g });

@@ -36,10 +36,11 @@ wymiary_graniczne: wymiary graniczne i zużycia
 przepisy: odniesienia do przepisów i norm (np. GCU, VPI, karty UIC, normy EN)
 zdjecia: lista zdjęć, na razie pusta (zdjęcia z hali dodamy później)
 status: "do weryfikacji" albo "zweryfikowane"
+do_sprawdzenia: ukryta lista notatek do weryfikacji (opcjonalna)
 
 NIE dodawaj numerów katalogowych.
 
-Zasada rzetelności: treści opieraj na publicznie dostępnych źródłach. Nie zmyślaj liczb. Jeśli nie masz pewnego źródła, wpisz "[uzupełnić]". Wszystkie nowe opisy dostają status "do weryfikacji", bo sprawdza je Mateusz na podstawie doświadczenia z pracy. Źródła zapisuj w polu zrodla.
+Zasada rzetelności: treści opieraj na publicznie dostępnych źródłach. Nie zmyślaj liczb. Jeśli nie masz pewnego źródła, pomiń pole (nie wpisuj "[uzupełnić]"); panel opisu ukrywa puste pola. Liczby bez źródła w kodzie 3D oznaczaj komentarzem SZACUNKOWE. Notatki o tym, co trzeba sprawdzić, wpisuj w ukryte pole do_sprawdzenia (lista tekstów, panel go nie pokazuje). Wszystkie nowe opisy dostają status "do weryfikacji", bo sprawdza je Mateusz na podstawie doświadczenia z pracy. Źródła zapisuj w polu zrodla.
 
 Technologia
 Statyczna strona bez etapu budowania: index.html + JavaScript (moduły ES) + Three.js ładowany przez importmap z CDN. Ma działać na GitHub Pages bez żadnej konfiguracji.

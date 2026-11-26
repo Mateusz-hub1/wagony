@@ -4,7 +4,7 @@ import { Viewer } from './engine/scene.js';
 import { loadWagonList, loadWagonData, walk } from './engine/dataLoader.js';
 import { buildModel } from './engine/partRegistry.js';
 import { Navigator } from './engine/navigator.js';
-import { Animator } from './engine/explode.js';
+import { Animator, setOpenRotation } from './engine/explode.js';
 import { applyVisibility, applyHighlight } from './engine/visibility.js';
 import { Picker } from './engine/picking.js';
 import { TreeView } from './ui/tree.js';
@@ -102,6 +102,9 @@ async function openWagon(w) {
     onChange('init');
     viewer.resetCamera(targetBox(root), 0.001);
     loading.hidden = true;
+    // tryb sprawdzania (?debug w adresie) – patrz src/engine/debug.js
+    const params = new URLSearchParams(location.search);
+    if (params.has('debug')) (await import('./engine/debug.js')).installDebug(current, viewer, params);
   } catch (e) {
     console.error(e);
     loading.textContent = `Błąd: ${e.message}`;
@@ -169,10 +172,11 @@ function targetBox(node) {
   for (const n of walk(root)) {
     if (!n.parent) continue;
     const o = n.object, u = o.userData;
-    saved.push([o, o.position.clone()]);
+    saved.push([o, o.position.clone(), o.rotation.clone()]);
     o.position.copy(u.basePos)
       .addScaledVector(u.explode, n.parent.exploded ? 1 : 0)
       .addScaledVector(u.remove, n.removed ? 1 : 0);
+    if (u.removeRot) setOpenRotation(o, n.removed ? 1 : 0);
   }
   root.object.updateMatrixWorld(true);
   const box = new THREE.Box3();
@@ -180,12 +184,12 @@ function targetBox(node) {
     if (skip(n)) continue;
     for (const m of n.meshes) box.expandByObject(m);
   }
-  for (const [o, p] of saved) o.position.copy(p);
+  for (const [o, p, r] of saved) { o.position.copy(p); o.rotation.copy(r); }
   root.object.updateMatrixWorld(true);
   return box;
 }
 function skip(n) {
-  for (let p = n; p; p = p.parent) if (p.hidden || p.removed) return true;
+  for (let p = n; p; p = p.parent) if (p.hidden || (p.removed && !p.object.userData.opens)) return true;
   return false;
 }
 

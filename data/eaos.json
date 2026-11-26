@@ -41,10 +41,11 @@
     },
     "belka_skretowa": {
       "typ": "belka_skretowa_eaos",
+      "ukryj_otoczenie": true,
       "children": [
         {
           "id": "czop_skretu",
-          "typ": "czop_skretu_eaos"
+          "ref": "components/ostoja.json#czop_skretu"
         }
       ]
     }
@@ -55,13 +56,15 @@
       "nazwa_en": "Eaos open wagon",
       "funkcja": "Węglarka czteroosiowa (wagon odkryty wysokoburtowy) do przewozu ładunków masowych, np. węgla, kruszyw, złomu.",
       "budowa": "Pudło stalowe z dwiema parami drzwi dwuskrzydłowych na każdym boku, ciągłym pasem górnym i podłogą stalową; spawana ostoja; dwa wózki Y25; urządzenia cięgłowo-zderzakowe; hamulec zespolony. Długość ze zderzakami 14 040 mm, rozstaw czopów skrętu 9 000 mm, długość ładunkowa 12 800 mm, szerokość ładunkowa 2 800 mm, wysokość podłogi ok. 1 200 mm.",
-      "typowe_uszkodzenia": "[uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "Oznaczenie literowe wg UIC 438-2 [uzupełnić: sprawdzić znaczenie liter]. GCU – Załącznik 9 [uzupełnić].",
+      "przepisy": "Oznaczenie literowe wg UIC 438-2. GCU – Załącznik 9.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo – katalog wagonów, Eaos-x 051: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456",
         "VTG – karta wagonu Eaos B41.072C: https://www.vtg.com/fileadmin/VTG/Dokumente/waggon_datenblaetter/Boxwagen-Eaos-B41.072C.pdf"
+      ],
+      "do_sprawdzenia": [
+        "przepisy: Oznaczenie literowe wg UIC 438-2 – sprawdzić znaczenie liter",
+        "przepisy: GCU – Załącznik 9 – uzupełnić"
       ],
       "status": "do weryfikacji"
     },
@@ -70,12 +73,13 @@
       "nazwa_en": "body",
       "funkcja": "Przestrzeń ładunkowa wagonu; ściany przenoszą parcie ładunku.",
       "budowa": "Podłoga stalowa, dwie ściany boczne (każda z dwiema parami drzwi dwuskrzydłowych), dwie ściany czołowe, ciągły pas górny po obu stronach. Konstrukcja spawana, przyspawana do ostoi.",
-      "typowe_uszkodzenia": "Wgniecenia i wybrzuszenia ścian, pęknięcia spoin słupków, korozja dolnej części ścian. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Wgniecenia i wybrzuszenia ścian, pęknięcia spoin słupków, korozja dolnej części ścian.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny, dwie pary drzwi na stronę, podłoga stalowa): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
       ],
       "status": "do weryfikacji"
     },
@@ -84,12 +88,13 @@
       "nazwa_en": "steel floor",
       "funkcja": "Przenosi masę ładunku na ostoję.",
       "budowa": "Blachy stalowe zespawane ze sobą, oparte na poprzecznicach i belkach ostoi, z podłużnicami usztywniającymi.",
-      "typowe_uszkodzenia": "Wgniecenia od ładunku (np. złomu), perforacja korozyjna, pęknięcia spoin. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Wgniecenia od ładunku (np. złomu), perforacja korozyjna, pęknięcia spoin.",
       "zdjecia": [],
       "zrodla": [
         "VTG – karta wagonu Eaos B41.072C (wysokość podłogi 1 200 mm): https://www.vtg.com/fileadmin/VTG/Dokumente/waggon_datenblaetter/Boxwagen-Eaos-B41.072C.pdf"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
       ],
       "status": "do weryfikacji"
     },
@@ -98,11 +103,12 @@
       "nazwa_en": "side wall",
       "funkcja": "Zamyka przestrzeń ładunkową z boku i przenosi parcie ładunku.",
       "budowa": "Poszycie z blachy stalowej, słupki pośrednie z profili, wzmocnione słupki drzwiowe, listwa dolna z zaczepami. Dwa otwory drzwiowe.",
-      "typowe_uszkodzenia": "Wybrzuszenia poszycia, pęknięte lub odgięte słupki, pęknięcia spoin przy ostoi. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Wybrzuszenia poszycia, pęknięte lub odgięte słupki, pęknięcia spoin przy ostoi.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "drzwi_eaos": {
@@ -110,11 +116,12 @@
       "nazwa_en": "double-leaf door",
       "funkcja": "Umożliwiają ręczny wyładunek i czyszczenie wnętrza z boku wagonu.",
       "budowa": "Dwa skrzydła na zawiasach przy słupkach drzwiowych, zamykane ryglami pionowymi zaczepiającymi o podłogę i pas górny.",
-      "typowe_uszkodzenia": "Wygięte skrzydła, zatarte lub urwane zawiasy, niedomykające się rygle, brak zabezpieczenia zamknięcia. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Wygięte skrzydła, zatarte lub urwane zawiasy, niedomykające się rygle, brak zabezpieczenia zamknięcia.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "skrzydlo_drzwi_eaos": {
@@ -122,11 +129,12 @@
       "nazwa_en": "door leaf",
       "funkcja": "Ruchoma część drzwi; otwiera się na zewnątrz wagonu.",
       "budowa": "Blacha z ramą i użebrowaniem z profili, trzy zawiasy, rygiel pionowy z dźwignią.",
-      "typowe_uszkodzenia": "Odkształcenia, pęknięcia przy zawiasach, luzy w zawiasach, uszkodzony rygiel. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Odkształcenia, pęknięcia przy zawiasach, luzy w zawiasach, uszkodzony rygiel.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "sciana_czolowa_eaos": {
@@ -134,11 +142,12 @@
       "nazwa_en": "end wall",
       "funkcja": "Zamyka przestrzeń ładunkową od czoła i przejmuje parcie ładunku przy hamowaniu i uderzeniach.",
       "budowa": "Poszycie z blachy, użebrowanie pionowe i poziome, rama górna, słupki narożne łączące ze ścianami bocznymi.",
-      "typowe_uszkodzenia": "Wybrzuszenia od przesuniętego ładunku, pęknięcia słupków narożnych. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Wybrzuszenia od przesuniętego ładunku, pęknięcia słupków narożnych.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "pas_gorny_eaos": {
@@ -146,12 +155,13 @@
       "nazwa_en": "top chord",
       "funkcja": "Usztywnia górną krawędź ściany bocznej; nad drzwiami stanowi ich górne oparcie.",
       "budowa": "Ciągły profil zamknięty przyspawany do poszycia i słupków na całej długości ściany.",
-      "typowe_uszkodzenia": "Wygięcia od chwytaków i urządzeń wyładowczych, pęknięcia, korozja wewnątrz profilu. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Wygięcia od chwytaków i urządzeń wyładowczych, pęknięcia, korozja wewnątrz profilu.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
       ],
       "status": "do weryfikacji"
     },
@@ -160,12 +170,13 @@
       "nazwa_en": "underframe",
       "funkcja": "Nośna konstrukcja wagonu: przenosi masę pudła i ładunku na wózki oraz siły pociągowe i zderzakowe.",
       "budowa": "Spawana rama z dwóch ostojnic, dwóch belek czołowych, dwóch belek skrętowych z czopami skrętu, belki środkowej i poprzecznic. Na końcach stopnie i poręcze manewrowe.",
-      "typowe_uszkodzenia": "Pęknięcia spoin (zwłaszcza przy belkach skrętowych i czołowych), odkształcenia belek czołowych po uderzeniach, korozja. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcia spoin (zwłaszcza przy belkach skrętowych i czołowych), odkształcenia belek czołowych po uderzeniach, korozja.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo – katalog wagonów, Eaos-x 051 (rozstaw czopów skrętu 9 000 mm): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
       ],
       "status": "do weryfikacji"
     },
@@ -174,11 +185,12 @@
       "nazwa_en": "sole bar",
       "funkcja": "Główna podłużna belka ostoi po boku wagonu; podpiera ścianę boczną.",
       "budowa": "Kształtownik (ceownik) z przeponami wewnątrz, przyspawany do belek czołowych, skrętowych i poprzecznic.",
-      "typowe_uszkodzenia": "Pęknięcia, odkształcenia, korozja półki dolnej. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcia, odkształcenia, korozja półki dolnej.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "belka_czolowa_eaos": {
@@ -186,11 +198,12 @@
       "nazwa_en": "headstock",
       "funkcja": "Zamyka ostoję na końcu wagonu; na niej mocowane są zderzaki i przez nią przechodzi hak cięgłowy.",
       "budowa": "Belka skrzynkowa z blachy czołowej, półek i żeber; nakładki wzmacniające pod zderzaki, otwór haka.",
-      "typowe_uszkodzenia": "Odkształcenia po uderzeniach (najechania), pęknięcia przy mocowaniu zderzaków. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Odkształcenia po uderzeniach (najechania), pęknięcia przy mocowaniu zderzaków.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "belka_skretowa_eaos": {
@@ -198,25 +211,14 @@
       "nazwa_en": "body bolster",
       "funkcja": "Przenosi masę pudła z ostojnic na czop skrętu i ślizgi boczne wózka.",
       "budowa": "Belka skrzynkowa w poprzek wagonu nad wózkiem; w środku czop skrętu, po bokach przeciwślizgi.",
-      "typowe_uszkodzenia": "Pęknięcia spoin z ostojnicami, zużycie przeciwślizgów. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcia spoin z ostojnicami, zużycie przeciwślizgów.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo – katalog wagonów, Eaos-x 051 (rozstaw czopów skrętu 9 000 mm): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
       ],
-      "status": "do weryfikacji"
-    },
-    "czop_skretu_eaos": {
-      "nazwa_pl": "czop skrętu",
-      "nazwa_en": "centre pivot (body centre plate)",
-      "funkcja": "Opiera pudło na gnieździe skrętu wózka i pozwala wózkowi obracać się w łukach.",
-      "budowa": "Toczony czop z kołnierzem przykręcony do spodu belki skrętowej.",
-      "typowe_uszkodzenia": "Zużycie powierzchni oporowej i bocznej, pęknięcia, luzy w gnieździe. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
-      "zdjecia": [],
-      "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "belka_srodkowa_eaos": {
@@ -224,11 +226,12 @@
       "nazwa_en": "centre sill",
       "funkcja": "Przenosi siły pociągowe i ściskające między końcami wagonu; mieści urządzenie cięgłowe.",
       "budowa": "Dwa ceowniki wzdłuż osi wagonu połączone przewiązkami.",
-      "typowe_uszkodzenia": "Pęknięcia, odkształcenia w rejonie urządzenia cięgłowego. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcia, odkształcenia w rejonie urządzenia cięgłowego.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "poprzecznice_eaos": {
@@ -236,38 +239,11 @@
       "nazwa_en": "cross bearers",
       "funkcja": "Łączą belkę środkową z ostojnicami i podpierają podłogę.",
       "budowa": "Dwuteowniki spawane między belką środkową a ostojnicami.",
-      "typowe_uszkodzenia": "Pęknięcia spoin, korozja. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcia spoin, korozja.",
       "zdjecia": [],
       "zrodla": [],
-      "status": "do weryfikacji"
-    },
-    "stopien_manewrowy_eaos": {
-      "nazwa_pl": "stopień manewrowy",
-      "nazwa_en": "shunter's step",
-      "funkcja": "Miejsce, na którym stoi manewrowy podczas jazdy na wagonie.",
-      "budowa": "Kratowy stopień na dwóch wspornikach przy narożniku ostoi.",
-      "typowe_uszkodzenia": "Wygięte wsporniki, urwany lub skorodowany stopień. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
-      "zdjecia": [],
-      "zrodla": [
-        "UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych [uzupełnić: wymiary]"
-      ],
-      "status": "do weryfikacji"
-    },
-    "porecz_manewrowa_eaos": {
-      "nazwa_pl": "poręcze manewrowe",
-      "nazwa_en": "shunter's handrails",
-      "funkcja": "Uchwyty do trzymania się przez manewrowego na stopniu.",
-      "budowa": "Poręcz pionowa na ścianie czołowej i pozioma na ostojnicy, z prętów okrągłych.",
-      "typowe_uszkodzenia": "Wygięte lub urwane poręcze, pęknięte mocowania. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
-      "zdjecia": [],
-      "zrodla": [
-        "UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych [uzupełnić: wymiary]"
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
       ],
       "status": "do weryfikacji"
     }
@@ -319,6 +295,11 @@
       {
         "id": "ostoja",
         "typ": "ostoja_eaos",
+        "param": {
+          "pol_dlugosci": 6.4,
+          "z_ostojnicy": 1.4,
+          "pol_szerokosci": 1.4
+        },
         "children": [
           {
             "id": "ostojnica_1",
@@ -360,7 +341,7 @@
           },
           {
             "id": "stopien_manewrowy_1",
-            "typ": "stopien_manewrowy_eaos",
+            "ref": "components/ostoja.json#stopien_manewrowy",
             "dopisek": "narożnik 1",
             "param": {
               "sx": 1,
@@ -369,7 +350,7 @@
           },
           {
             "id": "stopien_manewrowy_2",
-            "typ": "stopien_manewrowy_eaos",
+            "ref": "components/ostoja.json#stopien_manewrowy",
             "dopisek": "narożnik 2",
             "param": {
               "sx": 1,
@@ -378,7 +359,7 @@
           },
           {
             "id": "stopien_manewrowy_3",
-            "typ": "stopien_manewrowy_eaos",
+            "ref": "components/ostoja.json#stopien_manewrowy",
             "dopisek": "narożnik 3",
             "param": {
               "sx": -1,
@@ -387,7 +368,7 @@
           },
           {
             "id": "stopien_manewrowy_4",
-            "typ": "stopien_manewrowy_eaos",
+            "ref": "components/ostoja.json#stopien_manewrowy",
             "dopisek": "narożnik 4",
             "param": {
               "sx": -1,
@@ -396,7 +377,7 @@
           },
           {
             "id": "porecz_manewrowa_1",
-            "typ": "porecz_manewrowa_eaos",
+            "ref": "components/ostoja.json#porecz_manewrowa",
             "dopisek": "narożnik 1",
             "param": {
               "sx": 1,
@@ -405,7 +386,7 @@
           },
           {
             "id": "porecz_manewrowa_2",
-            "typ": "porecz_manewrowa_eaos",
+            "ref": "components/ostoja.json#porecz_manewrowa",
             "dopisek": "narożnik 2",
             "param": {
               "sx": 1,
@@ -414,7 +395,7 @@
           },
           {
             "id": "porecz_manewrowa_3",
-            "typ": "porecz_manewrowa_eaos",
+            "ref": "components/ostoja.json#porecz_manewrowa",
             "dopisek": "narożnik 3",
             "param": {
               "sx": -1,
@@ -423,7 +404,7 @@
           },
           {
             "id": "porecz_manewrowa_4",
-            "typ": "porecz_manewrowa_eaos",
+            "ref": "components/ostoja.json#porecz_manewrowa",
             "dopisek": "narożnik 4",
             "param": {
               "sx": -1,

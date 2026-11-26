@@ -93,6 +93,17 @@ export const M = {
   placeholder: std({ color: 0xd0473a, roughness: 0.6, metalness: 0, transparent: true, opacity: 0.6 }, null, { textured: false }),
 };
 
+// Farba w dowolnym kolorze, z takim samym zużyciem jak farba pudła (np. inny kolor wagonu).
+// Wynik jest zapamiętywany, więc wiele wywołań z tym samym kolorem daje ten sam materiał.
+const paintCache = new Map();
+export function paint(hex, { rust = 0.7, edges = true } = {}) {
+  const key = `${hex}|${rust}|${edges}`;
+  if (!paintCache.has(key)) {
+    paintCache.set(key, std({ color: hex, roughness: 0.7, metalness: 0.1 }, { rust: RUST, edges, amount: rust }));
+  }
+  return paintCache.get(key);
+}
+
 // ---------- Zużycie: kolory wierzchołków ----------
 // Każda geometria dostaje atrybut "color". Kolor 1 = czysta farba,
 // w kierunku rdzy tam, gdzie normalna nie jest równoległa do osi (fazowane krawędzie

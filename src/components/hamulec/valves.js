@@ -31,15 +31,16 @@ export function buildLoadValve(node) {
   box(0.16, 0.15, 0.15, M.paintDark, { pos: [x, y, z], r: 0.015, parent: g });
   cylinder(0.04, 0.03, M.paintDark, { axis: 'z', pos: [x, y, z + 0.085], parent: g });
   // wspornik
-  boxFromTo([x - 0.09, x + 0.09], [y + 0.075, 1.05], [z - 0.01, z + 0.01], M.paintDark, { r: 0.004, parent: g });
+  boxFromTo([x - 0.09, x + 0.09], [y + 0.075, lay.mountY], [z - 0.01, z + 0.01], M.paintDark, { r: 0.004, parent: g });
   return g;
 }
 
 // Dźwignia przestawiacza wyprowadzona na bok wagonu + tabliczka położeń
 export function buildLoadValveLever(node) {
   const g = part('dzwignia_przestawiacza');
-  const [x, y, z] = layout(cfg(node)).loadValve;
-  const zs = 1.46; // za ostojnicą (SZACUNKOWE)
+  const lay = layout(cfg(node));
+  const [x, y, z] = lay.loadValve;
+  const zs = lay.sideZ; // za ostojnicą
   rod([x, y, z + 0.1], [x, y, zs], 0.012, M.steelRaw, { seg: 10, parent: g });
   // rękojeść skierowana w dół z gałką
   rod([x, y, zs], [x + 0.06, y - 0.22, zs], 0.012, M.paintRed, { seg: 10, parent: g });

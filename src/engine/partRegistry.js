@@ -38,9 +38,14 @@ async function buildNode(node, builders) {
     // dane do animacji rozkładania i zdejmowania
     childObj.userData.basePos = childObj.position.clone();
     childObj.userData.explode = new THREE.Vector3(...(s.explode ?? [0, 0, 0]));
+    childObj.userData.baseRot = childObj.rotation.clone();
+    // otwieranie przez obrót (np. klapa w dnie): bez przesunięcia, część zostaje widoczna
+    childObj.userData.removeRot = s.removeRot ? new THREE.Vector3(...s.removeRot) : null;
+    childObj.userData.opens = !!s.removeRot && !s.remove;
     childObj.userData.remove = s.remove ? new THREE.Vector3(...s.remove)
+      : s.removeRot ? new THREE.Vector3()
       : childObj.userData.explode.clone().multiplyScalar(1.5);
-    if (childObj.userData.remove.lengthSq() === 0) childObj.userData.remove.set(0, 0.5, 0);
+    if (childObj.userData.remove.lengthSq() === 0 && !s.removeRot) childObj.userData.remove.set(0, 0.5, 0);
     childObj.userData.curE = 0; // 0 = złożone, 1 = rozłożone
     childObj.userData.curR = 0; // 0 = założone, 1 = zdjęte
     obj.add(childObj);

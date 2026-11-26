@@ -32,6 +32,9 @@ export class Toolbar {
     (function scan(n) { if (n.hidden) anyHidden = true; n.children.forEach(scan); })(root);
     this.btn.showall.disabled = !anyHidden;
     this.btn.remove.disabled = !selected?.zdejmowalny;
-    this.btn.remove.textContent = selected?.removed ? 'Załóż' : 'Zdejmij';
+    // części otwierane obrotem (klapy) mają przycisk „Otwórz / Zamknij”
+    const opens = selected?.object?.userData.opens;
+    this.btn.remove.textContent = opens ? (selected.removed ? 'Zamknij' : 'Otwórz')
+      : (selected?.removed ? 'Załóż' : 'Zdejmij');
   }
 }

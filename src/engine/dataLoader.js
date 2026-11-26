@@ -5,6 +5,7 @@
 //     "drzewo": { "id": "...", "typ": "...", "children": [ ... ] } }
 // Węzeł drzewa może mieć "ref": "components/y25.json" – wtedy w tym miejscu
 // wstawiane jest całe drzewo z tamtego pliku (z opisami z tamtego pliku).
+// "ref": "components/ostoja.json#czop_skretu" wstawia szablon "czop_skretu" z tamtego pliku.
 // Węzeł może też mieć "szablon": "maznica" – wtedy jego dzieci są brane z sekcji
 // "szablony" tego samego pliku (żeby nie powtarzać 4 razy tej samej maźnicy).
 // Opcjonalne "param": { ... } trafia do buildera (node.param) – np. wymiary zależne od wagonu.
@@ -35,16 +36,17 @@ export async function loadWagonData(file) {
 
 const ctxOf = (data, file) => ({ opisy: data.opisy ?? {}, szablony: data.szablony ?? {}, file });
 
-const EMPTY = '[uzupełnić]';
-
 async function resolveNode(raw, ctx, parent) {
   let src = raw;
   if (raw.ref) {
     // Wstawienie wspólnego podzespołu. Pola z wagonu (np. id, dopisek) mają pierwszeństwo.
-    const comp = await loadJSON(`./data/${raw.ref}`);
+    const [file, anchor] = raw.ref.split('#');
+    const comp = await loadJSON(`./data/${file}`);
     const { ref, ...over } = raw;
-    src = { ...comp.drzewo, ...over };
-    ctx = ctxOf(comp, ref);
+    const base = anchor ? comp.szablony?.[anchor] : comp.drzewo;
+    if (!base) console.warn(`[dane] Brak ${anchor ? `szablonu "${anchor}"` : 'drzewa'} w ${file}`);
+    src = { ...(base ?? {}), ...over };
+    ctx = ctxOf(comp, file);
   }
   if (src.szablon) {
     const t = ctx.szablony[src.szablon];
@@ -67,9 +69,9 @@ async function resolveNode(raw, ctx, parent) {
     zdejmowalny: !!src.zdejmowalny,
     // od tego poziomu w dół reszta wagonu jest ukrywana (żeby nie zasłaniała widoku)
     ukryjOtoczenie: !!src.ukryj_otoczenie,
+    // pola bez danych są pomijane (panel opisu ich nie pokazuje)
     opis: {
-      nazwa_pl: src.id, nazwa_en: '', funkcja: EMPTY, budowa: EMPTY,
-      typowe_uszkodzenia: EMPTY, wymiary_graniczne: EMPTY, przepisy: EMPTY,
+      nazwa_pl: src.id, nazwa_en: '',
       zdjecia: [], zrodla: [], status: 'do weryfikacji',
       ...(opisTypu ?? {}), ...(src.opis ?? {}),
     },

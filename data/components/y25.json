@@ -1,6 +1,6 @@
 {
   "podzespol": "Wózek Y25",
-  "uwaga": "Opisy skrócone, wersja robocza. Wszystkie do weryfikacji. Liczby tylko ze źródeł, w innym wypadku [uzupełnić].",
+  "uwaga": "Opisy skrócone, wersja robocza. Wszystkie do weryfikacji. Liczby tylko ze źródeł; pola bez danych są pomijane, a notatki do sprawdzenia są w ukrytym polu \"do_sprawdzenia\".",
 
   "szablony": {
     "zestaw_kolowy": {
@@ -50,6 +50,7 @@
   "drzewo": {
     "id": "wozek_y25",
     "typ": "wozek_y25",
+    "ukryj_otoczenie": true,
     "children": [
       { "id": "rama", "typ": "rama_y25" },
       { "id": "gniazdo_skretu", "typ": "gniazdo_skretu" },
@@ -75,13 +76,17 @@
       "nazwa_en": "Y25 bogie",
       "funkcja": "Prowadzi wagon po torze, przenosi masę pudła na szyny, amortyzuje drgania i hamuje koła.",
       "budowa": "Spawana rama w kształcie litery H, dwa zestawy kołowe w maźnicach, usprężynowanie ze sprężyn śrubowych z tłumikiem ciernym Lenoira, gniazdo skrętu, ślizgi boczne, układ hamulca klockowego. Rozstaw osi 1800 mm, koła Ø920 mm (w niektórych odmianach Ø840 mm).",
-      "typowe_uszkodzenia": "Pęknięcia ramy (zwłaszcza przy spoinach), zużycie prowadnic maźnic i ślizgów, pęknięte lub osiadłe sprężyny, zużycie gniazda skrętu. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 13749 (wymagania wytrzymałościowe ram wózków); GCU – Załącznik 9 [uzupełnić]; VPI [uzupełnić: rozdział].",
+      "typowe_uszkodzenia": "Pęknięcia ramy (zwłaszcza przy spoinach), zużycie prowadnic maźnic i ślizgów, pęknięte lub osiadłe sprężyny, zużycie gniazda skrętu.",
+      "przepisy": "EN 13749 (wymagania wytrzymałościowe ram wózków); GCU – Załącznik 9; VPI.",
       "zdjecia": [],
       "zrodla": [
         "Railway Technology – Y25 bogie: https://www.railway-technology.com/products/y25-bogie/",
         "TŽV Gredelj – okretno postolje Y25: https://tzv-gredelj.hr/en/proizvod/okretno-postolje-y25/"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: GCU – Załącznik 9 – uzupełnić",
+        "przepisy: VPI – rozdział"
       ],
       "status": "do weryfikacji"
     },
@@ -90,11 +95,14 @@
       "nazwa_en": "bogie frame",
       "funkcja": "Łączy wszystkie elementy wózka; przenosi obciążenia z gniazda skrętu na sprężyny i maźnice.",
       "budowa": "Dwie ostojnice o przekroju skrzynkowym połączone poprzecznicą i czołownicami, z prowadnicami maźnic i kołpakami sprężyn. Konstrukcja spawana.",
-      "typowe_uszkodzenia": "Pęknięcia spoin i blach, odkształcenia, zużycie nakładek ślizgowych prowadnic. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 13749 [uzupełnić: inne]",
+      "typowe_uszkodzenia": "Pęknięcia spoin i blach, odkształcenia, zużycie nakładek ślizgowych prowadnic.",
+      "przepisy": "EN 13749",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 13749 – inne"
+      ],
       "status": "do weryfikacji"
     },
     "gniazdo_skretu": {
@@ -102,11 +110,12 @@
       "nazwa_en": "centre bowl",
       "funkcja": "Przyjmuje czop skrętu pudła: przenosi pionowy nacisk pudła na wózek i pozwala wózkowi obracać się w łukach.",
       "budowa": "Pierścieniowa panew przykręcona do poprzecznicy, z wkładką ślizgową na dnie.",
-      "typowe_uszkodzenia": "Zużycie wkładki i obrzeża panwi, brak smarowania, luźne śruby. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Zużycie wkładki i obrzeża panwi, brak smarowania, luźne śruby.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "slizg_boczny": {
@@ -114,11 +123,13 @@
       "nazwa_en": "side bearer",
       "funkcja": "Ogranicza kołysanie pudła na boki i stabilizuje wózek.",
       "budowa": "Obudowa przykręcona do poprzecznicy z płytą (nakładką) ślizgową; po stronie pudła współpracuje z przeciwślizgiem.",
-      "typowe_uszkodzenia": "Zużycie nakładki, niewłaściwy luz, luźne mocowanie. [uzupełnić]",
-      "wymiary_graniczne": "Luz ślizgów: [uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Zużycie nakładki, niewłaściwy luz, luźne mocowanie.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "wymiary_graniczne: Luz ślizgów – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "zestaw_kolowy": {
@@ -126,11 +137,17 @@
       "nazwa_en": "wheelset",
       "funkcja": "Toczy się po szynach, prowadzi wagon i przenosi nacisk na tor.",
       "budowa": "Oś z dwoma kołami wtłoczonymi na podstopia oraz dwie maźnice z łożyskami na czopach osi.",
-      "typowe_uszkodzenia": "Uszkodzenia powierzchni tocznej (wyślizgi, nalepy, wykruszenia), zużycie obrzeży, pęknięcia osi lub kół, przegrzanie łożysk. [uzupełnić]",
-      "wymiary_graniczne": "Odległość wewnętrznych powierzchni kół (nominalnie 1360 mm): tolerancje [uzupełnić].",
-      "przepisy": "EN 13260 (zestawy kołowe), EN 13103-1 (projektowanie osi), GCU – Załącznik 9 [uzupełnić], VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Uszkodzenia powierzchni tocznej (wyślizgi, nalepy, wykruszenia), zużycie obrzeży, pęknięcia osi lub kół, przegrzanie łożysk.",
+      "wymiary_graniczne": "Odległość wewnętrznych powierzchni kół (nominalnie 1360 mm).",
+      "przepisy": "EN 13260 (zestawy kołowe), EN 13103-1 (projektowanie osi), GCU – Załącznik 9, VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "wymiary_graniczne: tolerancje – uzupełnić",
+        "przepisy: GCU – Załącznik 9 – uzupełnić",
+        "przepisy: VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "os": {
@@ -138,11 +155,14 @@
       "nazwa_en": "axle",
       "funkcja": "Łączy koła na stałe i przenosi obciążenie z maźnic na koła.",
       "budowa": "Stalowy wał toczony: czopy łożyskowe, czopy podpiaściowe, podstopia kół i trzon. W czołach otwory gwintowane na śruby płytki czołowej.",
-      "typowe_uszkodzenia": "Pęknięcia zmęczeniowe, korozja i uszkodzenia powłoki, ślady przegrzania czopa. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 13103-1, EN 13261 [uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcia zmęczeniowe, korozja i uszkodzenia powłoki, ślady przegrzania czopa.",
+      "przepisy": "EN 13103-1, EN 13261",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 13261 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "kolo": {
@@ -150,11 +170,18 @@
       "nazwa_en": "wheel",
       "funkcja": "Toczy się po szynie; obrzeże prowadzi zestaw w torze, a powierzchnia toczna współpracuje z wstawką hamulcową.",
       "budowa": "Koło monoblokowe: piasta, tarcza, wieniec z powierzchnią toczną i obrzeżem. Profil toczny typu S1002 (w modelu przybliżony). Średnica nowego koła 920 mm.",
-      "typowe_uszkodzenia": "Wyślizgi (płaskie miejsca), nalepy, wykruszenia, cienkie lub ostre obrzeże, przegrzanie od hamowania, pęknięcia. [uzupełnić]",
-      "wymiary_graniczne": "Średnica minimalna, grubość obrzeża (Sd), wysokość obrzeża (Sh), stromość (qR), dopuszczalne wyślizgi: [uzupełnić wg GCU Zał. 9 / VPI].",
-      "przepisy": "EN 13262 (koła – wymagania), EN 13979-1 (koła monoblokowe – dopuszczenie), EN 13715 (profil toczny), GCU – Załącznik 9 [uzupełnić].",
+      "typowe_uszkodzenia": "Wyślizgi (płaskie miejsca), nalepy, wykruszenia, cienkie lub ostre obrzeże, przegrzanie od hamowania, pęknięcia.",
+      "wymiary_graniczne": "Średnica minimalna, grubość obrzeża (Sd), wysokość obrzeża (Sh), stromość (qR).",
+      "przepisy": "EN 13262 (koła – wymagania), EN 13979-1 (koła monoblokowe – dopuszczenie), EN 13715 (profil toczny), GCU – Załącznik 9.",
       "zdjecia": [],
-      "zrodla": ["Railway Technology – Y25 bogie (średnica koła): https://www.railway-technology.com/products/y25-bogie/"],
+      "zrodla": [
+        "Railway Technology – Y25 bogie (średnica koła): https://www.railway-technology.com/products/y25-bogie/"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "wymiary_graniczne: dopuszczalne wyślizgi – wg GCU Zał. 9 / VPI",
+        "przepisy: GCU – Załącznik 9 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "maznica": {
@@ -162,11 +189,14 @@
       "nazwa_en": "axle box",
       "funkcja": "Obudowa łożyska na czopie osi; przenosi nacisk sprężyn na oś i prowadzi zestaw w ramie wózka.",
       "budowa": "Korpus z gniazdem sprężyn, pokrywa przednia, płytka czołowa osi, łożysko toczne, smar, uszczelnienie (pierścień labiryntowy).",
-      "typowe_uszkodzenia": "Przegrzanie (gorąca maźnica), wyciek smaru, pęknięty korpus lub pokrywa, luźne lub brakujące śruby. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 12080 (łożyska maźnic), EN 12081 (smary), EN 12082 (badania maźnic), VPI [uzupełnić].",
+      "typowe_uszkodzenia": "Przegrzanie (gorąca maźnica), wyciek smaru, pęknięty korpus lub pokrywa, luźne lub brakujące śruby.",
+      "przepisy": "EN 12080 (łożyska maźnic), EN 12081 (smary), EN 12082 (badania maźnic), VPI.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: VPI – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "korpus_maznicy": {
@@ -174,11 +204,12 @@
       "nazwa_en": "axle box housing",
       "funkcja": "Mieści łożysko, na górze przyjmuje sprężyny, z boków ślizga się w prowadnicach ramy.",
       "budowa": "Odlew staliwny: obudowa cylindryczna, gniazdo sprężyn z żebrami, boczne powierzchnie prowadzące.",
-      "typowe_uszkodzenia": "Pęknięcia, zużycie powierzchni prowadzących. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcia, zużycie powierzchni prowadzących.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "pokrywa_maznicy": {
@@ -186,11 +217,12 @@
       "nazwa_en": "axle box front cover",
       "funkcja": "Zamyka maźnicę od czoła, chroni łożysko przed wodą i brudem, utrzymuje smar.",
       "budowa": "Tłoczona lub odlewana pokrywa przykręcona śrubami do korpusu. Przycisk „Zdejmij” pokazuje wnętrze.",
-      "typowe_uszkodzenia": "Pęknięcia, wgniecenia, luźne lub brakujące śruby, wyciek smaru spod pokrywy. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcia, wgniecenia, luźne lub brakujące śruby, wyciek smaru spod pokrywy.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "plytka_czolowa": {
@@ -198,11 +230,12 @@
       "nazwa_en": "axle end cap",
       "funkcja": "Dociska pierścienie wewnętrzne łożyska i zabezpiecza je przed zsunięciem z czopa.",
       "budowa": "Stalowa płytka przykręcona śrubami w czoło osi, z podkładką zabezpieczającą.",
-      "typowe_uszkodzenia": "Poluzowane śruby, brak zabezpieczenia. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Poluzowane śruby, brak zabezpieczenia.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "lozysko": {
@@ -210,11 +243,14 @@
       "nazwa_en": "rolling bearing (cartridge unit)",
       "funkcja": "Umożliwia obrót osi w maźnicy przy małych oporach; przenosi siły pionowe i poprzeczne.",
       "budowa": "Stalowe łożysko dwurzędowe stożkowe w postaci kasety: pierścień zewnętrzny, dwa pierścienie wewnętrzne, elementy toczne, koszyki, smar i uszczelnienia. Wymiary w modelu przybliżone.",
-      "typowe_uszkodzenia": "Przegrzanie, łuszczenie bieżni, korozja, uszkodzenie koszyka, utrata smaru. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 12080 [uzupełnić]",
+      "typowe_uszkodzenia": "Przegrzanie, łuszczenie bieżni, korozja, uszkodzenie koszyka, utrata smaru.",
+      "przepisy": "EN 12080",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 12080 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "pierscien_zewn": {
@@ -222,11 +258,14 @@
       "nazwa_en": "outer ring (cup)",
       "funkcja": "Zewnętrzna bieżnia dla obu rzędów elementów tocznych; osadzony w korpusie maźnicy.",
       "budowa": "Pierścień ze stali łożyskowej z dwiema stożkowymi bieżniami.",
-      "typowe_uszkodzenia": "Łuszczenie, wżery, ślady przegrzania. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 12080 [uzupełnić]",
+      "typowe_uszkodzenia": "Łuszczenie, wżery, ślady przegrzania.",
+      "przepisy": "EN 12080",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 12080 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "pierscien_wewn": {
@@ -234,11 +273,14 @@
       "nazwa_en": "inner ring (cone)",
       "funkcja": "Wewnętrzna bieżnia elementów tocznych; osadzony na czopie osi i obraca się razem z nią.",
       "budowa": "W łożysku dwurzędowym dwa pierścienie wewnętrzne (po jednym na rząd) i pierścień dystansowy między nimi. Stal łożyskowa.",
-      "typowe_uszkodzenia": "Łuszczenie bieżni, pęknięcia, obrót pierścienia na czopie. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 12080 [uzupełnić]",
+      "typowe_uszkodzenia": "Łuszczenie bieżni, pęknięcia, obrót pierścienia na czopie.",
+      "przepisy": "EN 12080",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 12080 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "elementy_toczne": {
@@ -246,11 +288,14 @@
       "nazwa_en": "rolling elements (tapered rollers)",
       "funkcja": "Toczą się między bieżniami pierścieni, przenosząc obciążenie przy małym tarciu.",
       "budowa": "Dwa rzędy stalowych wałeczków stożkowych. Liczba wałeczków w modelu przybliżona.",
-      "typowe_uszkodzenia": "Łuszczenie, wżery, przebarwienia od przegrzania. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 12080 [uzupełnić]",
+      "typowe_uszkodzenia": "Łuszczenie, wżery, przebarwienia od przegrzania.",
+      "przepisy": "EN 12080",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 12080 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "koszyk": {
@@ -258,11 +303,14 @@
       "nazwa_en": "cage",
       "funkcja": "Utrzymuje równe odstępy między elementami tocznymi i prowadzi je.",
       "budowa": "Pierścień z okienkami na wałeczki; z poliamidu albo z mosiądzu (zależnie od wykonania łożyska).",
-      "typowe_uszkodzenia": "Pęknięcia, deformacja (np. po przegrzaniu poliamidu), zużycie okienek. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 12080 [uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcia, deformacja (np. po przegrzaniu poliamidu), zużycie okienek.",
+      "przepisy": "EN 12080",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 12080 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "smar": {
@@ -270,11 +318,15 @@
       "nazwa_en": "grease",
       "funkcja": "Zmniejsza tarcie i zużycie w łożysku, chroni przed korozją.",
       "budowa": "Smar plastyczny wypełniający przestrzeń w łożysku i przed nim.",
-      "typowe_uszkodzenia": "Wyciek, zanieczyszczenie wodą lub brudem, przebarwienie od przegrzania, zbyt mała ilość. [uzupełnić]",
-      "wymiary_graniczne": "Ilość i gatunek smaru: [uzupełnić]",
-      "przepisy": "EN 12081 [uzupełnić]",
+      "typowe_uszkodzenia": "Wyciek, zanieczyszczenie wodą lub brudem, przebarwienie od przegrzania, zbyt mała ilość.",
+      "przepisy": "EN 12081",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "wymiary_graniczne: Ilość i gatunek smaru – uzupełnić",
+        "przepisy: EN 12081 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "uszczelnienie": {
@@ -282,11 +334,12 @@
       "nazwa_en": "seal (labyrinth ring)",
       "funkcja": "Zatrzymuje smar w maźnicy i nie wpuszcza wody ani brudu od strony koła.",
       "budowa": "Stalowy pierścień labiryntowy na czopie podpiaściowym i gumowa warga uszczelniająca.",
-      "typowe_uszkodzenia": "Zużycie lub uszkodzenie wargi, wyciek smaru od strony koła. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Zużycie lub uszkodzenie wargi, wyciek smaru od strony koła.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "usprezynowanie": {
@@ -294,11 +347,14 @@
       "nazwa_en": "suspension with friction damping",
       "funkcja": "Amortyzuje drgania między maźnicą a ramą; tłumik cierny wygasza drgania.",
       "budowa": "Nad każdą maźnicą para sprężyn śrubowych (zewnętrzna i wewnętrzna, krótsza – charakterystyka dwustopniowa) oraz tłumik cierny Lenoira.",
-      "typowe_uszkodzenia": "Pęknięte lub osiadłe sprężyny, zużyte nakładki cierne, uszkodzony wieszak. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "EN 13298 (sprężyny śrubowe) [uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięte lub osiadłe sprężyny, zużyte nakładki cierne, uszkodzony wieszak.",
+      "przepisy": "EN 13298 (sprężyny śrubowe)",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "przepisy: EN 13298 (sprężyny śrubowe) – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "sprezyna_zewn": {
@@ -306,11 +362,15 @@
       "nazwa_en": "outer coil spring",
       "funkcja": "Przenosi obciążenie pustego i ładownego wagonu.",
       "budowa": "Stalowa sprężyna śrubowa z dociśniętymi i szlifowanymi końcami.",
-      "typowe_uszkodzenia": "Pęknięcie zwoju, osiadanie, korozja. [uzupełnić]",
-      "wymiary_graniczne": "Wysokość swobodna: [uzupełnić]",
-      "przepisy": "EN 13298 [uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcie zwoju, osiadanie, korozja.",
+      "przepisy": "EN 13298",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "wymiary_graniczne: Wysokość swobodna – uzupełnić",
+        "przepisy: EN 13298 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "sprezyna_wewn": {
@@ -318,11 +378,15 @@
       "nazwa_en": "inner coil spring",
       "funkcja": "Zaczyna pracować dopiero przy większym obciążeniu (wagon ładowny) – usztywnia usprężynowanie.",
       "budowa": "Stalowa sprężyna śrubowa, niższa od zewnętrznej, umieszczona w jej środku.",
-      "typowe_uszkodzenia": "Pęknięcie zwoju, osiadanie, korozja. [uzupełnić]",
-      "wymiary_graniczne": "Wysokość swobodna: [uzupełnić]",
-      "przepisy": "EN 13298 [uzupełnić]",
+      "typowe_uszkodzenia": "Pęknięcie zwoju, osiadanie, korozja.",
+      "przepisy": "EN 13298",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "wymiary_graniczne: Wysokość swobodna – uzupełnić",
+        "przepisy: EN 13298 – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "tlumik_lenoira": {
@@ -330,11 +394,12 @@
       "nazwa_en": "Lenoir friction damper",
       "funkcja": "Tłumi drgania pionowe i poprzeczne przez tarcie nakładki o maźnicę; siła tarcia rośnie z obciążeniem wagonu.",
       "budowa": "Pochylony wieszak (łącznik Lenoira) dociskający nakładkę cierną do bocznej powierzchni maźnicy, sworznie, górny talerz sprężyn.",
-      "typowe_uszkodzenia": "Zużyte nakładki cierne, zużyte sworznie i otwory wieszaka, brak tłumienia. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Zużyte nakładki cierne, zużyte sworznie i otwory wieszaka, brak tłumienia.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "hamulec_wozka": {
@@ -342,11 +407,12 @@
       "nazwa_en": "bogie brake rigging",
       "funkcja": "Przenosi siłę z cylindra hamulcowego wagonu na klocki i dociska wstawki do kół.",
       "budowa": "Dwie belki hamulcowe z klockami i wstawkami, dźwignie i cięgła. Klocki działają z jednej strony koła (od środka wózka) [do sprawdzenia].",
-      "typowe_uszkodzenia": "Zużyte wstawki, zużyte sworznie i tuleje, pęknięte wieszaki, nieprawidłowa regulacja. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Zużyte wstawki, zużyte sworznie i tuleje, pęknięte wieszaki, nieprawidłowa regulacja.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "belka_hamulcowa": {
@@ -354,11 +420,12 @@
       "nazwa_en": "brake beam",
       "funkcja": "Łączy klocki obu kół zestawu i przenosi na nie siłę z dźwigni.",
       "budowa": "Konstrukcja kratowa: rura ściskana, cięgno i rozpórka środkowa; na końcach głowice z klockami, belka zawieszona na wieszakach do ramy.",
-      "typowe_uszkodzenia": "Wygięcie, pęknięcia, zużycie wieszaków i głowic. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Wygięcie, pęknięcia, zużycie wieszaków i głowic.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "klocek_hamulcowy": {
@@ -366,23 +433,29 @@
       "nazwa_en": "brake block holder",
       "funkcja": "Oprawa, w której osadzona jest wstawka hamulcowa; łączy wstawkę z belką.",
       "budowa": "Stalowa oprawa w kształcie łuku z uchem i klinem mocującym wstawkę.",
-      "typowe_uszkodzenia": "Zużycie, brak klina, pęknięcia. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Zużycie, brak klina, pęknięcia.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "wstawka_hamulcowa": {
       "nazwa_pl": "wstawka hamulcowa",
       "nazwa_en": "brake shoe insert",
       "funkcja": "Element cierny dociskany do powierzchni tocznej koła – zamienia energię ruchu na ciepło.",
-      "budowa": "Wstawka żeliwna lub kompozytowa (np. typu K lub LL) [uzupełnić: typ stosowany w Eaos].",
-      "typowe_uszkodzenia": "Zużycie poniżej granicy, pęknięcia, wykruszenia, nierównomierne zużycie. [uzupełnić]",
-      "wymiary_graniczne": "Minimalna grubość wstawki: [uzupełnić]",
-      "przepisy": "EN 16452 (wstawki hamulcowe), UIC 541-4 (hamulce z wstawkami kompozytowymi) [uzupełnić].",
+      "budowa": "Wstawka żeliwna lub kompozytowa (np. typu K lub LL).",
+      "typowe_uszkodzenia": "Zużycie poniżej granicy, pęknięcia, wykruszenia, nierównomierne zużycie.",
+      "przepisy": "EN 16452 (wstawki hamulcowe), UIC 541-4 (hamulce z wstawkami kompozytowymi).",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "budowa: typu K lub LL) – typ stosowany w Eaos",
+        "typowe_uszkodzenia: uzupełnić",
+        "wymiary_graniczne: Minimalna grubość wstawki – uzupełnić",
+        "przepisy: UIC 541-4 (hamulce z wstawkami kompozytowymi) – uzupełnić"
+      ],
       "status": "do weryfikacji"
     },
     "dzwignie": {
@@ -390,11 +463,12 @@
       "nazwa_en": "brake levers and rods",
       "funkcja": "Przekazują i rozdzielają siłę hamowania między belki hamulcowe.",
       "budowa": "Dźwignie z płaskowników, sworznie z tulejami, cięgło łączące i cięgło do hamulca wagonu (fragment).",
-      "typowe_uszkodzenia": "Zużyte sworznie i tuleje, brak zabezpieczeń sworzni, wygięte cięgła. [uzupełnić]",
-      "wymiary_graniczne": "[uzupełnić]",
-      "przepisy": "[uzupełnić]",
+      "typowe_uszkodzenia": "Zużyte sworznie i tuleje, brak zabezpieczeń sworzni, wygięte cięgła.",
       "zdjecia": [],
       "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
       "status": "do weryfikacji"
     }
   }

@@ -1,0 +1,63 @@
+{
+  "podzespol": "Wspólne elementy ostoi",
+  "uwaga": "Czop skrętu, stopnie i poręcze manewrowe – takie same w każdym wagonie. Wagon wstawia je przez \"ref\": \"components/ostoja.json#<szablon>\", a wymiary podaje w param (zob. src/components/ostoja/index.js).",
+  "szablony": {
+    "czop_skretu": {
+      "typ": "czop_skretu",
+      "ukryj_otoczenie": true
+    },
+    "stopien_manewrowy": {
+      "typ": "stopien_manewrowy"
+    },
+    "porecz_manewrowa": {
+      "typ": "porecz_manewrowa"
+    }
+  },
+  "opisy": {
+    "czop_skretu": {
+      "nazwa_pl": "czop skrętu",
+      "nazwa_en": "centre pivot (body centre plate)",
+      "funkcja": "Opiera pudło na gnieździe skrętu wózka i pozwala wózkowi obracać się w łukach.",
+      "budowa": "Toczony czop z kołnierzem przykręcony do spodu belki skrętowej.",
+      "typowe_uszkodzenia": "Zużycie powierzchni oporowej i bocznej, pęknięcia, luzy w gnieździe.",
+      "zdjecia": [],
+      "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "stopien_manewrowy": {
+      "nazwa_pl": "stopień manewrowy",
+      "nazwa_en": "shunter's step",
+      "funkcja": "Miejsce, na którym stoi manewrowy podczas jazdy na wagonie.",
+      "budowa": "Kratowy stopień na dwóch wspornikach przy narożniku ostoi.",
+      "typowe_uszkodzenia": "Wygięte wsporniki, urwany lub skorodowany stopień.",
+      "zdjecia": [],
+      "zrodla": [
+        "UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "zrodla: UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych – wymiary"
+      ],
+      "status": "do weryfikacji"
+    },
+    "porecz_manewrowa": {
+      "nazwa_pl": "poręcze manewrowe",
+      "nazwa_en": "shunter's handrails",
+      "funkcja": "Uchwyty do trzymania się przez manewrowego na stopniu.",
+      "budowa": "Poręcz pionowa na ścianie czołowej i pozioma na ostojnicy, z prętów okrągłych.",
+      "typowe_uszkodzenia": "Wygięte lub urwane poręcze, pęknięte mocowania.",
+      "zdjecia": [],
+      "zrodla": [
+        "UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić",
+        "zrodla: UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych – wymiary"
+      ],
+      "status": "do weryfikacji"
+    }
+  }
+}

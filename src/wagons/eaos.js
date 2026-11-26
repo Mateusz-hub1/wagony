@@ -6,10 +6,11 @@
 //   długość ładunkowa 12 800 mm, szerokość ładunkowa 2 800 mm,
 //   wysokość podłogi nad główką szyny 1 200 mm, wysokość ścian (ładunkowa) 2 000 mm.
 // Pozostałe wymiary (profile, drzwi, słupki) – SZACUNKOWE, do sprawdzenia.
-import { THREE, M, part, slot, mesh, box, boxFromTo, merged, boxGeom, cylinder, rod, lathe, bolts, boltCircle, rivets, weld } from '../lib/geom.js';
+import { THREE, M, part, slot, mesh, box, boxFromTo, merged, boxGeom, cylinder, bolts, rivets, weld, hatV, hatH } from '../lib/geom.js';
 import { y25Builders } from '../components/y25/index.js';
 import { drawGearBuilders } from '../components/ciegla_zderzaki/index.js';
 import { airBrakeBuilders } from '../components/hamulec/index.js';
+import { underframeBuilders } from '../components/ostoja/index.js';
 
 export const PIVOT_X = 4.5;   // pół rozstawu czopów skrętu (9000 / 2)
 export const HALF_LEN = 6.4;  // lico belki czołowej: (14 040 − 2 × 620 mm długości zderzaka) / 2 – długość zderzaka SZACUNKOWA
@@ -24,26 +25,6 @@ const DOOR_H = CHORD[0] - FLOOR_Y - 0.02; // wysokość skrzydła (do pasa górn
 const SHEET = 0.004;          // grubość poszycia (SZACUNKOWE)
 
 const sorted = (a, b) => (a < b ? [a, b] : [b, a]);
-
-// Profil kapeluszowy (omega) – typowe użebrowanie ścian wagonów.
-// Zwraca geometrie: półka zewnętrzna + dwie ścianki. Wzdłuż osi Y (pionowo).
-function hatV(x, y0, y1, z0, w = 0.1, d = 0.06, t = 0.005) {
-  const h = y1 - y0, yc = (y0 + y1) / 2;
-  return [
-    boxGeom(w, h, t, [x, yc, z0 + d - t / 2]),
-    boxGeom(t, h, d, [x - w / 2 + t / 2, yc, z0 + d / 2]),
-    boxGeom(t, h, d, [x + w / 2 - t / 2, yc, z0 + d / 2]),
-  ];
-}
-// To samo, poziomo (wzdłuż X)
-function hatH(x0, x1, y, z0, w = 0.08, d = 0.04, t = 0.005) {
-  const l = x1 - x0, xc = (x0 + x1) / 2;
-  return [
-    boxGeom(l, w, t, [xc, y, z0 + d - t / 2]),
-    boxGeom(l, t, d, [xc, y - w / 2 + t / 2, z0 + d / 2]),
-    boxGeom(l, t, d, [xc, y + w / 2 - t / 2, z0 + d / 2]),
-  ];
-}
 
 // ======================= WAGON =======================
 
@@ -222,7 +203,7 @@ const SOLE_Z = IN_W;          // zewnętrzna ściana ostojnicy pod poszyciem śc
 export const HEAD_X = HALF_LEN - 0.2; // wewnętrzna krawędź belki czołowej
 export const BUF_Y = 1.03;    // oś zderzaków i haka nad główką szyny (SZACUNKOWE; UIC 528: maks. 1065 mm wagon próżny)
 export const BUF_Z = 0.875;   // pół rozstawu osi zderzaków (1750 / 2, UIC 528)
-const CORNERS = { 1: [1, 1], 2: [1, -1], 3: [-1, 1], 4: [-1, -1] }; // nr narożnika → [sx, sz]
+const CORNERS = { 1: [1, 1], 2: [1, -1], 3: [-1, 1], 4: [-1, -1] }; // nr narożnika → [sx, sz] (stopnie i poręcze – wspólne, src/components/ostoja)
 
 export function buildUnderframe() {
   const g = part('ostoja');
@@ -316,14 +297,6 @@ export function buildBolster() {
   return g;
 }
 
-// Czop skrętu (od strony pudła) – wchodzi w gniazdo skrętu wózka. Początek: środek walca.
-export function buildPivot() {
-  const g = part('czop_skretu');
-  lathe([[0, -0.085], [0.142, -0.085], [0.15, -0.077], [0.15, 0.06], [0.21, 0.06], [0.21, 0.085], [0, 0.085]], M.paintDarkRound, { seg: 64, rot: [-Math.PI / 2, 0, 0], parent: g });
-  boltCircle(6, 0.185, 0.06, 0.018, { parent: g, rot: [-Math.PI / 2, 0, 0], flip: true, start: 0 });
-  return g;
-}
-
 // Belka środkowa: dwa ceowniki wzdłuż osi wagonu (wewnątrz – urządzenie cięgłowe)
 export function buildCenterSill() {
   const g = part('belka_srodkowa');
@@ -356,47 +329,12 @@ export function buildCrossBearers() {
   return g;
 }
 
-// Stopień manewrowy w narożniku. param: { sx, sz } – który narożnik (±1).
-// Budowany od razu w układzie wagonu (stąd gniazdo bez przesunięcia).
-export function buildStep(node) {
-  const g = part('stopien_manewrowy');
-  const { sx = 1, sz = 1 } = node?.param ?? {};
-  const x = sx * (HALF_LEN - 0.4), z = sz * SOLE_Z;
-  const yTread = 0.45; // wysokość stopnia nad główką szyny – SZACUNKOWE, sprawdzić w UIC 535-2 / EN 16116-2
-  // dwa wsporniki z płaskownika
-  for (const dx of [-0.2, 0.2]) {
-    rod([x + dx, 0.92, z + sz * 0.01], [x + dx, yTread, z + sz * 0.06], 0.012, M.paintDark, { seg: 8, parent: g });
-  }
-  // stopień kratowy (płaskowniki na krawędź)
-  const bars = [];
-  for (let i = 0; i < 5; i++) bars.push(boxGeom(0.44, 0.03, 0.008, [x, yTread, z + sz * (0.0 + i * 0.045)]));
-  bars.push(boxGeom(0.012, 0.03, 0.2, [x - 0.21, yTread, z + sz * 0.09]));
-  bars.push(boxGeom(0.012, 0.03, 0.2, [x + 0.21, yTread, z + sz * 0.09]));
-  merged(bars, M.paintDark, { parent: g });
-  return g;
-}
-
-// Poręcze manewrowe w narożniku: pionowa na ścianie czołowej i pozioma na boku. param: { sx, sz }
-export function buildHandrail(node) {
-  const g = part('porecz_manewrowa');
-  const { sx = 1, sz = 1 } = node?.param ?? {};
-  const R = 0.014;
-  // pionowa – na licu ściany czołowej przy narożniku (SZACUNKOWE)
-  const xo = sx * (HALF_LEN + 0.06), zv = sz * (IN_W - 0.08);
-  rod([xo, 1.35, zv], [xo, 2.15, zv], R, M.paintDark, { seg: 12, parent: g });
-  for (const y of [1.35, 2.15]) rod([xo, y, zv], [sx * (HALF_LEN - 0.01), y, zv], R, M.paintDark, { seg: 12, parent: g });
-  // pozioma – na ostojnicy nad stopniem
-  const zs = sz * (SOLE_Z + 0.07), x0 = sx * (HALF_LEN - 0.7), x1 = sx * (HALF_LEN - 0.15);
-  rod([x0, 1.12, zs], [x1, 1.12, zs], R, M.paintDark, { seg: 12, parent: g });
-  for (const x of [x0, x1]) rod([x, 1.12, zs], [x, 1.12, sz * SOLE_Z], R, M.paintDark, { seg: 12, parent: g });
-  return g;
-}
-
 // Wszystkie buildery, których potrzebuje Eaos (wagon + wspólne podzespoły)
 export const builders = {
   ...y25Builders,
   ...drawGearBuilders,
   ...airBrakeBuilders,
+  ...underframeBuilders,
   eaos: buildEaos,
   ostoja_eaos: buildUnderframe,
   pudlo_eaos: buildBody,
@@ -409,9 +347,6 @@ export const builders = {
   ostojnica_eaos: buildSoleBar,
   belka_czolowa_eaos: buildHeadstock,
   belka_skretowa_eaos: buildBolster,
-  czop_skretu_eaos: buildPivot,
   belka_srodkowa_eaos: buildCenterSill,
   poprzecznice_eaos: buildCrossBearers,
-  stopien_manewrowy_eaos: buildStep,
-  porecz_manewrowa_eaos: buildHandrail,
 };

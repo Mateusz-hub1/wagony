@@ -70,7 +70,7 @@ export class TreeView {
       li.classList.toggle('is-focus', n === focus);
       li.classList.toggle('is-selected', n === selected);
       li.classList.toggle('is-hidden', n.hidden);
-      li.classList.toggle('is-removed', n.removed);
+      li.classList.toggle('is-removed', n.removed && !n.object?.userData.opens);
     }
     for (const target of [focus, selected]) {
       for (let n = target; n; n = n.parent) {

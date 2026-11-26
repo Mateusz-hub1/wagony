@@ -1,4 +1,6 @@
 // Panel opisu części (prawa kolumna).
+// Puste pola (brak w JSON, pusty tekst, pusta lista) są pomijane razem z nagłówkiem.
+// Pole "do_sprawdzenia" (notatki do weryfikacji) celowo nie jest wyświetlane.
 import { displayName } from '../engine/dataLoader.js';
 import { esc } from './tree.js';
 
@@ -17,21 +19,25 @@ export function renderInfo(el, node, nav) {
     ? '<span class="status ok">zweryfikowane</span>'
     : `<span class="status todo">${esc(o.status || 'do weryfikacji')}</span>`;
 
-  let html = `<h2>${esc(displayName(node))} <span class="en">(${esc(o.nazwa_en)})</span></h2>
+  const en = o.nazwa_en ? ` <span class="en">(${esc(o.nazwa_en)})</span>` : '';
+  let html = `<h2>${esc(displayName(node))}${en}</h2>
     <div class="path">${esc(pathNames(node))}</div>${status}`;
 
-  for (const [key, label] of FIELDS) html += `<h3>${label}</h3>${text(o[key])}`;
-
-  html += '<h3>Źródła</h3>' + list(o.zrodla, 'brak – [uzupełnić]');
-  html += '<h3>Zdjęcia</h3>' + (o.zdjecia?.length
-    ? list(o.zdjecia)
-    : '<p class="missing">Zdjęcia z hali zostaną dodane później.</p>');
+  for (const [key, label] of FIELDS) {
+    if (!isEmpty(o[key])) html += `<h3>${label}</h3>${text(o[key])}`;
+  }
+  if (!isEmpty(o.zrodla)) html += '<h3>Źródła</h3>' + list(o.zrodla);
+  if (!isEmpty(o.zdjecia)) html += '<h3>Zdjęcia</h3>' + list(o.zdjecia);
 
   if (node.children.length) {
     html += '<h3>Składa się z</h3><ul class="children-list">' +
       node.children.map((c, i) => `<li><a data-i="${i}">${esc(displayName(c))}</a></li>`).join('') + '</ul>';
   }
-  if (node.zdejmowalny) html += '<h3>Uwaga</h3><p>Tę część można zdjąć przyciskiem „Zdejmij”.</p>';
+  if (node.zdejmowalny) {
+    html += node.object?.userData.opens
+      ? '<h3>Uwaga</h3><p>Tę część można otworzyć przyciskiem „Otwórz”.</p>'
+      : '<h3>Uwaga</h3><p>Tę część można zdjąć przyciskiem „Zdejmij”.</p>';
+  }
 
   el.innerHTML = html;
   el.querySelectorAll('.children-list a').forEach((a) => {
@@ -46,14 +52,19 @@ function pathNames(node) {
   return names.join(' › ');
 }
 
-function text(v) {
-  if (Array.isArray(v)) return list(v);
-  const s = String(v ?? '').trim() || '[uzupełnić]';
-  return `<p class="${s.includes('[uzupełnić]') ? 'missing' : ''}">${esc(s)}</p>`;
+// Czy pole jest puste (brak, pusty tekst albo pusta lista)
+function isEmpty(v) {
+  if (Array.isArray(v)) return v.every((x) => !String(x ?? '').trim());
+  return !String(v ?? '').trim();
 }
 
-function list(arr, empty = '') {
-  if (!arr?.length) return `<p class="missing">${esc(empty)}</p>`;
+function text(v) {
+  if (Array.isArray(v)) return list(v);
+  return `<p>${esc(String(v).trim())}</p>`;
+}
+
+function list(arr) {
+  arr = arr.filter((x) => String(x ?? '').trim());
   return '<ul>' + arr.map((x) => `<li>${linkify(x)}</li>`).join('') + '</ul>';
 }
 

@@ -25,7 +25,7 @@ export function applyVisibility(nav) {
     let visible = isNodeVisible(node, nav);
     if (scope && !Navigator.isInside(node, scope)) visible = false;
     const ghost = !Navigator.isInside(node, nav.focus);
-    const removing = anyUp(node, (n) => n.removed);
+    const removing = anyUp(node, (n) => n.removed && !n.object.userData.opens);
     for (const m of node.meshes) {
       m.visible = visible;
       setGhost(m, ghost, ghostOpacity);
@@ -38,7 +38,8 @@ export function applyVisibility(nav) {
 function isNodeVisible(node, nav) {
   if (anyUp(node, (n) => n.hidden)) return false;
   // zdjęta część znika dopiero po zakończeniu animacji zdejmowania
-  if (anyUp(node, (n) => n.removed && n.object.userData.curR > 0.97)) return false;
+  // (część otwierana obrotem, np. klapa, zostaje widoczna)
+  if (anyUp(node, (n) => n.removed && !n.object.userData.opens && n.object.userData.curR > 0.97)) return false;
   if (nav.isolated && !Navigator.isInside(node, nav.isolated)) return false;
   return true;
 }

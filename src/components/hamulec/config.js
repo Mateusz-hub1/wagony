@@ -1,8 +1,11 @@
 // Hamulec zespolony – parametry i rozmieszczenie elementów pod ostoją.
 // Wszystkie części hamulca (poza tymi z własnym układem lokalnym) są budowane od razu
 // w układzie WAGONU: x wzdłuż (0 = środek), y w górę (0 = główka szyny), z w poprzek.
-// Parametry przychodzą z JSON wagonu: "param": { "dlugosc": ..., "x_wozka": ..., "hamulec_reczny": true }.
+// Parametry przychodzą z JSON wagonu: "param": { "dlugosc": ..., "x_wozka": ..., "hamulec_reczny": true, "uklad": { ... } }.
 // Położenia elementów – SZACUNKOWE (układ typowy, do sprawdzenia na wagonie).
+// "uklad" (opcjonalny) nadpisuje wybrane położenia z layout(), np. gdy pod środkiem wagonu
+// są leje (Fals): { "cyl": [x, y, z], "valve": [...], "reservoir": [...], "hb": { "wheel": [...] } }.
+// Klucze jak w layout() poniżej; "hb" jest łączony pole po polu.
 import { THREE, rodGeom } from '../../lib/geom.js';
 import { LEVER_ROD_END } from '../y25/brake.js';
 
@@ -21,7 +24,7 @@ export function cfg(node) {
 // Rozmieszczenie elementów (wszystko w metrach, w układzie wagonu)
 export function layout(c) {
   const L = c.dlugosc / 2;
-  return {
+  const base = {
     L,
     pipeY: 0.93, pipeZ: 0.32,                // przewód główny
     cock: [L + 0.03, 0.8, 0.32],             // kurek końcowy (koniec 1; koniec 2 symetrycznie względem środka)
@@ -40,8 +43,13 @@ export function layout(c) {
     via2: [-(c.x_wozka - 1.2), 0.66, 0.1],
     bogie1: [c.x_wozka + LEVER_ROD_END[0], LEVER_ROD_END[1], LEVER_ROD_END[2]],
     bogie2: [-(c.x_wozka + LEVER_ROD_END[0]), LEVER_ROD_END[1], -LEVER_ROD_END[2]],
-    hb: { wheel: [-(L + 0.12), 1.65, -0.5], gear: [-(L + 0.07), 1.0, -0.5], leverZ: 0.45 }, // hamulec ręczny na końcu 2
+    hb: { wheel: [-(L + 0.12), 1.65, -0.5], gear: [-(L + 0.07), 1.0, -0.5], leverZ: 0.45, rodY: 0.8 }, // hamulec ręczny na końcu 2
+    mountY: 1.05,                            // wysokość mocowania wsporników do ostoi (spód poprzecznic)
+    sideZ: 1.46,                             // dźwignia przestawiacza wyprowadzona za ostojnicę
   };
+  // nadpisania z wagonu (param.uklad)
+  const u = c.uklad ?? {};
+  return { ...base, ...u, hb: { ...base.hb, ...(u.hb ?? {}) } };
 }
 
 // Rura po łamanej: odcinki + kulki w załamaniach (do połączenia przez merged)

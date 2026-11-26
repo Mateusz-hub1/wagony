@@ -1,6 +1,7 @@
 // Płynna animacja rozkładania i zdejmowania części.
 // Położenie części = położenie bazowe + explode × (stopień rozłożenia rodzica)
 //                                      + remove  × (stopień zdjęcia)
+// Obrót części     = obrót bazowy + removeRot × (stopień zdjęcia / otwarcia)
 import { walk } from './dataLoader.js';
 
 const SPEED = 5; // im większe, tym szybciej (wykładnicze dochodzenie do celu)
@@ -27,6 +28,7 @@ export class Animator {
       o.position.copy(u.basePos)
         .addScaledVector(u.explode, u.curE)
         .addScaledVector(u.remove, u.curR);
+      if (u.removeRot) setOpenRotation(o, u.curR);
     }
     return removalChanged;
   }
@@ -46,4 +48,10 @@ export class Animator {
 function approach(cur, target, k) {
   const v = cur + (target - cur) * k;
   return Math.abs(target - v) < 0.0005 ? target : v;
+}
+
+// Obrót części otwieranej (np. klapy): obrót bazowy + removeRot × t
+export function setOpenRotation(o, t) {
+  const b = o.userData.baseRot, r = o.userData.removeRot;
+  o.rotation.set(b.x + r.x * t, b.y + r.y * t, b.z + r.z * t, b.order);
 }

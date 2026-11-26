@@ -4,9 +4,9 @@
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-import { M, weather } from './materials.js';
+import { M, weather, paint } from './materials.js';
 
-export { THREE, M };
+export { THREE, M, paint };
 
 // ---------- Części i „gniazda” na podczęści ----------
 
@@ -20,9 +20,11 @@ export function part(name) {
 
 // Gniazdo dla podczęści o danym id:
 //  pos/rot – położenie w układzie rodzica, explode – przesunięcie po rozłożeniu,
-//  remove – przesunięcie przy zdejmowaniu (domyślnie 1,5 × explode)
-export function slot(group, childId, { pos = [0, 0, 0], rot = [0, 0, 0], explode = [0, 0, 0], remove = null } = {}) {
-  group.userData.slots[childId] = { pos, rot, explode, remove };
+//  remove – przesunięcie przy zdejmowaniu (domyślnie 1,5 × explode),
+//  removeRot – obrót przy „otwieraniu” [rx, ry, rz] wokół początku części (np. klapa na zawiasie).
+//    Część z removeRot (bez remove) się nie zdejmuje, tylko otwiera i zostaje widoczna.
+export function slot(group, childId, { pos = [0, 0, 0], rot = [0, 0, 0], explode = [0, 0, 0], remove = null, removeRot = null } = {}) {
+  group.userData.slots[childId] = { pos, rot, explode, remove, removeRot };
 }
 
 // ---------- Siatki ----------
@@ -221,4 +223,37 @@ export function springGeom(R, wire, H, turns) {
     }
   }
   return new THREE.TubeGeometry(new Helix(), Math.round(turns * 36), wire, 8, false);
+}
+
+// ---------- Profile ścian wagonów ----------
+
+// Profil kapeluszowy (omega) – typowe użebrowanie ścian wagonów.
+// Zwraca geometrie: półka zewnętrzna + dwie ścianki. Wzdłuż osi Y (pionowo),
+// przyspawany do płaszczyzny z = z0, wystaje w +z na głębokość d.
+export function hatV(x, y0, y1, z0, w = 0.1, d = 0.06, t = 0.005) {
+  const h = y1 - y0, yc = (y0 + y1) / 2;
+  return [
+    boxGeom(w, h, t, [x, yc, z0 + d - t / 2]),
+    boxGeom(t, h, d, [x - w / 2 + t / 2, yc, z0 + d / 2]),
+    boxGeom(t, h, d, [x + w / 2 - t / 2, yc, z0 + d / 2]),
+  ];
+}
+// To samo, poziomo (wzdłuż X)
+export function hatH(x0, x1, y, z0, w = 0.08, d = 0.04, t = 0.005) {
+  const l = x1 - x0, xc = (x0 + x1) / 2;
+  return [
+    boxGeom(l, w, t, [xc, y, z0 + d - t / 2]),
+    boxGeom(l, t, d, [xc, y - w / 2 + t / 2, z0 + d / 2]),
+    boxGeom(l, t, d, [xc, y + w / 2 - t / 2, z0 + d / 2]),
+  ];
+}
+
+// ---------- Parametry dziedziczone ----------
+
+// Parametry części razem z parametrami przodków (bliższy przodek ma pierwszeństwo).
+// Dzięki temu wagon może podać wymiary raz, np. w węźle "ostoja", a wspólne części je odczytają.
+export function inheritedParam(node, defaults = {}) {
+  const chain = [];
+  for (let n = node; n; n = n.parent) chain.unshift(n.param ?? {});
+  return Object.assign({ ...defaults }, ...chain);
 }

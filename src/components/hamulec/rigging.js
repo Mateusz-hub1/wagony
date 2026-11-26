@@ -27,7 +27,7 @@ export function buildRigging(node) {
     for (const z of [a[2] + 0.02, lay.cyl[2], lay.rodZ, (a[2] + lay.cyl[2]) / 2]) cylinder(0.011, 0.07, M.steelMachined, { pos: [a[0], a[1], z], parent: g });
   }
   // punkt stały dźwigni stałej (wspornik do ostoi)
-  box(0.08, 1.05 - lay.leverY, 0.03, M.paintDark, { pos: [lay.lever2X, (lay.leverY + 1.05) / 2, lay.cyl[2]], r: 0.005, parent: g });
+  box(0.08, lay.mountY - lay.leverY, 0.03, M.paintDark, { pos: [lay.lever2X, (lay.leverY + lay.mountY) / 2, lay.cyl[2]], r: 0.005, parent: g });
   // cięgło łączące dźwignie
   rod([lay.lever2X, lay.leverY, p.lever2[0][2] + 0.02], [lay.lever1X, lay.leverY, p.lever1[0][2] + 0.02], 0.015, S, { seg: 10, parent: g });
   // cięgło do wózka 1: od nastawiacza przez punkt pośredni do dźwigni wózka
