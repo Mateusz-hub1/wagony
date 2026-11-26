@@ -32,13 +32,15 @@ export class TreeView {
     const label = document.createElement('span');
     label.className = 'label';
     label.innerHTML = `${esc(displayName(node))} <span class="en">${esc(node.opis.nazwa_en ? `(${node.opis.nazwa_en})` : '')}</span>`;
-    label.title = `${displayName(node)} (${node.opis.nazwa_en})`;
 
     const eye = document.createElement('button');
     eye.className = 'eye';
     eye.title = 'Ukryj / pokaż';
     eye.textContent = '👁';
     eye.addEventListener('click', (e) => { e.stopPropagation(); this.nav.toggleHidden(node); });
+
+    // dymek z pełną nazwą (gdy nazwa jest ucięta w wąskim panelu)
+    row.title = node.opis.nazwa_en ? `${displayName(node)} (${node.opis.nazwa_en})` : displayName(node);
 
     row.append(caret, label, eye);
     row.addEventListener('click', () => this.nav.select(node));

@@ -5,6 +5,7 @@
   "szablony": {
     "zestaw_kolowy": {
       "typ": "zestaw_kolowy",
+      "ukryj_otoczenie": true,
       "children": [
         { "id": "os", "typ": "os" },
         { "id": "kolo_1", "typ": "kolo", "dopisek": "strona 1" },

@@ -1,7 +1,7 @@
 // Maźnica (axle box) z łożyskiem tocznym kasetowym.
 // Układ lokalny maźnicy: początek w środku łożyska na osi czopa, +Z na zewnątrz wagonu.
 // Wymiary łożyska przyjęte szacunkowo: 130 × 230 × 160 mm (otwór × średnica zewn. × szerokość).
-import { THREE, M, part, slot, mesh, box, boxFromTo, lathe, ringGeom, boltCircle, merged, boxGeom, cylGeom } from '../../lib/geom.js';
+import { THREE, M, part, slot, mesh, box, boxFromTo, lathe, latheGeom, ringGeom, boltCircle, merged, boxGeom, cylGeom } from '../../lib/geom.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 
 // Wymiary łożyska
@@ -12,7 +12,7 @@ export function buildAxlebox() {
   slot(g, 'korpus', { pos: [0, 0, 0] });
   slot(g, 'uszczelnienie', { pos: [0, 0, 0], explode: [0, 0, -0.22] });
   slot(g, 'lozysko', { pos: [0, 0, 0], explode: [0, 0, 0.30] });
-  slot(g, 'smar', { pos: [0, 0, 0], explode: [0, 0.22, 0.42] });
+  slot(g, 'smar', { pos: [0, 0, 0], explode: [0, 0, 0.30] }); // smar wyjeżdża razem z łożyskiem
   slot(g, 'plytka_czolowa', { pos: [0, 0, 0], explode: [0, 0, 0.55] });
   slot(g, 'pokrywa', { pos: [0, 0, 0], explode: [0, 0, 0.72], remove: [0, 0, 0.6] });
   return g;
@@ -89,25 +89,47 @@ export function buildSeal() {
   return g;
 }
 
-// Smar plastyczny – wypełnienie przestrzeni przed łożyskiem i między elementami tocznymi
+// Smar plastyczny – półprzezroczysta masa wypełniająca łożysko (między pierścieniami,
+// wokół wałeczków) i przestrzeń maźnicy przed łożyskiem, pod pokrywą.
+// Po zdjęciu pokrywy widać smar wokół płytki czołowej, a przez niego wnętrze łożyska.
 export function buildGrease() {
   const g = part('smar');
-  const geo = new THREE.TorusGeometry(0.088, 0.016, 16, 64);
-  // nieregularny kształt „nałożonego” smaru
+  const mat = M.grease.clone();
+  mat.transparent = true;
+  mat.depthWrite = false; // żeby elementy wewnątrz (wałeczki, koszyk) były widoczne
+
+  // 1) wypełnienie łożyska: pierścień między bieżniami, przenika przez wałeczki
+  const inside = mesh(latheGeom([
+    [0.083, -0.074], [0.098, -0.074], [0.098, 0.074], [0.083, 0.074], [0.083, -0.074],
+  ], { seg: 64 }), mat, { parent: g });
+  inside.material = mat.clone();
+  inside.material.opacity = 0.35;
+  inside.raycast = () => {}; // klik „przechodzi” do łożyska – smar wybiera się z przodu
+
+  // 2) masa przed łożyskiem: od płytki czołowej do ścianki maźnicy, nierówna powierzchnia
+  const front = latheGeom([
+    [0.078, 0.080], [0.124, 0.080], [0.126, 0.090], [0.120, 0.099], [0.100, 0.104],
+    [0.086, 0.103], [0.078, 0.098], [0.078, 0.080],
+  ], { seg: 72, sharpDeg: 60 });
+  bumpy(front, 0.080);
+  const fm = mesh(front, mat, { parent: g });
+  fm.material.opacity = 0.5;
+
+  for (const m of g.children) { m.castShadow = false; m.renderOrder = 1; }
+  return g;
+}
+
+// Nieregularność „nałożonego” smaru: falowanie powierzchni zależne od kąta
+function bumpy(geo, zBase) {
   const p = geo.attributes.position, v = new THREE.Vector3();
   for (let i = 0; i < p.count; i++) {
     v.fromBufferAttribute(p, i);
+    if (v.z <= zBase + 0.002) continue; // spód (przy łożysku) zostaje płaski
     const a = Math.atan2(v.y, v.x);
-    const k = 1 + 0.12 * Math.sin(a * 7) + 0.08 * Math.sin(a * 13 + v.z * 200);
-    v.z *= k; v.x *= 1 + 0.03 * Math.sin(a * 5); v.y *= 1 + 0.03 * Math.sin(a * 5);
-    p.setXYZ(i, v.x, v.y, v.z);
+    const k = 0.004 * Math.sin(a * 7) + 0.0025 * Math.sin(a * 13 + 1.3) + 0.0015 * Math.sin(a * 23);
+    p.setZ(i, v.z + k);
   }
   geo.computeVertexNormals();
-  mesh(geo, M.grease, { pos: [0, 0, 0.092], parent: g });
-  // cienka warstwa smaru na bieżniach (pierścienie)
-  for (const z of [-ROW_Z, ROW_Z]) mesh(ringGeom(0.084, 0.097, z - 0.026, z + 0.026, 48), M.grease, { parent: g });
-  g.children.slice(1).forEach((m) => { m.material = M.grease.clone(); m.material.transparent = true; m.material.opacity = 0.35; });
-  return g;
 }
 
 // ---------- Łożysko toczne kasetowe (dwurzędowe, stożkowe) ----------

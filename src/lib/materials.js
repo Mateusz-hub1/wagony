@@ -40,7 +40,7 @@ function makeGrungeTextures() {
   rough.wrapS = rough.wrapT = THREE.RepeatWrapping;
   return { map, rough };
 }
-const grunge = makeGrungeTextures();
+export const grunge = makeGrungeTextures(); // używane też przez tor
 
 // Pomocnik: materiał standardowy + informacja o zużyciu (weather)
 function std(params, weatherOpts = null, { physical = false, textured = true } = {}) {

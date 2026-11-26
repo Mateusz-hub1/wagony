@@ -18,7 +18,7 @@ export function renderInfo(el, node, nav) {
     : `<span class="status todo">${esc(o.status || 'do weryfikacji')}</span>`;
 
   let html = `<h2>${esc(displayName(node))} <span class="en">(${esc(o.nazwa_en)})</span></h2>
-    <div class="path">${esc(node.path.replaceAll('/', ' › '))}</div>${status}`;
+    <div class="path">${esc(pathNames(node))}</div>${status}`;
 
   for (const [key, label] of FIELDS) html += `<h3>${label}</h3>${text(o[key])}`;
 
@@ -37,6 +37,13 @@ export function renderInfo(el, node, nav) {
   el.querySelectorAll('.children-list a').forEach((a) => {
     a.addEventListener('click', () => nav.select(node.children[+a.dataset.i]));
   });
+}
+
+// Ścieżka polskimi nazwami: „Eaos › wózek Y25 – nr 1 › zestaw kołowy – nr 1”
+function pathNames(node) {
+  const names = [];
+  for (let n = node; n; n = n.parent) names.unshift(displayName(n));
+  return names.join(' › ');
 }
 
 function text(v) {

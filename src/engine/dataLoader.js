@@ -62,6 +62,8 @@ async function resolveNode(raw, ctx, parent) {
     dopisek: src.dopisek ?? '',             // np. "lewa", "nr 1"
     model: src.model ?? null,                // opcjonalny plik .glb zamiast modelu z kodu
     zdejmowalny: !!src.zdejmowalny,
+    // od tego poziomu w dół reszta wagonu jest ukrywana (żeby nie zasłaniała widoku)
+    ukryjOtoczenie: !!src.ukryj_otoczenie,
     opis: {
       nazwa_pl: src.id, nazwa_en: '', funkcja: EMPTY, budowa: EMPTY,
       typowe_uszkodzenia: EMPTY, wymiary_graniczne: EMPTY, przepisy: EMPTY,

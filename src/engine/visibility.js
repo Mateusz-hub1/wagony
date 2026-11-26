@@ -7,20 +7,28 @@ import { Navigator } from './navigator.js';
 
 const HOVER = new THREE.Color(0x2f7bff);
 const SELECT = new THREE.Color(0xff8a00);
-const GHOST_OPACITY = 0.1;
+const GHOST_OPACITY = 0.1;      // części poza bieżącym poziomem
+const GHOST_DEEP_OPACITY = 0.05; // to samo, gdy jesteśmy głęboko (np. w zestawie kołowym)
 
 // Lista siatek, które można kliknąć (aktualizowana razem z widocznością)
 export const pickables = [];
 
 export function applyVisibility(nav) {
   pickables.length = 0;
+  // Najbliższa część (bieżąca lub wyżej) z flagą "ukryj_otoczenie", np. zestaw kołowy.
+  // Wszystko poza nią znika, a reszta wewnątrz niej jest prawie przezroczysta.
+  let scope = null;
+  for (let n = nav.focus; n; n = n.parent) if (n.ukryjOtoczenie) { scope = n; break; }
+  const ghostOpacity = scope ? GHOST_DEEP_OPACITY : GHOST_OPACITY;
+
   for (const node of walk(nav.root)) {
-    const visible = isNodeVisible(node, nav);
+    let visible = isNodeVisible(node, nav);
+    if (scope && !Navigator.isInside(node, scope)) visible = false;
     const ghost = !Navigator.isInside(node, nav.focus);
     const removing = anyUp(node, (n) => n.removed);
     for (const m of node.meshes) {
       m.visible = visible;
-      setGhost(m, ghost);
+      setGhost(m, ghost, ghostOpacity);
       if (visible && !ghost && !removing) pickables.push(m);
     }
   }
@@ -40,12 +48,13 @@ function anyUp(node, fn) {
   return false;
 }
 
-function setGhost(m, ghost) {
-  if (m.userData.ghost === ghost) return;
-  m.userData.ghost = ghost;
+function setGhost(m, ghost, opacity) {
+  const key = ghost ? opacity : false;
+  if (m.userData.ghost === key) return;
+  m.userData.ghost = key;
   const mat = m.material;
   mat.transparent = ghost ? true : m.userData.baseTransparent;
-  mat.opacity = ghost ? GHOST_OPACITY * (m.userData.baseOpacity ?? 1) : m.userData.baseOpacity;
+  mat.opacity = ghost ? opacity * (m.userData.baseOpacity ?? 1) : m.userData.baseOpacity;
   mat.depthWrite = ghost ? false : m.userData.baseDepthWrite;
   m.castShadow = !ghost;
   mat.needsUpdate = true;

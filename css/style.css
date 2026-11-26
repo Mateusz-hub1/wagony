@@ -76,14 +76,24 @@ body {
 #screen-viewer {
   flex: 1; min-height: 0;
   display: grid;
-  grid-template-columns: 280px 1fr 360px;
+  grid-template-columns: var(--tree-w, 280px) 1fr 360px;
 }
 #tree-panel, #info-panel {
   background: var(--panel);
   overflow: auto;
   padding: 12px 14px;
 }
-#tree-panel { border-right: 1px solid var(--line); }
+/* panel drzewa sam się nie przewija (przewija się #tree), dzięki temu uchwyt zostaje na miejscu */
+#tree-panel { border-right: 1px solid var(--line); position: relative; overflow: hidden; display: flex; flex-direction: column; }
+#tree { flex: 1; min-height: 0; overflow: auto; }
+/* uchwyt do poszerzania panelu drzewa */
+#tree-resizer {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 6px;
+  cursor: col-resize; z-index: 2;
+}
+#tree-resizer:hover, body.resizing #tree-resizer { background: var(--accent-soft); border-right: 2px solid var(--accent); }
+body.resizing { cursor: col-resize; user-select: none; }
+body.resizing canvas { pointer-events: none; }
 #info-panel { border-left: 1px solid var(--line); }
 #tree-panel h2 { font-size: 14px; margin: 0 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
 
@@ -135,7 +145,7 @@ body {
 /* --- Panel opisu --- */
 #info-panel h2 { font-size: 18px; margin: 0; }
 #info-panel .en { color: var(--muted); font-weight: 400; }
-#info-panel .path { color: var(--muted); font-size: 11px; margin: 2px 0 10px; word-break: break-all; }
+#info-panel .path { color: var(--muted); font-size: 12px; margin: 2px 0 10px; }
 #info-panel h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 14px 0 4px; }
 #info-panel p { margin: 0; white-space: pre-line; }
 #info-panel ul { margin: 0; padding-left: 18px; }

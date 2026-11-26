@@ -44,7 +44,7 @@ export class Viewer {
       new THREE.MeshStandardMaterial({ color: 0xcfd3d6, roughness: 1, metalness: 0 })
     );
     ground.rotation.x = -Math.PI / 2;
-    ground.position.y = -0.2;
+    ground.position.y = -0.45; // pod spodem podsypki toru
     ground.receiveShadow = true;
     this.scene.add(ground);
     this.scene.add(buildTrack());
