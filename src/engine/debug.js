@@ -12,7 +12,7 @@
 import * as THREE from 'three';
 import { walk } from './dataLoader.js';
 
-export function installDebug({ root, nav }, viewer, params) {
+export function installDebug({ root, nav, animator }, viewer, params) {
   const find = (path) => {
     for (const n of walk(root)) if (n.path === `${root.id}/${path}` || n.path === path) return n;
     console.warn(`[debug] Brak części ${path}`);
@@ -26,16 +26,26 @@ export function installDebug({ root, nav }, viewer, params) {
     const n = find(p);
     if (n) nav.toggleRemoved(n);
   }
+  // Chrome bez okna rysuje mało klatek – kończymy animacje od razu, żeby zrzut pokazał stan końcowy
+  settle(nav, animator, viewer);
   if (params.has('cam')) {
     const [x, y, z, tx, ty, tz] = params.get('cam').split(',').map(Number);
     // po animacji kamery z flyToBox
-    setTimeout(() => { viewer.camera.position.set(x, y, z); viewer.controls.target.set(tx, ty, tz); viewer.controls.update(); }, 1500);
+    viewer.fly = null;
+    viewer.camera.position.set(x, y, z); viewer.controls.target.set(tx, ty, tz); viewer.controls.update();
   }
   if (params.has('overlaps')) {
     const list = overlaps(root, { log: false });
     console.log(`[debug] kolizje: ${list.length}`);
     for (const o of list.slice(0, 60)) console.log(`[debug] ${o.a} <> ${o.b}: ${o.size}`);
   }
+}
+
+// Natychmiastowe zakończenie rozkładania / zdejmowania i przelotu kamery
+function settle(nav, animator, viewer) {
+  for (let i = 0; i < 300; i++) animator.update(0.05);
+  nav.emit('visibility');
+  if (viewer.fly) viewer.fly.duration = 1e-4;
 }
 
 // Kolizje: dla każdej pary siatek z RÓŻNYCH zespołów (dzieci korzenia na głębokości "depth")
