@@ -1,0 +1,162 @@
+{
+  "opisy": {
+    "zaczep_kontenerowy_staly": {
+      "nazwa_pl": "zaczep kontenerowy stały",
+      "nazwa_en": "fixed container spigot",
+      "funkcja": "Ustala położenie kontenera lub nadwozia wymiennego na wagonie: czop wchodzi w otwór dolnego naroża kontenera i nie pozwala mu przesunąć się wzdłuż ani w poprzek wagonu.",
+      "budowa": "Wspornik przyspawany do ostoi, na nim płyta oporowa, na której opiera się naroże kontenera, i czop (stożek) wchodzący w otwór naroża.",
+      "typowe_uszkodzenia": "Czop lub płyta oporowa odkształcone albo uszkodzone: czop nieużywany – usterka GCU 6.7.1.3 (oznaczenie K, kl. 3); czop używany (z ładunkiem) – 6.7.1.4 (naprawić + K, jeśli się nie da – odstawić wagon, kl. 5). Naroża kontenera nie osadzone na czopach – 7.7.2 (odstawić wagon).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 6.7.1.3, 6.7.1.4, 7.7.2; Aneks 5: czop nieużywany – nieuszkodzony, czop używany – „uruchomiony”, nieuszkodzony; GCU Zał. 10 kody prac CU61010–CU61012 (blokada czopów); karta UIC 592 (czopy wg UIC 592-1 i 592-2 – według katalogu DB Cargo).",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1 i Aneks 5; Załącznik 10: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "DB Cargo – katalog wagonów, Sgns 681 (składane czopy wg UIC 592-1 i 592-2): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/s-bogie-flat-wagons-with-4-wheelsets/Sgns-681-9121290"
+      ],
+      "do_sprawdzenia": [
+        "Kształt i wymiary czopu w modelu – SZACUNKOWE; sprawdzić z UIC 592 / ISO 1161 (otwór dolnego naroża kontenera)",
+        "Od 2026 część Zał. 9 GCU przeniesiono do IRS 40436 – porównać kody"
+      ],
+      "status": "do weryfikacji"
+    },
+    "zaczep_kontenerowy_skladany": {
+      "nazwa_pl": "zaczep kontenerowy składany",
+      "nazwa_en": "folding (hinged) container spigot",
+      "funkcja": "Jak zaczep stały, ale można go złożyć (położyć na bok), gdy w tym miejscu nie stoi naroże kontenera – dzięki temu na jednym wagonie da się ustawić kontenery o różnych długościach.",
+      "budowa": "Wspornik z uchami zawiasu, głowica (płyta oporowa z czopem) obracana na sworzniu i zatrzask, który blokuje głowicę w położeniu roboczym albo złożonym.",
+      "typowe_uszkodzenia": "Czop lub głowica odkształcone (GCU 6.7.1.3 / 6.7.1.4). Ruchome części niezabezpieczone, np. czop wysuwany lub składany pozostawiony luzem – 6.7.5 (naprawić, jeśli się nie da – zabezpieczyć prowizorycznie). Czopy płyt uchylnych ani podniesione, ani zabezpieczone – 7.7.3 (podnieść i zabezpieczyć, jeśli się nie da – odstawić wagon, kl. 5). Zatarty zawias, niesprawny zatrzask.",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 6.7.1.3, 6.7.1.4, 6.7.5, 7.7.2, 7.7.3; GCU Zał. 10 kody prac CU61010–CU61012; UIC 592.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1 i Aneks 5; Załącznik 10: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "DB Cargo – katalog wagonów, Sgns 681: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/s-bogie-flat-wagons-with-4-wheelsets/Sgns-681-9121290",
+        "Wascosa – karta wagonu 48' (stałe czopy dla 40'/45', uchylne dla 20', UIC 592): https://wascosa.alpha.bag.ch/99-datenobjekte/wagenpark/Typenbl%C3%A4tter/en/intermodalwagen/containertragwagen/containerwagen_48_en_ffs.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Kierunek składania i rodzaj zatrzasku – w modelu uproszczone (SZACUNKOWE)"
+      ],
+      "status": "do weryfikacji"
+    },
+    "wspornik_zaczepu": {
+      "nazwa_pl": "wspornik zaczepu",
+      "nazwa_en": "spigot bracket",
+      "funkcja": "Przenosi na ostoję siły od kontenera (ciężar i siły wzdłużne przy hamowaniu i uderzeniach).",
+      "budowa": "Spawana skrzynka z blach; w zaczepie składanym ma ucha zawiasu ze sworzniem i zatrzask.",
+      "typowe_uszkodzenia": "Pęknięcia spoin przy ostoi, odkształcenie po uderzeniu kontenerem przy załadunku, wyrobione otwory zawiasu.",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "glowica_zaczepu": {
+      "nazwa_pl": "głowica zaczepu",
+      "nazwa_en": "spigot head (hinged support plate)",
+      "funkcja": "Ruchoma część zaczepu składanego: w położeniu roboczym podpiera naroże kontenera, po złożeniu chowa się na bok.",
+      "budowa": "Płyta oporowa z żebrami, kolanko zawiasu i czop.",
+      "typowe_uszkodzenia": "Głowica nie podniesiona lub nie zabezpieczona (GCU 7.7.3), odkształcona płyta (6.7.1).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 6.7.1, 6.7.5, 7.7.3.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "status": "do weryfikacji"
+    },
+    "czop_zaczepu": {
+      "nazwa_pl": "czop zaczepu",
+      "nazwa_en": "spigot (locating cone)",
+      "funkcja": "Wchodzi w otwór dolnego naroża kontenera i ustala jego położenie.",
+      "budowa": "Stalowy stożek ścięty, spłaszczony w poprzek (dopasowany do podłużnego otworu naroża), przyspawany do płyty oporowej.",
+      "typowe_uszkodzenia": "Odkształcenie, starcie lub urwanie czopu (GCU 6.7.1.3 / 6.7.1.4).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 6.7.1.3–6.7.1.4; UIC 592.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "status": "do weryfikacji"
+    },
+    "klonica": {
+      "nazwa_pl": "kłonica",
+      "nazwa_en": "stanchion (stake)",
+      "funkcja": "Pionowy słupek przy boku platformy, który utrzymuje ładunek (np. drewno, rury, profile) przed zsunięciem się w bok.",
+      "budowa": "Słupek stalowy osadzony w kieszeni (gnieździe) na ostojnicy. Kłonice bywają zdejmowane, obrotowe (odchylane na zewnątrz) albo wysuwane; często mają łańcuch i zabezpieczenie przed wypadnięciem.",
+      "typowe_uszkodzenia": "Brak kłonicy potrzebnej do zabezpieczenia ładunku – GCU 6.4.3.1 (kl. 5); odkształcona i przekracza skrajnię – 6.4.3.2 (kl. 5); pęknięcie lub złamanie kłonicy albo jej mocowania – 6.4.3.3 (gdy kłonica potrzebna: odstawić wagon, inaczej M; kl. 4); luźno zwisające łańcuchy – 6.4.3.4; nieskuteczne zamocowanie – 6.4.3.5 (zamocować + K, jeśli się nie da – odstawić). Ładunek naciska na kłonice i je odkształca – 7.2.3.3.",
+      "wymiary_graniczne": "Kłonice nie mogą być odkształcone, złamane ani rozdarte tak, że przekraczają skrajnię (GCU Zał. 10 pkt 6.26).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 6.4.3.1–6.4.3.5, 7.2.3; GCU Zał. 10 pkt 6.26 (kłonice zdejmowane, obrotowe i wysuwane – bez braków, złamań i pęknięć, także mocowania; zamocowania skuteczne) oraz kody prac CU60260–CU60262; GCU Zał. 7 pkt 4.1 (kłonice wg karty UIC 578 jako wymienne części zamienne); GCU Zał. 11 pkt 2.13 (znak akcesoriów zdejmowanych: nr 1 – kłonica zdejmowana, nr 6 – łańcuch kłonicy).",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załączniki 7, 9 (Aneks 1 i 5), 10 i 11: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Przekrój i wysokość słupka w modelu – SZACUNKOWE (UIC 578 – brak publicznego tekstu)",
+        "Od 2026 część Zał. 9 GCU przeniesiono do IRS 40436 – porównać kody"
+      ],
+      "status": "do weryfikacji"
+    },
+    "kieszen_klonicy": {
+      "nazwa_pl": "kieszeń kłonicy",
+      "nazwa_en": "stanchion pocket (socket)",
+      "funkcja": "Gniazdo przy ostojnicy, w którym osadza się kłonicę.",
+      "budowa": "Spawana skrzynka z blach otwarta u góry i u dołu, przyspawana do ostojnicy.",
+      "typowe_uszkodzenia": "Pęknięcie lub złamanie mocowania kłonicy (GCU 6.4.3.3), rozgięta kieszeń, w której kłonica się nie trzyma (6.4.3.5).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 6.4.3.3, 6.4.3.5; GCU Zał. 10 pkt 6.26.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1; Załącznik 10: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "status": "do weryfikacji"
+    },
+    "slupek_klonicy": {
+      "nazwa_pl": "słupek kłonicy",
+      "nazwa_en": "stanchion post",
+      "funkcja": "Właściwa część kłonicy, o którą opiera się ładunek.",
+      "budowa": "Rura prostokątna lub kształtownik z kołnierzem opierającym się na kieszeni i sworzniem lub zawleczką zabezpieczającą przed wyjęciem.",
+      "typowe_uszkodzenia": "Wygięcie przez ładunek (GCU 6.4.3.2, 7.2.3.3), pęknięcie (6.4.3.3), brak zabezpieczenia (6.4.3.5).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 6.4.3.2–6.4.3.5, 7.2.3.3; GCU Zał. 10 pkt 6.26.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1; Załącznik 10: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "status": "do weryfikacji"
+    },
+    "uchwyt_mocujacy": {
+      "nazwa_pl": "uchwyt mocujący",
+      "nazwa_en": "lashing ring",
+      "funkcja": "Punkt zaczepienia pasów, lin lub łańcuchów mocujących ładunek do wagonu.",
+      "budowa": "Wspornik przyspawany do ostojnicy lub belki z kutym pierścieniem (albo hakiem).",
+      "typowe_uszkodzenia": "Urwany lub pęknięty wspornik, wytarty albo rozgięty pierścień, pęknięte spoiny.",
+      "zdjecia": [],
+      "zrodla": [],
+      "do_sprawdzenia": [
+        "Brak osobnego kodu usterki w katalogu GCU Zał. 9 (szukano w wydaniu 2022) – potwierdzić, pod jaki kod się to zalicza",
+        "Wytrzymałość uchwytów mocujących – sprawdzić w normie EN 12663-2 / wytycznych załadunku UIC"
+      ],
+      "status": "do weryfikacji"
+    }
+  },
+  "szablony": {
+    "zaczep_kontenerowy_staly": {
+      "typ": "zaczep_kontenerowy_staly",
+      "children": [
+        { "id": "wspornik_zaczepu", "typ": "wspornik_zaczepu" },
+        { "id": "czop_zaczepu", "typ": "czop_zaczepu" }
+      ]
+    },
+    "zaczep_kontenerowy_skladany": {
+      "typ": "zaczep_kontenerowy_skladany",
+      "children": [
+        { "id": "wspornik_zaczepu", "typ": "wspornik_zaczepu" },
+        { "id": "glowica_zaczepu", "typ": "glowica_zaczepu", "zdejmowalny": true, "children": [
+          { "id": "czop_zaczepu", "typ": "czop_zaczepu" }
+        ] }
+      ]
+    },
+    "klonica": {
+      "typ": "klonica",
+      "children": [
+        { "id": "kieszen_klonicy", "typ": "kieszen_klonicy" },
+        { "id": "slupek_klonicy", "typ": "slupek_klonicy", "zdejmowalny": true }
+      ]
+    },
+    "uchwyt_mocujacy": {
+      "typ": "uchwyt_mocujacy"
+    }
+  }
+}

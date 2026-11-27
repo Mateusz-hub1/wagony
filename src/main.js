@@ -24,6 +24,8 @@ route();
 
 async function route() {
   let list;
+  // komunikat na ekranie wyboru, dopóki lista wagonów się wczytuje
+  $('#select-loading').hidden = false;
   try {
     list = await loadWagonList();
   } catch (e) {
@@ -44,6 +46,7 @@ function showSelect(list) {
   $('#screen-select').hidden = false;
   $('#btn-home').hidden = true;
   clearBreadcrumb($('#breadcrumb'));
+  $('#select-loading').hidden = true;
   const box = $('#wagon-list');
   box.innerHTML = '';
   for (const w of list.wagony) {
@@ -64,6 +67,7 @@ function showError(e) {
     ? 'Strony nie da się otworzyć bezpośrednio z pliku. Uruchom w folderze projektu: python3 -m http.server 8000 i wejdź na http://localhost:8000'
     : `Błąd wczytywania: ${e.message}`;
   $('#screen-select').hidden = false;
+  $('#select-loading').hidden = true;
   $('#wagon-list').innerHTML = `<p class="missing">${msg}</p>`;
   const l = $('#loading');
   l.textContent = msg;
@@ -71,6 +75,7 @@ function showError(e) {
 
 // ---------- Otwieranie wagonu ----------
 async function openWagon(w) {
+  $('#select-loading').hidden = true;
   $('#screen-select').hidden = true;
   $('#screen-viewer').hidden = false;
   $('#btn-home').hidden = false;

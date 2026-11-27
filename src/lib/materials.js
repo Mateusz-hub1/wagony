@@ -42,6 +42,44 @@ function makeGrungeTextures() {
 }
 export const grunge = makeGrungeTextures(); // używane też przez tor
 
+// ---------- Tekstura drewna (słoje wzdłuż osi U tekstury) ----------
+// Deski: słoje biegną wzdłuż U. Przy box() z geometrii RoundedBox tekstura jest rozciągana
+// na każdą ścianę, więc długie deski warto budować osobno (1 deska = 1 bryła).
+function makeWoodTexture() {
+  if (!hasDOM) return null;
+  const W = 512, H = 128;
+  const c = document.createElement('canvas');
+  c.width = W; c.height = H;
+  const ctx = c.getContext('2d');
+  const img = ctx.createImageData(W, H);
+  let seed = 4321;
+  const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+  // kilka losowych sęków
+  const knots = Array.from({ length: 3 }, () => [rnd() * W, rnd() * H, 6 + rnd() * 8]);
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+    // słoje: falujące linie wzdłuż x, zagęszczone wokół sęków
+    let v = y / H * 7 + Math.sin(x / W * Math.PI * 2 * 2 + y * 0.04) * 0.9
+      + Math.sin(x / W * Math.PI * 2 * 5 + 1.3) * 0.25;
+    for (const [kx, ky, kr] of knots) {
+      const d = Math.hypot((x - kx) * 0.35, y - ky);
+      v += kr * 2 / (d + kr);
+    }
+    const ring = 0.5 + 0.5 * Math.sin(v * Math.PI * 2);
+    // jasne drewno wczesne, ciemniejsze słoje późne, drobne włókna wzdłuż deski
+    const fiber = Math.sin(y * 2.7 + Math.sin(x * 0.013) * 3) * 0.03;
+    const val = 0.8 - 0.22 * Math.pow(ring, 4) + fiber + (rnd() - 0.5) * 0.05;
+    const i = (y * W + x) * 4;
+    img.data[i] = img.data[i + 1] = img.data[i + 2] = Math.round(Math.min(1, val) * 255);
+    img.data[i + 3] = 255;
+  }
+  ctx.putImageData(img, 0, 0);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  return t;
+}
+const woodTex = makeWoodTexture();
+
 // Pomocnik: materiał standardowy + informacja o zużyciu (weather)
 function std(params, weatherOpts = null, { physical = false, textured = true } = {}) {
   // DoubleSide: bryły toczone nie zależą od kierunku obiegu profilu
@@ -53,6 +91,13 @@ function std(params, weatherOpts = null, { physical = false, textured = true } =
 }
 
 const RUST = 0x5b2c14;
+
+// Drewno: tekstura słojów zamiast „brudu”, bez rdzy (zabrudzenie tylko z kolorów wierzchołków)
+function woodStd(color, roughness) {
+  const m = std({ color, roughness, metalness: 0 }, { rust: 0x3a3128, edges: false, amount: 0.35 }, { textured: false });
+  if (woodTex) { m.map = woodTex; m.roughnessMap = grunge.rough; }
+  return m;
+}
 
 // ---------- Biblioteka materiałów ----------
 export const M = {
@@ -89,6 +134,10 @@ export const M = {
   paintRed: std({ color: 0x9e1f1a, roughness: 0.55, metalness: 0.1 }, { rust: RUST, edges: false, amount: 0.3 }),
   // Farba biała / jasna (tabliczki, oznaczenia)
   paintWhite: std({ color: 0xd9d6cf, roughness: 0.6, metalness: 0.05 }, { rust: RUST, edges: false, amount: 0.25 }),
+  // Drewno podłogi platformy (deski) – szarobrązowe, zwietrzałe, matowe; słoje wzdłuż deski
+  wood: woodStd(0x7a6a55, 0.88),
+  // Drewno ciemniejsze, mocniej zabrudzone (np. drewniane burty, przekładki)
+  woodWorn: woodStd(0x5e5244, 0.92),
   // Materiał zastępczy, gdy brakuje buildera
   placeholder: std({ color: 0xd0473a, roughness: 0.6, metalness: 0, transparent: true, opacity: 0.6 }, null, { textured: false }),
 };

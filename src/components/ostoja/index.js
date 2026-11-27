@@ -9,6 +9,10 @@
 //   y_poreczy      – wysokość poręczy poziomej na ostojnicy [m]
 //   y_poreczy_pion – [od, do] poręczy pionowej na ścianie czołowej [m]
 //   sx, sz         – który narożnik (±1) – podawane w węźle stopnia / poręczy
+//   porecz_pionowa – gdzie jest poręcz pionowa: "sciana" (na ścianie czołowej, domyślnie),
+//                    "belka" (na licu belki czołowej – wagony bez ściany czołowej, np. platformy)
+//                    albo false (brak poręczy pionowej)
+//   y_poreczy_belka – [od, do] poręczy pionowej na belce czołowej [m] (gdy "belka")
 // Domyślne wartości = Eaos. Wymiary SZACUNKOWE, chyba że wagon poda inne ze źródła.
 import { M, part, rod, lathe, boltCircle, boxGeom, merged, inheritedParam } from '../../lib/geom.js';
 
@@ -17,6 +21,8 @@ const DEF = {
   y_ostojnicy: 0.92, y_poreczy: 1.12, y_poreczy_pion: [1.35, 2.15],
   y_stopnia: 0.45, // wysokość stopnia nad główką szyny – SZACUNKOWE, sprawdzić w UIC 535-2 / EN 16116-2
   sx: 1, sz: 1,
+  porecz_pionowa: 'sciana',
+  y_poreczy_belka: null, // domyślnie: od spodu ostojnicy w górę o 0,4 m – SZACUNKOWE
 };
 
 // Czop skrętu (od strony pudła) – wchodzi w gniazdo skrętu wózka. Początek: środek walca.
@@ -53,10 +59,18 @@ export function buildHandrail(node) {
   const p = inheritedParam(node, DEF);
   const { sx, sz } = p;
   const R = 0.014, L = p.pol_dlugosci, [yv0, yv1] = p.y_poreczy_pion;
-  // pionowa – na licu ściany czołowej przy narożniku (SZACUNKOWE)
-  const xo = sx * (L + 0.06), zv = sz * (p.pol_szerokosci - 0.08);
-  rod([xo, yv0, zv], [xo, yv1, zv], R, M.paintDark, { seg: 12, parent: g });
-  for (const y of [yv0, yv1]) rod([xo, y, zv], [sx * (L - 0.01), y, zv], R, M.paintDark, { seg: 12, parent: g });
+  if (p.porecz_pionowa === 'sciana') {
+    // pionowa – na licu ściany czołowej przy narożniku (SZACUNKOWE)
+    const xo = sx * (L + 0.06), zv = sz * (p.pol_szerokosci - 0.08);
+    rod([xo, yv0, zv], [xo, yv1, zv], R, M.paintDark, { seg: 12, parent: g });
+    for (const y of [yv0, yv1]) rod([xo, y, zv], [sx * (L - 0.01), y, zv], R, M.paintDark, { seg: 12, parent: g });
+  } else if (p.porecz_pionowa === 'belka') {
+    // pionowa – na licu belki czołowej przy narożniku (wagon bez ściany czołowej, SZACUNKOWE)
+    const [yb0, yb1] = p.y_poreczy_belka ?? [p.y_ostojnicy, p.y_ostojnicy + 0.4];
+    const xo = sx * (L + 0.07), zv = sz * (p.z_ostojnicy - 0.12);
+    rod([xo, yb0, zv], [xo, yb1, zv], R, M.paintDark, { seg: 12, parent: g });
+    for (const y of [yb0 + 0.03, yb1 - 0.03]) rod([xo, y, zv], [sx * (L - 0.005), y, zv], R, M.paintDark, { seg: 12, parent: g });
+  }
   // pozioma – na ostojnicy nad stopniem
   const zs = sz * (p.z_ostojnicy + 0.07), x0 = sx * (L - 0.7), x1 = sx * (L - 0.15), y = p.y_poreczy;
   rod([x0, y, zs], [x1, y, zs], R, M.paintDark, { seg: 12, parent: g });

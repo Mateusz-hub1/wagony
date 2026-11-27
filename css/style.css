@@ -71,6 +71,7 @@ body {
 .card .badge { display: inline-block; margin-top: 10px; font-size: 12px; padding: 2px 8px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
 .card:disabled .badge { background: #eceff1; color: var(--muted); }
 .note { color: var(--muted); margin-top: 24px; }
+.loading-note { color: var(--muted); margin: 0 0 16px; }
 
 /* --- Ekran przeglądarki 3D: 3 kolumny --- */
 #screen-viewer {
