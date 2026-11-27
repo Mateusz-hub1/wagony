@@ -56,8 +56,11 @@ async function resolveNode(raw, ctx, parent) {
   }
 
   const sourceFile = ctx.file;
-  const opisTypu = ctx.opisy[src.typ];
+  let opisTypu = ctx.opisy[src.typ];
   if (!opisTypu) console.warn(`[dane] Brak opisu dla typu "${src.typ}" w ${sourceFile}`);
+  // Opis wspólny (np. belki ostoi): "opis_wspolny": "components/ostoja.json#ostojnica".
+  // Pola wagonu mają pierwszeństwo, a listy źródeł i notatek są łączone.
+  if (opisTypu?.opis_wspolny) opisTypu = await mergeOpisWspolny(opisTypu);
 
   const node = {
     id: src.id,
@@ -86,6 +89,25 @@ async function resolveNode(raw, ctx, parent) {
     node.children.push(await resolveNode(ch, ctx, node));
   }
   return node;
+}
+
+// Łączy opis wagonu z opisem wspólnym z pliku podzespołu
+async function mergeOpisWspolny(opis) {
+  const { opis_wspolny, ...wlasny } = opis;
+  const [file, anchor] = opis_wspolny.split('#');
+  const comp = await loadJSON(`./data/${file}`);
+  const wspolny = comp.opisy?.[anchor];
+  if (!wspolny) {
+    console.warn(`[dane] Brak opisu wspólnego "${anchor}" w ${file}`);
+    return wlasny;
+  }
+  const lista = (k) => [...(wlasny[k] ?? []), ...(wspolny[k] ?? [])];
+  return {
+    ...wspolny, ...wlasny,
+    zrodla: lista('zrodla'),
+    do_sprawdzenia: lista('do_sprawdzenia'),
+    zdjecia: lista('zdjecia'),
+  };
 }
 
 // Nazwa do wyświetlenia: „maźnica – lewa”
