@@ -76,17 +76,21 @@
       "nazwa_en": "Y25 bogie",
       "funkcja": "Prowadzi wagon po torze, przenosi masę pudła na szyny, amortyzuje drgania i hamuje koła.",
       "budowa": "Spawana rama w kształcie litery H, dwa zestawy kołowe w maźnicach, usprężynowanie ze sprężyn śrubowych z tłumikiem ciernym Lenoira, gniazdo skrętu, ślizgi boczne, układ hamulca klockowego. Rozstaw osi 1800 mm, koła Ø920 mm (w niektórych odmianach Ø840 mm).",
-      "typowe_uszkodzenia": "Pęknięcia ramy (zwłaszcza przy spoinach), zużycie prowadnic maźnic i ślizgów, pęknięte lub osiadłe sprężyny, zużycie gniazda skrętu.",
-      "przepisy": "EN 13749 (wymagania wytrzymałościowe ram wózków); GCU – Załącznik 9; VPI.",
+      "typowe_uszkodzenia": "Pęknięte lub widocznie odkształcone elementy ramy (GCU 4.7.1), złamane elementy (4.7.2), brakujące lub złamane śruby ramy (4.7.3); uszkodzone ślizgi boczne i ich sprężyny (4.8); nasmarowane powierzchnie cierne tłumików (4.9.1); uszkodzenia usprężynowania Y25 (2.5); przemieszczone lub brakujące nakładki ze stali manganowej na maźnicach i prowadnicach (1.8.4, 4.4.2); wadliwe połączenie wózka z ostoją, brak zabezpieczenia czopa skrętu (4.6.1).",
+      "wymiary_graniczne": "Odstęp korpusu maźnicy od ramy wózka co najmniej 8 mm (GCU Zał. 10 pkt 2.5.2; Zał. 9 usterka 2.5.6). Po wymianie zestawu bez formularza HR różnica średnic okręgów tocznych dwóch zestawów wózka maks. 10 mm (Zał. 10 pkt 1.35).",
+      "przepisy": "GCU Zał. 9, Aneks 1: grupa 1 (układ biegowy), 2.5 (usprężynowanie Y25 i pochodnych), 4.6–4.9 (połączenie z ostoją, rama, ślizgi, tłumiki); GCU Zał. 10 pkt 4.12–4.26 (wózki, w tym Y25 i pochodne); EN 13749 (wymagania wytrzymałościowe ram wózków); EN 15827 (wymagania dla wózków i układów biegowych).",
       "zdjecia": [],
       "zrodla": [
         "Railway Technology – Y25 bogie: https://www.railway-technology.com/products/y25-bogie/",
-        "TŽV Gredelj – okretno postolje Y25: https://tzv-gredelj.hr/en/proizvod/okretno-postolje-y25/"
+        "TŽV Gredelj – okretno postolje Y25: https://tzv-gredelj.hr/en/proizvod/okretno-postolje-y25/",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: GCU – Załącznik 9 – uzupełnić",
-        "przepisy: VPI – rozdział"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu",
+        "budowa: odmiana z kołami Ø840 mm – brak źródła"
       ],
       "status": "do weryfikacji"
     },
@@ -95,13 +99,16 @@
       "nazwa_en": "bogie frame",
       "funkcja": "Łączy wszystkie elementy wózka; przenosi obciążenia z gniazda skrętu na sprężyny i maźnice.",
       "budowa": "Dwie ostojnice o przekroju skrzynkowym połączone poprzecznicą i czołownicami, z prowadnicami maźnic i kołpakami sprężyn. Konstrukcja spawana.",
-      "typowe_uszkodzenia": "Pęknięcia spoin i blach, odkształcenia, zużycie nakładek ślizgowych prowadnic.",
-      "przepisy": "EN 13749",
+      "typowe_uszkodzenia": "Pęknięte lub widocznie odkształcone elementy (GCU 4.7.1), złamane elementy (4.7.2); pęknięcia spoin poprzecznic i ostojnic (Zał. 10 pkt 4.12); brakujące lub złamane śruby ramy (4.7.3); przemieszczone lub brakujące nakładki ze stali manganowej na prowadnicach maźnic (4.4.2) i pęknięte spoiny tych nakładek.",
+      "wymiary_graniczne": "Łączna długość pęknięć spoin nakładek ciernych maks. 50% długości spoin (GCU Zał. 10 pkt 4.18). Odstęp korpusu maźnicy od ramy min. 8 mm (pkt 2.5.2).",
+      "przepisy": "EN 13749; GCU Zał. 9 usterki 4.4.2, 4.7.1–4.7.3; GCU Zał. 10 pkt 4.12, 4.18, 4.34 (spawanie nakładek tylko po wyjęciu zestawów i według instrukcji posiadacza; ponowne spawanie pęknięć nakładek zabronione).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 13749 – inne"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -110,11 +117,15 @@
       "nazwa_en": "centre bowl",
       "funkcja": "Przyjmuje czop skrętu pudła: przenosi pionowy nacisk pudła na wózek i pozwala wózkowi obracać się w łukach.",
       "budowa": "Pierścieniowa panew przykręcona do poprzecznicy, z wkładką ślizgową na dnie.",
-      "typowe_uszkodzenia": "Zużycie wkładki i obrzeża panwi, brak smarowania, luźne śruby.",
+      "typowe_uszkodzenia": "Gniazdo pęknięte lub luźne (GCU Zał. 10 pkt 4.16); brak, pęknięcie lub luz czopa skrętu (pkt 4.17); brak lub nieskuteczne zabezpieczenie czopa (Zał. 9 usterka 4.6.1.2); zużycie wkładki i obrzeża panwi, luźne śruby.",
+      "przepisy": "GCU Zał. 9 usterki 4.6.1.1–4.6.1.2; GCU Zał. 10 pkt 4.16–4.17, 4.35–4.36 (śruby mocujące gniazdo: zakaz spawania i cięcia przy śrubach klasy 8.8 i wyższej).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -123,12 +134,16 @@
       "nazwa_en": "side bearer",
       "funkcja": "Ogranicza kołysanie pudła na boki i stabilizuje wózek.",
       "budowa": "Obudowa przykręcona do poprzecznicy z płytą (nakładką) ślizgową; po stronie pudła współpracuje z przeciwślizgiem.",
-      "typowe_uszkodzenia": "Zużycie nakładki, niewłaściwy luz, luźne mocowanie.",
+      "typowe_uszkodzenia": "Ślizg złamany (GCU 4.8.1), pęknięta sprężyna ślizgu (4.8.2), niekompletne lub luźne mocowanie (4.8.3), zużycie nakładki.",
+      "przepisy": "GCU Zał. 9 usterki 4.8.1–4.8.3; GCU Zał. 10 pkt 4.14.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: Luz ślizgów – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "wymiary_graniczne: luz ślizgów – brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -137,16 +152,19 @@
       "nazwa_en": "wheelset",
       "funkcja": "Toczy się po szynach, prowadzi wagon i przenosi nacisk na tor.",
       "budowa": "Oś z dwoma kołami wtłoczonymi na podstopia oraz dwie maźnice z łożyskami na czopach osi.",
-      "typowe_uszkodzenia": "Uszkodzenia powierzchni tocznej (wyślizgi, nalepy, wykruszenia), zużycie obrzeży, pęknięcia osi lub kół, przegrzanie łożysk.",
-      "wymiary_graniczne": "Odległość wewnętrznych powierzchni kół (nominalnie 1360 mm).",
-      "przepisy": "EN 13260 (zestawy kołowe), EN 13103-1 (projektowanie osi), GCU – Załącznik 9, VPI.",
+      "typowe_uszkodzenia": "Odległość wewnętrznych powierzchni kół poza tolerancją albo różnica między zestawami ponad 2 mm, ślady wykolejenia, przesunięcie koła na osi, przegrzanie strefy przejścia tarczy w wieniec (GCU 1.7.1). Oznaki owalizacji kół (1.7.2): ścięty sworzeń trójkąta hamulcowego, złamane strzemię bezpieczeństwa, błyszczące ślady na sprężynie wewnętrznej, brak zaczepu „T”, odpadnięte nakładki manganowe Y25.",
+      "wymiary_graniczne": "Odległość wewnętrznych powierzchni kół E: 1357–1363 mm dla kół > 840 mm, 1359–1363 mm dla kół ≤ 840 mm; Emax − Emin ≤ 2 mm; pomiar sprawdzianem przy główce szyny w co najmniej 3 punktach co 120° (GCU Zał. 10 pkt 1.1.2, 1.17; Zał. 9 usterka 1.7.1). Odległość powierzchni czynnych obrzeży (10 mm poniżej okręgów pomiarowych): maks. 1426 mm; min. 1410 mm dla kół > 840 mm (wagony inne niż dwuosiowe z podwójnymi wieszakami), min. 1415 mm dla kół ≤ 840 mm (pkt 1.1.1). Owalizacja koła maks. 0,6 mm (pkt 1.19). Różnica średnic dwóch zestawów wózka po wymianie bez formularza HR maks. 10 mm (pkt 1.35).",
+      "przepisy": "EN 13260 (zestawy kołowe – wymagania), EN 15313 (zestawy kołowe w eksploatacji i utrzymaniu), EN 13103-1 (projektowanie osi); GCU Zał. 9 usterki 1.7.1–1.7.2; GCU Zał. 10 pkt 1.1, 1.17, 1.19, 1.35–1.37 (po wymianie zestawu: sprawdzić regulację i działanie hamulca).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "EN 13260:2020 – Zestawy kołowe – Wymagania dotyczące wyrobu (opis normy): https://standards.iteh.ai/catalog/standards/cen/2918a430-161a-4376-8927-f4df6fa45507/en-13260-2020",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: tolerancje – uzupełnić",
-        "przepisy: GCU – Załącznik 9 – uzupełnić",
-        "przepisy: VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -155,13 +173,16 @@
       "nazwa_en": "axle",
       "funkcja": "Łączy koła na stałe i przenosi obciążenie z maźnic na koła.",
       "budowa": "Stalowy wał toczony: czopy łożyskowe, czopy podpiaściowe, podstopia kół i trzon. W czołach otwory gwintowane na śruby płytki czołowej.",
-      "typowe_uszkodzenia": "Pęknięcia zmęczeniowe, korozja i uszkodzenia powłoki, ślady przegrzania czopa.",
-      "przepisy": "EN 13103-1, EN 13261",
+      "typowe_uszkodzenia": "Pęknięcie, skrzywienie, naprawa spawaniem, ostra krawędź albo wytarcie głębsze niż 1 mm – odstawienie wagonu (GCU 1.6.1); wytarcie do 1 mm bez ostrych krawędzi (1.6.2); ocieranie części, np. cięgieł hamulcowych, o oś (1.6.3); korozja i uszkodzenia powłoki.",
+      "wymiary_graniczne": "Wytarcie od tarcia maks. 1 mm głębokości, bez ostrych krawędzi (GCU Zał. 10 pkt 1.15.1; Zał. 9 usterki 1.6.1–1.6.2).",
+      "przepisy": "EN 13261 (osie – wymagania wyrobu), EN 13103-1 (projektowanie osi); GCU Zał. 9 usterki 1.6.1–1.6.3; GCU Zał. 10 pkt 1.15, 1.22 (zakaz napraw spawaniem), 1.24.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 13261 – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -170,17 +191,19 @@
       "nazwa_en": "wheel",
       "funkcja": "Toczy się po szynie; obrzeże prowadzi zestaw w torze, a powierzchnia toczna współpracuje z wstawką hamulcową.",
       "budowa": "Koło monoblokowe: piasta, tarcza, wieniec z powierzchnią toczną i obrzeżem. Profil toczny typu S1002 (w modelu przybliżony). Średnica nowego koła 920 mm.",
-      "typowe_uszkodzenia": "Wyślizgi (płaskie miejsca), nalepy, wykruszenia, cienkie lub ostre obrzeże, przegrzanie od hamowania, pęknięcia.",
-      "wymiary_graniczne": "Średnica minimalna, grubość obrzeża (Sd), wysokość obrzeża (Sh), stromość (qR).",
-      "przepisy": "EN 13262 (koła – wymagania), EN 13979-1 (koła monoblokowe – dopuszczenie), EN 13715 (profil toczny), GCU – Załącznik 9.",
+      "typowe_uszkodzenia": "Wyślizgi, nalepy metalu, wykruszenia i łuszczenie powierzchni tocznej (GCU 1.3.3–1.3.5); pęknięcia na przejściu powierzchni tocznej w czoło wieńca (1.3.6.1) i pojedyncze pęknięcia poprzeczne na powierzchni tocznej (1.3.6.3–1.3.6.4); ostre karby od narzędzi na czole wieńca (1.3.6.2); rowki, wyżłobienia i fałszywe obrzeże (1.3.8); farba lub smar na krawędzi powierzchni tocznej (1.3.7); przeciążenie cieplne od hamowania – przypalona farba na przejściu wieniec–tarcza (50 mm lub więcej), rdza na wieńcu, niebieskawe przebarwienia, nalepy (1.2.2); niewidoczny rowek granicy zużycia (1.2.1); za wysokie, za cienkie lub ostre obrzeże (1.4); pęknięta tarcza lub piasta (1.5.1).",
+      "wymiary_graniczne": "Średnica okręgu tocznego min. 840 mm dla koła nominalnego 920–1000 mm (GCU Zał. 10 pkt 1.2). Szerokość wieńca 133–140 mm (pkt 1.3). Grubość obrzeża Sd (10 mm poniżej okręgu tocznego): min. 22 mm dla kół > 840 mm, maks. 33 mm (pkt 1.1.4; Zał. 9 usterka 1.4.2). Wysokość obrzeża Sh: min. 27,5 mm dla kół > 760 mm, maks. 36 mm; przy wstawkach LL i prędkości > 100 km/h maks. 32 mm (pkt 1.4; usterka 1.4.1). Stromość obrzeża qR > 6,5 mm (pkt 1.5; usterka 1.4.3). Wyślizg, wykruszenie, łuszczenie lub nalep na kole > 840 mm: maks. 60 mm długości przy nacisku ≤ 22,5 t, maks. 50 mm przy nacisku > 22,5 t (pkt 1.6.1); w katalogu usterek odstawienie wagonu przy wyślizgu > 60 mm oraz nalepie > 60 mm długości lub ≥ 1 mm grubości (usterki 1.3.3.1, 1.3.4.1). Wyżłobienie lub fałszywe obrzeże maks. 2 mm głębokości (pkt 1.6.1; usterka 1.3.8.3). Rowek granicy zużycia musi być w całości widoczny (pkt 1.8).",
+      "przepisy": "EN 13262 (koła – wymagania), EN 13979-1 (koła monoblokowe – dopuszczenie), EN 13715 (profil toczny), EN 15313 (zestawy kołowe w eksploatacji); GCU Zał. 9 usterki 1.2–1.5; GCU Zał. 10 pkt 1.1–1.8, 1.14, 1.18 (przy podejrzeniu przeciążenia cieplnego próba hamulca wg UIC 543-1 i kontakt z posiadaczem), 1.25, 1.28.",
       "zdjecia": [],
       "zrodla": [
-        "Railway Technology – Y25 bogie (średnica koła): https://www.railway-technology.com/products/y25-bogie/"
+        "Railway Technology – Y25 bogie (średnica koła): https://www.railway-technology.com/products/y25-bogie/",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "EN 13262 – Koła – Wymagania dotyczące wyrobu (opis normy): https://knowledge.bsigroup.com/products/railway-applications-wheelsets-and-bogies-wheels-product-requirements-1",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: dopuszczalne wyślizgi – wg GCU Zał. 9 / VPI",
-        "przepisy: GCU – Załącznik 9 – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -189,13 +212,21 @@
       "nazwa_en": "axle box",
       "funkcja": "Obudowa łożyska na czopie osi; przenosi nacisk sprężyn na oś i prowadzi zestaw w ramie wózka.",
       "budowa": "Korpus z gniazdem sprężyn, pokrywa przednia, płytka czołowa osi, łożysko toczne, smar, uszczelnienie (pierścień labiryntowy).",
-      "typowe_uszkodzenia": "Przegrzanie (gorąca maźnica), wyciek smaru, pęknięty korpus lub pokrywa, luźne lub brakujące śruby.",
-      "przepisy": "EN 12080 (łożyska maźnic), EN 12081 (smary), EN 12082 (badania maźnic), VPI.",
+      "typowe_uszkodzenia": "Korpus nieszczelny – pęknięty, złamany, brak korka (GCU 1.8.1.1); wyciek smaru na tarczę koła (1.8.1.2) albo ślady smaru przy pokrywie (1.8.1.3); prowadnice nie prowadzą maźnicy, maźnica w nieprawidłowym położeniu (1.8.2); gorąca maźnica (1.8.3); przemieszczone lub brakujące nakładki manganowe (1.8.4); luźne lub brakujące śruby.",
+      "wymiary_graniczne": "Boczne powierzchnie maźnicy zachodzą na powierzchnie prowadzące wózka we wszystkich położeniach na co najmniej 5 mm (GCU Zał. 10 pkt 1.21). Odstęp korpusu maźnicy od ramy wózka min. 8 mm (pkt 2.5.2).",
+      "przepisy": "EN 12080 (łożyska), EN 12081 (smary), EN 12082-1 i EN 12082-2 (badania i wdrożenie maźnic); GCU Zał. 9 usterki 1.8.1–1.8.4; GCU Zał. 10 pkt 1.20–1.21, 1.27, 1.32–1.34 (smarowanie łożysk i naprawy maźnic wykonuje tylko posiadacz wagonu; przy podejrzeniu gorącej maźnicy zestaw do wymiany).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "EN 12080 – Maźnice – Łożyska toczne (opis projektu normy): https://standards.iteh.ai/catalog/standards/cen/3452f138-559d-425f-9b16-8abfb5c5f10f/fpren-12080",
+        "EN 12081 – Maźnice – Smary (opis normy): https://knowledge.bsigroup.com/products/railway-applications-axleboxes-lubricating-greases",
+        "EN 12082-1 – Maźnice – Procedury badań (badanie układu łożysko, obudowa, uszczelnienie, smar): https://standards.iteh.ai/catalog/standards/cen/1ebd9873-2c3c-4318-aeef-7fdc05773727/pren-12082-1",
+        "EN 12082-2 – Maźnice – Procedura wdrożenia: https://knowledge.bsigroup.com/products/railway-applications-axleboxes-deployment-procedure"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -204,11 +235,16 @@
       "nazwa_en": "axle box housing",
       "funkcja": "Mieści łożysko, na górze przyjmuje sprężyny, z boków ślizga się w prowadnicach ramy.",
       "budowa": "Odlew staliwny: obudowa cylindryczna, gniazdo sprężyn z żebrami, boczne powierzchnie prowadzące.",
-      "typowe_uszkodzenia": "Pęknięcia, zużycie powierzchni prowadzących.",
+      "typowe_uszkodzenia": "Pęknięty lub złamany korpus, przez który wnika woda lub pył (GCU 1.8.1.1); zużycie powierzchni prowadzących, maźnica w nieprawidłowym położeniu (1.8.2); przemieszczone lub brakujące nakładki manganowe (1.8.4).",
+      "wymiary_graniczne": "Zachodzenie bocznych powierzchni maźnicy na prowadnice wózka min. 5 mm (GCU Zał. 10 pkt 1.21).",
+      "przepisy": "GCU Zał. 9 usterki 1.8.1.1, 1.8.2, 1.8.4; GCU Zał. 10 pkt 1.20–1.21, 1.34 (zakaz napraw maźnic przez warsztat użytkownika).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -217,11 +253,15 @@
       "nazwa_en": "axle box front cover",
       "funkcja": "Zamyka maźnicę od czoła, chroni łożysko przed wodą i brudem, utrzymuje smar.",
       "budowa": "Tłoczona lub odlewana pokrywa przykręcona śrubami do korpusu. Przycisk „Zdejmij” pokazuje wnętrze.",
-      "typowe_uszkodzenia": "Pęknięcia, wgniecenia, luźne lub brakujące śruby, wyciek smaru spod pokrywy.",
+      "typowe_uszkodzenia": "Pęknięcia, wgniecenia, luźne lub brakujące śruby, ślady smaru przy pokrywie (GCU 1.8.1.3) albo wyciek na tarczę koła (1.8.1.2).",
+      "przepisy": "GCU Zał. 9 usterki 1.8.1.2–1.8.1.3; GCU Zał. 10 pkt 1.27 (warsztat użytkownika może zdjąć pokrywę tylko do ustawienia zestawu na tokarce i tylko gdy pokrywa nie ma otworów centrujących), pkt 1.18 (pionowa przerywana biała linia na pokrywie oznacza koła odporne na duże obciążenia cieplne).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -234,7 +274,7 @@
       "zdjecia": [],
       "zrodla": [],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -243,13 +283,18 @@
       "nazwa_en": "rolling bearing (cartridge unit)",
       "funkcja": "Umożliwia obrót osi w maźnicy przy małych oporach; przenosi siły pionowe i poprzeczne.",
       "budowa": "Stalowe łożysko dwurzędowe stożkowe w postaci kasety: pierścień zewnętrzny, dwa pierścienie wewnętrzne, elementy toczne, koszyki, smar i uszczelnienia. Wymiary w modelu przybliżone.",
-      "typowe_uszkodzenia": "Przegrzanie, łuszczenie bieżni, korozja, uszkodzenie koszyka, utrata smaru.",
-      "przepisy": "EN 12080",
+      "typowe_uszkodzenia": "Przegrzanie – gorąca maźnica (GCU 1.8.3; przy podejrzeniu zestaw do wymiany, Zał. 10 pkt 1.32), łuszczenie bieżni, korozja, uszkodzenie koszyka, utrata smaru (1.8.1.2).",
+      "przepisy": "EN 12080 (łożyska toczne maźnic – wymagania wyrobu); EN 12082-1 (badanie stanowiskowe całego układu); GCU Zał. 10 pkt 1.32–1.34.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "EN 12080 – Maźnice – Łożyska toczne (opis projektu normy): https://standards.iteh.ai/catalog/standards/cen/3452f138-559d-425f-9b16-8abfb5c5f10f/fpren-12080",
+        "EN 12082-1 – Maźnice – Procedury badań (badanie układu łożysko, obudowa, uszczelnienie, smar): https://standards.iteh.ai/catalog/standards/cen/1ebd9873-2c3c-4318-aeef-7fdc05773727/pren-12082-1"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 12080 – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "typowe_uszkodzenia: łuszczenie, korozja, koszyk – brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -259,12 +304,13 @@
       "funkcja": "Zewnętrzna bieżnia dla obu rzędów elementów tocznych; osadzony w korpusie maźnicy.",
       "budowa": "Pierścień ze stali łożyskowej z dwiema stożkowymi bieżniami.",
       "typowe_uszkodzenia": "Łuszczenie, wżery, ślady przegrzania.",
-      "przepisy": "EN 12080",
+      "przepisy": "EN 12080 (łożyska toczne maźnic).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "EN 12080 – Maźnice – Łożyska toczne (opis projektu normy): https://standards.iteh.ai/catalog/standards/cen/3452f138-559d-425f-9b16-8abfb5c5f10f/fpren-12080"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 12080 – uzupełnić"
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -274,12 +320,13 @@
       "funkcja": "Wewnętrzna bieżnia elementów tocznych; osadzony na czopie osi i obraca się razem z nią.",
       "budowa": "W łożysku dwurzędowym dwa pierścienie wewnętrzne (po jednym na rząd) i pierścień dystansowy między nimi. Stal łożyskowa.",
       "typowe_uszkodzenia": "Łuszczenie bieżni, pęknięcia, obrót pierścienia na czopie.",
-      "przepisy": "EN 12080",
+      "przepisy": "EN 12080 (łożyska toczne maźnic).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "EN 12080 – Maźnice – Łożyska toczne (opis projektu normy): https://standards.iteh.ai/catalog/standards/cen/3452f138-559d-425f-9b16-8abfb5c5f10f/fpren-12080"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 12080 – uzupełnić"
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -289,12 +336,13 @@
       "funkcja": "Toczą się między bieżniami pierścieni, przenosząc obciążenie przy małym tarciu.",
       "budowa": "Dwa rzędy stalowych wałeczków stożkowych. Liczba wałeczków w modelu przybliżona.",
       "typowe_uszkodzenia": "Łuszczenie, wżery, przebarwienia od przegrzania.",
-      "przepisy": "EN 12080",
+      "przepisy": "EN 12080 (łożyska toczne maźnic).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "EN 12080 – Maźnice – Łożyska toczne (opis projektu normy): https://standards.iteh.ai/catalog/standards/cen/3452f138-559d-425f-9b16-8abfb5c5f10f/fpren-12080"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 12080 – uzupełnić"
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -304,12 +352,13 @@
       "funkcja": "Utrzymuje równe odstępy między elementami tocznymi i prowadzi je.",
       "budowa": "Pierścień z okienkami na wałeczki; z poliamidu albo z mosiądzu (zależnie od wykonania łożyska).",
       "typowe_uszkodzenia": "Pęknięcia, deformacja (np. po przegrzaniu poliamidu), zużycie okienek.",
-      "przepisy": "EN 12080",
+      "przepisy": "EN 12080 (łożyska toczne maźnic).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "EN 12080 – Maźnice – Łożyska toczne (opis projektu normy): https://standards.iteh.ai/catalog/standards/cen/3452f138-559d-425f-9b16-8abfb5c5f10f/fpren-12080"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 12080 – uzupełnić"
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -318,14 +367,17 @@
       "nazwa_en": "grease",
       "funkcja": "Zmniejsza tarcie i zużycie w łożysku, chroni przed korozją.",
       "budowa": "Smar plastyczny wypełniający przestrzeń w łożysku i przed nim.",
-      "typowe_uszkodzenia": "Wyciek, zanieczyszczenie wodą lub brudem, przebarwienie od przegrzania, zbyt mała ilość.",
-      "przepisy": "EN 12081",
+      "typowe_uszkodzenia": "Wyciek smaru na tarczę koła (GCU 1.8.1.2) lub ślady przy pokrywie (1.8.1.3), zanieczyszczenie wodą lub brudem, przebarwienie od przegrzania, zbyt mała ilość.",
+      "przepisy": "EN 12081 (wymagania jakościowe smarów do łożysk maźnic); GCU Zał. 10 pkt 1.33 (łożyska smaruje tylko posiadacz wagonu).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "EN 12081 – Maźnice – Smary (opis normy): https://knowledge.bsigroup.com/products/railway-applications-axleboxes-lubricating-greases"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: Ilość i gatunek smaru – uzupełnić",
-        "przepisy: EN 12081 – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "wymiary_graniczne: ilość i gatunek smaru – brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -334,11 +386,16 @@
       "nazwa_en": "seal (labyrinth ring)",
       "funkcja": "Zatrzymuje smar w maźnicy i nie wpuszcza wody ani brudu od strony koła.",
       "budowa": "Stalowy pierścień labiryntowy na czopie podpiaściowym i gumowa warga uszczelniająca.",
-      "typowe_uszkodzenia": "Zużycie lub uszkodzenie wargi, wyciek smaru od strony koła.",
+      "typowe_uszkodzenia": "Zużycie lub uszkodzenie wargi; maźnica nie zatrzymuje smaru albo przepuszcza wodę i pył (GCU 1.8.1.1–1.8.1.2; Zał. 10 pkt 1.20).",
+      "przepisy": "EN 12082-1 (badanie układu łożysko–obudowa–uszczelnienie–smar); GCU Zał. 10 pkt 1.20.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "EN 12082-1 – Maźnice – Procedury badań (badanie układu łożysko, obudowa, uszczelnienie, smar): https://standards.iteh.ai/catalog/standards/cen/1ebd9873-2c3c-4318-aeef-7fdc05773727/pren-12082-1"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -347,13 +404,17 @@
       "nazwa_en": "suspension with friction damping",
       "funkcja": "Amortyzuje drgania między maźnicą a ramą; tłumik cierny wygasza drgania.",
       "budowa": "Nad każdą maźnicą para sprężyn śrubowych (zewnętrzna i wewnętrzna, krótsza – charakterystyka dwustopniowa) oraz tłumik cierny Lenoira.",
-      "typowe_uszkodzenia": "Pęknięte lub osiadłe sprężyny, zużyte nakładki cierne, uszkodzony wieszak.",
-      "przepisy": "EN 13298 (sprężyny śrubowe)",
+      "typowe_uszkodzenia": "Pęknięta sprężyna zewnętrzna (tara) (GCU 2.5.1); przemieszczona lub pęknięta sprężyna wewnętrzna (ładunkowa) (2.5.2); brakujące lub pęknięte pierścienie tłumika (2.5.3); kołpak tłumika w kontakcie z ramą (2.5.4); luźny lub brakujący zaczep „T” (2.5.5); odstęp maźnica–rama poniżej 8 mm i świeże ślady kontaktu (2.5.6).",
+      "wymiary_graniczne": "Odstęp korpusu maźnicy od ramy wózka min. 8 mm (GCU Zał. 10 pkt 2.5.2; Zał. 9 usterka 2.5.6). Wszystkie sprężyny tary w wózku nawinięte w tę samą stronę, a każda para tara/ładunkowa – w przeciwne strony (Zał. 10 pkt 4.22–4.23).",
+      "przepisy": "EN 13298 (sprężyny śrubowe); GCU Zał. 9 usterki 2.3, 2.5.1–2.5.6; GCU Zał. 10 pkt 2.3, 2.6, 2.11 (zakaz napraw sprężyn spawaniem), 4.20–4.26.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 13298 (sprężyny śrubowe) – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: tytuł i zakres EN 13298 – nie potwierdzono w publicznym źródle"
       ],
       "status": "do weryfikacji"
     },
@@ -362,14 +423,17 @@
       "nazwa_en": "outer coil spring",
       "funkcja": "Przenosi obciążenie pustego i ładownego wagonu.",
       "budowa": "Stalowa sprężyna śrubowa z dociśniętymi i szlifowanymi końcami.",
-      "typowe_uszkodzenia": "Pęknięcie zwoju, osiadanie, korozja.",
-      "przepisy": "EN 13298",
+      "typowe_uszkodzenia": "Pęknięta lub złamana sprężyna – odstawienie wagonu (GCU 2.5.1; Zał. 10 pkt 4.20); osiadanie, korozja.",
+      "przepisy": "EN 13298; GCU Zał. 9 usterka 2.5.1; GCU Zał. 10 pkt 4.20, 4.22–4.23.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: Wysokość swobodna – uzupełnić",
-        "przepisy: EN 13298 – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "wymiary_graniczne: wysokość swobodna – brak publicznego źródła – potwierdzić z doświadczenia",
+        "przepisy: EN 13298 – nie potwierdzono w publicznym źródle"
       ],
       "status": "do weryfikacji"
     },
@@ -378,14 +442,17 @@
       "nazwa_en": "inner coil spring",
       "funkcja": "Zaczyna pracować dopiero przy większym obciążeniu (wagon ładowny) – usztywnia usprężynowanie.",
       "budowa": "Stalowa sprężyna śrubowa, niższa od zewnętrznej, umieszczona w jej środku.",
-      "typowe_uszkodzenia": "Pęknięcie zwoju, osiadanie, korozja.",
-      "przepisy": "EN 13298",
+      "typowe_uszkodzenia": "Przemieszczona lub złamana sprężyna (GCU 2.5.2): na wagonie próżnym – etykieta K, na ładownym (maźnica nie jest pozioma) – odstawienie wagonu. Błyszczące ślady na sprężynie wewnętrznej to jedna z oznak owalizacji kół (1.7.2).",
+      "przepisy": "EN 13298; GCU Zał. 9 usterki 1.7.2, 2.5.2; GCU Zał. 10 pkt 4.21, 4.23.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: Wysokość swobodna – uzupełnić",
-        "przepisy: EN 13298 – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "wymiary_graniczne: wysokość swobodna – brak publicznego źródła – potwierdzić z doświadczenia",
+        "przepisy: EN 13298 – nie potwierdzono w publicznym źródle"
       ],
       "status": "do weryfikacji"
     },
@@ -394,11 +461,15 @@
       "nazwa_en": "Lenoir friction damper",
       "funkcja": "Tłumi drgania pionowe i poprzeczne przez tarcie nakładki o maźnicę; siła tarcia rośnie z obciążeniem wagonu.",
       "budowa": "Pochylony wieszak (łącznik Lenoira) dociskający nakładkę cierną do bocznej powierzchni maźnicy, sworznie, górny talerz sprężyn.",
-      "typowe_uszkodzenia": "Zużyte nakładki cierne, zużyte sworznie i otwory wieszaka, brak tłumienia.",
+      "typowe_uszkodzenia": "Brakujące lub pęknięte pierścienie tłumika (GCU 2.5.3), kołpak tłumika w kontakcie z ramą – tłumik niesprawny (2.5.4; Zał. 10 pkt 4.25), nasmarowane powierzchnie cierne – odstawienie wagonu (4.9.1), brak popychacza, np. po wykolejeniu (Zał. 10 pkt 4.24); zużyte nakładki cierne i sworznie wieszaka.",
+      "przepisy": "GCU Zał. 9 usterki 2.5.3–2.5.4, 4.9.1; GCU Zał. 10 pkt 4.13 i 4.33 (powierzchni ciernych tłumików nie wolno smarować; smar usunąć, wagon oznaczyć etykietą M), 4.24–4.25.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -406,12 +477,18 @@
       "nazwa_pl": "układ hamulcowy wózka",
       "nazwa_en": "bogie brake rigging",
       "funkcja": "Przenosi siłę z cylindra hamulcowego wagonu na klocki i dociska wstawki do kół.",
-      "budowa": "Dwie belki hamulcowe z klockami i wstawkami, dźwignie i cięgła. Klocki działają z jednej strony koła (od środka wózka) [do sprawdzenia].",
-      "typowe_uszkodzenia": "Zużyte wstawki, zużyte sworznie i tuleje, pęknięte wieszaki, nieprawidłowa regulacja.",
+      "budowa": "Dwie belki hamulcowe z klockami i wstawkami, dźwignie i cięgła.",
+      "typowe_uszkodzenia": "Części układu zwisające lub złamane (GCU 3.1.1), nieskuteczne strzemiona bezpieczeństwa (3.1.2), ocieranie cięgieł o oś (1.6.3), wstawki wystające poza wieniec koła (3.2.3), zużyte sworznie i tuleje, nieprawidłowa regulacja.",
+      "przepisy": "GCU Zał. 9 usterki 3.1–3.2; GCU Zał. 10 pkt 3.5–3.8, 3.13, 3.18 (zakaz spawania strzemion), 3.21 (po wymianie wstawek sprawdzić regulację i działanie hamulca).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Railway Technology – Y25 bogie (Railteco): nacisk 22,5 t, rozstaw osi 1 800 mm, koła 920 mm, hamulec klockowy z obu stron koła, ślizgi sprężyste: https://www.railway-technology.com/products/y25-bogie/"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "budowa: czy klocki działają z jednej strony koła (od środka wózka) – Railway Technology (Railteco) podaje hamulec klockowy z obu stron koła; sprawdzić na wagonie"
       ],
       "status": "do weryfikacji"
     },
@@ -420,11 +497,15 @@
       "nazwa_en": "brake beam",
       "funkcja": "Łączy klocki obu kół zestawu i przenosi na nie siłę z dźwigni.",
       "budowa": "Konstrukcja kratowa: rura ściskana, cięgno i rozpórka środkowa; na końcach głowice z klockami, belka zawieszona na wieszakach do ramy.",
-      "typowe_uszkodzenia": "Wygięcie, pęknięcia, zużycie wieszaków i głowic.",
+      "typowe_uszkodzenia": "Wygięcie, pęknięcia, zużycie wieszaków i głowic; ścięty sworzeń trójkąta hamulcowego lub błyszczące ślady na podkładce końcowej trójkąta – oznaki owalizacji kół (GCU 1.7.2); złamane strzemię bezpieczeństwa (3.1.2).",
+      "przepisy": "GCU Zał. 9 usterki 1.7.2, 3.1.1–3.1.2; GCU Zał. 10 pkt 3.5, 3.18.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -434,10 +515,14 @@
       "funkcja": "Oprawa, w której osadzona jest wstawka hamulcowa; łączy wstawkę z belką.",
       "budowa": "Stalowa oprawa w kształcie łuku z uchem i klinem mocującym wstawkę.",
       "typowe_uszkodzenia": "Zużycie, brak klina, pęknięcia.",
+      "przepisy": "GCU Zał. 10 pkt 3.7.2 i 3.8.4 (w podwójnej oprawie Bgu przy wymianie jednej wstawki wymienia się obie).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -446,15 +531,19 @@
       "nazwa_en": "brake shoe insert",
       "funkcja": "Element cierny dociskany do powierzchni tocznej koła – zamienia energię ruchu na ciepło.",
       "budowa": "Wstawka żeliwna lub kompozytowa (np. typu K lub LL).",
-      "typowe_uszkodzenia": "Zużycie poniżej granicy, pęknięcia, wykruszenia, nierównomierne zużycie.",
-      "przepisy": "EN 16452 (wstawki hamulcowe), UIC 541-4 (hamulce z wstawkami kompozytowymi).",
+      "typowe_uszkodzenia": "Żeliwna: brak, złamana albo pęknięta na wskroś, nawet jeśli trzyma ją wkładka stalowa (GCU 3.2.1). Kompozytowa: brak, pęknięcie promieniowe od powierzchni ciernej do krawędzi płyty (poza szczeliną dylatacyjną), wykruszenie na ponad ¼ długości, wtrącenia metalu, odklejenie od płyty na ponad 25 mm, pęknięcie wzdłuż obwodu koła na ponad 25 mm (3.2.2). Wstawka wystająca poza zewnętrzną krawędź wieńca (3.2.3). Nie są usterką: pęknięcie w przewidzianym miejscu łamania, zaczątki pęknięć promieniowych, biały nalot i siatka pęknięć termicznych (Zał. 10 pkt 3.8.2).",
+      "wymiary_graniczne": "Grubość wstawki min. 10 mm w najcieńszym miejscu, mierzona od zewnątrz – żeliwnej i kompozytowej (GCU Zał. 9 usterki 3.2.1–3.2.2; Zał. 10 pkt 3.7.1, 3.8.1). Odklejenie lub pęknięcie obwodowe wstawki kompozytowej maks. 25 mm (pkt 3.8.1). Wokół jednego zestawu wszystkie wstawki tego samego typu (pkt 3.8.3).",
+      "przepisy": "EN 16452 (wstawki hamulcowe); UIC 541-4 (wstawki kompozytowe – warunki certyfikacji i stosowania; wykaz dopuszczonych typów K i LL w Załączniku M); GCU Zał. 9 usterki 3.2.1–3.2.3; GCU Zał. 10 pkt 3.6–3.8.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "UIC 541-4, Załącznik M – wykaz dopuszczonych wstawek kompozytowych K i LL (stan 31.03.2025): https://css1.uic.org/IMG/pdf/20250130-541-4_annex_m-error6.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf"
+      ],
       "do_sprawdzenia": [
-        "budowa: typu K lub LL) – typ stosowany w Eaos",
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: Minimalna grubość wstawki – uzupełnić",
-        "przepisy: UIC 541-4 (hamulce z wstawkami kompozytowymi) – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "budowa: typ wstawek (K lub LL) stosowany w Eaos"
       ],
       "status": "do weryfikacji"
     },
@@ -463,11 +552,15 @@
       "nazwa_en": "brake levers and rods",
       "funkcja": "Przekazują i rozdzielają siłę hamowania między belki hamulcowe.",
       "budowa": "Dźwignie z płaskowników, sworznie z tulejami, cięgło łączące i cięgło do hamulca wagonu (fragment).",
-      "typowe_uszkodzenia": "Zużyte sworznie i tuleje, brak zabezpieczeń sworzni, wygięte cięgła.",
+      "typowe_uszkodzenia": "Zużyte sworznie i tuleje, brak zabezpieczeń sworzni, wygięte cięgła; części zwisające lub złamane (GCU 3.1.1), nieskuteczne strzemiona bezpieczeństwa (3.1.2).",
+      "przepisy": "GCU Zał. 9 usterki 3.1.1–3.1.2; GCU Zał. 10 pkt 3.5, 3.13, 3.18.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     }
