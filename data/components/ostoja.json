@@ -19,11 +19,15 @@
       "nazwa_en": "centre pivot (body centre plate)",
       "funkcja": "Opiera pudło na gnieździe skrętu wózka i pozwala wózkowi obracać się w łukach.",
       "budowa": "Toczony czop z kołnierzem przykręcony do spodu belki skrętowej.",
-      "typowe_uszkodzenia": "Zużycie powierzchni oporowej i bocznej, pęknięcia, luzy w gnieździe.",
+      "typowe_uszkodzenia": "Zużycie powierzchni oporowej i bocznej, pęknięcia, luzy w gnieździe; brak, pęknięcie lub luz czopa (GCU Zał. 10 pkt 4.17); brak lub nieskuteczne zabezpieczenie czopa albo brak zawleczki (Zał. 9 usterka 4.6.1.2).",
+      "przepisy": "GCU Zał. 9 usterki 4.6.1.1–4.6.1.2; GCU Zał. 10 pkt 4.16–4.17, 4.35–4.36 (śruby mocujące: zakaz spawania i cięcia przy śrubach klasy 8.8 i wyższej).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -32,14 +36,21 @@
       "nazwa_en": "shunter's step",
       "funkcja": "Miejsce, na którym stoi manewrowy podczas jazdy na wagonie.",
       "budowa": "Kratowy stopień na dwóch wspornikach przy narożniku ostoi.",
-      "typowe_uszkodzenia": "Wygięte wsporniki, urwany lub skorodowany stopień.",
+      "typowe_uszkodzenia": "Wygięte wsporniki, urwany lub skorodowany stopień; brak stopnia (GCU 6.1.7.2); stopień uszkodzony, urwany lub odkształcony ponad dopuszczalną granicę – zagrożenie dla personelu (6.1.7.3); pęknięcia stopnia lub mocowania (Zał. 10 pkt 6.10).",
+      "wymiary_graniczne": "Stopień może być skręcony, odkształcony lub pochylony maks. o 20 mm (GCU Zał. 10 pkt 6.11). W katalogu usterek: odkształcenie ponad granicę a > 80 mm – odstawienie wagonu (Zał. 9 usterka 6.1.7.3).",
+      "przepisy": "EN 16116-2 (stopnie, poręcze i dojścia w wagonach towarowych); UIC 535-2; GCU Zał. 9 usterki 6.1.7.2–6.1.7.3; GCU Zał. 10 pkt 4.27 (pęknięte stopnie wymienić; naprawa spawaniem zabroniona), 4.35–4.36, 6.10–6.11.",
       "zdjecia": [],
       "zrodla": [
-        "UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych"
+        "UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 12663-2 – wymagania wytrzymałościowe pudeł pojazdów szynowych, cz. 2: wagony towarowe; EN 15085 – spawanie pojazdów szynowych i ich części; EN 16116-2 – wymagania konstrukcyjne dla stopni, poręczy i dojść dla personelu, cz. 2: wagony towarowe"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "zrodla: UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych – wymiary"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "wymiary_graniczne: wymiar „a” jest zdefiniowany na rysunku w GCU Zał. 9 – sprawdzić, co dokładnie mierzy (Zał. 10 podaje 20 mm)",
+        "zrodla: UIC 535-2 / EN 16116-2 – wymiary stopni – brak publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -48,14 +59,128 @@
       "nazwa_en": "shunter's handrails",
       "funkcja": "Uchwyty do trzymania się przez manewrowego na stopniu.",
       "budowa": "Poręcz pionowa na ścianie czołowej i pozioma na ostojnicy, z prętów okrągłych.",
-      "typowe_uszkodzenia": "Wygięte lub urwane poręcze, pęknięte mocowania.",
+      "typowe_uszkodzenia": "Wygięte lub urwane poręcze, pęknięte mocowania; brak poręczy lub uszkodzenie zagrażające personelowi, odkształcenie ponad granicę (GCU 6.1.7.4).",
+      "wymiary_graniczne": "Pod każdą belką czołową dwie poręcze dla manewrowego (GCU Zał. 10 pkt 6.10). Odstęp poręczy od najbliższej części wagonu min. 60 mm (pkt 6.12; Zał. 9 usterka 6.1.7.4: b < 60 mm).",
+      "przepisy": "EN 16116-2; UIC 535-2; GCU Zał. 9 usterka 6.1.7.4; GCU Zał. 10 pkt 4.35–4.36, 6.10, 6.12.",
       "zdjecia": [],
       "zrodla": [
-        "UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych"
+        "UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 12663-2 – wymagania wytrzymałościowe pudeł pojazdów szynowych, cz. 2: wagony towarowe; EN 15085 – spawanie pojazdów szynowych i ich części; EN 16116-2 – wymagania konstrukcyjne dla stopni, poręczy i dojść dla personelu, cz. 2: wagony towarowe"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "zrodla: UIC 535-2 / EN 16116-2 – wymagania dla stopni i poręczy manewrowych – wymiary"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "zrodla: UIC 535-2 / EN 16116-2 – wymiary poręczy – brak publicznego tekstu"
+      ],
+      "status": "do weryfikacji"
+    },
+    "ostoja": {
+      "nazwa_pl": "ostoja",
+      "nazwa_en": "underframe",
+      "typowe_uszkodzenia": "Ostoja odkształcona pionowo lub poziomo – np. wysokość zderzaków poza tolerancją, widoczne odkształcenie (GCU 4.1.1); pęknięcia ostojnic, belek czołowych i poprzecznic obciążonych przez urządzenie cięgłowe oraz ich spoin (4.1.2); pęknięcia spoin, zwłaszcza przy belkach skrętowych i czołowych; odkształcenia belek czołowych po uderzeniach; korozja.",
+      "wymiary_graniczne": "Pęknięcie poprzeczne od krawędzi półki – maks. do połowy szerokości półki; pęknięcia wzdłużne maks. 150 mm, a przy wspornikach usprężynowania maks. 100 mm (GCU Zał. 10 pkt 4.2; Zał. 9 usterka 4.1.2). Spoiny nie mogą mieć pęknięć (Zał. 10 pkt 4.3).",
+      "przepisy": "GCU Zał. 9 usterki 4.1.1–4.1.2; GCU Zał. 10 pkt 4.1–4.3, 4.29–4.30 (pęknięcia ostoi spawa tylko warsztat wybrany przez posiadacza; wyjątkowo warsztat użytkownika, by wagon próżny mógł wrócić); EN 12663-2 (wytrzymałość pudeł wagonów towarowych); EN 15085 (spawanie pojazdów szynowych).",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 12663-2 – wymagania wytrzymałościowe pudeł pojazdów szynowych, cz. 2: wagony towarowe; EN 15085 – spawanie pojazdów szynowych i ich części; EN 16116-2 – wymagania konstrukcyjne dla stopni, poręczy i dojść dla personelu, cz. 2: wagony towarowe"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "ostojnica": {
+      "nazwa_pl": "ostojnica",
+      "nazwa_en": "solebar",
+      "typowe_uszkodzenia": "Pęknięcia półki lub środnika (GCU 4.1.2), w tym wzdłużne przy wspornikach usprężynowania; pęknięcia spoin z poprzecznicami (Zał. 10 pkt 4.3); odkształcenia; korozja półki dolnej.",
+      "wymiary_graniczne": "Pęknięcie poprzeczne od krawędzi półki – maks. do połowy szerokości półki; pęknięcia wzdłużne maks. 150 mm, a przy wspornikach usprężynowania maks. 100 mm (GCU Zał. 10 pkt 4.2; Zał. 9 usterka 4.1.2). Spoiny nie mogą mieć pęknięć (Zał. 10 pkt 4.3).",
+      "przepisy": "GCU Zał. 9 usterki 4.1.1–4.1.2; GCU Zał. 10 pkt 4.1–4.3, 4.29–4.30 (pęknięcia ostoi spawa tylko warsztat wybrany przez posiadacza; wyjątkowo warsztat użytkownika, by wagon próżny mógł wrócić); EN 12663-2 (wytrzymałość pudeł wagonów towarowych); EN 15085 (spawanie pojazdów szynowych).",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 12663-2 – wymagania wytrzymałościowe pudeł pojazdów szynowych, cz. 2: wagony towarowe; EN 15085 – spawanie pojazdów szynowych i ich części; EN 16116-2 – wymagania konstrukcyjne dla stopni, poręczy i dojść dla personelu, cz. 2: wagony towarowe"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "belka_czolowa": {
+      "nazwa_pl": "belka czołowa",
+      "nazwa_en": "headstock",
+      "typowe_uszkodzenia": "Odkształcenia po uderzeniach i najechaniach – zmieniona wysokość zderzaków (GCU 4.1.1, 5.1.2); pęknięcia półek i spoin, także przy mocowaniu zderzaków i haka (4.1.2); luz tulei zderzaka względem belki (5.4.4.1).",
+      "wymiary_graniczne": "Pęknięcie poprzeczne od krawędzi półki – maks. do połowy szerokości półki; pęknięcia wzdłużne maks. 150 mm, a przy wspornikach usprężynowania maks. 100 mm (GCU Zał. 10 pkt 4.2; Zał. 9 usterka 4.1.2). Spoiny nie mogą mieć pęknięć (Zał. 10 pkt 4.3).",
+      "przepisy": "GCU Zał. 9 usterki 4.1.1–4.1.2; GCU Zał. 10 pkt 4.1–4.3, 4.29–4.30 (pęknięcia ostoi spawa tylko warsztat wybrany przez posiadacza; wyjątkowo warsztat użytkownika, by wagon próżny mógł wrócić); EN 12663-2 (wytrzymałość pudeł wagonów towarowych); EN 15085 (spawanie pojazdów szynowych).",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 12663-2 – wymagania wytrzymałościowe pudeł pojazdów szynowych, cz. 2: wagony towarowe; EN 15085 – spawanie pojazdów szynowych i ich części; EN 16116-2 – wymagania konstrukcyjne dla stopni, poręczy i dojść dla personelu, cz. 2: wagony towarowe"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "belka_skretowa": {
+      "nazwa_pl": "belka skrętowa",
+      "nazwa_en": "body bolster",
+      "typowe_uszkodzenia": "Pęknięcia spoin z ostojnicami (GCU Zał. 10 pkt 4.3); brak lub nieskuteczne zabezpieczenie czopa skrętu (Zał. 9 usterka 4.6.1.2); zużycie przeciwślizgów.",
+      "wymiary_graniczne": "Pęknięcie poprzeczne od krawędzi półki – maks. do połowy szerokości półki; pęknięcia wzdłużne maks. 150 mm, a przy wspornikach usprężynowania maks. 100 mm (GCU Zał. 10 pkt 4.2; Zał. 9 usterka 4.1.2). Spoiny nie mogą mieć pęknięć (Zał. 10 pkt 4.3).",
+      "przepisy": "GCU Zał. 9 usterki 4.1.1–4.1.2; GCU Zał. 10 pkt 4.1–4.3, 4.29–4.30 (pęknięcia ostoi spawa tylko warsztat wybrany przez posiadacza; wyjątkowo warsztat użytkownika, by wagon próżny mógł wrócić); EN 12663-2 (wytrzymałość pudeł wagonów towarowych); EN 15085 (spawanie pojazdów szynowych).",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 12663-2 – wymagania wytrzymałościowe pudeł pojazdów szynowych, cz. 2: wagony towarowe; EN 15085 – spawanie pojazdów szynowych i ich części; EN 16116-2 – wymagania konstrukcyjne dla stopni, poręczy i dojść dla personelu, cz. 2: wagony towarowe"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "belka_srodkowa": {
+      "nazwa_pl": "belka środkowa",
+      "nazwa_en": "centre sill",
+      "typowe_uszkodzenia": "Pęknięcia i odkształcenia w rejonie urządzenia cięgłowego (GCU 4.1.2); pęknięte prowadnice urządzenia cięgłowego (Zał. 10 pkt 5.18).",
+      "wymiary_graniczne": "Pęknięcie poprzeczne od krawędzi półki – maks. do połowy szerokości półki; pęknięcia wzdłużne maks. 150 mm, a przy wspornikach usprężynowania maks. 100 mm (GCU Zał. 10 pkt 4.2; Zał. 9 usterka 4.1.2). Spoiny nie mogą mieć pęknięć (Zał. 10 pkt 4.3).",
+      "przepisy": "GCU Zał. 9 usterki 4.1.1–4.1.2; GCU Zał. 10 pkt 4.1–4.3, 4.29–4.30 (pęknięcia ostoi spawa tylko warsztat wybrany przez posiadacza; wyjątkowo warsztat użytkownika, by wagon próżny mógł wrócić); EN 12663-2 (wytrzymałość pudeł wagonów towarowych); EN 15085 (spawanie pojazdów szynowych).",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 12663-2 – wymagania wytrzymałościowe pudeł pojazdów szynowych, cz. 2: wagony towarowe; EN 15085 – spawanie pojazdów szynowych i ich części; EN 16116-2 – wymagania konstrukcyjne dla stopni, poręczy i dojść dla personelu, cz. 2: wagony towarowe"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "poprzecznice": {
+      "nazwa_pl": "poprzecznice",
+      "nazwa_en": "cross members",
+      "typowe_uszkodzenia": "Pęknięcia poprzecznic obciążonych przez urządzenie cięgłowe (GCU 4.1.2), pęknięcia spoin z ostojnicami (Zał. 10 pkt 4.3), korozja.",
+      "wymiary_graniczne": "Pęknięcie poprzeczne od krawędzi półki – maks. do połowy szerokości półki; pęknięcia wzdłużne maks. 150 mm, a przy wspornikach usprężynowania maks. 100 mm (GCU Zał. 10 pkt 4.2; Zał. 9 usterka 4.1.2). Spoiny nie mogą mieć pęknięć (Zał. 10 pkt 4.3).",
+      "przepisy": "GCU Zał. 9 usterki 4.1.1–4.1.2; GCU Zał. 10 pkt 4.1–4.3, 4.29–4.30 (pęknięcia ostoi spawa tylko warsztat wybrany przez posiadacza; wyjątkowo warsztat użytkownika, by wagon próżny mógł wrócić); EN 12663-2 (wytrzymałość pudeł wagonów towarowych); EN 15085 (spawanie pojazdów szynowych).",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 12663-2 – wymagania wytrzymałościowe pudeł pojazdów szynowych, cz. 2: wagony towarowe; EN 15085 – spawanie pojazdów szynowych i ich części; EN 16116-2 – wymagania konstrukcyjne dla stopni, poręczy i dojść dla personelu, cz. 2: wagony towarowe"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     }
