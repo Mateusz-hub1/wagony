@@ -11,6 +11,8 @@
 // Opcjonalne "param": { ... } trafia do buildera (node.param) – np. wymiary zależne od wagonu.
 // Opcjonalne "bez": ["hamulec_reczny"] pomija wymienione części (dzieci) wstawianego podzespołu,
 // np. wagon bez hamulca ręcznego.
+// Opcjonalne "nadpisz": { "hamulec_reczny": { "dopisek": "...", "opis": { ... } } } zmienia pola
+// wybranych dzieci wstawianego podzespołu (opis jest łączony pole po polu).
 
 const cache = new Map();
 
@@ -87,8 +89,11 @@ async function resolveNode(raw, ctx, parent) {
     // stan w widoku 3D (ustawiany przez silnik)
     object: null, exploded: false, hidden: false, removed: false,
   };
-  const bez = src.bez ?? [];
-  for (const ch of (src.children ?? []).filter((c) => !bez.includes(c.id))) {
+  const bez = src.bez ?? [], nadpisz = src.nadpisz ?? {};
+  const children = (src.children ?? [])
+    .filter((c) => !bez.includes(c.id))
+    .map((c) => (nadpisz[c.id] ? { ...c, ...nadpisz[c.id], opis: { ...(c.opis ?? {}), ...(nadpisz[c.id].opis ?? {}) } } : c));
+  for (const ch of children) {
     node.children.push(await resolveNode(ch, ctx, node));
   }
   return node;

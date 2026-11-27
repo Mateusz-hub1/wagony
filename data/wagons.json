@@ -4,7 +4,7 @@
     { "id": "eanos",  "seria": "Eanos",  "opis": "Węglarka czteroosiowa, długa (15,74 m) na wózkach Y25", "plik": "eanos.json", "modul": "./src/wagons/eanos.js", "aktywny": true },
     { "id": "fals",   "seria": "Fals",   "opis": "Wagon samowyładowczy z dnem siodłowym i klapami bocznymi", "plik": "fals.json", "modul": "./src/wagons/fals.js", "aktywny": true },
     { "id": "falns",  "seria": "Falns",  "opis": "Wagon samowyładowczy", "aktywny": false },
-    { "id": "res",    "seria": "Res",    "opis": "Platforma czteroosiowa", "plik": "res.json", "modul": "./src/wagons/res.js", "aktywny": false },
+    { "id": "res",    "seria": "Res",    "opis": "Platforma czteroosiowa z opuszczanymi burtami i kłonicami", "plik": "res.json", "modul": "./src/wagons/res.js", "aktywny": true },
     { "id": "sgs",    "seria": "Sgs",    "opis": "Platforma czteroosiowa do kontenerów (do 60 stóp), zaczepy stałe i składane", "plik": "sgs.json", "modul": "./src/wagons/sgs.js", "aktywny": true },
     { "id": "sggrss", "seria": "Sggrss", "opis": "Wagon przegubowy do kontenerów", "aktywny": false }
   ]

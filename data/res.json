@@ -1,6 +1,6 @@
 {
   "seria": "Res",
-  "uwaga": "Hamulec: lista części skopiowana z components/hamulec.json tylko po to, żeby dopisać opis hamulca postojowego Res (koło przy ostojnicy). Kształt hamulca ręcznego buduje src/wagons/res.js (buildHandBrakeRes).",
+  "uwaga": "Hamulec: opis hamulca postojowego Res (koło przy ostojnicy) jest dopisany przez \"nadpisz\" w węźle hamulec. Kształt hamulca ręcznego buduje src/wagons/res.js (buildHandBrakeRes).",
   "szablony": {
     "belka_skretowa": {
       "typ": "belka_skretowa_res",
@@ -1960,84 +1960,8 @@
             ]
           }
         },
-        "children": [
-          {
-            "id": "zawor_rozrzadczy",
-            "typ": "zawor_rozrzadczy"
-          },
-          {
-            "id": "cylinder_hamulcowy",
-            "typ": "cylinder_hamulcowy",
-            "ukryj_otoczenie": true,
-            "children": [
-              {
-                "id": "tlok_cylindra",
-                "typ": "tlok_cylindra"
-              },
-              {
-                "id": "pokrywa_cylindra",
-                "typ": "pokrywa_cylindra",
-                "zdejmowalny": true
-              }
-            ]
-          },
-          {
-            "id": "nastawiacz",
-            "typ": "nastawiacz"
-          },
-          {
-            "id": "przestawiacz_prozny_ladowny",
-            "typ": "przestawiacz_prozny_ladowny",
-            "children": [
-              {
-                "id": "dzwignia_przestawiacza",
-                "typ": "dzwignia_przestawiacza"
-              }
-            ]
-          },
-          {
-            "id": "luzownik",
-            "typ": "luzownik"
-          },
-          {
-            "id": "zbiornik_pomocniczy",
-            "typ": "zbiornik_pomocniczy"
-          },
-          {
-            "id": "przewod_glowny",
-            "typ": "przewod_glowny"
-          },
-          {
-            "id": "rury_laczace",
-            "typ": "rury_laczace"
-          },
-          {
-            "id": "ciegla_hamulcowe",
-            "typ": "ciegla_hamulcowe"
-          },
-          {
-            "id": "kurek_koncowy_1",
-            "typ": "kurek_koncowy",
-            "dopisek": "koniec 1"
-          },
-          {
-            "id": "kurek_koncowy_2",
-            "typ": "kurek_koncowy",
-            "dopisek": "koniec 2"
-          },
-          {
-            "id": "sprzeg_hamulcowy_1",
-            "typ": "sprzeg_hamulcowy",
-            "dopisek": "koniec 1"
-          },
-          {
-            "id": "sprzeg_hamulcowy_2",
-            "typ": "sprzeg_hamulcowy",
-            "dopisek": "koniec 2"
-          },
-          {
-            "id": "hamulec_reczny",
-            "typ": "hamulec_reczny",
+        "nadpisz": {
+          "hamulec_reczny": {
             "dopisek": "postojowy, obsługiwany z ziemi",
             "opis": {
               "budowa": "W platformie Res: koło ręczne przy ostojnicy (obsługa z ziemi), wałek z przekładnią na wsporniku pod ostojnicą i cięgło do dźwigni stałej hamulca wagonu. Wg DB Cargo (Res 675) hamulec postojowy działa na wszystkie zestawy kołowe; w Res-x 679 – na jeden wózek.",
@@ -2053,7 +1977,7 @@
               ]
             }
           }
-        ]
+        }
       }
     ]
   }
