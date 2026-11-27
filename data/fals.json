@@ -60,19 +60,24 @@
       "nazwa_en": "Fals self-discharging wagon",
       "funkcja": "Czteroosiowy wagon samowyładowczy (z dnem siodłowym) do przewozu ładunków masowych niewrażliwych na wilgoć: węgla, rud, kamienia, kruszyw. Wyładunek grawitacyjny na obie strony jednocześnie, bez możliwości dozowania – po otwarciu klap wysypuje się cały ładunek.",
       "budowa": "Pudło z dnem siodłowym (dno pochylone na obie strony jak dach dwuspadowy), dwie klapy wyładowcze na każdym boku, pochyłe ściany czołowe i nadstawy, spawana ostoja z pomostami na końcach, mechanizm otwierania klap, dwa wózki Y25, urządzenia cięgłowo-zderzakowe, hamulec zespolony (KE-GP) z hamulcem ręcznym. Wzór wymiarów: Fals 175 – długość ze zderzakami 11 950 mm, rozstaw czopów skrętu 6 400 mm, szerokość 3 055 mm, wysokość 3 975 mm, pojemność 75 m³, masa własna 24 700 kg.",
-      "przepisy": "Oznaczenie literowe wg UIC 438-2.",
+      "przepisy": "Oznaczenie literowe wg UIC 438-2: F – specjalny wagon odkryty wysokoburtowy, a – 4 zestawy kołowe, l – samowyładowczy grawitacyjnie, wysyp niesterowany (spód podłogi co najmniej 70 cm nad główką szyny), s – dopuszczony do pociągów do 100 km/h. GCU Zał. 9 usterki 6.1.1 (oznakowanie wagonu: numer, tara, granice obciążenia, długość ze zderzakami, dane posiadacza) i 6.1.2 (tabliczka utrzymania – termin rewizji); GCU Zał. 10 pkt 6.1–6.14; EN 12663-2 (wytrzymałość pudeł wagonów towarowych).",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf",
         "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
         "BDŽ Cargo – Fals (wagon samowyładowczy z dnem siodłowym): https://bdzcargo.bdz.bg/en/wagon-fleet/wagon-tipping-4axled-for-the-carriage-of-coal-with-an-arched-floor-fals-type.html",
         "Wikipedia – Open wagon (saddle-bottomed wagons): https://en.wikipedia.org/wiki/Open_wagon",
-        "Rail Cargo Group – karta techniczna Fals (typ 6650/6652): https://railcargo.com/ru/dam/jcr:ab2fcece-4aac-4549-803b-9c20b6aafa86/fals-fs.pdf"
+        "Rail Cargo Group – karta techniczna Fals (typ 6650/6652): https://railcargo.com/ru/dam/jcr:ab2fcece-4aac-4549-803b-9c20b6aafa86/fals-fs.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Wikipedia – UIC classification of goods wagons (znaczenie liter E, F, a, o, s, n, l): https://en.wikipedia.org/wiki/UIC_classification_of_goods_wagons",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf"
       ],
       "do_sprawdzenia": [
         "Wymiary wzięte z Fals 175 (DB Cargo Romania); inne odmiany Fals mają inne wymiary, np. RCH typ 6656: długość ze zderzakami 14 500 mm, rozstaw czopów 9 000 mm; RCG typ 6650/6652: 14 400 mm – wybrać odmianę typową dla serwisu",
         "Fals 175 w katalogu DB: klapy otwierane mechanicznie; RCH Fals 6656: napęd pneumatyczny 8–10 bar; BDŽ: sprężone powietrze lub ręcznie – w modelu siłowniki pneumatyczne",
-        "przepisy: GCU – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: znaczenie liter wzięte z Wikipedii (bez numeru karty UIC) – potwierdzić w UIC 438-2 / TSI WAG"
       ],
       "status": "do weryfikacji"
     },
@@ -81,14 +86,17 @@
       "nazwa_en": "body",
       "funkcja": "Przestrzeń ładunkowa wagonu; kieruje ładunek grawitacyjnie do otworów wyładowczych po obu bokach.",
       "budowa": "Dno siodłowe, dwie ściany boczne (stała część nad klapami, słupek środkowy, narożniki) z czterema klapami wyładowczymi, dwie pochyłe ściany czołowe, pochyłe nadstawy zwężające otwór ładunkowy u góry (1 955 mm), pas górny. Konstrukcja spawana.",
-      "typowe_uszkodzenia": "Wgniecenia i przetarcia blach dna i ścian od ładunku, pęknięcia spoin, korozja w narożach.",
+      "typowe_uszkodzenia": "Wgniecenia i przetarcia blach dna i ścian od ładunku, pęknięcia spoin, korozja w narożach. Wg katalogu GCU: uszkodzona część szkieletu pudła – bez naruszenia skrajni (6.1.3.1) lub z naruszeniem skrajni – odstawienie (6.1.3.2); dziurawe lub złamane poszycie ścian (6.1.4); ściany boczne uszkodzone z ryzykiem utraty ładunku lub naruszenia skrajni (6.3.1).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.3–6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2, 6.52 (sprawdzanie skrajni po odkształceniu wg Wytycznych załadunku); EN 12663-2.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf",
-        "Wikipedia – Open wagon (saddle-bottomed wagons): https://en.wikipedia.org/wiki/Open_wagon"
+        "Wikipedia – Open wagon (saddle-bottomed wagons): https://en.wikipedia.org/wiki/Open_wagon",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -97,15 +105,18 @@
       "nazwa_en": "saddle floor",
       "funkcja": "Kieruje ładunek na obie strony do klap wyładowczych; po otwarciu klap ładunek zsuwa się grawitacyjnie.",
       "budowa": "Dwie blachy stalowe pochylone pod kątem 49° do poziomu, zespawane w grzbiecie z nakładką; na dole listwy (progi) otworów wyładowczych, o które opierają się klapy.",
-      "typowe_uszkodzenia": "Przetarcia i perforacja blach od ścierania ładunkiem, pęknięcia spoiny grzbietowej, odkształcenia progów (nieszczelność klap).",
+      "typowe_uszkodzenia": "Przetarcia i perforacja blach od ścierania ładunkiem, pęknięcia spoiny grzbietowej, odkształcenia progów (nieszczelność klap). Wg katalogu GCU: dno uszkodzone bez ryzyka utraty ładunku (6.1.5.1) lub z ryzykiem utraty ładunku (6.1.5.2).",
+      "przepisy": "GCU Zał. 9 usterka 6.1.5; GCU Zał. 10 pkt 6.5.",
       "zdjecia": [],
       "zrodla": [
         "BDŽ Cargo – Fals (wagon samowyładowczy z dnem siodłowym): https://bdzcargo.bdz.bg/en/wagon-fleet/wagon-tipping-4axled-for-the-carriage-of-coal-with-an-arched-floor-fals-type.html",
         "Wikipedia – Open wagon (saddle-bottomed wagons): https://en.wikipedia.org/wiki/Open_wagon",
-        "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en"
+        "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -114,14 +125,17 @@
       "nazwa_en": "side wall",
       "funkcja": "Zamyka przestrzeń ładunkową z boku; w dolnej części ma otwory wyładowcze zamykane klapami.",
       "budowa": "Stała część nad klapami z belką zawiasową i belką okapową, użebrowanie pionowe, słupek środkowy z drabinką między klapami, narożniki przy ścianach czołowych. Dwie klapy wyładowcze na stronę.",
-      "typowe_uszkodzenia": "Pęknięcia przy wspornikach zawiasów, wgniecenia, pęknięcia spoin słupka środkowego.",
+      "typowe_uszkodzenia": "Pęknięcia przy wspornikach zawiasów, wgniecenia, pęknięcia spoin słupka środkowego. Wg katalogu GCU: ściana uszkodzona bez ryzyka (6.3.1.1), z ryzykiem utraty ładunku (6.3.1.2) lub naruszenia skrajni (6.3.1.3); dziurawe lub złamane poszycie (6.1.4).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2.",
       "zdjecia": [],
       "zrodla": [
         "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
-        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -130,16 +144,19 @@
       "nazwa_en": "discharge flap",
       "funkcja": "Zamyka otwór wyładowczy; po otwarciu wychyla się dolną krawędzią na zewnątrz i ładunek wysypuje się na bok wagonu.",
       "budowa": "Blacha z użebrowaniem z profili, zawieszona górną krawędzią na zawiasach; dolna krawędź z listwą uszczelniającą opiera się o próg dna siodłowego. Na dolnej krawędzi ucha zamków, na końcach ucha cięgieł mechanizmu.",
-      "typowe_uszkodzenia": "Nieszczelność (zabrudzone lub uszkodzone listwy uszczelniające – klapa się nie domyka), odkształcenia, zużyte zawiasy, uszkodzone ucha zamków.",
+      "typowe_uszkodzenia": "Nieszczelność (zabrudzone lub uszkodzone listwy uszczelniające – klapa się nie domyka), odkształcenia, zużyte zawiasy, uszkodzone ucha zamków. Wg katalogu GCU: klapa wyładowcza niezamknięta lub niezaryglowana (6.6.6) – w wagonie z klapami bocznymi odstawienie wagonu próżnego i ładownego, gdy nie da się jej zamknąć (6.6.6.3–6.6.6.4).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6 (wagony samowyładowcze, wymienione m.in. Fals); GCU Zał. 10 pkt 6.50–6.51 (wszystkie klapy muszą dać się zamknąć i zaryglować; żadna część układu zamykania i wyładunku nie może być luźna).",
       "zdjecia": [],
       "zrodla": [
         "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
         "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en",
-        "Wikipedia – Open wagon (saddle-bottomed wagons): https://en.wikipedia.org/wiki/Open_wagon"
+        "Wikipedia – Open wagon (saddle-bottomed wagons): https://en.wikipedia.org/wiki/Open_wagon",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
         "Kąt otwarcia klapy w modelu – SZACUNKOWY",
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -148,13 +165,16 @@
       "nazwa_en": "sloping end wall",
       "funkcja": "Zamyka przestrzeń ładunkową od czoła; pochylenie kieruje ładunek do środka wagonu, nad otwory wyładowcze.",
       "budowa": "Blacha pochylona, oparta dołem na dnie siodłowym, z poziomymi i pionowymi żebrami; górna krawędź z rury.",
-      "typowe_uszkodzenia": "Wgniecenia, pęknięcia spoin z dnem i ścianami bocznymi.",
+      "typowe_uszkodzenia": "Wgniecenia, pęknięcia spoin z dnem i ścianami bocznymi. Wg katalogu GCU: dziurawe lub złamane poszycie (6.1.4); uszkodzenie z ryzykiem utraty ładunku lub naruszenia skrajni (6.3.1.2–6.3.1.3).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2.",
       "zdjecia": [],
       "zrodla": [
-        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -163,13 +183,16 @@
       "nazwa_en": "sloping upper side",
       "funkcja": "Zwęża otwór ładunkowy u góry i kieruje ładunek do wnętrza przy załadunku.",
       "budowa": "Pochyła blacha z żebrami, między belką okapową ściany bocznej (szerokość 3 025 mm) a pasem górnym (otwór 1 955 mm).",
-      "typowe_uszkodzenia": "Wgniecenia od urządzeń załadowczych, pęknięcia spoin.",
+      "typowe_uszkodzenia": "Wgniecenia od urządzeń załadowczych, pęknięcia spoin. Wg katalogu GCU: uszkodzenie z ryzykiem utraty ładunku lub naruszenia skrajni (6.3.1.2–6.3.1.3); dziurawe poszycie (6.1.4).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2.",
       "zdjecia": [],
       "zrodla": [
-        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -178,85 +201,76 @@
       "nazwa_en": "top chord",
       "funkcja": "Usztywnia górną krawędź otworu ładunkowego.",
       "budowa": "Rura (profil zamknięty) przyspawana do górnej krawędzi nadstawy.",
-      "typowe_uszkodzenia": "Wgniecenia i wygięcia od urządzeń załadowczych.",
+      "typowe_uszkodzenia": "Wgniecenia i wygięcia od urządzeń załadowczych. Wg katalogu GCU: pas górny złamany lub odkształcony – bez naruszenia skrajni (6.3.3.1) lub z naruszeniem skrajni (6.3.3.2).",
+      "przepisy": "GCU Zał. 9 usterka 6.3.3; GCU Zał. 10 pkt 6.23.",
       "zdjecia": [],
       "zrodla": [
-        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
     "ostoja_fals": {
       "nazwa_pl": "ostoja",
       "nazwa_en": "underframe",
+      "opis_wspolny": "components/ostoja.json#ostoja",
       "funkcja": "Nośna konstrukcja wagonu: przenosi masę pudła i ładunku na wózki oraz siły pociągowe i zderzakowe.",
       "budowa": "Spawana rama: dwie ostojnice (zarazem progi otworów wyładowczych), dwie belki czołowe, dwie belki skrętowe z czopami, belka środkowa, wiązary pod dnem siodłowym; pomosty na obu końcach, stopnie i poręcze manewrowe.",
-      "typowe_uszkodzenia": "Pęknięcia spoin przy belkach skrętowych i czołowych, odkształcenia belek czołowych, korozja.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
-      ],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
       ],
       "status": "do weryfikacji"
     },
     "ostojnica_fals": {
       "nazwa_pl": "ostojnica",
       "nazwa_en": "sole bar",
+      "opis_wspolny": "components/ostoja.json#ostojnica",
       "funkcja": "Podłużna belka ostoi po boku wagonu; na niej opiera się dolna krawędź dna siodłowego.",
       "budowa": "Ceownik z przeponami, przyspawany do belek czołowych i skrętowych.",
-      "typowe_uszkodzenia": "Pęknięcia, odkształcenia, korozja (ładunek wysypuje się nad ostojnicą).",
       "zdjecia": [],
       "zrodla": [],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "typowe_uszkodzenia: korozja ostojnicy od wysypującego się ładunku – potwierdzić"
       ],
       "status": "do weryfikacji"
     },
     "belka_czolowa_fals": {
       "nazwa_pl": "belka czołowa",
       "nazwa_en": "headstock",
+      "opis_wspolny": "components/ostoja.json#belka_czolowa",
       "funkcja": "Zamyka ostoję na końcu wagonu; mocowane są do niej zderzaki, przechodzi przez nią hak cięgłowy.",
       "budowa": "Belka skrzynkowa z blachy czołowej, półek i żeber; nakładki pod zderzaki, otwór haka. Oś zderzaków 1 064 mm nad główką szyny (Fals 175).",
-      "typowe_uszkodzenia": "Odkształcenia po uderzeniach, pęknięcia przy mocowaniu zderzaków.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
-      ],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
       ],
       "status": "do weryfikacji"
     },
     "belka_skretowa_fals": {
       "nazwa_pl": "belka skrętowa",
       "nazwa_en": "body bolster",
+      "opis_wspolny": "components/ostoja.json#belka_skretowa",
       "funkcja": "Przenosi masę pudła z ostojnic na czop skrętu i ślizgi boczne wózka.",
       "budowa": "Belka skrzynkowa w poprzek wagonu nad wózkiem; w środku czop skrętu, po bokach przeciwślizgi. Rozstaw czopów 6 400 mm (Fals 175).",
-      "typowe_uszkodzenia": "Pęknięcia spoin z ostojnicami, zużycie przeciwślizgów.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
-      ],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
       ],
       "status": "do weryfikacji"
     },
     "belka_srodkowa_fals": {
       "nazwa_pl": "belka środkowa",
       "nazwa_en": "centre sill",
+      "opis_wspolny": "components/ostoja.json#belka_srodkowa",
       "funkcja": "Przenosi siły pociągowe i ściskające między końcami wagonu; mieści urządzenie cięgłowe; podpiera grzbiet dna przez wiązary.",
       "budowa": "Dwa ceowniki wzdłuż osi wagonu połączone przewiązkami.",
-      "typowe_uszkodzenia": "Pęknięcia, odkształcenia w rejonie urządzenia cięgłowego.",
       "zdjecia": [],
       "zrodla": [],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
-      ],
       "status": "do weryfikacji"
     },
     "wiazary_dna_fals": {
@@ -264,12 +278,16 @@
       "nazwa_en": "floor cross bearers",
       "funkcja": "Podpierają blachy dna siodłowego i przenoszą masę ładunku na belkę środkową i ostojnice.",
       "budowa": "Poprzeczne przepony z blachy o obrysie dopasowanym do spadku dna, z pasem dolnym.",
-      "typowe_uszkodzenia": "Pęknięcia spoin z blachą dna, korozja.",
+      "typowe_uszkodzenia": "Pęknięcia spoin z blachą dna, korozja. Wg katalogu GCU: uszkodzona część szkieletu pudła – bez naruszenia skrajni (6.1.3.1) lub z naruszeniem (6.1.3.2).",
+      "przepisy": "GCU Zał. 9 usterka 6.1.3; GCU Zał. 10 pkt 6.1.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
         "Liczba i rozstaw wiązarów – SZACUNKOWE",
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -278,15 +296,18 @@
       "nazwa_en": "end platform",
       "funkcja": "Stanowisko obsługi na końcu wagonu (hamulec ręczny, zawór sterujący klap).",
       "budowa": "Blacha ryflowana nad belką czołową, barierka ze słupków i poręczy; na końcu 2 słupek koła hamulca ręcznego.",
-      "typowe_uszkodzenia": "Wygięte poręcze, skorodowana lub pęknięta blacha pomostu.",
+      "typowe_uszkodzenia": "Wygięte poręcze, skorodowana lub pęknięta blacha pomostu. Wg katalogu GCU: pomosty, drabiny i barierki w złym stanie lub nie do użytku (6.1.7.1); pęknięcia pomostu, barierek lub ich mocowań (Zał. 10 pkt 6.10).",
+      "przepisy": "GCU Zał. 9 usterka 6.1.7.1; GCU Zał. 10 pkt 6.10 (stopnie, poręcze, drabiny i pomosty bezpieczne w użyciu, bez pęknięć – także mocowania); EN 16116-2.",
       "zdjecia": [],
       "zrodla": [
         "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
-        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
         "Wymiary pomostu i barierki – SZACUNKOWE; sprawdzić, czy pomosty są na obu końcach",
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -295,17 +316,20 @@
       "nazwa_en": "discharge flap operating gear",
       "funkcja": "Otwiera jednocześnie wszystkie cztery klapy i zamyka je z czoła wagonu; w czasie jazdy utrzymuje klapy zamknięte i zabezpieczone.",
       "budowa": "Po każdej stronie: wał sterujący wzdłuż ostojnicy, zamki (razem 8), cięgła klap, siłownik pneumatyczny i blokada w środku wagonu; zawór sterujący z dźwignią (położenie 1 – zamykanie, 2 – otwieranie), kurek odcinający i przewody. Ciśnienie sprężonego powietrza 8–10 bar.",
-      "typowe_uszkodzenia": "Zatarte łożyska wału, luzy w cięgłach, uszkodzone zamki, nieszczelne siłowniki i przewody.",
+      "typowe_uszkodzenia": "Zatarte łożyska wału, luzy w cięgłach, uszkodzone zamki, nieszczelne siłowniki i przewody. Wg katalogu GCU: klapy niezamknięte lub niezaryglowane (6.6.6); luźne części układu zamykania i wyładunku (Zał. 10 pkt 6.51); widoczne uszkodzenia części ruchomych i ich sterowania, utrudniające działanie (Zał. 10 pkt 6.4).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.4, 6.50–6.51.",
       "zdjecia": [],
       "zrodla": [
         "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
         "BDŽ Cargo – Fals (wagon samowyładowczy z dnem siodłowym): https://bdzcargo.bdz.bg/en/wagon-fleet/wagon-tipping-4axled-for-the-carriage-of-coal-with-an-arched-floor-fals-type.html",
-        "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en"
+        "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
         "Układ dźwigni, wału i siłowników w modelu – SZACUNKOWY (uproszczony), sprawdzić na wagonie",
         "Kolejność obsługi wg RCH: zwolnić zamki → dźwignia w położenie 2; zamykanie: oczyścić listwy uszczelniające → położenie 1 → zamknąć kurek odcinający → zamknąć zabezpieczenie w środku wagonu",
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -325,14 +349,17 @@
       "nazwa_en": "operating shaft",
       "funkcja": "Przenosi ruch siłownika na zamki i cięgła klap jednej strony.",
       "budowa": "Wał stalowy wzdłuż ostojnicy w łożyskach przykręconych do ostojnicy, z dźwignią napędową od siłownika.",
-      "typowe_uszkodzenia": "Zatarcie lub zużycie łożysk, skręcenie wału, luz na dźwigni.",
+      "typowe_uszkodzenia": "Zatarcie lub zużycie łożysk, skręcenie wału, luz na dźwigni. Wg katalogu GCU: luźne części układu zamykania i wyładunku (Zał. 10 pkt 6.51); uszkodzenia utrudniające działanie (pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.51.",
       "zdjecia": [],
       "zrodla": [
-        "BDŽ Cargo – Fals (wagon samowyładowczy z dnem siodłowym): https://bdzcargo.bdz.bg/en/wagon-fleet/wagon-tipping-4axled-for-the-carriage-of-coal-with-an-arched-floor-fals-type.html"
+        "BDŽ Cargo – Fals (wagon samowyładowczy z dnem siodłowym): https://bdzcargo.bdz.bg/en/wagon-fleet/wagon-tipping-4axled-for-the-carriage-of-coal-with-an-arched-floor-fals-type.html",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
         "Położenie wału i łożysk – SZACUNKOWE",
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -341,13 +368,16 @@
       "nazwa_en": "flap locking claws",
       "funkcja": "Zabezpieczają klapy przed otwarciem w czasie jazdy; przed otwarciem klap trzeba je zwolnić.",
       "budowa": "Pazury na wale, chwytające ucha na dolnej krawędzi klap; łącznie 8 zamków (po 2 na klapę).",
-      "typowe_uszkodzenia": "Zużyte lub wygięte pazury, niepełne zazębienie z uchem klapy.",
+      "typowe_uszkodzenia": "Zużyte lub wygięte pazury, niepełne zazębienie z uchem klapy. Wg katalogu GCU: klapa niezaryglowana (6.6.6); luźne części zamknięcia (Zał. 10 pkt 6.51).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.50–6.51.",
       "zdjecia": [],
       "zrodla": [
-        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -356,13 +386,16 @@
       "nazwa_en": "flap link rods",
       "funkcja": "Łączą wał z klapami – otwierają je i zamykają.",
       "budowa": "Korby na wale i cięgła do uch na końcach klap.",
-      "typowe_uszkodzenia": "Wygięte cięgła, zużyte sworznie i tuleje.",
+      "typowe_uszkodzenia": "Wygięte cięgła, zużyte sworznie i tuleje. Wg katalogu GCU: luźne części układu zamykania (Zał. 10 pkt 6.51); uszkodzenia utrudniające działanie (pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.51.",
       "zdjecia": [],
       "zrodla": [
-        "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en"
+        "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -371,14 +404,17 @@
       "nazwa_en": "pneumatic actuator",
       "funkcja": "Obraca wał sterujący przy otwieraniu i zamykaniu klap.",
       "budowa": "Cylinder z tłokiem i tłoczyskiem połączonym z dźwignią napędową wału, zawieszony pod ostojnicą.",
-      "typowe_uszkodzenia": "Nieszczelności, uszkodzone tłoczysko, zużyte sworznie zawieszenia.",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzone tłoczysko, zużyte sworznie zawieszenia. Wg katalogu GCU: uszkodzenia urządzeń sterujących częściami ruchomymi, utrudniające działanie (Zał. 10 pkt 6.4); luźne części (pkt 6.51).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.51.",
       "zdjecia": [],
       "zrodla": [
-        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
         "Liczba i położenie siłowników – SZACUNKOWE",
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -387,14 +423,17 @@
       "nazwa_en": "central safety lock",
       "funkcja": "Dodatkowe zabezpieczenie zamkniętych klap; zamykana jako ostatnia czynność po zamknięciu klap.",
       "budowa": "Zapadka na wale z rękojeścią i gniazdo na ostojnicy.",
-      "typowe_uszkodzenia": "Brak zabezpieczenia, wygięta zapadka.",
+      "typowe_uszkodzenia": "Brak zabezpieczenia, wygięta zapadka. Wg katalogu GCU: klapa niezaryglowana (6.6.6); luźne części zamknięcia (Zał. 10 pkt 6.51).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.50–6.51.",
       "zdjecia": [],
       "zrodla": [
-        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
         "Budowa blokady w modelu – SZACUNKOWA",
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -403,15 +442,18 @@
       "nazwa_en": "control valve",
       "funkcja": "Steruje siłownikami klap: położenie 2 – otwieranie wszystkich klap, położenie 1 – zamykanie (z czoła wagonu).",
       "budowa": "Zawór z dźwignią i tabliczką położeń oraz przyłączem sprężonego powietrza (8–10 bar).",
-      "typowe_uszkodzenia": "Nieszczelności, uszkodzona dźwignia, brak tabliczki.",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzona dźwignia, brak tabliczki. Wg katalogu GCU: uszkodzenia urządzeń sterujących częściami ruchomymi (Zał. 10 pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.50.",
       "zdjecia": [],
       "zrodla": [
-        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
         "Położenie zaworu na wagonie – SZACUNKOWE",
         "Źródło zasilania powietrzem (instalacja zewnętrzna) – sprawdzić",
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -420,13 +462,16 @@
       "nazwa_en": "control piping",
       "funkcja": "Doprowadzają sprężone powietrze od zaworu sterującego do siłowników.",
       "budowa": "Rury stalowe w obejmach pod ostojnicami; na czole kurek odcinający (zamykany po zamknięciu klap).",
-      "typowe_uszkodzenia": "Nieszczelności, uszkodzone obejmy, zamknięty lub uszkodzony kurek.",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzone obejmy, zamknięty lub uszkodzony kurek. Wg katalogu GCU: luźne części układu wyładunku (Zał. 10 pkt 6.51); uszkodzenia urządzeń sterujących (pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.51.",
       "zdjecia": [],
       "zrodla": [
-        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     }
