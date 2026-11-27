@@ -1,0 +1,750 @@
+{
+  "seria": "Fals",
+  "szablony": {
+    "sciana_boczna": {
+      "typ": "sciana_boczna_fals",
+      "children": [
+        {
+          "id": "klapa_1",
+          "typ": "klapa_fals",
+          "dopisek": "nr 1",
+          "zdejmowalny": true
+        },
+        {
+          "id": "klapa_2",
+          "typ": "klapa_fals",
+          "dopisek": "nr 2",
+          "zdejmowalny": true
+        }
+      ]
+    },
+    "naped": {
+      "typ": "naped_klap_fals",
+      "children": [
+        {
+          "id": "wal",
+          "typ": "wal_fals"
+        },
+        {
+          "id": "zamki",
+          "typ": "zamki_fals"
+        },
+        {
+          "id": "ciegla_klap",
+          "typ": "ciegla_klap_fals"
+        },
+        {
+          "id": "silownik",
+          "typ": "silownik_fals"
+        },
+        {
+          "id": "blokada",
+          "typ": "blokada_fals"
+        }
+      ]
+    },
+    "belka_skretowa": {
+      "typ": "belka_skretowa_fals",
+      "ukryj_otoczenie": true,
+      "children": [
+        {
+          "id": "czop_skretu",
+          "ref": "components/ostoja.json#czop_skretu"
+        }
+      ]
+    }
+  },
+  "opisy": {
+    "fals": {
+      "nazwa_pl": "Fals",
+      "nazwa_en": "Fals self-discharging wagon",
+      "funkcja": "Czteroosiowy wagon samowyładowczy (z dnem siodłowym) do przewozu ładunków masowych niewrażliwych na wilgoć: węgla, rud, kamienia, kruszyw. Wyładunek grawitacyjny na obie strony jednocześnie, bez możliwości dozowania – po otwarciu klap wysypuje się cały ładunek.",
+      "budowa": "Pudło z dnem siodłowym (dno pochylone na obie strony jak dach dwuspadowy), dwie klapy wyładowcze na każdym boku, pochyłe ściany czołowe i nadstawy, spawana ostoja z pomostami na końcach, mechanizm otwierania klap, dwa wózki Y25, urządzenia cięgłowo-zderzakowe, hamulec zespolony (KE-GP) z hamulcem ręcznym. Wzór wymiarów: Fals 175 – długość ze zderzakami 11 950 mm, rozstaw czopów skrętu 6 400 mm, szerokość 3 055 mm, wysokość 3 975 mm, pojemność 75 m³, masa własna 24 700 kg.",
+      "przepisy": "Oznaczenie literowe wg UIC 438-2.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf",
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
+        "BDŽ Cargo – Fals (wagon samowyładowczy z dnem siodłowym): https://bdzcargo.bdz.bg/en/wagon-fleet/wagon-tipping-4axled-for-the-carriage-of-coal-with-an-arched-floor-fals-type.html",
+        "Wikipedia – Open wagon (saddle-bottomed wagons): https://en.wikipedia.org/wiki/Open_wagon",
+        "Rail Cargo Group – karta techniczna Fals (typ 6650/6652): https://railcargo.com/ru/dam/jcr:ab2fcece-4aac-4549-803b-9c20b6aafa86/fals-fs.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wymiary wzięte z Fals 175 (DB Cargo Romania); inne odmiany Fals mają inne wymiary, np. RCH typ 6656: długość ze zderzakami 14 500 mm, rozstaw czopów 9 000 mm; RCG typ 6650/6652: 14 400 mm – wybrać odmianę typową dla serwisu",
+        "Fals 175 w katalogu DB: klapy otwierane mechanicznie; RCH Fals 6656: napęd pneumatyczny 8–10 bar; BDŽ: sprężone powietrze lub ręcznie – w modelu siłowniki pneumatyczne",
+        "przepisy: GCU – uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "pudlo_fals": {
+      "nazwa_pl": "pudło",
+      "nazwa_en": "body",
+      "funkcja": "Przestrzeń ładunkowa wagonu; kieruje ładunek grawitacyjnie do otworów wyładowczych po obu bokach.",
+      "budowa": "Dno siodłowe, dwie ściany boczne (stała część nad klapami, słupek środkowy, narożniki) z czterema klapami wyładowczymi, dwie pochyłe ściany czołowe, pochyłe nadstawy zwężające otwór ładunkowy u góry (1 955 mm), pas górny. Konstrukcja spawana.",
+      "typowe_uszkodzenia": "Wgniecenia i przetarcia blach dna i ścian od ładunku, pęknięcia spoin, korozja w narożach.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf",
+        "Wikipedia – Open wagon (saddle-bottomed wagons): https://en.wikipedia.org/wiki/Open_wagon"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "dno_siodlowe_fals": {
+      "nazwa_pl": "dno siodłowe (ściana grzbietowa)",
+      "nazwa_en": "saddle floor",
+      "funkcja": "Kieruje ładunek na obie strony do klap wyładowczych; po otwarciu klap ładunek zsuwa się grawitacyjnie.",
+      "budowa": "Dwie blachy stalowe pochylone pod kątem 49° do poziomu, zespawane w grzbiecie z nakładką; na dole listwy (progi) otworów wyładowczych, o które opierają się klapy.",
+      "typowe_uszkodzenia": "Przetarcia i perforacja blach od ścierania ładunkiem, pęknięcia spoiny grzbietowej, odkształcenia progów (nieszczelność klap).",
+      "zdjecia": [],
+      "zrodla": [
+        "BDŽ Cargo – Fals (wagon samowyładowczy z dnem siodłowym): https://bdzcargo.bdz.bg/en/wagon-fleet/wagon-tipping-4axled-for-the-carriage-of-coal-with-an-arched-floor-fals-type.html",
+        "Wikipedia – Open wagon (saddle-bottomed wagons): https://en.wikipedia.org/wiki/Open_wagon",
+        "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "sciana_boczna_fals": {
+      "nazwa_pl": "ściana boczna",
+      "nazwa_en": "side wall",
+      "funkcja": "Zamyka przestrzeń ładunkową z boku; w dolnej części ma otwory wyładowcze zamykane klapami.",
+      "budowa": "Stała część nad klapami z belką zawiasową i belką okapową, użebrowanie pionowe, słupek środkowy z drabinką między klapami, narożniki przy ścianach czołowych. Dwie klapy wyładowcze na stronę.",
+      "typowe_uszkodzenia": "Pęknięcia przy wspornikach zawiasów, wgniecenia, pęknięcia spoin słupka środkowego.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "klapa_fals": {
+      "nazwa_pl": "klapa wyładowcza",
+      "nazwa_en": "discharge flap",
+      "funkcja": "Zamyka otwór wyładowczy; po otwarciu wychyla się dolną krawędzią na zewnątrz i ładunek wysypuje się na bok wagonu.",
+      "budowa": "Blacha z użebrowaniem z profili, zawieszona górną krawędzią na zawiasach; dolna krawędź z listwą uszczelniającą opiera się o próg dna siodłowego. Na dolnej krawędzi ucha zamków, na końcach ucha cięgieł mechanizmu.",
+      "typowe_uszkodzenia": "Nieszczelność (zabrudzone lub uszkodzone listwy uszczelniające – klapa się nie domyka), odkształcenia, zużyte zawiasy, uszkodzone ucha zamków.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
+        "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en",
+        "Wikipedia – Open wagon (saddle-bottomed wagons): https://en.wikipedia.org/wiki/Open_wagon"
+      ],
+      "do_sprawdzenia": [
+        "Kąt otwarcia klapy w modelu – SZACUNKOWY",
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "sciana_czolowa_fals": {
+      "nazwa_pl": "ściana czołowa (pochyła)",
+      "nazwa_en": "sloping end wall",
+      "funkcja": "Zamyka przestrzeń ładunkową od czoła; pochylenie kieruje ładunek do środka wagonu, nad otwory wyładowcze.",
+      "budowa": "Blacha pochylona, oparta dołem na dnie siodłowym, z poziomymi i pionowymi żebrami; górna krawędź z rury.",
+      "typowe_uszkodzenia": "Wgniecenia, pęknięcia spoin z dnem i ścianami bocznymi.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "nadstawa_fals": {
+      "nazwa_pl": "nadstawa (pochyła ściana górna)",
+      "nazwa_en": "sloping upper side",
+      "funkcja": "Zwęża otwór ładunkowy u góry i kieruje ładunek do wnętrza przy załadunku.",
+      "budowa": "Pochyła blacha z żebrami, między belką okapową ściany bocznej (szerokość 3 025 mm) a pasem górnym (otwór 1 955 mm).",
+      "typowe_uszkodzenia": "Wgniecenia od urządzeń załadowczych, pęknięcia spoin.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "pas_gorny_fals": {
+      "nazwa_pl": "pas górny",
+      "nazwa_en": "top chord",
+      "funkcja": "Usztywnia górną krawędź otworu ładunkowego.",
+      "budowa": "Rura (profil zamknięty) przyspawana do górnej krawędzi nadstawy.",
+      "typowe_uszkodzenia": "Wgniecenia i wygięcia od urządzeń załadowczych.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "ostoja_fals": {
+      "nazwa_pl": "ostoja",
+      "nazwa_en": "underframe",
+      "funkcja": "Nośna konstrukcja wagonu: przenosi masę pudła i ładunku na wózki oraz siły pociągowe i zderzakowe.",
+      "budowa": "Spawana rama: dwie ostojnice (zarazem progi otworów wyładowczych), dwie belki czołowe, dwie belki skrętowe z czopami, belka środkowa, wiązary pod dnem siodłowym; pomosty na obu końcach, stopnie i poręcze manewrowe.",
+      "typowe_uszkodzenia": "Pęknięcia spoin przy belkach skrętowych i czołowych, odkształcenia belek czołowych, korozja.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "ostojnica_fals": {
+      "nazwa_pl": "ostojnica",
+      "nazwa_en": "sole bar",
+      "funkcja": "Podłużna belka ostoi po boku wagonu; na niej opiera się dolna krawędź dna siodłowego.",
+      "budowa": "Ceownik z przeponami, przyspawany do belek czołowych i skrętowych.",
+      "typowe_uszkodzenia": "Pęknięcia, odkształcenia, korozja (ładunek wysypuje się nad ostojnicą).",
+      "zdjecia": [],
+      "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "belka_czolowa_fals": {
+      "nazwa_pl": "belka czołowa",
+      "nazwa_en": "headstock",
+      "funkcja": "Zamyka ostoję na końcu wagonu; mocowane są do niej zderzaki, przechodzi przez nią hak cięgłowy.",
+      "budowa": "Belka skrzynkowa z blachy czołowej, półek i żeber; nakładki pod zderzaki, otwór haka. Oś zderzaków 1 064 mm nad główką szyny (Fals 175).",
+      "typowe_uszkodzenia": "Odkształcenia po uderzeniach, pęknięcia przy mocowaniu zderzaków.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "belka_skretowa_fals": {
+      "nazwa_pl": "belka skrętowa",
+      "nazwa_en": "body bolster",
+      "funkcja": "Przenosi masę pudła z ostojnic na czop skrętu i ślizgi boczne wózka.",
+      "budowa": "Belka skrzynkowa w poprzek wagonu nad wózkiem; w środku czop skrętu, po bokach przeciwślizgi. Rozstaw czopów 6 400 mm (Fals 175).",
+      "typowe_uszkodzenia": "Pęknięcia spoin z ostojnicami, zużycie przeciwślizgów.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "belka_srodkowa_fals": {
+      "nazwa_pl": "belka środkowa",
+      "nazwa_en": "centre sill",
+      "funkcja": "Przenosi siły pociągowe i ściskające między końcami wagonu; mieści urządzenie cięgłowe; podpiera grzbiet dna przez wiązary.",
+      "budowa": "Dwa ceowniki wzdłuż osi wagonu połączone przewiązkami.",
+      "typowe_uszkodzenia": "Pęknięcia, odkształcenia w rejonie urządzenia cięgłowego.",
+      "zdjecia": [],
+      "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "wiazary_dna_fals": {
+      "nazwa_pl": "wiązary dna",
+      "nazwa_en": "floor cross bearers",
+      "funkcja": "Podpierają blachy dna siodłowego i przenoszą masę ładunku na belkę środkową i ostojnice.",
+      "budowa": "Poprzeczne przepony z blachy o obrysie dopasowanym do spadku dna, z pasem dolnym.",
+      "typowe_uszkodzenia": "Pęknięcia spoin z blachą dna, korozja.",
+      "zdjecia": [],
+      "zrodla": [],
+      "do_sprawdzenia": [
+        "Liczba i rozstaw wiązarów – SZACUNKOWE",
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "pomost_fals": {
+      "nazwa_pl": "pomost",
+      "nazwa_en": "end platform",
+      "funkcja": "Stanowisko obsługi na końcu wagonu (hamulec ręczny, zawór sterujący klap).",
+      "budowa": "Blacha ryflowana nad belką czołową, barierka ze słupków i poręczy; na końcu 2 słupek koła hamulca ręcznego.",
+      "typowe_uszkodzenia": "Wygięte poręcze, skorodowana lub pęknięta blacha pomostu.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
+        "DB Cargo Romania – katalog wagonów (wagon catalog), Fals 175: https://ro.dbcargo.com/resource/blob/5568470/f66cbf8075b69ea48aab07daedf16074/wagon-catalog-pdf-en-ro-data.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wymiary pomostu i barierki – SZACUNKOWE; sprawdzić, czy pomosty są na obu końcach",
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "mechanizm_klap_fals": {
+      "nazwa_pl": "mechanizm otwierania klap",
+      "nazwa_en": "discharge flap operating gear",
+      "funkcja": "Otwiera jednocześnie wszystkie cztery klapy i zamyka je z czoła wagonu; w czasie jazdy utrzymuje klapy zamknięte i zabezpieczone.",
+      "budowa": "Po każdej stronie: wał sterujący wzdłuż ostojnicy, zamki (razem 8), cięgła klap, siłownik pneumatyczny i blokada w środku wagonu; zawór sterujący z dźwignią (położenie 1 – zamykanie, 2 – otwieranie), kurek odcinający i przewody. Ciśnienie sprężonego powietrza 8–10 bar.",
+      "typowe_uszkodzenia": "Zatarte łożyska wału, luzy w cięgłach, uszkodzone zamki, nieszczelne siłowniki i przewody.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf",
+        "BDŽ Cargo – Fals (wagon samowyładowczy z dnem siodłowym): https://bdzcargo.bdz.bg/en/wagon-fleet/wagon-tipping-4axled-for-the-carriage-of-coal-with-an-arched-floor-fals-type.html",
+        "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en"
+      ],
+      "do_sprawdzenia": [
+        "Układ dźwigni, wału i siłowników w modelu – SZACUNKOWY (uproszczony), sprawdzić na wagonie",
+        "Kolejność obsługi wg RCH: zwolnić zamki → dźwignia w położenie 2; zamykanie: oczyścić listwy uszczelniające → położenie 1 → zamknąć kurek odcinający → zamknąć zabezpieczenie w środku wagonu",
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "naped_klap_fals": {
+      "nazwa_pl": "napęd klap jednej strony",
+      "nazwa_en": "flap drive (one side)",
+      "funkcja": "Otwiera i zamyka obie klapy jednej strony wagonu.",
+      "budowa": "Wał sterujący, zamki, cięgła klap, siłownik pneumatyczny, blokada.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+      ],
+      "status": "do weryfikacji"
+    },
+    "wal_fals": {
+      "nazwa_pl": "wał sterujący",
+      "nazwa_en": "operating shaft",
+      "funkcja": "Przenosi ruch siłownika na zamki i cięgła klap jednej strony.",
+      "budowa": "Wał stalowy wzdłuż ostojnicy w łożyskach przykręconych do ostojnicy, z dźwignią napędową od siłownika.",
+      "typowe_uszkodzenia": "Zatarcie lub zużycie łożysk, skręcenie wału, luz na dźwigni.",
+      "zdjecia": [],
+      "zrodla": [
+        "BDŽ Cargo – Fals (wagon samowyładowczy z dnem siodłowym): https://bdzcargo.bdz.bg/en/wagon-fleet/wagon-tipping-4axled-for-the-carriage-of-coal-with-an-arched-floor-fals-type.html"
+      ],
+      "do_sprawdzenia": [
+        "Położenie wału i łożysk – SZACUNKOWE",
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "zamki_fals": {
+      "nazwa_pl": "zamki klap",
+      "nazwa_en": "flap locking claws",
+      "funkcja": "Zabezpieczają klapy przed otwarciem w czasie jazdy; przed otwarciem klap trzeba je zwolnić.",
+      "budowa": "Pazury na wale, chwytające ucha na dolnej krawędzi klap; łącznie 8 zamków (po 2 na klapę).",
+      "typowe_uszkodzenia": "Zużyte lub wygięte pazury, niepełne zazębienie z uchem klapy.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "ciegla_klap_fals": {
+      "nazwa_pl": "cięgła klap",
+      "nazwa_en": "flap link rods",
+      "funkcja": "Łączą wał z klapami – otwierają je i zamykają.",
+      "budowa": "Korby na wale i cięgła do uch na końcach klap.",
+      "typowe_uszkodzenia": "Wygięte cięgła, zużyte sworznie i tuleje.",
+      "zdjecia": [],
+      "zrodla": [
+        "EP 0118068 (Waggon Union) – klapa wyładowcza wagonu z dnem siodłowym: https://patents.google.com/patent/EP0118068A1/en"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "silownik_fals": {
+      "nazwa_pl": "siłownik pneumatyczny",
+      "nazwa_en": "pneumatic actuator",
+      "funkcja": "Obraca wał sterujący przy otwieraniu i zamykaniu klap.",
+      "budowa": "Cylinder z tłokiem i tłoczyskiem połączonym z dźwignią napędową wału, zawieszony pod ostojnicą.",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzone tłoczysko, zużyte sworznie zawieszenia.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Liczba i położenie siłowników – SZACUNKOWE",
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "blokada_fals": {
+      "nazwa_pl": "blokada w środku wagonu",
+      "nazwa_en": "central safety lock",
+      "funkcja": "Dodatkowe zabezpieczenie zamkniętych klap; zamykana jako ostatnia czynność po zamknięciu klap.",
+      "budowa": "Zapadka na wale z rękojeścią i gniazdo na ostojnicy.",
+      "typowe_uszkodzenia": "Brak zabezpieczenia, wygięta zapadka.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Budowa blokady w modelu – SZACUNKOWA",
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "zawor_sterujacy_fals": {
+      "nazwa_pl": "zawór sterujący",
+      "nazwa_en": "control valve",
+      "funkcja": "Steruje siłownikami klap: położenie 2 – otwieranie wszystkich klap, położenie 1 – zamykanie (z czoła wagonu).",
+      "budowa": "Zawór z dźwignią i tabliczką położeń oraz przyłączem sprężonego powietrza (8–10 bar).",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzona dźwignia, brak tabliczki.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Położenie zaworu na wagonie – SZACUNKOWE",
+        "Źródło zasilania powietrzem (instalacja zewnętrzna) – sprawdzić",
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    },
+    "przewody_sterujace_fals": {
+      "nazwa_pl": "przewody sterujące",
+      "nazwa_en": "control piping",
+      "funkcja": "Doprowadzają sprężone powietrze od zaworu sterującego do siłowników.",
+      "budowa": "Rury stalowe w obejmach pod ostojnicami; na czole kurek odcinający (zamykany po zamknięciu klap).",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzone obejmy, zamknięty lub uszkodzony kurek.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Hungaria – Bedienungsanleitung Fals (typ 6656): https://rch.railcargo.com/dam/jcr:b4ab4fda-b190-4784-9c9e-952f2db247e1/6656_Fals_DE.pdf"
+      ],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: uzupełnić"
+      ],
+      "status": "do weryfikacji"
+    }
+  },
+  "drzewo": {
+    "id": "fals",
+    "typ": "fals",
+    "children": [
+      {
+        "id": "pudlo",
+        "typ": "pudlo_fals",
+        "children": [
+          {
+            "id": "dno_siodlowe",
+            "typ": "dno_siodlowe_fals"
+          },
+          {
+            "id": "sciana_boczna_1",
+            "szablon": "sciana_boczna",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "sciana_boczna_2",
+            "szablon": "sciana_boczna",
+            "dopisek": "strona 2"
+          },
+          {
+            "id": "sciana_czolowa_1",
+            "typ": "sciana_czolowa_fals",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "sciana_czolowa_2",
+            "typ": "sciana_czolowa_fals",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "nadstawa_1",
+            "typ": "nadstawa_fals",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "nadstawa_2",
+            "typ": "nadstawa_fals",
+            "dopisek": "strona 2"
+          },
+          {
+            "id": "pas_gorny_1",
+            "typ": "pas_gorny_fals",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "pas_gorny_2",
+            "typ": "pas_gorny_fals",
+            "dopisek": "strona 2"
+          }
+        ]
+      },
+      {
+        "id": "ostoja",
+        "typ": "ostoja_fals",
+        "param": {
+          "pol_dlugosci": 5.35,
+          "z_ostojnicy": 1.4,
+          "pol_szerokosci": 1.4,
+          "y_ostojnicy": 0.92,
+          "y_poreczy": 1.12,
+          "y_poreczy_pion": [
+            1.35,
+            2.15
+          ],
+          "y_stopnia": 0.45
+        },
+        "children": [
+          {
+            "id": "ostojnica_1",
+            "typ": "ostojnica_fals",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "ostojnica_2",
+            "typ": "ostojnica_fals",
+            "dopisek": "strona 2"
+          },
+          {
+            "id": "belka_czolowa_1",
+            "typ": "belka_czolowa_fals",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "belka_czolowa_2",
+            "typ": "belka_czolowa_fals",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "belka_skretowa_1",
+            "szablon": "belka_skretowa",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "belka_skretowa_2",
+            "szablon": "belka_skretowa",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "belka_srodkowa",
+            "typ": "belka_srodkowa_fals"
+          },
+          {
+            "id": "wiazary_dna",
+            "typ": "wiazary_dna_fals"
+          },
+          {
+            "id": "pomost_1",
+            "typ": "pomost_fals",
+            "dopisek": "koniec 1"
+          },
+          {
+            "id": "pomost_2",
+            "typ": "pomost_fals",
+            "dopisek": "koniec 2",
+            "param": {
+              "slupek_hamulca": 0.65
+            }
+          },
+          {
+            "id": "stopien_manewrowy_1",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 1",
+            "param": {
+              "sx": 1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_2",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 2",
+            "param": {
+              "sx": 1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_3",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 3",
+            "param": {
+              "sx": -1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_4",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 4",
+            "param": {
+              "sx": -1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_1",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 1",
+            "param": {
+              "sx": 1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_2",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 2",
+            "param": {
+              "sx": 1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_3",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 3",
+            "param": {
+              "sx": -1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_4",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 4",
+            "param": {
+              "sx": -1,
+              "sz": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "mechanizm_klap",
+        "typ": "mechanizm_klap_fals",
+        "ukryj_otoczenie": true,
+        "children": [
+          {
+            "id": "naped_1",
+            "szablon": "naped",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "naped_2",
+            "szablon": "naped",
+            "dopisek": "strona 2"
+          },
+          {
+            "id": "zawor_sterujacy",
+            "typ": "zawor_sterujacy_fals"
+          },
+          {
+            "id": "przewody_sterujace",
+            "typ": "przewody_sterujace_fals"
+          }
+        ]
+      },
+      {
+        "id": "wozek_1",
+        "ref": "components/y25.json",
+        "dopisek": "nr 1"
+      },
+      {
+        "id": "wozek_2",
+        "ref": "components/y25.json",
+        "dopisek": "nr 2"
+      },
+      {
+        "id": "ciegla_zderzaki_1",
+        "ref": "components/ciegla_zderzaki.json",
+        "dopisek": "koniec 1"
+      },
+      {
+        "id": "ciegla_zderzaki_2",
+        "ref": "components/ciegla_zderzaki.json",
+        "dopisek": "koniec 2"
+      },
+      {
+        "id": "hamulec",
+        "ref": "components/hamulec.json",
+        "param": {
+          "dlugosc": 10.7,
+          "x_wozka": 3.2,
+          "hamulec_reczny": true,
+          "uklad": {
+            "pipeY": 0.922,
+            "pipeZ": 0.32,
+            "valve": [
+              -0.15,
+              0.84,
+              0.6
+            ],
+            "reservoir": [
+              -1.15,
+              0.735,
+              -0.35
+            ],
+            "cyl": [
+              0.1,
+              0.92,
+              0.62
+            ],
+            "loadValve": [
+              -0.25,
+              0.86,
+              1.0
+            ],
+            "release": [
+              0.69,
+              0.86,
+              -0.35
+            ],
+            "leverY": 0.92,
+            "lever1X": 0.9,
+            "lever2X": -0.55,
+            "leverZ": [
+              -0.65,
+              1.0
+            ],
+            "rodZ": 0.95,
+            "slackX": [
+              1.0,
+              1.75
+            ],
+            "mountY": 0.94,
+            "sideZ": 1.46,
+            "hb": {
+              "wheel": [
+                -5.0,
+                1.95,
+                -0.65
+              ],
+              "gear": [
+                -5.0,
+                1.0,
+                -0.65
+              ],
+              "leverZ": -0.6,
+              "rodY": 0.925
+            },
+            "pipeHangersX": [
+              -4.15,
+              -1.9,
+              -0.95,
+              0,
+              1.9,
+              4.15
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
