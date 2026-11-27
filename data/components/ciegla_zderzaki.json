@@ -90,23 +90,24 @@
       "nazwa_en": "draw and buffing gear",
       "funkcja": "Łączą wagony w pociągu, przenoszą siły rozciągające (pociągowe) i ściskające (zderzakowe) oraz łagodzą uderzenia.",
       "budowa": "Na każdym końcu wagonu: dwa zderzaki, hak cięgłowy z urządzeniem sprężystym, sprzęg śrubowy.",
-      "typowe_uszkodzenia": "Zużyte lub pęknięte talerze zderzaków, osłabione wkłady sprężyste, pęknięcia haka, zużyty lub skrzywiony sprzęg.",
-      "wymiary_graniczne": "Rozstaw osi zderzaków 1 750 ± 10 mm; wysokość osi zderzaków nad główką szyny – nie więcej niż 1 065 mm w stanie próżnym (UIC 528).",
-      "przepisy": "EN 15551 (zderzaki), EN 15566 (urządzenie cięgłowe i sprzęg śrubowy), EN 16839 (rozmieszczenie na belce czołowej); karty UIC; GCU / VPI.",
+      "typowe_uszkodzenia": "Różne typy zderzaków na jednym końcu wagonu (GCU 5.1.1); wysokość zderzaków poza tolerancją (5.1.2); uszkodzone talerze, tłoki i tuleje zderzaków (5.2–5.4); zderzak dający się wcisnąć ręką (5.5.1); zadziałane elementy anti-crash (5.5.2); niesprawny sprzęg śrubowy (5.6); pęknięty lub skręcony hak (5.7); uszkodzone inne części urządzenia cięgłowego, np. pęknięty cięgłowód, niesprawna sprężyna (5.8).",
+      "wymiary_graniczne": "Wysokość osi zderzaków nad główką szyny, w spoczynku: maks. 1 065 mm wagon próżny, min. 940 mm przy maksymalnym ładunku (GCU Zał. 10 pkt 5.1; Zał. 9 usterka 5.1.2). Rozstaw osi zderzaków 1 750 ± 10 mm (UIC 528). Żadna część sprzęgu (sprzężonego lub nie) nie może zwisać niżej niż 140 mm nad główką szyny (Zał. 10 pkt 5.11).",
+      "przepisy": "EN 15551 (zderzaki), EN 15566 (urządzenie cięgłowe i sprzęg śrubowy), EN 16839 (rozmieszczenie na belce czołowej); UIC 528; GCU Zał. 9 usterki 5.1–5.9; GCU Zał. 10 pkt 5.1–5.29.",
       "zdjecia": [],
       "zrodla": [
         "UIC 528 – rozstaw osi zderzaków 1 750 ± 10 mm, wysokość osi zderzaków nie więcej niż 1 065 mm (wagon próżny)",
         "DIN EN 15551 – Zderzaki (streszczenie normy: skok 105 mm w wagonach towarowych, 150 mm w niektórych wagonach towarowych): https://www.din.de/en/wdc-beuth:din21:254307735",
         "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016",
-        "EN 16839 – Rozmieszczenie elementów na belce czołowej (opis normy): https://knowledge.bsigroup.com/products/railway-applications-rolling-stock-head-stock-layout-3"
+        "EN 16839 – Rozmieszczenie elementów na belce czołowej (opis normy): https://knowledge.bsigroup.com/products/railway-applications-rolling-stock-head-stock-layout-3",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "EN 15566:2022 – wydanie zastępujące EN 15566:2016: https://standards.iteh.ai/catalog/standards/cen/6a469eb0-9726-4329-9c20-55bcffdac90e/en-15566-2022"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: wysokość osi zderzaków nad główką szyny – nie więcej niż 1 065 mm w stanie próżnym (UIC 528) – dolna granica wg EN 16839, pkt 5.2.2",
-        "wymiary_graniczne: Pozostałe – uzupełnić",
-        "przepisy: karty UIC – uzupełnić",
-        "przepisy: GCU / VPI – uzupełnić",
-        "zrodla: wysokość osi zderzaków nie więcej niż 1 065 mm (wagon próżny) – sprawdzić aktualne wydanie i zastosowanie do wagonów towarowych"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "zrodla: UIC 528 (rozstaw 1 750 ± 10 mm) – brak linku do publicznego tekstu, sprawdzić aktualne wydanie",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -115,18 +116,19 @@
       "nazwa_en": "buffer",
       "funkcja": "Przejmuje siły ściskające między wagonami i tłumi uderzenia (np. przy manewrach i hamowaniu).",
       "budowa": "Tuleja przykręcona do belki czołowej, tłok z talerzem wsuwany w tuleję, wkład sprężysty wewnątrz.",
-      "typowe_uszkodzenia": "Pęknięty lub zużyty talerz, brak smaru na talerzu, osłabiony wkład (zderzak „zapadnięty”), luźne śruby mocujące.",
-      "wymiary_graniczne": "Skok 105 mm (zderzaki wagonów towarowych wg EN 15551; występują też zderzaki o skoku 150 mm).",
-      "przepisy": "EN 15551; karty UIC; GCU / VPI.",
+      "typowe_uszkodzenia": "Różne typy zderzaków na jednym końcu (GCU 5.1.1); zderzak dający się wcisnąć ręką o ponad 15 mm albo oba zderzaki na tym samym końcu (5.5.1); zadziałane elementy anti-crash – skrócona długość, brak żółtej strzałki, odkształcony tłok lub wskaźnik (5.5.2); brak oznaczenia anti-crash (5.5.3); luźne lub brakujące śruby tulei (5.4.4); pęknięty, zużyty lub nienasmarowany talerz (5.2).",
+      "wymiary_graniczne": "Skok 105 mm (zderzaki wagonów towarowych wg EN 15551; występują też zderzaki o skoku 150 mm). Przy wymianie zderzaki o skoku 105, 130 lub 150 mm wymienia się na zderzaki tej samej kategorii (GCU Zał. 10 pkt 5.23). Jeden zderzak na każdym końcu może dać się wcisnąć ręką maks. o 15 mm (pkt 5.5). Oba zderzaki na końcu wagonu muszą mieć tę samą długość całkowitą (Zał. 9, przypis do usterki 5.1.1).",
+      "przepisy": "EN 15551; GCU Zał. 9 usterki 5.1–5.5; GCU Zał. 10 pkt 5.3–5.10, 5.23–5.26 (przy uszkodzeniu jednego zderzaka wymienia się oba; zakaz spawania przy zderzakach z żółtą kropką na tulei).",
       "zdjecia": [],
       "zrodla": [
-        "DIN EN 15551 – Zderzaki (streszczenie normy: skok 105 mm w wagonach towarowych, 150 mm w niektórych wagonach towarowych): https://www.din.de/en/wdc-beuth:din21:254307735"
+        "DIN EN 15551 – Zderzaki (streszczenie normy: skok 105 mm w wagonach towarowych, 150 mm w niektórych wagonach towarowych): https://www.din.de/en/wdc-beuth:din21:254307735",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: Pozostałe – uzupełnić",
-        "przepisy: karty UIC – uzupełnić",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -135,11 +137,16 @@
       "nazwa_en": "buffer casing",
       "funkcja": "Korpus zderzaka – prowadzi tłok i mocuje zderzak do belki czołowej.",
       "budowa": "Płyta podstawy z żebrami i tuleja; mocowana czterema śrubami.",
-      "typowe_uszkodzenia": "Pęknięcia przy płycie, luźne lub brakujące śruby.",
+      "typowe_uszkodzenia": "Brak lub złamanie tulei (GCU 5.4.1); pęknięcie przy płycie podstawy (5.4.2); pęknięcie wzdłużne, przez które tuleja nie prowadzi tłoka (5.4.3.1); więcej niż 2 ostre rowki głębsze niż 2 mm i dłuższe niż 60 mm (5.4.3.2); luźne lub brakujące śruby mocujące, luz między tuleją a belką czołową (5.4.4).",
+      "wymiary_graniczne": "Na widocznej powierzchni prowadzącej najwyżej 2 ostre rowki głębsze niż 2 mm i dłuższe niż 60 mm (GCU Zał. 10 pkt 5.6.1; Zał. 9 usterka 5.4.3.2).",
+      "przepisy": "GCU Zał. 9 usterki 5.4.1–5.4.4; GCU Zał. 10 pkt 5.3.1, 5.6.1, 5.28–5.29 (śruby mocujące).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -148,11 +155,16 @@
       "nazwa_en": "buffer plunger",
       "funkcja": "Przesuwa się w tulei i przekazuje nacisk z talerza na wkład sprężysty.",
       "budowa": "Rura stalowa z pierścieniem oporowym, z przyspawanym talerzem.",
-      "typowe_uszkodzenia": "Zatarcie, zużycie powierzchni ślizgowej.",
+      "typowe_uszkodzenia": "Brak lub złamanie tłoka (GCU 5.3.1), pęknięcie przy przejściu w talerz (5.3.2), pęknięcie wzdłużne (5.3.3.1), więcej niż 2 ostre rowki głębsze niż 2 mm i dłuższe niż 60 mm (5.3.3.2), brak smaru na powierzchni prowadzącej (Zał. 10 pkt 5.6.2), zatarcie.",
+      "wymiary_graniczne": "Najwyżej 2 ostre rowki głębsze niż 2 mm i dłuższe niż 60 mm (GCU Zał. 9 usterka 5.3.3.2; Zał. 10 pkt 5.6.1).",
+      "przepisy": "GCU Zał. 9 usterki 5.3.1–5.3.3; GCU Zał. 10 pkt 5.4, 5.6.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -161,12 +173,17 @@
       "nazwa_en": "buffer head (plate)",
       "funkcja": "Styka się z talerzem zderzaka sąsiedniego wagonu.",
       "budowa": "Stalowa płyta (lekko wypukła), powierzchnia smarowana.",
-      "typowe_uszkodzenia": "Zużycie, pęknięcia, brak smaru.",
+      "typowe_uszkodzenia": "Brak, złamanie lub odkształcenie talerza (GCU 5.2.1); luźne nity lub śruby mocowania do tłoka (5.2.2); brak smaru na metalowych talerzach (5.2.3.1); ostre rowki na powierzchni styku (5.2.3.2); pęknięta, wykruszona lub luźna wkładka ślizgowa albo płyta z tworzywa (5.2.4).",
+      "wymiary_graniczne": "Na powierzchni styku najwyżej 2 ostre rowki głębsze niż 3 mm i dłuższe niż 50 mm (GCU Zał. 10 pkt 5.9.1; Zał. 9 usterka 5.2.3.2). Wkładka lub płyta z tworzywa: wykruszenie maks. 3 mm głębokości i 25 mm długości (pkt 5.9.2; usterka 5.2.4.2). Luźna co najmniej 1/3 nitów lub śrub – odstawienie wagonu (usterka 5.2.2.1).",
+      "przepisy": "GCU Zał. 9 usterki 5.2.1–5.2.4; GCU Zał. 10 pkt 5.7–5.9, 5.24 (brakujące nity można zastąpić śrubami, ostre krawędzie zeszlifować).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: wymiary talerza wg EN 15551 / UIC"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "wymiary_graniczne: wymiary talerza wg EN 15551 / UIC – brak publicznego źródła"
       ],
       "status": "do weryfikacji"
     },
@@ -175,11 +192,16 @@
       "nazwa_en": "buffer spring element",
       "funkcja": "Pochłania energię uderzenia i oddaje ją z tłumieniem.",
       "budowa": "Pakiet krążków elastomerowych przedzielonych płytkami stalowymi (w innych wykonaniach sprężyny pierścieniowe lub stalowo-gumowe).",
-      "typowe_uszkodzenia": "Utrata sprężystości, pęknięcia elastomeru.",
+      "typowe_uszkodzenia": "Utrata sprężystości – zderzak daje się wcisnąć ręką (GCU 5.5.1); pęknięcia elastomeru; uszkodzenia utrudniające działanie zderzaka (Zał. 10 pkt 5.5).",
+      "wymiary_graniczne": "Jeden zderzak na każdym końcu może dać się wcisnąć ręką maks. o 15 mm (GCU Zał. 10 pkt 5.5; Zał. 9 usterka 5.5.1).",
+      "przepisy": "GCU Zał. 9 usterka 5.5.1; GCU Zał. 10 pkt 5.5.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -188,15 +210,19 @@
       "nazwa_en": "draw hook",
       "funkcja": "Przenosi siły pociągowe; zakłada się na niego kabłąk sprzęgu sąsiedniego wagonu.",
       "budowa": "Hak z trzonem przechodzącym przez belkę czołową, prowadnica haka, urządzenie sprężyste cięgłowe za belką.",
-      "typowe_uszkodzenia": "Pęknięcia haka (zwłaszcza w gardzieli), zużycie gardzieli, osłabione urządzenie sprężyste.",
-      "przepisy": "EN 15566; GCU / VPI",
+      "typowe_uszkodzenia": "Pęknięty hak, także w dziobie (GCU 5.7.1.1), skręcony hak (5.7.1.2); wyraźnie nienormalne wysunięcie haka z prowadnicy (5.8.1); zużycie trzonu i prowadnicy, przy którym hak obraca się w prowadnicy (Zał. 10 pkt 5.16); osłabione urządzenie sprężyste.",
+      "wymiary_graniczne": "Sworzeń haka w sprzęgu śrubowym o średnicy co najmniej 50 mm (GCU Zał. 10 pkt 5.19). Kategorie wytrzymałości urządzenia cięgłowego i sprzęgu śrubowego: 1 MN, 1,2 MN i 1,5 MN (EN 15566:2016).",
+      "przepisy": "EN 15566; GCU Zał. 9 usterki 5.7–5.8; GCU Zał. 10 pkt 5.13–5.21 (zakaz napraw urządzenia cięgłowego spawaniem, poza doraźną naprawą cięgłowodu).",
       "zdjecia": [],
       "zrodla": [
-        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016"
+        "EN 15566:2016 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy: trzy kategorie 1 MN, 1,2 MN i 1,5 MN): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016",
+        "EN 15566:2022 – wydanie zastępujące EN 15566:2016: https://standards.iteh.ai/catalog/standards/cen/6a469eb0-9726-4329-9c20-55bcffdac90e/en-15566-2022",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -205,13 +231,16 @@
       "nazwa_en": "hook",
       "funkcja": "Element, na który zakłada się kabłąk sprzęgu; z otworem na sworzeń własnego sprzęgu.",
       "budowa": "Odkuwka stalowa: głowa z gardzielą i trzon zakończony gwintem z nakrętką.",
-      "typowe_uszkodzenia": "Pęknięcia, zużycie gardzieli i otworu sworznia.",
+      "typowe_uszkodzenia": "Pęknięcia, także w dziobie (GCU 5.7.1.1), skręcenie (5.7.1.2), zużycie gardzieli i otworu sworznia.",
+      "przepisy": "EN 15566; GCU Zał. 9 usterka 5.7.1; GCU Zał. 10 pkt 5.13, 5.14.2, 5.19.",
       "zdjecia": [],
       "zrodla": [
-        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016"
+        "EN 15566:2016 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy: trzy kategorie 1 MN, 1,2 MN i 1,5 MN): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -220,11 +249,15 @@
       "nazwa_en": "draw hook guide",
       "funkcja": "Prowadzi trzon haka w otworze belki czołowej.",
       "budowa": "Ramka przykręcona do belki czołowej z nakładkami ślizgowymi.",
-      "typowe_uszkodzenia": "Zużycie nakładek, pęknięcia.",
+      "typowe_uszkodzenia": "Zużycie nakładek, przy którym hak obraca się w prowadnicy (GCU Zał. 10 pkt 5.16); pęknięcia prowadnic utrudniające działanie (pkt 5.18); wyraźnie nienormalne wysunięcie haka z prowadnicy (Zał. 9 usterka 5.8.1).",
+      "przepisy": "GCU Zał. 9 usterka 5.8.1; GCU Zał. 10 pkt 5.16, 5.18.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -233,13 +266,16 @@
       "nazwa_en": "draw gear spring",
       "funkcja": "Łagodzi szarpnięcia przy ruszaniu i zmianach siły pociągowej.",
       "budowa": "Pakiet sprężysty (sprężyna lub elastomer) między płytami oporowymi na trzonie haka, w belce środkowej.",
-      "typowe_uszkodzenia": "Osłabienie, pęknięcie sprężyny, luzy wzdłużne.",
+      "typowe_uszkodzenia": "Niesprawna sprężyna (GCU 5.8.1); w urządzeniu niepodzielnym (nieciągłym) pęknięcie lub wada sprężyny spiralnej lub pierścieniowej, zniszczenie sprężyny gumowej lub elastomerowej (Zał. 10 pkt 5.17); w urządzeniu ciągłym pęknięte sprężyny lub prowadnice (pkt 5.18); luzy wzdłużne.",
+      "przepisy": "EN 15566; GCU Zał. 9 usterka 5.8.1; GCU Zał. 10 pkt 5.15, 5.17–5.18.",
       "zdjecia": [],
       "zrodla": [
-        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016"
+        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -248,15 +284,19 @@
       "nazwa_en": "screw coupling",
       "funkcja": "Łączy wagony; śrubą skraca się sprzęg, żeby dociągnąć talerze zderzaków.",
       "budowa": "Ogniwa na sworzniu w haku, dwie nakrętki czopowe, śruba z gwintem prawym i lewym z rękojeścią, kabłąk.",
-      "typowe_uszkodzenia": "Wydłużenie, zgięcie, zużycie gwintu, pęknięcia kabłąka i ogniw.",
-      "przepisy": "EN 15566; GCU / VPI",
+      "typowe_uszkodzenia": "Sprzęg uszkodzony lub niekompletny (GCU 5.6.1.1), suchy i zablokowany (5.6.1.2); uszkodzony lub brakujący wieszak sprzęgu (5.6.2); sprzęg odczepiony z wieszaka (5.6.3); sprzęg za długi, by zderzaki się zetknęły (5.8.1); źle sprzęgnięty w pociągu (5.8.2); wydłużenie, zgięcie, zużycie gwintu, pęknięcia kabłąka i ogniw.",
+      "wymiary_graniczne": "Luz między ogniwem a śrubą mniejszy niż 10 mm (GCU Zał. 10 pkt 5.13). Sprzęg nie może zwisać niżej niż 140 mm nad główką szyny (pkt 5.11). Długość sprzęgu musi pozwalać co najmniej na zetknięcie zderzaków (pkt 5.12). Sworzeń haka min. 50 mm średnicy (pkt 5.19).",
+      "przepisy": "EN 15566; GCU Zał. 9 usterki 5.6, 5.8; GCU Zał. 10 pkt 5.11–5.14, 5.19–5.21.",
       "zdjecia": [],
       "zrodla": [
-        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016"
+        "EN 15566 – Urządzenie cięgłowe i sprzęg śrubowy (opis normy): https://standards.iteh.ai/catalog/standards/cen/e87e9479-f89d-4563-ba37-fbd7acd891bd/en-15566-2016",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "EN 15566:2022 – wydanie zastępujące EN 15566:2016: https://standards.iteh.ai/catalog/standards/cen/6a469eb0-9726-4329-9c20-55bcffdac90e/en-15566-2022"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -265,11 +305,15 @@
       "nazwa_en": "coupling links",
       "funkcja": "Łączą sprzęg z hakiem własnego wagonu.",
       "budowa": "Dwa płaskowniki z oczkami i sworzeń przechodzący przez hak.",
-      "typowe_uszkodzenia": "Zużycie oczek i sworznia, pęknięcia.",
+      "typowe_uszkodzenia": "Zużycie oczek i sworznia, pęknięcia (GCU Zał. 10 pkt 5.14.2), luz między ogniwem a śrubą 10 mm lub większy (pkt 5.13).",
+      "wymiary_graniczne": "Luz ogniwo–śruba mniejszy niż 10 mm (GCU Zał. 10 pkt 5.13).",
+      "przepisy": "GCU Zał. 10 pkt 5.13–5.14.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -282,7 +326,7 @@
       "zdjecia": [],
       "zrodla": [],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -291,11 +335,15 @@
       "nazwa_en": "coupling screw with handle",
       "funkcja": "Obracana rękojeścią skraca lub wydłuża sprzęg.",
       "budowa": "Śruba z gwintem prawym i lewym, piasta z rękojeścią zakończoną ciężarkiem.",
-      "typowe_uszkodzenia": "Zgięcie, zużyty gwint, brak ciężarka.",
+      "typowe_uszkodzenia": "Zgięcie, zużyty gwint, brak ciężarka; brak smaru i zablokowanie (GCU 5.6.1.2; Zał. 10 pkt 5.14.1 – śruba ma być łatwa w obsłudze i nasmarowana).",
+      "przepisy": "GCU Zał. 9 usterka 5.6.1.2; GCU Zał. 10 pkt 5.14.1.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -308,7 +356,7 @@
       "zdjecia": [],
       "zrodla": [],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     }
