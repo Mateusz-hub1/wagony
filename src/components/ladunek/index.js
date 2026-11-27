@@ -6,6 +6,7 @@
 // gnieździe (slot) – położenie i obrót podaje wagon. Układ lokalny każdej części:
 //   zaczep kontenerowy – początek: środek czopu na wysokości płyty oporowej (tu opiera się
 //     naroże kontenera); +z = na zewnątrz wagonu (w tę stronę składa się zaczep składany).
+//     param.kat_skladania – 180 (płasko na zewnątrz, domyślnie) albo 90 (pionowo przy boku).
 //     Dla drugiej strony wagonu wystarczy gniazdo z obrotem [0, Math.PI, 0].
 //   kłonica – początek: górna krawędź kieszeni, na zewnętrznej ścianie ostojnicy; +z na zewnątrz.
 //     param.wysokosc – wysokość słupka nad kieszenią [m], param.obrotowa – true: kłonica
@@ -38,11 +39,14 @@ export function buildFixedSpigot() {
 }
 
 // Zaczep SKŁADANY: głowica z czopem obraca się na zawiasie i kładzie na zewnątrz
-export function buildFoldingSpigot() {
+// param.kat_skladania – kąt obrotu przy składaniu [stopnie]: 180 (domyślnie) – głowica leży płasko
+// na zewnątrz, 90 – głowica stoi pionowo przy boku wagonu (mniej wystaje poza obrys)
+export function buildFoldingSpigot(node) {
   const g = part('zaczep_kontenerowy_skladany');
+  const { kat_skladania } = inheritedParam(node, { kat_skladania: 180 });
   slot(g, 'wspornik_zaczepu', { explode: [0, -0.25, 0] });
-  // obrót o 180° wokół osi zawiasu: głowica przechodzi na zewnątrz i w dół (zaczep złożony)
-  slot(g, 'glowica_zaczepu', { pos: HINGE, explode: [0, 0.2, 0.2], removeRot: [Math.PI, 0, 0] });
+  // obrót wokół osi zawiasu: głowica przechodzi na zewnątrz (zaczep złożony)
+  slot(g, 'glowica_zaczepu', { pos: HINGE, explode: [0, 0.2, 0.2], removeRot: [(kat_skladania * Math.PI) / 180, 0, 0] });
   return g;
 }
 

@@ -46,6 +46,7 @@ export function layout(c) {
     hb: { wheel: [-(L + 0.12), 1.65, -0.5], gear: [-(L + 0.07), 1.0, -0.5], leverZ: 0.45, rodY: 0.8 }, // hamulec ręczny na końcu 2
     mountY: 1.05,                            // wysokość mocowania wsporników do ostoi (spód poprzecznic)
     sideZ: 1.46,                             // dźwignia przestawiacza wyprowadzona za ostojnicę
+    plateZ: 1.402,                           // tabliczka próżny/ładowny na zewnętrznej ścianie ostojnicy (Eaos)
     pipeHangersX: [-3.3, -2.0, -0.7, 0.7, 2.0, 3.3, 5.45, -5.45], // wieszaki przewodu głównego (pod poprzecznicami Eaos)
   };
   // nadpisania z wagonu (param.uklad)

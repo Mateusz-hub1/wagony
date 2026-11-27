@@ -1,6 +1,6 @@
 {
   "podzespol": "Hamulec zespolony",
-  "uwaga": "Opisy skrócone, wersja robocza. Wszystkie do weryfikacji. Liczby tylko ze źródeł; pola bez danych są pomijane, a notatki do sprawdzenia są w ukrytym polu \"do_sprawdzenia\". Wagon podaje w węźle \"param\": dlugosc (między licami belek czołowych), x_wozka (pół rozstawu czopów), hamulec_reczny (true/false – gdy false, usuń też węzeł hamulec_reczny).",
+  "uwaga": "Opisy skrócone, wersja robocza. Wszystkie do weryfikacji. Liczby tylko ze źródeł; pola bez danych są pomijane, a notatki do sprawdzenia są w ukrytym polu \"do_sprawdzenia\". Wagon podaje w węźle \"param\": dlugosc (między licami belek czołowych), x_wozka (pół rozstawu czopów), hamulec_reczny (true/false – gdy false, dodaj w węźle wagonu \"bez\": [\"hamulec_reczny\"]).",
   "drzewo": {
     "id": "hamulec",
     "typ": "hamulec",

@@ -9,6 +9,8 @@
 // Węzeł może też mieć "szablon": "maznica" – wtedy jego dzieci są brane z sekcji
 // "szablony" tego samego pliku (żeby nie powtarzać 4 razy tej samej maźnicy).
 // Opcjonalne "param": { ... } trafia do buildera (node.param) – np. wymiary zależne od wagonu.
+// Opcjonalne "bez": ["hamulec_reczny"] pomija wymienione części (dzieci) wstawianego podzespołu,
+// np. wagon bez hamulca ręcznego.
 
 const cache = new Map();
 
@@ -85,7 +87,8 @@ async function resolveNode(raw, ctx, parent) {
     // stan w widoku 3D (ustawiany przez silnik)
     object: null, exploded: false, hidden: false, removed: false,
   };
-  for (const ch of src.children ?? []) {
+  const bez = src.bez ?? [];
+  for (const ch of (src.children ?? []).filter((c) => !bez.includes(c.id))) {
     node.children.push(await resolveNode(ch, ctx, node));
   }
   return node;

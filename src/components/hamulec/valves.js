@@ -46,7 +46,7 @@ export function buildLoadValveLever(node) {
   rod([x, y, zs], [x + 0.06, y - 0.22, zs], 0.012, M.paintRed, { seg: 10, parent: g });
   mesh(new THREE.SphereGeometry(0.022, 14, 10), M.paintRed, { pos: [x + 0.06, y - 0.23, zs], parent: g });
   // tabliczka z położeniami (próżny / ładowny) na ostojnicy
-  box(0.26, 0.07, 0.004, M.paintWhite, { pos: [x, y + 0.08, 1.402], r: 0.002, parent: g });
+  box(0.26, 0.07, 0.004, M.paintWhite, { pos: [x, y + 0.08, lay.plateZ], r: 0.002, parent: g });
   return g;
 }
 
