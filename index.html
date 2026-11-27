@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Atlas budowy wagonów towarowych</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./css/style.css">
@@ -19,8 +19,11 @@
 </head>
 <body>
   <header id="topbar">
-    <button id="btn-home" class="btn ghost" hidden>← Wybór wagonu</button>
-    <h1>Atlas budowy wagonów towarowych</h1>
+    <button id="btn-home" class="btn ghost" hidden title="Wybór wagonu"><span class="wide-only">← Wybór wagonu</span><span class="narrow-only">⌂</span></button>
+    <!-- przyciski tylko na telefonie: menu drzewa części i „wstecz” (poziom wyżej) -->
+    <button id="btn-tree" class="btn narrow-only" hidden title="Części (drzewo)" aria-label="Części">☰</button>
+    <button id="btn-back" class="btn narrow-only" hidden title="Poziom wyżej">‹ Wstecz</button>
+    <h1><span class="wide-only">Atlas budowy wagonów towarowych</span><span class="narrow-only">Atlas wagonów</span></h1>
     <nav id="breadcrumb" aria-label="Ścieżka"></nav>
   </header>
 
@@ -55,15 +58,22 @@
         <span class="sep"></span>
         <button class="btn" data-act="reset" title="Wróć do widoku całego wagonu">Reset widoku</button>
       </div>
-      <div id="hint">Lewy przycisk: obrót · prawy: przesuwanie · kółko: przybliżanie · klik: zaznacz · dwuklik: rozłóż · Esc: poziom wyżej</div>
+      <div id="hint"><span class="wide-only">Lewy przycisk: obrót · prawy: przesuwanie · kółko: przybliżanie · klik: zaznacz · dwuklik: rozłóż · Esc: poziom wyżej</span><span class="narrow-only">1 palec: obrót · 2 palce: zoom i przesuwanie · dotknij: zaznacz · dotknij 2×: rozłóż</span></div>
       <div id="loading">Wczytywanie…</div>
       <div id="toast" hidden></div>
     </div>
 
-    <aside id="info-panel"></aside>
+    <!-- na telefonie: karta wysuwana od dołu (uchwyt do przeciągania + treść) -->
+    <aside id="info-panel" data-sheet="min">
+      <div id="sheet-handle" title="Przeciągnij albo dotknij, żeby rozwinąć / zwinąć"><span></span></div>
+      <div id="info-content"></div>
+    </aside>
+    <!-- przyciemnienie pod wysuwanym menu drzewa (telefon) -->
+    <div id="tree-backdrop"></div>
   </main>
 
   <script type="module" src="./src/main.js"></script>
   <script type="module" src="./src/ui/resizer.js"></script>
+  <script type="module" src="./src/ui/mobile.js"></script>
 </body>
 </html>

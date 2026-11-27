@@ -155,3 +155,104 @@ body.resizing canvas { pointer-events: none; }
 .status.todo { background: var(--warn-bg); color: var(--warn-text); }
 .status.ok { background: var(--ok-bg); color: var(--ok-text); }
 .children-list a { color: var(--accent); cursor: pointer; }
+
+/* --- Dotyk (wszystkie ekrany, na komputerze bez zmian) ---
+   manipulation: bez przybliżania całej strony podwójnym dotknięciem,
+   overscroll none: bez odświeżania strony przeciągnięciem w dół */
+html, body { overscroll-behavior: none; }
+.btn, .card, #topbar, #tree-panel, #tree .row, #info-panel, #toolbar, #breadcrumb a { touch-action: manipulation; }
+#tree, #info-content { overscroll-behavior: none; }
+
+/* elementy tylko dla telefonu są domyślnie ukryte */
+.narrow-only, #sheet-handle, #tree-backdrop { display: none; }
+
+/* ======================================================================
+   Telefon: wąski ekran (pionowo) albo niski (poziomo).
+   To samo zapytanie jest w src/engine/device.js (MOBILE_MQ).
+   ====================================================================== */
+@media (max-width: 760px), (max-height: 520px) {
+  .wide-only { display: none !important; }
+  span.narrow-only { display: inline; }
+  button.narrow-only { display: inline-flex; align-items: center; justify-content: center; }
+
+  body { height: 100dvh; overflow: hidden; }
+
+  /* pasek górny: przyciski min. 44 px, ścieżka w jednej linii */
+  #topbar {
+    gap: 6px; flex-wrap: nowrap;
+    height: calc(52px + env(safe-area-inset-top)); min-height: 0;
+    padding: env(safe-area-inset-top) max(8px, env(safe-area-inset-right)) 0 max(8px, env(safe-area-inset-left));
+  }
+  #topbar h1 { font-size: 15px; }
+  /* w przeglądarce 3D tytuł ustępuje miejsca ścieżce */
+  body:has(#screen-viewer:not([hidden])) #topbar h1 { display: none; }
+  #topbar .btn { min-height: 44px; min-width: 44px; padding: 6px 10px; flex: none; font-size: 14px; }
+  #breadcrumb { flex: 1; min-width: 0; flex-wrap: nowrap; overflow: hidden; white-space: nowrap; font-size: 13px; }
+  #breadcrumb a, #breadcrumb .current { min-width: 0; overflow: hidden; text-overflow: ellipsis; padding: 12px 4px; }
+  /* nazwa bieżącej części ma pierwszeństwo, rodzic jest ucinany pierwszy */
+  #breadcrumb a { flex: 0 4 auto; }
+  #breadcrumb .current { flex: 0 1 auto; }
+  #btn-tree { font-size: 20px !important; }
+  #breadcrumb .sep { flex: none; }
+
+  /* ekran wyboru wagonu: jedna kolumna */
+  #screen-select { flex: 1; min-height: 0; overflow: auto; padding: 16px max(16px, env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
+  .cards { grid-template-columns: 1fr; gap: 10px; }
+
+  /* widok 3D na cały ekran */
+  #screen-viewer { display: block; position: relative; }
+  #viewport { position: absolute; inset: 0; }
+
+  /* drzewo części: menu wysuwane z lewej */
+  #tree-panel {
+    position: fixed; top: 0; left: 0; bottom: 0; z-index: 30;
+    width: min(85vw, 360px);
+    padding: max(12px, env(safe-area-inset-top)) 8px env(safe-area-inset-bottom) max(10px, env(safe-area-inset-left));
+    transform: translateX(-100%); transition: transform .25s ease;
+  }
+  body.tree-open #tree-panel { transform: none; box-shadow: 4px 0 20px rgba(0,0,0,.18); }
+  body.tree-open #tree-backdrop { display: block; position: fixed; inset: 0; z-index: 25; background: rgba(0,0,0,.35); }
+  #tree-resizer { display: none; }
+  .tree .row { min-height: 40px; }
+  .tree .caret { width: 32px; align-self: stretch; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+  .tree .eye { opacity: .6; min-width: 40px; min-height: 40px; }
+
+  /* panel opisu: karta wysuwana od dołu (zwinięta / pół ekranu / pełny ekran) */
+  #info-panel {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    display: flex; flex-direction: column; overflow: hidden; padding: 0;
+    border-left: 0; border-top: 1px solid var(--line); border-radius: 14px 14px 0 0;
+    box-shadow: 0 -4px 16px rgba(0,0,0,.12);
+    transition: height .25s ease;
+  }
+  #info-panel.dragging { transition: none; }
+  #info-panel[data-sheet="min"] { height: calc(76px + env(safe-area-inset-bottom)); }
+  #info-panel[data-sheet="half"] { height: 50dvh; }
+  #info-panel[data-sheet="full"] { height: calc(100dvh - 52px - env(safe-area-inset-top)); }
+  #sheet-handle { display: flex; justify-content: center; flex: none; padding: 8px 0 8px; cursor: grab; touch-action: none; }
+  #sheet-handle span { width: 44px; height: 5px; border-radius: 3px; background: #c3c9cf; }
+  #info-content { flex: 1; min-height: 0; overflow: auto; padding: 0 16px calc(16px + env(safe-area-inset-bottom)); }
+  #info-panel[data-sheet="min"] #info-content { overflow: hidden; cursor: pointer; }
+  #info-panel[data-sheet="min"] h2 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 16px; }
+  #info-panel h2 { font-size: 17px; }
+
+  /* pasek narzędzi: jeden wiersz przewijany w bok, przyciski min. 44 px */
+  #toolbar {
+    top: 8px; left: 0; right: 0; padding: 0 max(8px, env(safe-area-inset-right)) 0 max(8px, env(safe-area-inset-left));
+    flex-wrap: nowrap; overflow-x: auto; pointer-events: auto; scrollbar-width: none;
+  }
+  #toolbar::-webkit-scrollbar { display: none; }
+  #toolbar .btn { min-height: 44px; min-width: 44px; flex: none; white-space: nowrap; font-size: 14px; }
+  #toolbar .sep { display: none; }
+  #toolbar [data-act="up"] { display: none; } /* zastępuje go „‹ Wstecz” w pasku górnym */
+
+  #hint { bottom: calc(84px + env(safe-area-inset-bottom)); left: 8px; right: 8px; font-size: 11px; text-align: center; }
+  body.hint-off #hint { display: none; }
+  #toast { bottom: calc(120px + env(safe-area-inset-bottom)); max-width: calc(100% - 32px); text-align: center; }
+}
+
+/* telefon poziomo: karta opisu z prawej, żeby lewa część widoku 3D była odkryta */
+@media (max-height: 520px) and (min-width: 561px) {
+  #info-panel { left: auto; right: env(safe-area-inset-right); width: min(480px, 55vw); }
+  #hint { right: calc(min(480px, 55vw) + 8px); }
+}

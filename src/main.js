@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { Viewer } from './engine/scene.js';
 import { loadWagonList, loadWagonData, walk } from './engine/dataLoader.js';
 import { buildModel, materialize } from './engine/partRegistry.js';
-import { perf } from './engine/device.js';
+import { perf, onNarrowChange } from './engine/device.js';
 import { Navigator } from './engine/navigator.js';
 import { Animator, setOpenRotation } from './engine/explode.js';
 import { applyVisibility, applyHighlight } from './engine/visibility.js';
@@ -21,6 +21,8 @@ let current = null;  // otwarty wagon: { root, nav, animator, tree, toolbar, mod
 // ---------- Routing: #eaos otwiera wagon, pusty adres = wybór wagonu ----------
 window.addEventListener('hashchange', route);
 $('#btn-home').addEventListener('click', () => { location.hash = ''; });
+// po obróceniu telefonu (zmiana układu) ścieżka przełącza się między pełną a skróconą
+onNarrowChange(() => { if (current) renderBreadcrumb($('#breadcrumb'), current.nav); });
 route();
 
 async function route() {
@@ -46,6 +48,7 @@ function showSelect(list) {
   $('#screen-viewer').hidden = true;
   $('#screen-select').hidden = false;
   $('#btn-home').hidden = true;
+  $('#btn-tree').hidden = $('#btn-back').hidden = true;
   clearBreadcrumb($('#breadcrumb'));
   $('#select-loading').hidden = true;
   const box = $('#wagon-list');
@@ -80,6 +83,7 @@ async function openWagon(w) {
   $('#screen-select').hidden = true;
   $('#screen-viewer').hidden = false;
   $('#btn-home').hidden = false;
+  $('#btn-tree').hidden = $('#btn-back').hidden = false;
   const loading = $('#loading');
   loading.hidden = false;
   loading.textContent = 'Wczytywanie…';
@@ -104,7 +108,7 @@ async function openWagon(w) {
     const nav = new Navigator(root);
     const animator = new Animator(root);
     const tree = new TreeView($('#tree'), nav);
-    const toolbar = new Toolbar($('#toolbar'), nav, makeActions(nav));
+    const toolbar = new Toolbar($('#toolbar'), nav, makeActions(nav), { back: $('#btn-back') });
     current = { root, nav, animator, tree, toolbar, model, builders: mod.builders };
 
     picker ??= new Picker(viewer, nav, { onDoubleClick: (n) => onDoubleClick(n) });
@@ -146,7 +150,7 @@ function onChange(kind) {
   applyVisibility(nav);
   tree.update();
   toolbar.update();
-  renderInfo($('#info-panel'), nav.selected ?? nav.focus, nav);
+  renderInfo($('#info-content'), nav.selected ?? nav.focus, nav);
   renderBreadcrumb($('#breadcrumb'), nav);
   if (kind === 'focus' || kind === 'explode') viewer.flyToBox(targetBox(nav.focus));
   if (kind === 'reset') viewer.resetCamera(targetBox(nav.root));
