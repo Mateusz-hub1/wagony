@@ -467,7 +467,10 @@
             "ref": "components/ladunek.json#zaczep_kontenerowy_staly",
             "dopisek": "nr 20 – koniec 2, strona 2"
           }
-        ]
+        ],
+        "param": {
+          "kat_skladania": 90
+        }
       },
       {
         "id": "wozek_1",
@@ -543,84 +546,12 @@
               -1.5,
               1.5,
               4.5
-            ]
+            ],
+            "plateZ": 1.292
           }
         },
-        "children": [
-          {
-            "id": "zawor_rozrzadczy",
-            "typ": "zawor_rozrzadczy"
-          },
-          {
-            "id": "cylinder_hamulcowy",
-            "typ": "cylinder_hamulcowy",
-            "ukryj_otoczenie": true,
-            "children": [
-              {
-                "id": "tlok_cylindra",
-                "typ": "tlok_cylindra"
-              },
-              {
-                "id": "pokrywa_cylindra",
-                "typ": "pokrywa_cylindra",
-                "zdejmowalny": true
-              }
-            ]
-          },
-          {
-            "id": "nastawiacz",
-            "typ": "nastawiacz"
-          },
-          {
-            "id": "przestawiacz_prozny_ladowny",
-            "typ": "przestawiacz_prozny_ladowny",
-            "children": [
-              {
-                "id": "dzwignia_przestawiacza",
-                "typ": "dzwignia_przestawiacza"
-              }
-            ]
-          },
-          {
-            "id": "luzownik",
-            "typ": "luzownik"
-          },
-          {
-            "id": "zbiornik_pomocniczy",
-            "typ": "zbiornik_pomocniczy"
-          },
-          {
-            "id": "przewod_glowny",
-            "typ": "przewod_glowny"
-          },
-          {
-            "id": "rury_laczace",
-            "typ": "rury_laczace"
-          },
-          {
-            "id": "ciegla_hamulcowe",
-            "typ": "ciegla_hamulcowe"
-          },
-          {
-            "id": "kurek_koncowy_1",
-            "typ": "kurek_koncowy",
-            "dopisek": "koniec 1"
-          },
-          {
-            "id": "kurek_koncowy_2",
-            "typ": "kurek_koncowy",
-            "dopisek": "koniec 2"
-          },
-          {
-            "id": "sprzeg_hamulcowy_1",
-            "typ": "sprzeg_hamulcowy",
-            "dopisek": "koniec 1"
-          },
-          {
-            "id": "sprzeg_hamulcowy_2",
-            "typ": "sprzeg_hamulcowy",
-            "dopisek": "koniec 2"
-          }
+        "bez": [
+          "hamulec_reczny"
         ]
       }
     ]
