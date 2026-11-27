@@ -31,9 +31,7 @@
         "DB Cargo – katalog wagonów, Sgns 681: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/s-bogie-flat-wagons-with-4-wheelsets/Sgns-681-9121290",
         "Wascosa – karta wagonu 48' (stałe czopy dla 40'/45', uchylne dla 20', UIC 592): https://wascosa.alpha.bag.ch/99-datenobjekte/wagenpark/Typenbl%C3%A4tter/en/intermodalwagen/containertragwagen/containerwagen_48_en_ffs.pdf"
       ],
-      "do_sprawdzenia": [
-        "Kierunek składania i rodzaj zatrzasku – w modelu uproszczone (SZACUNKOWE)"
-      ],
+      "do_sprawdzenia": [],
       "status": "do weryfikacji"
     },
     "wspornik_zaczepu": {

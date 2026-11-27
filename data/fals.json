@@ -74,8 +74,6 @@
         "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf"
       ],
       "do_sprawdzenia": [
-        "Wymiary wzięte z Fals 175 (DB Cargo Romania); inne odmiany Fals mają inne wymiary, np. RCH typ 6656: długość ze zderzakami 14 500 mm, rozstaw czopów 9 000 mm; RCG typ 6650/6652: 14 400 mm – wybrać odmianę typową dla serwisu",
-        "Fals 175 w katalogu DB: klapy otwierane mechanicznie; RCH Fals 6656: napęd pneumatyczny 8–10 bar; BDŽ: sprężone powietrze lub ręcznie – w modelu siłowniki pneumatyczne",
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
         "przepisy: znaczenie liter wzięte z Wikipedii (bez numeru karty UIC) – potwierdzić w UIC 438-2 / TSI WAG"
       ],

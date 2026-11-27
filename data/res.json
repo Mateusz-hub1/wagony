@@ -216,7 +216,6 @@
       ],
       "status": "do weryfikacji",
       "do_sprawdzenia": [
-        "Kłonice czołowe (Ermewa, DB: kłonice składane przy belkach czołowych) – w modelu pominięte",
         "Położenie po opuszczeniu (wg DB Res 687 burta czołowa opuszczona 38 mm nad podłogą) – w modelu oparta na zawiasach, SZACUNKOWE",
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ]
@@ -403,10 +402,7 @@
         "Ermewa – instrukcja obsługi wagonu Res (R90), 2024 (opuszczanie burt bocznych i czołowych, kłonice obrotowe i wysuwane, zamknięcia): https://railcargo.com/bg/dam/jcr:46074c27-d61d-4a8d-8a9d-27d36f75722b/res-r30-ermewa.pdf"
       ],
       "status": "do weryfikacji",
-      "do_sprawdzenia": [
-        "Położenie kłonic w złączach burt – SZACUNKOWE; wg Ermewa kłonica obrotowa jest „w polu ściany bocznej”",
-        "Kłonice wysuwane (DB Res 677: 8 na stronę) i czołowe – w modelu pominięte"
-      ]
+      "do_sprawdzenia": []
     },
     "uchwyty_res": {
       "nazwa_pl": "uchwyty mocujące",

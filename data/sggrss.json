@@ -193,7 +193,6 @@
       "do_sprawdzenia": [
         "Wymiary modelu wg Ermewa (czop skrajny – oś przegubu 10 395 mm, lico belki czołowej – czop 2 180 mm). Karta Đuro Đaković podaje 10 425 mm i 2 150 mm – sprawdzić, który wariant jest w serwisie",
         "Wysokość ładunkowa: Ermewa 1 150 mm, DB Cargo i Đuro Đaković 1 155 mm – w modelu 1 155 mm",
-        "Hamulec postojowy: DB Cargo Sggrss 733 – brak; Đuro Đaković – hamulec ręczny obsługiwany z ziemi. W modelu pominięty – sprawdzić",
         "Znaczenie liter gg i r – wzięte z katalogu PKP Cargo, potwierdzić w UIC 438-2",
         "Masa własna i ładowność różnią się między producentami (Ermewa 26,6 t / 108,8 t, Đuro Đaković 26,5 t / 108,5 t, DB Cargo 733 średnio 28,0 t)",
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"

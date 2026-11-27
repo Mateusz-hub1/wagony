@@ -67,7 +67,6 @@
       ],
       "do_sprawdzenia": [
         "Wymiary wzięte z Falns-x typ 6636 (Rail Cargo Group); odmiany DB (Falns 181/183/184) mają inne pojemności (72–90 m³) – wybrać odmianę typową dla serwisu",
-        "Mechanizm klap wg opisów DB (Falns 181/183/184): napęd hydrauliczny z pompą od zestawu kołowego. Karta RCG 6636 nie opisuje napędu – sprawdzić, czy odmiana 6636 ma napęd hydrauliczny czy pneumatyczny",
         "Rysunek RCG: wymiary 2 369 / 1 369 / 340 mm odczytane jako barierka / pomost / stopień – potwierdzić",
         "Prędkość: DB podaje 120 km/h (wagon próżny); oznaczenie s dotyczy 100 km/h – sprawdzić",
         "przepisy: znaczenie liter wzięte z Wikipedii (bez numeru karty UIC) – potwierdzić w UIC 438-2 / TSI WAG",
