@@ -15,9 +15,9 @@ const FIELDS = [
 export function renderInfo(el, node, nav) {
   if (!node) { el.innerHTML = ''; return; }
   const o = node.opis;
-  const status = o.status === 'zweryfikowane'
-    ? '<span class="status ok">zweryfikowane</span>'
-    : `<span class="status todo">${esc(o.status || 'do weryfikacji')}</span>`;
+  // Status „do weryfikacji” zostaje w danych JSON, ale nie jest wyświetlany.
+  // Plakietkę pokazujemy tylko dla opisów już sprawdzonych.
+  const status = o.status === 'zweryfikowane' ? '<span class="status ok">zweryfikowane</span>' : '';
 
   const en = o.nazwa_en ? ` <span class="en">(${esc(o.nazwa_en)})</span>` : '';
   let html = `<h2>${esc(displayName(node))}${en}</h2>
