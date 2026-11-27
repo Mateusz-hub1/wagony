@@ -1,0 +1,560 @@
+{
+  "seria": "Sggrss",
+  "uwagi": "Wzór: Sggrss 80' (Ermewa, rysunek wymiarowy). Dwa człony z szablonu \"czlon\" – parametry hamulca (dlugosc, x_wozka, x_wozka_2, x_konca_2, koniec_2, ciegla_wozek_2, uklad) są w węźle członu (hamulec szuka ich w górę drzewa), bo człony różnią się tylko tym, że wózek środkowy hamuje człon 1. Przegub: ramie_1/ramie_2 = 0,355 m (połowa przerwy 710 mm), waz.a/b – kołnierze przewodów głównych członów w układzie przegubu.",
+  "szablony": {
+    "czlon": {
+      "typ": "czlon_sggrss",
+      "children": [
+        {
+          "id": "ostoja",
+          "typ": "ostoja_sggrss",
+          "param": {
+            "pol_dlugosci": 6.11,
+            "z_ostojnicy": 1.29,
+            "pol_szerokosci": 1.3,
+            "y_ostojnicy": 0.95,
+            "y_poreczy": 1.08,
+            "y_stopnia": 0.45,
+            "porecz_pionowa": "belka",
+            "y_poreczy_belka": [
+              0.86,
+              1.16
+            ]
+          },
+          "children": [
+            {
+              "id": "ostojnica_1",
+              "typ": "ostojnica_sggrss",
+              "dopisek": "strona 1"
+            },
+            {
+              "id": "ostojnica_2",
+              "typ": "ostojnica_sggrss",
+              "dopisek": "strona 2"
+            },
+            {
+              "id": "belka_czolowa",
+              "typ": "belka_czolowa_sggrss"
+            },
+            {
+              "id": "belka_przegubowa",
+              "typ": "belka_przegubowa_sggrss"
+            },
+            {
+              "id": "belka_skretowa",
+              "typ": "belka_skretowa_sggrss",
+              "ukryj_otoczenie": true,
+              "children": [
+                {
+                  "id": "czop_skretu",
+                  "ref": "components/ostoja.json#czop_skretu"
+                }
+              ]
+            },
+            {
+              "id": "belka_srodkowa",
+              "typ": "belka_srodkowa_sggrss"
+            },
+            {
+              "id": "poprzecznice",
+              "typ": "poprzecznice_sggrss"
+            },
+            {
+              "id": "poprzecznice_zaczepow",
+              "typ": "poprzecznice_zaczepow_sggrss"
+            },
+            {
+              "id": "stezenia",
+              "typ": "stezenia_sggrss"
+            },
+            {
+              "id": "stopien_manewrowy_1",
+              "ref": "components/ostoja.json#stopien_manewrowy",
+              "dopisek": "narożnik 1",
+              "param": {
+                "sx": 1,
+                "sz": 1
+              }
+            },
+            {
+              "id": "stopien_manewrowy_2",
+              "ref": "components/ostoja.json#stopien_manewrowy",
+              "dopisek": "narożnik 2",
+              "param": {
+                "sx": 1,
+                "sz": -1
+              }
+            },
+            {
+              "id": "porecz_manewrowa_1",
+              "ref": "components/ostoja.json#porecz_manewrowa",
+              "dopisek": "narożnik 1",
+              "param": {
+                "sx": 1,
+                "sz": 1
+              }
+            },
+            {
+              "id": "porecz_manewrowa_2",
+              "ref": "components/ostoja.json#porecz_manewrowa",
+              "dopisek": "narożnik 2",
+              "param": {
+                "sx": 1,
+                "sz": -1
+              }
+            }
+          ]
+        },
+        {
+          "id": "zaczepy",
+          "typ": "zaczepy_sggrss",
+          "param": {
+            "kat_skladania": 90
+          },
+          "children": [
+            {
+              "id": "zaczep_1",
+              "ref": "components/ladunek.json#zaczep_kontenerowy_staly",
+              "dopisek": "nr 1 – rząd przy czole, strona 1"
+            },
+            {
+              "id": "zaczep_2",
+              "ref": "components/ladunek.json#zaczep_kontenerowy_staly",
+              "dopisek": "nr 2 – rząd przy czole, strona 2"
+            },
+            {
+              "id": "zaczep_3",
+              "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+              "dopisek": "nr 3 – rząd 20', strona 1"
+            },
+            {
+              "id": "zaczep_4",
+              "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+              "dopisek": "nr 4 – rząd 20', strona 2"
+            },
+            {
+              "id": "zaczep_5",
+              "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+              "dopisek": "nr 5 – rząd 20' (drugi), strona 1"
+            },
+            {
+              "id": "zaczep_6",
+              "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+              "dopisek": "nr 6 – rząd 20' (drugi), strona 2"
+            },
+            {
+              "id": "zaczep_7",
+              "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+              "dopisek": "nr 7 – rząd 30', strona 1"
+            },
+            {
+              "id": "zaczep_8",
+              "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+              "dopisek": "nr 8 – rząd 30', strona 2"
+            },
+            {
+              "id": "zaczep_9",
+              "ref": "components/ladunek.json#zaczep_kontenerowy_staly",
+              "dopisek": "nr 9 – rząd przy przegubie, strona 1"
+            },
+            {
+              "id": "zaczep_10",
+              "ref": "components/ladunek.json#zaczep_kontenerowy_staly",
+              "dopisek": "nr 10 – rząd przy przegubie, strona 2"
+            }
+          ]
+        },
+        {
+          "id": "hamulec",
+          "ref": "components/hamulec.json",
+          "bez": [
+            "kurek_koncowy_2",
+            "sprzeg_hamulcowy_2",
+            "hamulec_reczny"
+          ]
+        }
+      ]
+    }
+  },
+  "opisy": {
+    "sggrss": {
+      "nazwa_pl": "Sggrss",
+      "nazwa_en": "Sggrss articulated container wagon (80')",
+      "funkcja": "Sześcioosiowy wagon przegubowy do przewozu kontenerów ISO i nadwozi wymiennych (Ermewa: 20', 30', 40'; DB Cargo – na każdy człon 2 × 20', 1 × 30' albo 1 × 40'). Dwa człony o długości ładunkowej ok. 40 stóp każdy dają razem 80 stóp. Załadunek i wyładunek z góry dźwignicami – kontener opuszcza się na czopy zaczepów.",
+      "budowa": "Dwa człony z ostojami szkieletowymi (bez podłogi) na trzech wózkach Y25: skrajne wózki pod belkami skrętowymi członów, środkowy wózek pod przegubem, który łączy oba człony. Na każdym członie zaczepy kontenerowe stałe i składane. Urządzenia cięgłowo-zderzakowe tylko na skrajnych czołach; między członami przegub z przewodem hamulcowym. Hamulec zespolony w każdym członie. Wzór wymiarów: Ermewa Sggrss 80' – długość ze zderzakami 26 390 mm, długość ostoi członu 12 220 mm (ładowna 2 × 12,20 m), odległość czopa wózka skrajnego od osi przegubu 10 395 mm, rozstaw osi wózka 1 800 mm, koło Ø920 mm, wysokość ładunkowa 1 150 mm, masa własna ok. 26,6 t, ładowność maks. 108,8 t, masa całkowita 135 t, 8 zaczepów stałych i 12 składanych, najmniejszy promień łuku 75 m (wagon pojedynczy, ładowny), 150 m (w pociągu). Granice obciążenia (Ermewa): S – A 69,8 t, B 81,8 t, C 96,8 t, D 108,8 t; ss – A 69,8 t, B 81,8 t, C i D 93,8 t. Wózki Y25 Ls(s)(d)1-K, hamulec GP-A (K), wstawki 2 × Bg, prędkość maks. 120 km/h (próżny i ładowny do 20 t/oś), 100 km/h przy 22,5 t/oś (Đuro Đaković).",
+      "przepisy": "Oznaczenie literowe wg UIC 438-2 (znaczenie liter wg katalogu PKP Cargo): S – wagon platforma specjalnej budowy na wózkach, gg – do transportu kontenerów o łącznej długości ponad 60 stóp, r – wagon przegubowy, s / ss – przystosowany do jazdy z prędkością 100 / 120 km/h. Karta UIC 571-4 (wagony do transportu kombinowanego), UIC 592 (kontenery i pojemniki wymienne); urządzenia cięgłowe i sprzęg śrubowy wg EN 15566, zderzaki wg EN 15551 kat. A, skrajnia EN 15273-2 G1 (Đuro Đaković); GCU Zał. 9 usterki 6.1.1 (oznakowanie wagonu), 6.7 (urządzenia do mocowania jednostek ładunkowych), 7.7.2–7.7.3 (kontenery na czopach).",
+      "zrodla": [
+        "Ermewa – karta wagonu „Sggrss 80' – 6 axles” (dane ogólne, rysunek wymiarowy, wyposażenie, schemat załadunku; kopia pliku Ermewa): https://leberek.github.io/EC_Application-Guide-1.0/Content/Resources/PDFSourceFiles/Container-Sggrss-80-3-bogies-3.pdf",
+        "Đuro Đaković Specijalna vozila – karta techniczna Sggrs(s) 80' (2024): https://duro-dakovic.com/wp-content/uploads/2024/01/TDS_Sggrss-80.pdf",
+        "DB Cargo – katalog wagonów, Sggrss 733: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/Sggrss-733-9121278",
+        "PKP Cargo – katalog wagonów (2019), znaczenie liter serii (rodzaj S, litery g, r, s), s. 7 i 12–13: https://www.pkpcargo.com/media/1002903/pkp-cargo_katalog-wagonow_3008_19.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wymiary modelu wg Ermewa (czop skrajny – oś przegubu 10 395 mm, lico belki czołowej – czop 2 180 mm). Karta Đuro Đaković podaje 10 425 mm i 2 150 mm – sprawdzić, który wariant jest w serwisie",
+        "Wysokość ładunkowa: Ermewa 1 150 mm, DB Cargo i Đuro Đaković 1 155 mm – w modelu 1 155 mm",
+        "Hamulec postojowy: DB Cargo Sggrss 733 – brak; Đuro Đaković – hamulec ręczny obsługiwany z ziemi. W modelu pominięty – sprawdzić",
+        "Znaczenie liter gg i r – wzięte z katalogu PKP Cargo, potwierdzić w UIC 438-2",
+        "Masa własna i ładowność różnią się między producentami (Ermewa 26,6 t / 108,8 t, Đuro Đaković 26,5 t / 108,5 t, DB Cargo 733 średnio 28,0 t)",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "czlon_sggrss": {
+      "nazwa_pl": "człon wagonu",
+      "nazwa_en": "wagon unit (platform)",
+      "funkcja": "Jedna z dwóch platform wagonu przegubowego. Przewozi kontenery o łącznej długości do 40 stóp (2 × 20', 1 × 30' albo 1 × 40' – DB Cargo). Jednym końcem opiera się na własnym wózku skrajnym, drugim – przez przegub – na wspólnym wózku środkowym.",
+      "budowa": "Ostoja szkieletowa (ostojnice, belka czołowa, belka przegubowa, belka skrętowa, belka środkowa, poprzecznice, stężenia), 10 zaczepów kontenerowych (4 stałe, 6 składanych) i własny hamulec zespolony. Długość ostoi członu 12 220 mm (Ermewa). Człon 2 jest odwrócony – oba człony mają czoło ze zderzakami na zewnątrz wagonu.",
+      "zrodla": [
+        "Ermewa – karta wagonu „Sggrss 80' – 6 axles” (dane ogólne, rysunek wymiarowy, wyposażenie, schemat załadunku; kopia pliku Ermewa): https://leberek.github.io/EC_Application-Guide-1.0/Content/Resources/PDFSourceFiles/Container-Sggrss-80-3-bogies-3.pdf",
+        "DB Cargo – katalog wagonów, Sggrss 733: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/Sggrss-733-9121278"
+      ],
+      "do_sprawdzenia": [
+        "Czy oba człony są identyczne (np. różnice w wyposażeniu hamulca, tabliczkach) – sprawdzić na wagonie"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "ostoja_sggrss": {
+      "nazwa_pl": "ostoja członu",
+      "nazwa_en": "unit underframe",
+      "opis_wspolny": "components/ostoja.json#ostoja",
+      "funkcja": "Nośna konstrukcja członu: przenosi masę kontenerów (przez zaczepy) na wózek skrajny i przegub oraz siły pociągowe i zderzakowe między czołem a przegubem.",
+      "budowa": "Spawana rama szkieletowa bez podłogi: dwie rybie ostojnice, belka środkowa, belka czołowa (koniec ze zderzakami), belka przegubowa (koniec przy przegubie), belka skrętowa nad wózkiem skrajnym, poprzecznice zwykłe i poprzecznice zaczepów, stężenia ukośne; stopnie i poręcze manewrowe w narożnikach przy czole. Długość 12 220 mm (Ermewa).",
+      "zrodla": [
+        "Ermewa – karta wagonu „Sggrss 80' – 6 axles” (dane ogólne, rysunek wymiarowy, wyposażenie, schemat załadunku; kopia pliku Ermewa): https://leberek.github.io/EC_Application-Guide-1.0/Content/Resources/PDFSourceFiles/Container-Sggrss-80-3-bogies-3.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Przekroje i wysokości belek ostoi – SZACUNKOWE (kształt wg rysunków poglądowych Ermewa i Đuro Đaković)"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "ostojnica_sggrss": {
+      "nazwa_pl": "ostojnica",
+      "nazwa_en": "solebar",
+      "opis_wspolny": "components/ostoja.json#ostojnica",
+      "funkcja": "Główna podłużna belka nośna po boku członu; przenosi zginanie od kontenerów między wózkiem skrajnym a przegubem.",
+      "budowa": "Blachownica rybia (fish-belly): środnik wyższy między wózkami, niższy nad wózkami, półka dolna wzdłuż krzywizny, półka górna przerwana przy zaczepach. Przy zaczepach składanych wycięcia w środniku na zawiasy, przy wszystkich zaczepach przekładki pod wsporniki; otwory na cięgła hamulca; uchwyty do podnoszenia przy belce skrętowej.",
+      "zrodla": [
+        "Ermewa – karta wagonu „Sggrss 80' – 6 axles” (dane ogólne, rysunek wymiarowy, wyposażenie, schemat załadunku; kopia pliku Ermewa): https://leberek.github.io/EC_Application-Guide-1.0/Content/Resources/PDFSourceFiles/Container-Sggrss-80-3-bogies-3.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wysokość środnika i kształt brzucha ostojnicy – SZACUNKOWE (wg rysunku Ermewa)",
+        "Czy nośne są głównie ostojnice rybie, czy belka środkowa – sprawdzić na wagonie"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "belka_czolowa_sggrss": {
+      "nazwa_pl": "belka czołowa",
+      "nazwa_en": "headstock",
+      "opis_wspolny": "components/ostoja.json#belka_czolowa",
+      "funkcja": "Zamyka ostoję członu na skrajnym końcu wagonu; mocowane są do niej zderzaki, przechodzi przez nią hak cięgłowy; niesie stałe zaczepy kontenerowe.",
+      "budowa": "Belka skrzynkowa z blachy czołowej, półek i ścianki wewnętrznej, z nakładkami pod zderzaki i otworem haka. Po bokach obniżona – tam stoją wsporniki stałych zaczepów (117,5 mm od końca ostoi – Ermewa). Oś zderzaków 1 030 mm nad główką szyny (Ermewa).",
+      "zrodla": [
+        "Ermewa – karta wagonu „Sggrss 80' – 6 axles” (dane ogólne, rysunek wymiarowy, wyposażenie, schemat załadunku; kopia pliku Ermewa): https://leberek.github.io/EC_Application-Guide-1.0/Content/Resources/PDFSourceFiles/Container-Sggrss-80-3-bogies-3.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Kształt belki i sposób mocowania zaczepów stałych – SZACUNKOWE",
+        "Wysokość osi zderzaków: Ermewa 1 030 mm, Đuro Đaković 1 025 mm"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "belka_przegubowa_sggrss": {
+      "nazwa_pl": "belka przegubowa",
+      "nazwa_en": "articulation end beam",
+      "funkcja": "Zamyka ostoję członu od strony przegubu; przyspawana jest do niej część przegubu, przez którą człon przekazuje siły pociągowe, hamowania i ciężar na wózek środkowy; niesie stałe zaczepy kontenerowe.",
+      "budowa": "Belka skrzynkowa w poprzek członu, płytsza od dołu (pod nią przechodzi przewód główny hamulca), z nakładką na licu pod ramię przegubu. Lico belki 355 mm od osi przegubu (przerwa między członami 710 mm – Ermewa). Po bokach obniżona pod wsporniki stałych zaczepów.",
+      "typowe_uszkodzenia": "Pęknięcia spoin ramienia przegubu i spoin belki z ostojnicami oraz belką środkową (GCU 4.1.2, Zał. 10 pkt 4.3); odkształcenia po uderzeniach kontenerem przy załadunku; korozja.",
+      "wymiary_graniczne": "Pęknięcie poprzeczne od krawędzi półki – maks. do połowy szerokości półki; pęknięcia wzdłużne maks. 150 mm (GCU Zał. 10 pkt 4.2; Zał. 9 usterka 4.1.2). Spoiny nie mogą mieć pęknięć (Zał. 10 pkt 4.3).",
+      "przepisy": "GCU Zał. 9 usterki 4.1.1–4.1.2, 4.6.1; GCU Zał. 10 pkt 4.1–4.3, 4.16–4.17.",
+      "zrodla": [
+        "Ermewa – karta wagonu „Sggrss 80' – 6 axles” (dane ogólne, rysunek wymiarowy, wyposażenie, schemat załadunku; kopia pliku Ermewa): https://leberek.github.io/EC_Application-Guide-1.0/Content/Resources/PDFSourceFiles/Container-Sggrss-80-3-bogies-3.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Konstrukcja końca członu przy przegubie – SZACUNKOWA (brak publicznego rysunku)",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "belka_skretowa_sggrss": {
+      "nazwa_pl": "belka skrętowa",
+      "nazwa_en": "body bolster",
+      "opis_wspolny": "components/ostoja.json#belka_skretowa",
+      "funkcja": "Przenosi masę członu i ładunku z ostojnic na czop skrętu i ślizgi boczne wózka skrajnego.",
+      "budowa": "Belka skrzynkowa w poprzek członu nad wózkiem skrajnym, z żebrami; w środku czop skrętu, po bokach przeciwślizgi. Czop 2 180 mm od lica belki czołowej (Ermewa). Drugi koniec członu nie ma belki skrętowej – opiera się na wózku środkowym przez przegub.",
+      "zrodla": [
+        "Ermewa – karta wagonu „Sggrss 80' – 6 axles” (dane ogólne, rysunek wymiarowy, wyposażenie, schemat załadunku; kopia pliku Ermewa): https://leberek.github.io/EC_Application-Guide-1.0/Content/Resources/PDFSourceFiles/Container-Sggrss-80-3-bogies-3.pdf"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "belka_srodkowa_sggrss": {
+      "nazwa_pl": "belka środkowa",
+      "nazwa_en": "centre sill",
+      "opis_wspolny": "components/ostoja.json#belka_srodkowa",
+      "funkcja": "Przenosi siły pociągowe i ściskające między czołem członu (urządzenie cięgłowe) a przegubem.",
+      "budowa": "Dwa ceowniki wzdłuż osi członu połączone przewiązkami; przy czole mieści urządzenie cięgłowe.",
+      "do_sprawdzenia": [
+        "Przekrój i przebieg belki środkowej – SZACUNKOWE"
+      ],
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "poprzecznice_sggrss": {
+      "nazwa_pl": "poprzecznice",
+      "nazwa_en": "cross bearers",
+      "opis_wspolny": "components/ostoja.json#poprzecznice",
+      "funkcja": "Łączą belkę środkową z ostojnicami; do ich półek dolnych mocowane są elementy hamulca i wieszaki przewodu głównego.",
+      "budowa": "Dwuteowniki spawane między belką środkową a ostojnicami, z szeroką półką dolną.",
+      "do_sprawdzenia": [
+        "Liczba i rozstaw poprzecznic – SZACUNKOWE"
+      ],
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "poprzecznice_zaczepow_sggrss": {
+      "nazwa_pl": "poprzecznice zaczepów",
+      "nazwa_en": "spigot cross bearers",
+      "funkcja": "Przenoszą na ostoję siły od kontenerów stojących na zaczepach składanych (ciężar, siły wzdłużne przy hamowaniu i uderzeniach).",
+      "budowa": "Blachownice spawane między belką środkową a ostojnicami; część zewnętrzna obniżona – na niej stoi wspornik zaczepu, przyspawany także do ostojnicy. Zaczepy stałe stoją na belce czołowej i przegubowej.",
+      "typowe_uszkodzenia": "Pęknięcia spoin przy wspornikach zaczepów i przy ostojnicach (GCU 4.1.2, Zał. 10 pkt 4.3); odkształcenia po uderzeniu kontenerem przy załadunku; korozja.",
+      "przepisy": "GCU Zał. 9 usterki 4.1.2, 6.7.1; GCU Zał. 10 pkt 4.2–4.3.",
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Konstrukcja węzła zaczepu – SZACUNKOWA, sprawdzić na wagonie",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "stezenia_sggrss": {
+      "nazwa_pl": "stężenia ukośne",
+      "nazwa_en": "diagonal bracing",
+      "funkcja": "Usztywniają szkieletową ostoję (bez podłogi) w płaszczyźnie poziomej – przeciw skręcaniu i odkształceniom poziomym przy siłach wzdłużnych i w łukach.",
+      "budowa": "Płaskowniki ułożone na krzyż między belką środkową a ostojnicami, z blachami węzłowymi; na rysunku Ermewa (widok z góry) widoczne ukośne pręty w polach między poprzecznicami.",
+      "typowe_uszkodzenia": "Pęknięcia spoin na końcach i w blachach węzłowych, odkształcenia (GCU 4.1.2, Zał. 10 pkt 4.3).",
+      "przepisy": "GCU Zał. 9 usterka 4.1.2; GCU Zał. 10 pkt 4.2–4.3.",
+      "zrodla": [
+        "Ermewa – karta wagonu „Sggrss 80' – 6 axles” (dane ogólne, rysunek wymiarowy, wyposażenie, schemat załadunku; kopia pliku Ermewa): https://leberek.github.io/EC_Application-Guide-1.0/Content/Resources/PDFSourceFiles/Container-Sggrss-80-3-bogies-3.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Liczba, przekrój i położenie stężeń – SZACUNKOWE (rysunek Ermewa jest poglądowy)",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "zaczepy_sggrss": {
+      "nazwa_pl": "zaczepy kontenerowe",
+      "nazwa_en": "container spigots",
+      "funkcja": "Ustalają położenie kontenerów na członie – czopy wchodzą w otwory dolnych naroży kontenerów. Zaczepy składane kładzie się na bok tam, gdzie przy danym układzie kontenerów nie stoi naroże.",
+      "budowa": "Na członie 10 zaczepów w 5 rzędach (Ermewa: na całym wagonie 8 stałych i 12 składanych). Rzędy wg rysunku Ermewa, licząc od czoła członu: 117,5 mm od końca ostoi (stały), 5 853 mm dalej (naroże 20', składany), drugi 20' (składany), 8 919 mm od rzędu skrajnego (naroże 30', składany) i 11 985 mm od rzędu skrajnego (naroże 40', stały, 117,5 mm od końca przy przegubie). Rozstawy wzdłużne odpowiadają rozstawowi naroży kontenerów ISO 20' / 30' / 40' (William Cook).",
+      "typowe_uszkodzenia": "Czop lub płyta oporowa odkształcone (GCU 6.7.1.3 – nieużywany, 6.7.1.4 – używany); ruchome części niezabezpieczone (6.7.5); naroża kontenerów nieosadzone na czopach (7.7.2); czopy płyt uchylnych ani podniesione, ani zabezpieczone (7.7.3).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 6.7.1, 6.7.5, 7.7.2, 7.7.3; GCU Zał. 10 kody prac CU61010–CU61012; UIC 571-4, UIC 592.",
+      "zrodla": [
+        "Ermewa – karta wagonu „Sggrss 80' – 6 axles” (dane ogólne, rysunek wymiarowy, wyposażenie, schemat załadunku; kopia pliku Ermewa): https://leberek.github.io/EC_Application-Guide-1.0/Content/Resources/PDFSourceFiles/Container-Sggrss-80-3-bogies-3.pdf",
+        "DB Cargo – katalog wagonów, Sggrss 733: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/Sggrss-733-9121278",
+        "William Cook Intermodal – broszura (tabela wymiarów kontenerów ISO: długość L i rozstaw naroży S dla 10', 20', 30', 40'): https://www.william-cook.co.uk/_media/images/client-uploads/Intermodal-Brochure.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Rozstaw poprzeczny czopów 2 259 mm – wartość z ISO 1161, nie potwierdzona w dostępnym źródle (SZACUNKOWE)",
+        "Położenie rzędu 30' (od czoła czy od przegubu) odczytane z rysunku Ermewa – sprawdzić",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    }
+  },
+  "drzewo": {
+    "id": "sggrss",
+    "typ": "sggrss",
+    "children": [
+      {
+        "id": "czlon_1",
+        "szablon": "czlon",
+        "dopisek": "nr 1",
+        "param": {
+          "dlugosc": 12.22,
+          "x_wozka": 3.93,
+          "x_wozka_2": 6.465,
+          "x_konca_2": 6.11,
+          "koniec_2": "przegub",
+          "ciegla_wozek_2": true,
+          "hamulec_reczny": false,
+          "uklad": {
+            "pipeY": 0.93,
+            "pipeZ": 0.32,
+            "valve": [
+              -1.0,
+              0.75,
+              0.6
+            ],
+            "reservoir": [
+              -2.25,
+              0.83,
+              -0.62
+            ],
+            "cyl": [
+              0.5,
+              0.807,
+              0.62
+            ],
+            "loadValve": [
+              -0.55,
+              0.9,
+              0.62
+            ],
+            "release": [
+              -1.5,
+              0.86,
+              -0.35
+            ],
+            "leverY": 0.807,
+            "lever1X": 1.3,
+            "lever2X": 0.0,
+            "leverZ": [
+              0.3,
+              1.0
+            ],
+            "rodZ": 0.95,
+            "slackX": [
+              1.425,
+              2.225
+            ],
+            "mountY": 1.05,
+            "sideZ": 1.37,
+            "plateZ": 1.292,
+            "pipeHangersX": [
+              1.7,
+              -4.4,
+              -5.4
+            ]
+          }
+        }
+      },
+      {
+        "id": "czlon_2",
+        "szablon": "czlon",
+        "dopisek": "nr 2",
+        "param": {
+          "dlugosc": 12.22,
+          "x_wozka": 3.93,
+          "x_wozka_2": 6.465,
+          "x_konca_2": 6.11,
+          "koniec_2": "przegub",
+          "ciegla_wozek_2": false,
+          "hamulec_reczny": false,
+          "uklad": {
+            "pipeY": 0.93,
+            "pipeZ": 0.32,
+            "valve": [
+              -1.0,
+              0.75,
+              0.6
+            ],
+            "reservoir": [
+              -2.25,
+              0.83,
+              -0.62
+            ],
+            "cyl": [
+              0.5,
+              0.807,
+              0.62
+            ],
+            "loadValve": [
+              -0.55,
+              0.9,
+              0.62
+            ],
+            "release": [
+              -1.5,
+              0.86,
+              -0.35
+            ],
+            "leverY": 0.807,
+            "lever1X": 1.3,
+            "lever2X": 0.0,
+            "leverZ": [
+              0.3,
+              1.0
+            ],
+            "rodZ": 0.95,
+            "slackX": [
+              1.425,
+              2.225
+            ],
+            "mountY": 1.05,
+            "sideZ": 1.37,
+            "plateZ": 1.292,
+            "pipeHangersX": [
+              1.7,
+              -4.4,
+              -5.4
+            ]
+          }
+        }
+      },
+      {
+        "id": "przegub",
+        "ref": "components/przegub.json",
+        "param": {
+          "ramie_1": 0.355,
+          "ramie_2": 0.355,
+          "waz": {
+            "a": [
+              0.405,
+              -0.11,
+              0.32
+            ],
+            "b": [
+              -0.405,
+              -0.11,
+              -0.32
+            ]
+          }
+        }
+      },
+      {
+        "id": "wozek_1",
+        "ref": "components/y25.json",
+        "dopisek": "nr 1 – skrajny, pod członem 1"
+      },
+      {
+        "id": "wozek_2",
+        "ref": "components/y25.json",
+        "dopisek": "nr 2 – środkowy, pod przegubem"
+      },
+      {
+        "id": "wozek_3",
+        "ref": "components/y25.json",
+        "dopisek": "nr 3 – skrajny, pod członem 2"
+      },
+      {
+        "id": "ciegla_zderzaki_1",
+        "ref": "components/ciegla_zderzaki.json",
+        "dopisek": "koniec 1"
+      },
+      {
+        "id": "ciegla_zderzaki_2",
+        "ref": "components/ciegla_zderzaki.json",
+        "dopisek": "koniec 2"
+      }
+    ]
+  }
+}
