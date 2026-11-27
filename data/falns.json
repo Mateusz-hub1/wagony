@@ -1,0 +1,1015 @@
+{
+  "seria": "Falns",
+  "uwaga": "Wersja robocza, wszystkie opisy do weryfikacji. Wymiary pudła i ostoi wg karty RCG Falns-x 6636, budowa i mechanizm klap wg katalogu DB Cargo (Falns 181/183/184). Liczby tylko ze źródeł; reszta w kodzie oznaczona SZACUNKOWE.",
+  "szablony": {
+    "sciana_boczna": {
+      "typ": "sciana_boczna_falns",
+      "children": [
+        {
+          "id": "klapa_1",
+          "typ": "klapa_falns",
+          "dopisek": "komora 1",
+          "zdejmowalny": true
+        },
+        {
+          "id": "klapa_2",
+          "typ": "klapa_falns",
+          "dopisek": "komora 2",
+          "zdejmowalny": true
+        }
+      ]
+    },
+    "naped": {
+      "typ": "naped_klap_falns",
+      "children": [
+        {
+          "id": "wal",
+          "typ": "wal_falns"
+        },
+        {
+          "id": "zamki",
+          "typ": "zamki_falns"
+        },
+        {
+          "id": "ciegla_klap",
+          "typ": "ciegla_klap_falns"
+        }
+      ]
+    },
+    "belka_skretowa": {
+      "typ": "belka_skretowa_falns",
+      "ukryj_otoczenie": true,
+      "children": [
+        {
+          "id": "czop_skretu",
+          "ref": "components/ostoja.json#czop_skretu"
+        }
+      ]
+    }
+  },
+  "opisy": {
+    "falns": {
+      "nazwa_pl": "Falns",
+      "nazwa_en": "Falns self-discharging hopper wagon",
+      "funkcja": "Czteroosiowy wagon samowyładowczy z dnem siodłowym o dużej ładowności (ponad 60 t) do przewozu ładunków masowych niewrażliwych na wilgoć: węgla, rud, koksu, kamienia, kruszyw i materiałów budowlanych. Wyładunek grawitacyjny na obie strony toru jednocześnie przez cztery klapy boczne – po otwarciu klap wysypuje się cały ładunek, bez dozowania.",
+      "budowa": "Pudło spawane z dwiema komorami (lejami) rozdzielonymi siodłem poprzecznym i ścianą działową, dno siodłowe pochylone pod kątem 49°, cztery klapy boczne zawieszone na ścianach bocznych, pochyłe ściany czołowe i nadstawy, pas górny. Spawana ostoja z pomostami na obu końcach, hydrauliczny mechanizm otwierania klap (wały z zamkami krzywkowymi, cylinder nastawczy i ryglujący, akumulator, zawór sterujący, pompa ręczna), dwa wózki Y25, urządzenia cięgłowo-zderzakowe, hamulec zespolony z hamulcem ręcznym. Wzór wymiarów: Falns-x typ 6636 (Rail Cargo Group) – długość ze zderzakami 12 540 mm, rozstaw czopów skrętu 7 500 mm, szerokość 3 055 mm, wysokość 4 000 mm nad główką szyny, otwór ładunkowy 10 960 × 1 950 mm, pojemność 75 m³, masa własna 25,5 t, wózki Y25.",
+      "typowe_uszkodzenia": "Wg katalogu GCU: oznakowanie wagonu nieczytelne lub niepełne (6.1.1), brak lub nieaktualna tabliczka utrzymania (6.1.2), klapy wyładowcze niezamknięte lub niezaryglowane (6.6.6). Typowe dla wagonów samowyładowczych: ścieranie i perforacja blach dna, nieszczelność klap (zabrudzone listwy uszczelniające), zużycie zamków i łożysk wałów.",
+      "przepisy": "Oznaczenie literowe wg UIC 438-2: F – specjalny wagon odkryty wysokoburtowy, a – 4 zestawy kołowe, l – samowyładowczy grawitacyjnie z wysypem niesterowanym, n – granica obciążenia ponad 60 t (wagon czteroosiowy), s – dopuszczony do pociągów do 100 km/h. GCU Zał. 9 usterki 6.1.1, 6.1.2, 6.6.6; GCU Zał. 10 pkt 6.1–6.14, 6.50–6.51; EN 12663-2 (wytrzymałość pudeł wagonów towarowych); TSI WAG.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Group – karta techniczna Falns-x (typ 6636) z rysunkiem wymiarowym (stan 2024): https://www.railcargo.com/sl/dam/jcr:19c6aa82-cd74-43a4-9103-441409b0dd06/falns-x-fs.pdf",
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "Wikipedia – UIC classification of goods wagons (znaczenie liter F, a, l, n, s): https://en.wikipedia.org/wiki/UIC_classification_of_goods_wagons",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wymiary wzięte z Falns-x typ 6636 (Rail Cargo Group); odmiany DB (Falns 181/183/184) mają inne pojemności (72–90 m³) – wybrać odmianę typową dla serwisu",
+        "Mechanizm klap wg opisów DB (Falns 181/183/184): napęd hydrauliczny z pompą od zestawu kołowego. Karta RCG 6636 nie opisuje napędu – sprawdzić, czy odmiana 6636 ma napęd hydrauliczny czy pneumatyczny",
+        "Rysunek RCG: wymiary 2 369 / 1 369 / 340 mm odczytane jako barierka / pomost / stopień – potwierdzić",
+        "Prędkość: DB podaje 120 km/h (wagon próżny); oznaczenie s dotyczy 100 km/h – sprawdzić",
+        "przepisy: znaczenie liter wzięte z Wikipedii (bez numeru karty UIC) – potwierdzić w UIC 438-2 / TSI WAG",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "pudlo_falns": {
+      "nazwa_pl": "pudło",
+      "nazwa_en": "body",
+      "funkcja": "Przestrzeń ładunkowa wagonu; kieruje ładunek grawitacyjnie do czterech otworów wyładowczych po obu bokach.",
+      "budowa": "Dwa leje (komory) z dnem siodłowym pochylonym 49°, siodło poprzeczne ze ścianą działową w środku, dwie ściany boczne z czterema klapami wyładowczymi i słupkiem środkowym, dwie pochyłe ściany czołowe, pochyłe nadstawy zwężające otwór ładunkowy do 1 950 mm, pas górny. Konstrukcja spawana; w odmianach DB części stykające się z ładunkiem z blachy nierdzewnej, bez ostrych naroży (mniej zalegania ładunku).",
+      "typowe_uszkodzenia": "Wgniecenia i przetarcia blach od ładunku, pęknięcia spoin, korozja w narożach. Wg katalogu GCU: uszkodzona część szkieletu pudła – bez naruszenia skrajni (6.1.3.1) lub z naruszeniem – odstawienie (6.1.3.2); dziurawe lub złamane poszycie (6.1.4); ściany uszkodzone z ryzykiem utraty ładunku lub naruszenia skrajni (6.3.1).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.3–6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2, 6.52 (sprawdzenie skrajni po odkształceniu); EN 12663-2.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Group – karta techniczna Falns-x (typ 6636) z rysunkiem wymiarowym (stan 2024): https://www.railcargo.com/sl/dam/jcr:19c6aa82-cd74-43a4-9103-441409b0dd06/falns-x-fs.pdf",
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "lej_falns": {
+      "nazwa_pl": "lej (komora) z dnem siodłowym",
+      "nazwa_en": "hopper compartment with saddle floor",
+      "funkcja": "Jedna z dwóch komór wagonu. Dwie pochyłe blachy dna (jak dach dwuspadowy) kierują ładunek na oba boki do klap wyładowczych.",
+      "budowa": "Dwie blachy dna pochylone pod kątem 49° do poziomu, zespawane w grzbiecie z nakładką; na dole progi otworów wyładowczych z listwami, o które opierają się klapy. W odmianach DB grzbiet i powierzchnie styku z klapami z blachy nierdzewnej. Leje oddziela siodło poprzeczne.",
+      "typowe_uszkodzenia": "Przetarcia i perforacja blach dna od ścierania ładunkiem, pęknięcia spoiny grzbietowej, odkształcenia progów (nieszczelność klap), zaleganie ładunku. Wg katalogu GCU: dno uszkodzone bez ryzyka utraty ładunku (6.1.5.1) lub z ryzykiem utraty ładunku (6.1.5.2).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.5, 6.6.6; GCU Zał. 10 pkt 6.5, 6.50–6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "Rail Cargo Group – karta techniczna Falns-x (typ 6636) z rysunkiem wymiarowym (stan 2024): https://www.railcargo.com/sl/dam/jcr:19c6aa82-cd74-43a4-9103-441409b0dd06/falns-x-fs.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Długość komory 5 485 mm odczytana z rysunku RCG 6636 – w modelu dno sięga od środka wagonu do ściany czołowej",
+        "Kąt 49° podaje DB dla Falns 183/184 – potwierdzić dla odmiany 6636",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#lej"
+    },
+    "siodlo_poprzeczne_falns": {
+      "nazwa_pl": "siodło poprzeczne ze ścianą działową",
+      "nazwa_en": "transverse saddle with partition wall",
+      "funkcja": "Dzieli pudło na dwie komory i kieruje ładunek ze środka wagonu do klap obu komór; ściana działowa usztywnia ściany boczne w środku wagonu.",
+      "budowa": "Dwie strome blachy od grzbietu w środku wagonu w dół do końców otworów wyładowczych, nad nimi pionowa ściana działowa z żebrami i rurą na górnej krawędzi.",
+      "typowe_uszkodzenia": "Pęknięcia spoin z dnem i ścianami bocznymi, wgniecenia od urządzeń załadowczych, przetarcia blach. Wg katalogu GCU: uszkodzona część szkieletu pudła (6.1.3.1–6.1.3.2); dziurawe lub złamane poszycie (6.1.4).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.3–6.1.4; GCU Zał. 10 pkt 6.1–6.2.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wysokość grzbietu siodła i ściany działowej, pochylenie blach – SZACUNKOWE",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "sciana_boczna_falns": {
+      "nazwa_pl": "ściana boczna",
+      "nazwa_en": "side wall",
+      "funkcja": "Zamyka przestrzeń ładunkową z boku; w dolnej części ma dwa otwory wyładowcze zamykane klapami.",
+      "budowa": "Stała część nad klapami z belką zawiasową i belką okapową, użebrowanie pionowe, słupek środkowy (między klapami obu komór) z drabinką i okienkiem wskaźnika zamknięcia klap, narożniki przy ścianach czołowych. Dwie klapy wyładowcze na stronę, zawieszone na zawiasach.",
+      "typowe_uszkodzenia": "Pęknięcia przy wspornikach zawiasów, wgniecenia, pęknięcia spoin słupka środkowego. Wg katalogu GCU: ściana uszkodzona bez ryzyka (6.3.1.1), z ryzykiem utraty ładunku (6.3.1.2) lub naruszenia skrajni (6.3.1.3); dziurawe lub złamane poszycie (6.1.4).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "klapa_falns": {
+      "nazwa_pl": "klapa wyładowcza (boczna)",
+      "nazwa_en": "side discharge flap",
+      "funkcja": "Zamyka otwór wyładowczy komory; po otwarciu wychyla się dolną krawędzią na zewnątrz i ładunek wysypuje się obok toru. Wszystkie cztery klapy otwierają się i zamykają jednocześnie.",
+      "budowa": "Blacha (w odmianach DB nierdzewna) z użebrowaniem z profili kapeluszowych, zawieszona górną krawędzią na trzech zawiasach w ścianie bocznej. Dolna krawędź z metalową listwą uszczelniającą ze stali Cr-Ni opiera się o próg dna; pod nią ucha pięciu zamków krzywkowych, na końcach ucha cięgieł mechanizmu. Największe wychylenie klap (szerokość po otwarciu) 4 300 mm (DB Falns 181/183/184).",
+      "typowe_uszkodzenia": "Nieszczelność (zabrudzone lub uszkodzone listwy uszczelniające – klapa się nie domyka), odkształcenia, zużyte zawiasy i sworznie, uszkodzone ucha zamków. Wg katalogu GCU: klapa wyładowcza niezamknięta lub niezaryglowana (6.6.6) – w wagonie z klapami bocznymi odstawienie wagonu, gdy nie da się jej zamknąć (6.6.6.3–6.6.6.4).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.50–6.51 (wszystkie klapy muszą dać się zamknąć i zaryglować; żadna część układu zamykania i wyładunku nie może być luźna).",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Długość klapy w modelu (4,3 m) – SZACUNKOWA; DB Falns 183 podaje otwór wyładowczy 4 950 mm i łączną długość wyładunku 10 508 mm",
+        "DB Falns 184: szczelina klap pod ładunkiem najwyżej 1 mm – sprawdzić, czy to wymiar graniczny przy naprawie",
+        "Kąt otwarcia w modelu wyliczony z wychylenia 4 300 mm i SZACUNKOWEJ wysokości klapy",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#klapa_wyladowcza"
+    },
+    "sciana_czolowa_falns": {
+      "nazwa_pl": "ściana czołowa (pochyła)",
+      "nazwa_en": "sloping end wall",
+      "funkcja": "Zamyka przestrzeń ładunkową od czoła; pochylenie kieruje ładunek do wnętrza komory, nad otwory wyładowcze.",
+      "budowa": "Blacha pochylona nad pomostem, oparta dołem na dnie siodłowym, z poziomymi i pionowymi żebrami; górna krawędź z rury. Przy ścianie końca 1 zawór sterujący klap z dźwignią.",
+      "typowe_uszkodzenia": "Wgniecenia, pęknięcia spoin z dnem i ścianami bocznymi. Wg katalogu GCU: dziurawe lub złamane poszycie (6.1.4); uszkodzenie z ryzykiem utraty ładunku lub naruszenia skrajni (6.3.1.2–6.3.1.3).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Group – karta techniczna Falns-x (typ 6636) z rysunkiem wymiarowym (stan 2024): https://www.railcargo.com/sl/dam/jcr:19c6aa82-cd74-43a4-9103-441409b0dd06/falns-x-fs.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Pochylenie ściany czołowej – SZACUNKOWE (z rysunku RCG wzięta tylko długość górnej krawędzi 10 960 mm)",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "nadstawa_falns": {
+      "nazwa_pl": "nadstawa (pochyła ściana górna)",
+      "nazwa_en": "sloping upper side",
+      "funkcja": "Zwęża otwór ładunkowy u góry i kieruje ładunek do wnętrza przy załadunku.",
+      "budowa": "Pochyła blacha z żebrami, między belką okapową ściany bocznej a pasem górnym; otwór ładunkowy u góry 1 950 mm (RCG 6636).",
+      "typowe_uszkodzenia": "Wgniecenia od urządzeń załadowczych, pęknięcia spoin. Wg katalogu GCU: uszkodzenie z ryzykiem utraty ładunku lub naruszenia skrajni (6.3.1.2–6.3.1.3); dziurawe poszycie (6.1.4).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Group – karta techniczna Falns-x (typ 6636) z rysunkiem wymiarowym (stan 2024): https://www.railcargo.com/sl/dam/jcr:19c6aa82-cd74-43a4-9103-441409b0dd06/falns-x-fs.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wysokość załamania ściana / nadstawa – SZACUNKOWA",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "pas_gorny_falns": {
+      "nazwa_pl": "pas górny",
+      "nazwa_en": "top chord",
+      "funkcja": "Usztywnia górną krawędź otworu ładunkowego.",
+      "budowa": "Profil gięty z zaokrągloną górą, przyspawany do górnej krawędzi nadstawy (DB Falns 184). Najwyższy punkt wagonu – 4 000 mm nad główką szyny (RCG 6636).",
+      "typowe_uszkodzenia": "Wgniecenia i wygięcia od urządzeń załadowczych. Wg katalogu GCU: pas górny złamany lub odkształcony – bez naruszenia skrajni (6.3.3.1) lub z naruszeniem skrajni (6.3.3.2).",
+      "przepisy": "GCU Zał. 9 usterka 6.3.3; GCU Zał. 10 pkt 6.23.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "Rail Cargo Group – karta techniczna Falns-x (typ 6636) z rysunkiem wymiarowym (stan 2024): https://www.railcargo.com/sl/dam/jcr:19c6aa82-cd74-43a4-9103-441409b0dd06/falns-x-fs.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "ostoja_falns": {
+      "nazwa_pl": "ostoja",
+      "nazwa_en": "underframe",
+      "funkcja": "Nośna konstrukcja wagonu: przenosi masę pudła i ładunku na wózki oraz siły pociągowe i zderzakowe.",
+      "budowa": "Spawana rama ze stali S355J2 (DB Falns 184): dwie ostojnice (zarazem progi otworów wyładowczych), dwie belki czołowe, dwie belki skrętowe z czopami (rozstaw 7 500 mm), belka środkowa, wiązary pod dnem siodłowym; pomosty na obu końcach, stopnie i poręcze manewrowe.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "Rail Cargo Group – karta techniczna Falns-x (typ 6636) z rysunkiem wymiarowym (stan 2024): https://www.railcargo.com/sl/dam/jcr:19c6aa82-cd74-43a4-9103-441409b0dd06/falns-x-fs.pdf"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/ostoja.json#ostoja"
+    },
+    "ostojnica_falns": {
+      "nazwa_pl": "ostojnica",
+      "nazwa_en": "sole bar",
+      "funkcja": "Podłużna belka ostoi po boku wagonu; opiera się na niej dolna krawędź dna siodłowego, a pod nią biegnie wał zamków klap.",
+      "budowa": "Ceownik z przeponami, przyspawany do belek czołowych i skrętowych; uchwyty do podnoszenia wagonu, łożyska wału zamków przykręcone do ściany.",
+      "zdjecia": [],
+      "zrodla": [],
+      "do_sprawdzenia": [
+        "typowe_uszkodzenia: korozja ostojnicy od wysypującego się ładunku – potwierdzić"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/ostoja.json#ostojnica"
+    },
+    "belka_czolowa_falns": {
+      "nazwa_pl": "belka czołowa",
+      "nazwa_en": "headstock",
+      "funkcja": "Zamyka ostoję na końcu wagonu; mocowane są do niej zderzaki, przechodzi przez nią hak cięgłowy.",
+      "budowa": "Belka skrzynkowa z blachy czołowej, półek i żeber; nakładki pod zderzaki, otwór haka. Oś zderzaków 1 060 mm nad główką szyny, lico belki 1 900 mm od czopa skrętu (RCG 6636).",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Group – karta techniczna Falns-x (typ 6636) z rysunkiem wymiarowym (stan 2024): https://www.railcargo.com/sl/dam/jcr:19c6aa82-cd74-43a4-9103-441409b0dd06/falns-x-fs.pdf"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/ostoja.json#belka_czolowa"
+    },
+    "belka_skretowa_falns": {
+      "nazwa_pl": "belka skrętowa",
+      "nazwa_en": "body bolster",
+      "funkcja": "Przenosi masę pudła z ostojnic na czop skrętu i ślizgi boczne wózka.",
+      "budowa": "Belka skrzynkowa w poprzek wagonu nad wózkiem; w środku czop skrętu, po bokach przeciwślizgi. Rozstaw czopów 7 500 mm (RCG 6636).",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Group – karta techniczna Falns-x (typ 6636) z rysunkiem wymiarowym (stan 2024): https://www.railcargo.com/sl/dam/jcr:19c6aa82-cd74-43a4-9103-441409b0dd06/falns-x-fs.pdf"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/ostoja.json#belka_skretowa"
+    },
+    "belka_srodkowa_falns": {
+      "nazwa_pl": "belka środkowa",
+      "nazwa_en": "centre sill",
+      "funkcja": "Przenosi siły pociągowe i ściskające między końcami wagonu; mieści urządzenie cięgłowe; podpiera grzbiet dna przez wiązary.",
+      "budowa": "Dwa ceowniki wzdłuż osi wagonu połączone przewiązkami.",
+      "zdjecia": [],
+      "zrodla": [],
+      "do_sprawdzenia": [
+        "Obecność i przekrój belki środkowej w Falns – SZACUNKOWE (DB Falns 184 wymienia ostojnice, siodła, poprzecznice i belki czołowe)"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/ostoja.json#belka_srodkowa"
+    },
+    "wiazary_dna_falns": {
+      "nazwa_pl": "wiązary dna",
+      "nazwa_en": "floor cross bearers",
+      "funkcja": "Podpierają blachy dna siodłowego i przenoszą masę ładunku na belkę środkową i ostojnice.",
+      "budowa": "Poprzeczne przepony z blachy o obrysie dopasowanym do spadku dna, z pasem dolnym; przez otwory w przeponach biegną przewody hydrauliczne mechanizmu klap.",
+      "typowe_uszkodzenia": "Pęknięcia spoin z blachą dna, korozja. Wg katalogu GCU: uszkodzona część szkieletu pudła – bez naruszenia skrajni (6.1.3.1) lub z naruszeniem (6.1.3.2).",
+      "przepisy": "GCU Zał. 9 usterka 6.1.3; GCU Zał. 10 pkt 6.1.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Liczba i rozstaw wiązarów – SZACUNKOWE",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "pomost_falns": {
+      "nazwa_pl": "pomost",
+      "nazwa_en": "end platform",
+      "funkcja": "Stanowisko obsługi na końcu wagonu: hamulec ręczny (koniec 2), zawór sterujący klap, pompa ręczna i zbiornik oleju (koniec 1).",
+      "budowa": "Blacha ryflowana na wspornikach nad belką czołową, wierzch 1 369 mm nad główką szyny, barierka ze słupków i poręczy (górna poręcz 2 369 mm wg rysunku RCG 6636); na końcu 2 słupek koła hamulca ręcznego.",
+      "typowe_uszkodzenia": "Wygięte poręcze, skorodowana lub pęknięta blacha pomostu. Wg katalogu GCU: pomosty, drabiny i barierki w złym stanie lub nie do użytku (6.1.7.1); pęknięcia pomostu, barierek lub ich mocowań (Zał. 10 pkt 6.10).",
+      "przepisy": "GCU Zał. 9 usterka 6.1.7.1; GCU Zał. 10 pkt 6.10; EN 16116-2.",
+      "zdjecia": [],
+      "zrodla": [
+        "Rail Cargo Group – karta techniczna Falns-x (typ 6636) z rysunkiem wymiarowym (stan 2024): https://www.railcargo.com/sl/dam/jcr:19c6aa82-cd74-43a4-9103-441409b0dd06/falns-x-fs.pdf",
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wysokości pomostu i barierki odczytane z rysunku RCG (1 369 / 2 369 mm) – potwierdzić; głębokość pomostu – SZACUNKOWA",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/ostoja.json#pomost"
+    },
+    "mechanizm_klap_falns": {
+      "nazwa_pl": "mechanizm otwierania klap (hydrauliczny)",
+      "nazwa_en": "hydraulic discharge flap operating gear",
+      "funkcja": "Otwiera jednocześnie wszystkie cztery klapy i zamyka je; w czasie jazdy utrzymuje klapy zamknięte i zaryglowane. Napęd niezależny od zewnętrznego zasilania – energię daje pompa napędzana od zestawu kołowego.",
+      "budowa": "Wg DB (Falns 181/183/184): pompa od zestawu kołowego ładuje akumulator tłokowy (ciśnienie robocze do ok. 220 bar, potem pompa przechodzi w obieg bezciśnieniowy); zawór sterujący kieruje olej najpierw do cylindra ryglującego, potem do cylindra nastawczego; cylinder nastawczy przez przekładnię (wały i drążki) obraca wały z zamkami krzywkowymi – 5 zamków na klapę. Jedno napełnienie akumulatora wystarcza co najmniej na 3 cykle otwarcia i zamknięcia; akumulator ładuje się po ok. 4 km jazdy z prędkością co najmniej 10 km/h. Obsługa kluczem z pomostu obsługi przy zasobniku albo dźwigniami ze ściany czołowej (z pomostu wagonu); awaryjnie pompa ręczna. W położeniu „zamknięte” mechanizm jest za martwym punktem i dodatkowo zaryglowany; żółty wskaźnik w środku wagonu pokazuje stan zamknięcia.",
+      "typowe_uszkodzenia": "Wycieki oleju, rozładowany akumulator (klapy nie dają się otworzyć), uszkodzona pompa od zestawu, zatarte łożyska wałów, luzy w drążkach i cięgłach, zużyte zamki krzywkowe, niewłaściwe wskazanie wskaźnika. Wg katalogu GCU: klapy niezamknięte lub niezaryglowane (6.6.6); luźne części układu zamykania i wyładunku (Zał. 10 pkt 6.51); widoczne uszkodzenia części ruchomych i ich sterowania (Zał. 10 pkt 6.4).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.4, 6.50–6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Układ wałów, przekładni i cylindrów w modelu – SZACUNKOWY (uproszczony), sprawdzić na wagonie",
+        "Pompa napędzana od zestawu kołowego nie jest zamodelowana (maźnice są wspólnym modułem Y25)",
+        "DB Falns 181 podaje pojemność akumulatora raz 10 l, raz 27 l – nie wpisano",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#mechanizm_wyladunku"
+    },
+    "naped_klap_falns": {
+      "nazwa_pl": "napęd klap jednej strony",
+      "nazwa_en": "flap drive (one side)",
+      "funkcja": "Otwiera, zamyka i rygluje obie klapy jednej strony wagonu.",
+      "budowa": "Wał zamków wzdłuż ostojnicy z dźwignią od przekładni, zamki krzywkowe (po 5 na klapę), cięgła klap.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510"
+      ],
+      "status": "do weryfikacji"
+    },
+    "wal_falns": {
+      "nazwa_pl": "wał zamków (krzywkowy)",
+      "nazwa_en": "camlock shaft",
+      "funkcja": "Przenosi ruch przekładni na zamki krzywkowe i cięgła klap jednej strony.",
+      "budowa": "Wał stalowy wzdłuż ostojnicy w łożyskach przykręconych do ostojnicy (DB Falns 181: łożyska hakowe jednocięte i dzielone łożyska przegubowe; DB Falns 184: przeguby i łożyska bezobsługowe, odporne na korozję), z dźwignią połączoną drążkiem z wałem poprzecznym.",
+      "typowe_uszkodzenia": "Zatarcie lub zużycie łożysk, skręcenie wału, luz na dźwigni. Wg katalogu GCU: luźne części układu zamykania i wyładunku (Zał. 10 pkt 6.51); uszkodzenia utrudniające działanie (pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Położenie wału i łożysk – SZACUNKOWE",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "zamki_falns": {
+      "nazwa_pl": "zamki krzywkowe klap",
+      "nazwa_en": "camlocks",
+      "funkcja": "Ryglują klapy w położeniu zamkniętym w czasie jazdy; obracają się razem z wałem przy otwieraniu.",
+      "budowa": "Pazury (krzywki) na wale, chwytające ucha na dolnej krawędzi klap; 5 zamków na klapę, razem 20 (DB Falns 181).",
+      "typowe_uszkodzenia": "Zużyte lub wygięte pazury, niepełne zazębienie z uchem klapy. Wg katalogu GCU: klapa niezaryglowana (6.6.6); luźne części zamknięcia (Zał. 10 pkt 6.51).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.50–6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Kształt zamka w modelu – SZACUNKOWY",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#zamki_klap"
+    },
+    "ciegla_klap_falns": {
+      "nazwa_pl": "cięgła klap",
+      "nazwa_en": "flap link rods",
+      "funkcja": "Łączą wał z klapami – otwierają je i zamykają.",
+      "budowa": "Korby na wale i cięgła do uch na końcach klap.",
+      "typowe_uszkodzenia": "Wygięte cięgła, zużyte sworznie i tuleje. Wg katalogu GCU: luźne części układu zamykania (Zał. 10 pkt 6.51); uszkodzenia utrudniające działanie (pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Liczba i położenie cięgieł – SZACUNKOWE (DB wymienia drążki prowadzące, bez rysunku)",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "przekladnia_falns": {
+      "nazwa_pl": "przekładnia (wał poprzeczny z drążkami)",
+      "nazwa_en": "transfer shaft with drive rods",
+      "funkcja": "Przenosi ruch cylindra nastawczego na wały zamków obu stron, tak że wszystkie klapy otwierają się jednocześnie.",
+      "budowa": "Wał poprzeczny w łożyskach na wieszakach pod wiązarem dna, dźwignie cylindra nastawczego i ryglującego, korby na końcach i drążki do dźwigni wałów zamków (DB Falns 181: centralny cylinder nastawczy porusza wały zamków przez wały napędowe i drążki prowadzące).",
+      "typowe_uszkodzenia": "Luzy w sworzniach i łożyskach, wygięte drążki. Wg katalogu GCU: luźne części układu zamykania i wyładunku (Zał. 10 pkt 6.51); uszkodzenia utrudniające działanie (pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Układ przekładni w modelu – SZACUNKOWY (uproszczony)",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "silownik_falns": {
+      "nazwa_pl": "cylinder nastawczy (hydrauliczny)",
+      "nazwa_en": "hydraulic actuating cylinder",
+      "funkcja": "Obraca wały zamków przez przekładnię – otwiera i zamyka wszystkie klapy. Przy zamykaniu olej działa na stronę dna cylindra (DB Falns 181).",
+      "budowa": "Cylinder hydrauliczny z tłokiem i tłoczyskiem połączonym z dźwignią wału poprzecznego, zawieszony na wspornikach pod ostoją; dwa przyłącza przewodów (otwieranie, zamykanie).",
+      "typowe_uszkodzenia": "Wycieki oleju, uszkodzone tłoczysko, zużyte sworznie zawieszenia. Wg katalogu GCU: uszkodzenia urządzeń sterujących częściami ruchomymi, utrudniające działanie (Zał. 10 pkt 6.4); luźne części (pkt 6.51).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Średnica, skok i położenie cylindra – SZACUNKOWE",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#silownik_pneumatyczny"
+    },
+    "silownik_ryglujacy_falns": {
+      "nazwa_pl": "cylinder ryglujący",
+      "nazwa_en": "locking cylinder",
+      "funkcja": "Zwalnia dodatkowe mechaniczne zaryglowanie mechanizmu przed otwarciem klap; zaryglowanie zwalnia cylinder z tłumieniem, a z powrotem zakłada sprężyna (DB Falns 181).",
+      "budowa": "Mały cylinder hydrauliczny działający na dźwignię rygla na wale poprzecznym; zasilany z zaworu sterującego przed cylindrem nastawczym.",
+      "typowe_uszkodzenia": "Wycieki oleju, złamana sprężyna powrotna, rygiel niewracający w położenie zamknięte. Wg katalogu GCU: klapa niezaryglowana (6.6.6); uszkodzenia urządzeń sterujących (Zał. 10 pkt 6.4).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.4, 6.50–6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Budowa i położenie cylindra ryglującego – SZACUNKOWE",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#silownik_pneumatyczny"
+    },
+    "wskaznik_falns": {
+      "nazwa_pl": "wskaźnik zamknięcia klap",
+      "nazwa_en": "flap closure indicator",
+      "funkcja": "Pokazuje z boku wagonu, czy klapy są zamknięte i zaryglowane: żółty wskaźnik wystający poza ścianę boczną oznacza, że klapy nie są zamknięte i zaryglowane (DB Falns 183).",
+      "budowa": "Żółta tarcza w słupku środkowym ściany bocznej, przesuwana popychaczem od krzywki na wale zamków.",
+      "typowe_uszkodzenia": "Zablokowany lub wygięty popychacz, brak tarczy – fałszywe wskazanie. Wg katalogu GCU: klapa niezamknięta lub niezaryglowana (6.6.6).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.50.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Budowa wskaźnika w modelu – SZACUNKOWA",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "zespol_hydrauliczny_falns": {
+      "nazwa_pl": "zespół hydrauliczny",
+      "nazwa_en": "hydraulic power unit",
+      "funkcja": "Magazynuje energię do otwierania i zamykania klap bez zasilania z zewnątrz.",
+      "budowa": "Zbiornik oleju z zaworami i wziernikiem, akumulator tłokowy, pompa ręczna (awaryjna); zasilany pompą napędzaną od zestawu kołowego (DB Falns 181). Przyłącza Minimess do sprawdzania ciśnienia oleju i gazu.",
+      "typowe_uszkodzenia": "Wycieki, rozładowany akumulator, niski poziom oleju. Wg katalogu GCU: uszkodzenia urządzeń sterujących częściami ruchomymi (Zał. 10 pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Położenie zespołu na pomoście – SZACUNKOWE",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "zbiornik_oleju_falns": {
+      "nazwa_pl": "zbiornik oleju",
+      "nazwa_en": "oil tank",
+      "funkcja": "Zapas oleju układu hydraulicznego; wziernik pokazuje stan naładowania układu (DB Falns 181).",
+      "budowa": "Zbiornik z zaworami, wziernikiem i korkiem wlewu, przykręcony do pomostu.",
+      "typowe_uszkodzenia": "Wycieki, niski poziom oleju, uszkodzony wziernik.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510"
+      ],
+      "do_sprawdzenia": [
+        "Położenie i wymiary – SZACUNKOWE"
+      ],
+      "status": "do weryfikacji"
+    },
+    "akumulator_falns": {
+      "nazwa_pl": "akumulator tłokowy",
+      "nazwa_en": "piston accumulator",
+      "funkcja": "Przechowuje olej pod ciśnieniem (do ok. 220 bar wg DB Falns 181) na co najmniej 3 cykle otwarcia i zamknięcia klap.",
+      "budowa": "Pionowy cylinder z tłokiem oddzielającym olej od gazu, w obejmach; przyłącze do pomiaru ciśnienia.",
+      "typowe_uszkodzenia": "Spadek ciśnienia gazu, wycieki, korozja obudowy.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514"
+      ],
+      "do_sprawdzenia": [
+        "Pojemność (DB podaje 10 l i 27 l) – sprawdzić; położenie i wymiary – SZACUNKOWE"
+      ],
+      "status": "do weryfikacji"
+    },
+    "pompa_reczna_falns": {
+      "nazwa_pl": "pompa ręczna",
+      "nazwa_en": "hand pump",
+      "funkcja": "Awaryjne wytworzenie ciśnienia, gdy akumulator jest rozładowany (np. wagon nie przejechał wymaganej drogi).",
+      "budowa": "Pompa tłokowa z dźwignią, obsługiwana z pomostu wagonu (DB Falns 183/184).",
+      "typowe_uszkodzenia": "Uszkodzona lub brakująca dźwignia, wycieki.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514"
+      ],
+      "do_sprawdzenia": [
+        "Położenie i wygląd – SZACUNKOWE"
+      ],
+      "status": "do weryfikacji"
+    },
+    "zawor_sterujacy_falns": {
+      "nazwa_pl": "zawór sterujący",
+      "nazwa_en": "control valve",
+      "funkcja": "Kieruje olej z akumulatora do cylindra ryglującego i cylindra nastawczego: otwieranie albo zamykanie wszystkich klap. Obsługa dźwignią ze ściany czołowej (z pomostu) albo kluczem z pomostu obsługi przy zasobniku (DB Falns 181/183).",
+      "budowa": "Zawór z dźwignią i tabliczką położeń na wsporniku przy ścianie czołowej końca 1; w czasie jazdy hydraulika zablokowana przed nieuprawnionym uruchomieniem (DB Falns 184).",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzona dźwignia, brak tabliczki lub zabezpieczenia. Wg katalogu GCU: uszkodzenia urządzeń sterujących częściami ruchomymi (Zał. 10 pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.50.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "DB Cargo – Güterwagenkatalog, Falns 183 (dwie komory, siodło poprzeczne, otwory wyładowcze): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-183-9120512",
+        "DB Cargo – Güterwagenkatalog, Falns 184 (konstrukcja, materiały, wychylenie klap): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-184-9120514",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wspólny model zaworu ma króciec sprężonego powietrza (z modułu wyładunku) – w Falns hydraulicznym to przyłącze oleju",
+        "Położenie zaworu – SZACUNKOWE",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#zawor_sterujacy"
+    },
+    "przewody_sterujace_falns": {
+      "nazwa_pl": "przewody hydrauliczne",
+      "nazwa_en": "hydraulic piping",
+      "funkcja": "Doprowadzają olej od zaworu sterującego do cylindra ryglującego i cylindra nastawczego oraz łączą zbiornik, pompę ręczną i akumulator.",
+      "budowa": "Rury stalowe: po dwa przewody do każdego cylindra (otwieranie, zamykanie), poprowadzone pod pomostem i pod dnem przez wiązary, w obejmach; zawór odcinający przy zaworze sterującym.",
+      "typowe_uszkodzenia": "Wycieki oleju na złączach, przetarte lub zgniecione rury, luźne obejmy. Wg katalogu GCU: luźne części układu wyładunku (Zał. 10 pkt 6.51); uszkodzenia urządzeń sterujących (pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "DB Cargo – Güterwagenkatalog, Falns 181 (budowa, napęd hydrauliczny klap, zamki krzywkowe): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/f-open-bulk-freight-wagons/Falns-181-9120510",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Trasa przewodów – SZACUNKOWA",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#przewody_sterujace"
+    }
+  },
+  "drzewo": {
+    "id": "falns",
+    "typ": "falns",
+    "children": [
+      {
+        "id": "pudlo",
+        "typ": "pudlo_falns",
+        "children": [
+          {
+            "id": "lej_1",
+            "typ": "lej_falns",
+            "dopisek": "komora 1"
+          },
+          {
+            "id": "lej_2",
+            "typ": "lej_falns",
+            "dopisek": "komora 2"
+          },
+          {
+            "id": "siodlo_poprzeczne",
+            "typ": "siodlo_poprzeczne_falns"
+          },
+          {
+            "id": "sciana_boczna_1",
+            "szablon": "sciana_boczna",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "sciana_boczna_2",
+            "szablon": "sciana_boczna",
+            "dopisek": "strona 2"
+          },
+          {
+            "id": "sciana_czolowa_1",
+            "typ": "sciana_czolowa_falns",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "sciana_czolowa_2",
+            "typ": "sciana_czolowa_falns",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "nadstawa_1",
+            "typ": "nadstawa_falns",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "nadstawa_2",
+            "typ": "nadstawa_falns",
+            "dopisek": "strona 2"
+          },
+          {
+            "id": "pas_gorny_1",
+            "typ": "pas_gorny_falns",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "pas_gorny_2",
+            "typ": "pas_gorny_falns",
+            "dopisek": "strona 2"
+          }
+        ]
+      },
+      {
+        "id": "ostoja",
+        "typ": "ostoja_falns",
+        "param": {
+          "pol_dlugosci": 5.65,
+          "z_ostojnicy": 1.4,
+          "pol_szerokosci": 1.4,
+          "y_ostojnicy": 0.92,
+          "y_poreczy": 1.12,
+          "y_poreczy_pion": [
+            1.45,
+            2.3
+          ],
+          "y_stopnia": 0.34,
+          "pomost": {
+            "x_od": 4.85,
+            "y": 1.344,
+            "z_barierki": 1.34,
+            "x_barierki": [
+              5.2,
+              5.6
+            ],
+            "y_barierki": [
+              1.87,
+              2.369
+            ],
+            "x_slupka": 5.25
+          }
+        },
+        "children": [
+          {
+            "id": "ostojnica_1",
+            "typ": "ostojnica_falns",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "ostojnica_2",
+            "typ": "ostojnica_falns",
+            "dopisek": "strona 2"
+          },
+          {
+            "id": "belka_czolowa_1",
+            "typ": "belka_czolowa_falns",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "belka_czolowa_2",
+            "typ": "belka_czolowa_falns",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "belka_skretowa_1",
+            "szablon": "belka_skretowa",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "belka_skretowa_2",
+            "szablon": "belka_skretowa",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "belka_srodkowa",
+            "typ": "belka_srodkowa_falns"
+          },
+          {
+            "id": "wiazary_dna",
+            "typ": "wiazary_dna_falns"
+          },
+          {
+            "id": "pomost_1",
+            "typ": "pomost_falns",
+            "dopisek": "koniec 1"
+          },
+          {
+            "id": "pomost_2",
+            "typ": "pomost_falns",
+            "dopisek": "koniec 2",
+            "param": {
+              "slupek_hamulca": 0.65
+            }
+          },
+          {
+            "id": "stopien_manewrowy_1",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 1",
+            "param": {
+              "sx": 1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_2",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 2",
+            "param": {
+              "sx": 1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_3",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 3",
+            "param": {
+              "sx": -1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_4",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 4",
+            "param": {
+              "sx": -1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_1",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 1",
+            "param": {
+              "sx": 1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_2",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 2",
+            "param": {
+              "sx": 1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_3",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 3",
+            "param": {
+              "sx": -1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_4",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 4",
+            "param": {
+              "sx": -1,
+              "sz": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "mechanizm_klap",
+        "typ": "mechanizm_klap_falns",
+        "ukryj_otoczenie": true,
+        "children": [
+          {
+            "id": "naped_1",
+            "szablon": "naped",
+            "dopisek": "strona 1",
+            "param": {
+              "x_dzwigni": -1.75
+            }
+          },
+          {
+            "id": "naped_2",
+            "szablon": "naped",
+            "dopisek": "strona 2",
+            "param": {
+              "x_dzwigni": 1.75
+            }
+          },
+          {
+            "id": "przekladnia",
+            "typ": "przekladnia_falns"
+          },
+          {
+            "id": "silownik",
+            "typ": "silownik_falns"
+          },
+          {
+            "id": "silownik_ryglujacy",
+            "typ": "silownik_ryglujacy_falns"
+          },
+          {
+            "id": "zespol_hydrauliczny",
+            "typ": "zespol_hydrauliczny_falns",
+            "children": [
+              {
+                "id": "zbiornik_oleju",
+                "typ": "zbiornik_oleju_falns"
+              },
+              {
+                "id": "akumulator",
+                "typ": "akumulator_falns"
+              },
+              {
+                "id": "pompa_reczna",
+                "typ": "pompa_reczna_falns"
+              }
+            ]
+          },
+          {
+            "id": "zawor_sterujacy",
+            "typ": "zawor_sterujacy_falns"
+          },
+          {
+            "id": "przewody_sterujace",
+            "typ": "przewody_sterujace_falns"
+          },
+          {
+            "id": "wskaznik_zamkniecia_1",
+            "typ": "wskaznik_falns",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "wskaznik_zamkniecia_2",
+            "typ": "wskaznik_falns",
+            "dopisek": "strona 2"
+          }
+        ]
+      },
+      {
+        "id": "wozek_1",
+        "ref": "components/y25.json",
+        "dopisek": "nr 1"
+      },
+      {
+        "id": "wozek_2",
+        "ref": "components/y25.json",
+        "dopisek": "nr 2"
+      },
+      {
+        "id": "ciegla_zderzaki_1",
+        "ref": "components/ciegla_zderzaki.json",
+        "dopisek": "koniec 1"
+      },
+      {
+        "id": "ciegla_zderzaki_2",
+        "ref": "components/ciegla_zderzaki.json",
+        "dopisek": "koniec 2"
+      },
+      {
+        "id": "hamulec",
+        "ref": "components/hamulec.json",
+        "param": {
+          "dlugosc": 11.3,
+          "x_wozka": 3.75,
+          "hamulec_reczny": true,
+          "uklad": {
+            "pipeY": 0.922,
+            "pipeZ": 0.32,
+            "valve": [
+              -0.15,
+              0.84,
+              0.6
+            ],
+            "reservoir": [
+              -1.0,
+              0.735,
+              -0.35
+            ],
+            "cyl": [
+              0.1,
+              0.92,
+              0.62
+            ],
+            "loadValve": [
+              -0.25,
+              0.86,
+              1.0
+            ],
+            "release": [
+              0.69,
+              0.86,
+              -0.35
+            ],
+            "leverY": 0.92,
+            "lever1X": 0.9,
+            "lever2X": -0.55,
+            "leverZ": [
+              -0.65,
+              1.0
+            ],
+            "rodZ": 0.95,
+            "slackX": [
+              1.0,
+              1.75
+            ],
+            "mountY": 0.94,
+            "sideZ": 1.46,
+            "hb": {
+              "wheel": [
+                -5.39,
+                2.13,
+                -0.65
+              ],
+              "gear": [
+                -5.37,
+                1.25,
+                -0.65
+              ],
+              "leverZ": -0.6,
+              "rodY": 0.925
+            },
+            "pipeHangersX": [
+              -4.34,
+              -2.54,
+              -1.15,
+              1.15,
+              2.54,
+              4.34
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
