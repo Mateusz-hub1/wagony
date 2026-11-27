@@ -29,7 +29,7 @@ export function buildHandBrake(node) {
   box(0.12, 0.18, 0.14, M.paintDark, { pos: [gx, gy, gz], r: 0.015, parent: g });
   // cięgło pod belką czołową do dźwigni stałej
   const p0 = [gx + 0.02, gy - 0.1, gz];
-  const p1 = [-(lay.L - 0.25), lay.hb.rodY, gz + 0.05];
+  const p1 = [lay.hb.rodX, lay.hb.rodY, gz + 0.05];
   const p2 = [lay.lever2X, lay.leverY, leverZ];
   rod(p0, p1, 0.013, M.steelRaw, { seg: 10, parent: g });
   rod(p1, p2, 0.013, M.steelRaw, { seg: 10, parent: g });

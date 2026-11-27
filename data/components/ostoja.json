@@ -11,6 +11,9 @@
     },
     "porecz_manewrowa": {
       "typ": "porecz_manewrowa"
+    },
+    "pomost": {
+      "typ": "pomost"
     }
   },
   "opisy": {
@@ -181,6 +184,19 @@
       ],
       "do_sprawdzenia": [
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "pomost": {
+      "nazwa_pl": "pomost",
+      "nazwa_en": "end platform",
+      "funkcja": "Stanowisko obsługi na końcu wagonu, np. przy hamulcu ręcznym lub zaworze sterującym wyładunku.",
+      "budowa": "Blacha ryflowana nad belką czołową, barierka ze słupków i poręczy; przy hamulcu ręcznym słupek koła.",
+      "typowe_uszkodzenia": "Wygięte poręcze, skorodowana lub pęknięta blacha pomostu. Wg katalogu GCU: pomosty, drabiny i barierki nie nadające się do użytku – usterka 6.1.7.1; pęknięcia pomostu, barierek lub ich mocowań (Zał. 10 pkt 6.10).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterka 6.1.7.1; GCU Zał. 10 pkt 6.10 (stopnie, poręcze, drabiny i pomosty bezpieczne w użyciu, bez pęknięć – także mocowania), kod prac CU60100; EN 16116-2.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9 (Aneks 1) i Załącznik 10: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "status": "do weryfikacji"
     }

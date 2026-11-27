@@ -7,13 +7,17 @@ const ALONG_X = [0, Math.PI / 2, 0];
 
 // Przewód główny: wzdłuż całego wagonu, na końcach opuszczony pod belkę czołową do kurków.
 // Po stronie końca 2 przechodzi na drugą stronę osi wagonu (kurki są ułożone symetrycznie względem środka).
+// Przy końcu 2 „przegub” (człon wagonu przegubowego) rura kończy się kołnierzem tuż przed przegubem,
+// po tej samej stronie – połączenie z drugim członem to przewód giętki w podzespole przegubu.
 export function mainPipePoints(lay) {
-  const { L, pipeY: y, pipeZ: z } = lay;
+  const { L, L2, pipeY: y, pipeZ: z } = lay;
   const [cx, cy] = lay.cock;
+  const end1 = [[cx - 0.06, cy, z], [L - 0.2, cy, z], [L - 0.35, y, z]];
+  if (lay.przegub2) return [...end1, [-(L2 - 0.05), y, z]];
   return [
-    [cx - 0.06, cy, z], [L - 0.2, cy, z], [L - 0.35, y, z],
-    [-(L - 0.9), y, z], [-(L - 0.6), y, -z],
-    [-(L - 0.35), y, -z], [-(L - 0.2), cy, -z], [-(cx - 0.06), cy, -z],
+    ...end1,
+    [-(L2 - 0.9), y, z], [-(L2 - 0.6), y, -z],
+    [-(L2 - 0.35), y, -z], [-(L2 - 0.2), cy, -z], [-(L2 + cx - L - 0.06), cy, -z],
   ];
 }
 
@@ -22,10 +26,12 @@ export function buildMainPipe(node) {
   const lay = layout(cfg(node));
   const pts = mainPipePoints(lay);
   merged(pipeGeoms(pts, 0.021, 14), M.paintDarkRound, { parent: g });
+  // kołnierz na końcu rury przy przegubie (przyłącze przewodu giętkiego)
+  if (lay.przegub2) cylinder(0.04, 0.025, M.steelRaw, { axis: 'x', pos: pts[pts.length - 1], seg: 16, parent: g });
   // obejmy rury z wieszakami do poprzecznic ostoi (położenia x: lay.pipeHangersX – SZACUNKOWE)
   const holders = [];
   for (const x of lay.pipeHangersX) {
-    if (Math.abs(x) > lay.L - 0.9) continue;
+    if (x > lay.L - 0.9 || x < -(lay.L2 - (lay.przegub2 ? 0.3 : 0.9))) continue;
     holders.push(boxGeom(0.04, 0.05, 0.06, [x, lay.pipeY, lay.pipeZ]));
     holders.push(boxGeom(0.03, lay.mountY - lay.pipeY, 0.012, [x, (lay.pipeY + lay.mountY) / 2, lay.pipeZ - 0.035]));
   }

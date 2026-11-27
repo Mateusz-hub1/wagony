@@ -158,7 +158,8 @@
         "Kąt otwarcia klapy w modelu – SZACUNKOWY",
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
-      "status": "do weryfikacji"
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#klapa_wyladowcza"
     },
     "sciana_czolowa_fals": {
       "nazwa_pl": "ściana czołowa (pochyła)",
@@ -309,7 +310,8 @@
         "Wymiary pomostu i barierki – SZACUNKOWE; sprawdzić, czy pomosty są na obu końcach",
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
-      "status": "do weryfikacji"
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/ostoja.json#pomost"
     },
     "mechanizm_klap_fals": {
       "nazwa_pl": "mechanizm otwierania klap",
@@ -331,7 +333,8 @@
         "Kolejność obsługi wg RCH: zwolnić zamki → dźwignia w położenie 2; zamykanie: oczyścić listwy uszczelniające → położenie 1 → zamknąć kurek odcinający → zamknąć zabezpieczenie w środku wagonu",
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
-      "status": "do weryfikacji"
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#mechanizm_wyladunku"
     },
     "naped_klap_fals": {
       "nazwa_pl": "napęd klap jednej strony",
@@ -379,7 +382,8 @@
       "do_sprawdzenia": [
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
-      "status": "do weryfikacji"
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#zamki_klap"
     },
     "ciegla_klap_fals": {
       "nazwa_pl": "cięgła klap",
@@ -416,7 +420,8 @@
         "Liczba i położenie siłowników – SZACUNKOWE",
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
-      "status": "do weryfikacji"
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#silownik_pneumatyczny"
     },
     "blokada_fals": {
       "nazwa_pl": "blokada w środku wagonu",
@@ -455,7 +460,8 @@
         "Źródło zasilania powietrzem (instalacja zewnętrzna) – sprawdzić",
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
-      "status": "do weryfikacji"
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#zawor_sterujacy"
     },
     "przewody_sterujace_fals": {
       "nazwa_pl": "przewody sterujące",
@@ -473,7 +479,8 @@
       "do_sprawdzenia": [
         "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
-      "status": "do weryfikacji"
+      "status": "do weryfikacji",
+      "opis_wspolny": "components/wyladunek.json#przewody_sterujace"
     }
   },
   "drzewo": {

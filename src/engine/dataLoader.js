@@ -109,7 +109,8 @@ async function mergeOpisWspolny(opis) {
     console.warn(`[dane] Brak opisu wspólnego "${anchor}" w ${file}`);
     return wlasny;
   }
-  const lista = (k) => [...(wlasny[k] ?? []), ...(wspolny[k] ?? [])];
+  // listy łączone bez powtórzeń (np. to samo źródło GCU w opisie wagonu i wspólnym)
+  const lista = (k) => [...new Set([...(wlasny[k] ?? []), ...(wspolny[k] ?? [])])];
   return {
     ...wspolny, ...wlasny,
     zrodla: lista('zrodla'),

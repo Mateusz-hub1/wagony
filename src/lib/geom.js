@@ -248,6 +248,32 @@ export function hatH(x0, x1, y, z0, w = 0.08, d = 0.04, t = 0.005) {
   ];
 }
 
+// ---------- Blachy i belki o dowolnym kształcie ----------
+
+// Płaska blacha o dowolnym obrysie: obrys 2D [[u, v], ...] wyciągnięty na grubość w0..w1,
+// a potem przeniesiony do 3D funkcją map(u, v, w) → [x, y, z] (np. na pochyłą płaszczyznę).
+export function plateGeom(outline, w0, w1, map) {
+  const sh = new THREE.Shape(outline.map(([u, v]) => new THREE.Vector2(u, v)));
+  const g = new THREE.ExtrudeGeometry(sh, { depth: w1 - w0, bevelEnabled: false });
+  const p = g.attributes.position;
+  for (let i = 0; i < p.count; i++) {
+    const [x, y, z] = map(p.getX(i), p.getY(i), p.getZ(i) + w0);
+    p.setXYZ(i, x, y, z);
+  }
+  g.computeVertexNormals();
+  return g;
+}
+
+// Belka prostokątna między punktami a i b (przekrój w × d) – np. pochyły słupek
+export function beamGeom(a, b, w, d) {
+  const A = new THREE.Vector3(...a), B = new THREE.Vector3(...b);
+  const g = new THREE.BoxGeometry(w, A.distanceTo(B), d);
+  g.applyQuaternion(new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), B.clone().sub(A).normalize()));
+  const m = A.add(B).multiplyScalar(0.5);
+  g.translate(m.x, m.y, m.z);
+  return g;
+}
+
 // ---------- Parametry dziedziczone ----------
 
 // Parametry części razem z parametrami przodków (bliższy przodek ma pierwszeństwo).

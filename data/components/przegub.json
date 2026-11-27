@@ -1,0 +1,98 @@
+{
+  "uwaga": "Przegub wagonu dwuczłonowego (np. Sggrss). Wagon wstawia go przez \"ref\": \"components/przegub.json\" nad czopem skrętu wózka środkowego. Param: ramie_1, ramie_2 (odległość osi przegubu od belek członów), waz: { a, b } (końce przewodu hamulcowego w układzie przegubu). Wymiary w kodzie SZACUNKOWE.",
+  "opisy": {
+    "przegub": {
+      "nazwa_pl": "przegub",
+      "nazwa_en": "articulation (articulated joint)",
+      "funkcja": "Łączy dwa człony wagonu nad wspólnym wózkiem środkowym: przenosi siły pociągowe i hamowania między członami oraz ich ciężar na wózek, a jednocześnie pozwala członom skręcać się w łukach i przechylać względem siebie.",
+      "budowa": "Część męska przyspawana do końca jednego członu, część żeńska (gniazdo z czopem skrętu od spodu) przyspawana do końca drugiego członu, łożysko kuliste (przegubowe) między nimi i pionowy sworzeń. Gniazdo części żeńskiej opiera się na gnieździe skrętu wózka środkowego. Obok przegubu biegnie giętki przewód łączący przewody główne hamulca obu członów.",
+      "typowe_uszkodzenia": "Luz lub zużycie łożyska przegubu, pęknięcia spoin ramion przegubu, brak lub niesprawne zabezpieczenie sworznia. W katalogu GCU połączenie wózka z ostoją: elementy łączące i mocujące złamane, brakujące lub niesprawne, wózek przesunięty – usterka 4.6.1.1 (odstawić wagon, kl. 5); brak lub niesprawne zabezpieczenie czopa skrętu albo brak sworznia – 4.6.1.2 (odstawić wagon, kl. 4).",
+      "wymiary_graniczne": "Gniazdo skrętu nie może być pęknięte ani luźne (GCU Zał. 10 pkt 4.16); czop gniazda skrętu nie może brakować, być pęknięty ani luźny (pkt 4.17).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 4.6.1.1–4.6.1.2; Aneks 5: połączenie wózka z ostoją – nieuszkodzone, nieprzesunięte, elementy łączące obecne i skuteczne; GCU Zał. 10 pkt 4.16–4.17 oraz kody prac CU40160, CU40162.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9 (Aneks 1 i 5), Załącznik 10: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Budowa przegubu w modelu uproszczona (SZACUNKOWE) – sprawdzić typ przegubu na konkretnym Sggrss (producent, rodzaj łożyska, zabezpieczenie sworznia)",
+        "Czy kody 4.6.1.x GCU stosuje się wprost do przegubu – potwierdzić",
+        "Od 2026 część Zał. 9 GCU przeniesiono do IRS 40436 – porównać kody"
+      ],
+      "status": "do weryfikacji"
+    },
+    "czesc_meska": {
+      "nazwa_pl": "część męska przegubu",
+      "nazwa_en": "male half of articulation",
+      "funkcja": "Ramię członu, które obejmuje sworzeń i kulę łożyska od góry – przez nie przechodzą siły z jednego członu na drugi.",
+      "budowa": "Spawane ramię z blach z okiem na sworzeń i tuleją dociskającą kulę łożyska; płyta czołowa przyspawana do belki członu.",
+      "typowe_uszkodzenia": "Pęknięcia spoin przy belce członu, wyrobione oko sworznia.",
+      "zdjecia": [],
+      "zrodla": [],
+      "status": "do weryfikacji"
+    },
+    "czesc_zenska": {
+      "nazwa_pl": "część żeńska przegubu (gniazdo)",
+      "nazwa_en": "female half of articulation (socket)",
+      "funkcja": "Gniazdo, w którym siedzi łożysko przegubu; od spodu ma czop skrętu, którym przegub opiera się na wózku środkowym.",
+      "budowa": "Odlew lub spawana skrzynka z dnem i ścianką gniazda, czopem skrętu od spodu i ramieniem do belki drugiego członu.",
+      "typowe_uszkodzenia": "Pęknięte lub luźne gniazdo, zużyty czop skrętu (GCU Zał. 10 pkt 4.16–4.17), pęknięcia spoin ramienia.",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 4.6.1.1–4.6.1.2; GCU Zał. 10 pkt 4.16–4.17.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1; Załącznik 10: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "status": "do weryfikacji"
+    },
+    "lozysko_przegubu": {
+      "nazwa_pl": "łożysko przegubu",
+      "nazwa_en": "articulation bearing (spherical bearing)",
+      "funkcja": "Pozwala członom obracać się względem siebie we wszystkich kierunkach (skręt w łuku, przechył, pochylenie na załomach toru), a jednocześnie przenosi siły pionowe i wzdłużne.",
+      "budowa": "Łożysko kuliste ślizgowe: kula wewnętrzna z otworem na sworzeń w pierścieniu zewnętrznym o kulistej powierzchni wewnętrznej.",
+      "typowe_uszkodzenia": "Luz w łożysku (zużycie powierzchni kulistych), zatarcie, pęknięcie pierścienia.",
+      "zdjecia": [],
+      "zrodla": [],
+      "do_sprawdzenia": [
+        "Rodzaj łożyska (ślizgowe / z wkładką) i dopuszczalny luz – brak publicznego źródła"
+      ],
+      "status": "do weryfikacji"
+    },
+    "sworzen_przegubu": {
+      "nazwa_pl": "sworzeń przegubu",
+      "nazwa_en": "articulation pin",
+      "funkcja": "Łączy część męską przegubu z kulą łożyska; zabezpieczony przed wypadnięciem.",
+      "budowa": "Stalowy sworzeń z łbem i zabezpieczeniem (płytka lub zawleczka). Przycisk „Zdejmij” wyjmuje sworzeń i pokazuje łożysko.",
+      "typowe_uszkodzenia": "Brak sworznia lub jego zabezpieczenia – w katalogu GCU dla połączenia wózka z ostoją usterka 4.6.1.2 (odstawić wagon); zużycie trzonu.",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterka 4.6.1.2.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "status": "do weryfikacji"
+    },
+    "przewod_przegubu": {
+      "nazwa_pl": "przewód hamulcowy przegubu",
+      "nazwa_en": "brake pipe hose across articulation",
+      "funkcja": "Łączy przewody główne hamulca obu członów tak, żeby mogły się względem siebie ruszać.",
+      "budowa": "Wąż gumowy z oplotem i złączkami przykręconymi do kołnierzy przewodów głównych członów.",
+      "typowe_uszkodzenia": "Pęknięty lub przetarty wąż, nieszczelne złączki – przewód główny niesprawny (GCU 3.3.1.1).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterka 3.3.1.1 (przewód główny niesprawny).",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "status": "do weryfikacji"
+    }
+  },
+  "drzewo": {
+    "id": "przegub",
+    "typ": "przegub",
+    "ukryj_otoczenie": true,
+    "children": [
+      { "id": "czesc_meska", "typ": "czesc_meska" },
+      { "id": "czesc_zenska", "typ": "czesc_zenska" },
+      { "id": "lozysko_przegubu", "typ": "lozysko_przegubu" },
+      { "id": "sworzen_przegubu", "typ": "sworzen_przegubu", "zdejmowalny": true },
+      { "id": "przewod_przegubu", "typ": "przewod_przegubu" }
+    ]
+  }
+}

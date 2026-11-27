@@ -13,6 +13,13 @@ export const DEFAULTS = {
   dlugosc: 12.8,          // odległość między licami belek czołowych [m]
   x_wozka: 4.5,           // pół rozstawu czopów skrętu [m]
   hamulec_reczny: true,   // czy wagon ma hamulec ręczny
+  // Człon wagonu przegubowego (np. Sggrss) – hamulec jednego członu, w układzie członu:
+  koniec_2: 'czolo',      // "czolo" (belka czołowa z kurkiem i sprzęgiem) albo "przegub"
+                          //   (przewód główny kończy się przy przegubie; wagon dodaje
+                          //   "bez": ["kurek_koncowy_2", "sprzeg_hamulcowy_2"])
+  x_konca_2: null,        // odległość końca 2 od środka [m] (domyślnie dlugosc / 2)
+  x_wozka_2: null,        // odległość wózka 2 od środka [m] (domyślnie x_wozka)
+  ciegla_wozek_2: true,   // false: bez cięgien do wózka 2 (np. wózek środkowy hamowany przez drugi człon)
 };
 
 // Parametry hamulca: szukamy w górę drzewa węzła z param.dlugosc (to węzeł "hamulec" w wagonie)
@@ -24,8 +31,12 @@ export function cfg(node) {
 // Rozmieszczenie elementów (wszystko w metrach, w układzie wagonu)
 export function layout(c) {
   const L = c.dlugosc / 2;
+  const L2 = c.x_konca_2 ?? L;
+  const xw2 = c.x_wozka_2 ?? c.x_wozka;
   const base = {
-    L,
+    L, L2,
+    przegub2: c.koniec_2 === 'przegub',
+    ciegla2: c.ciegla_wozek_2 !== false,
     pipeY: 0.93, pipeZ: 0.32,                // przewód główny
     cock: [L + 0.03, 0.8, 0.32],             // kurek końcowy (koniec 1; koniec 2 symetrycznie względem środka)
     valve: [-0.7, 0.86, 0.6],                // zawór rozrządczy
@@ -40,10 +51,11 @@ export function layout(c) {
     rodZ: 0.95,                              // punkt cięgien do wózków na dźwigniach
     slackX: [1.55, 2.65],                    // nastawiacz skoku tłoka (od–do po x)
     via1: [c.x_wozka - 1.2, 0.66, 0.1],      // punkt pośredni cięgła nad osią zestawu kołowego
-    via2: [-(c.x_wozka - 1.2), 0.66, 0.1],
+    via2: [-(xw2 - 1.2), 0.66, 0.1],
     bogie1: [c.x_wozka + LEVER_ROD_END[0], LEVER_ROD_END[1], LEVER_ROD_END[2]],
-    bogie2: [-(c.x_wozka + LEVER_ROD_END[0]), LEVER_ROD_END[1], -LEVER_ROD_END[2]],
-    hb: { wheel: [-(L + 0.12), 1.65, -0.5], gear: [-(L + 0.07), 1.0, -0.5], leverZ: 0.45, rodY: 0.8 }, // hamulec ręczny na końcu 2
+    bogie2: [-(xw2 + LEVER_ROD_END[0]), LEVER_ROD_END[1], -LEVER_ROD_END[2]],
+    // hamulec ręczny na końcu 2; rodX – załamanie cięgła pod belką czołową (domyślnie przy końcu 2)
+    hb: { wheel: [-(L + 0.12), 1.65, -0.5], gear: [-(L + 0.07), 1.0, -0.5], leverZ: 0.45, rodY: 0.8, rodX: -(L - 0.25) },
     mountY: 1.05,                            // wysokość mocowania wsporników do ostoi (spód poprzecznic)
     sideZ: 1.46,                             // dźwignia przestawiacza wyprowadzona za ostojnicę
     plateZ: 1.402,                           // tabliczka próżny/ładowny na zewnętrznej ścianie ostojnicy (Eaos)

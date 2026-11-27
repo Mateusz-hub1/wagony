@@ -34,11 +34,13 @@ export function buildRigging(node) {
   const n1 = atX(p.rod1a, lay.via1, lay.slackX[1]);
   rod(n1, lay.via1, 0.015, S, { seg: 10, parent: g });
   rod(lay.via1, lay.bogie1, 0.015, S, { seg: 10, parent: g });
-  // cięgło do wózka 2
-  rod(p.rod2a, lay.via2, 0.015, S, { seg: 10, parent: g });
-  rod(lay.via2, lay.bogie2, 0.015, S, { seg: 10, parent: g });
+  // cięgło do wózka 2 (może go nie być – np. wózek środkowy wagonu przegubowego hamowany przez drugi człon)
+  if (lay.ciegla2) {
+    rod(p.rod2a, lay.via2, 0.015, S, { seg: 10, parent: g });
+    rod(lay.via2, lay.bogie2, 0.015, S, { seg: 10, parent: g });
+  }
   // przeguby (widełki) w punktach załamania
-  for (const q of [lay.via1, lay.via2]) mesh(new THREE.SphereGeometry(0.024, 12, 8), S, { pos: q, parent: g });
+  for (const q of lay.ciegla2 ? [lay.via1, lay.via2] : [lay.via1]) mesh(new THREE.SphereGeometry(0.024, 12, 8), S, { pos: q, parent: g });
   return g;
 }
 

@@ -11,11 +11,12 @@
 //   BDŽ Cargo – Fals: pochylenie dna siodłowego 49° do poziomu.
 //   Rail Cargo Hungaria – instrukcja obsługi Fals: 2 klapy na stronę, 8 zamków (Klauen).
 // Pozostałe wymiary (wysokości pasów, profile, mechanizm) – SZACUNKOWE, do sprawdzenia.
-import { THREE, M, paint, part, slot, mesh, box, boxFromTo, merged, boxGeom, cylinder, rod, rodGeom, bolts, rivets, weld, hatV, hatH } from '../lib/geom.js';
+import { THREE, M, paint, part, slot, mesh, box, boxFromTo, merged, boxGeom, cylinder, rod, rodGeom, bolts, rivets, weld, hatV, hatH, plateGeom, beamGeom } from '../lib/geom.js';
 import { y25Builders } from '../components/y25/index.js';
 import { drawGearBuilders } from '../components/ciegla_zderzaki/index.js';
 import { airBrakeBuilders } from '../components/hamulec/index.js';
-import { underframeBuilders } from '../components/ostoja/index.js';
+import { underframeBuilders, buildPlatform } from '../components/ostoja/index.js';
+import { buildActuator, buildControlValve, buildControlPipes } from '../components/wyladunek/index.js';
 
 export const PIVOT_X = 3.2;    // pół rozstawu czopów skrętu (6400 / 2)
 export const HALF_LEN = 5.35;  // lico belki czołowej (10 700 / 2)
@@ -76,29 +77,7 @@ const P_SLOPE = paint(0x6a3a28, { edges: false, rust: 0.55 });
 
 // ---------- Pomocnicze bryły ----------
 
-// Płaska blacha o dowolnym obrysie: obrys 2D [[u, v], ...] wyciągnięty na grubość w0..w1,
-// a potem przeniesiony do 3D funkcją map(u, v, w) → [x, y, z] (np. na pochyłą płaszczyznę).
-function plateGeom(outline, w0, w1, map) {
-  const sh = new THREE.Shape(outline.map(([u, v]) => new THREE.Vector2(u, v)));
-  const g = new THREE.ExtrudeGeometry(sh, { depth: w1 - w0, bevelEnabled: false });
-  const p = g.attributes.position;
-  for (let i = 0; i < p.count; i++) {
-    const [x, y, z] = map(p.getX(i), p.getY(i), p.getZ(i) + w0);
-    p.setXYZ(i, x, y, z);
-  }
-  g.computeVertexNormals();
-  return g;
-}
-
-// Belka prostokątna między punktami a i b (przekrój w × d) – np. pochyły słupek
-function beamGeom(a, b, w, d) {
-  const A = new THREE.Vector3(...a), B = new THREE.Vector3(...b);
-  const g = new THREE.BoxGeometry(w, A.distanceTo(B), d);
-  g.applyQuaternion(new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), B.clone().sub(A).normalize()));
-  const m = A.add(B).multiplyScalar(0.5);
-  g.translate(m.x, m.y, m.z);
-  return g;
-}
+// plateGeom (blacha o dowolnym obrysie) i beamGeom (belka między punktami) – w src/lib/geom.js
 
 // ======================= WAGON =======================
 
@@ -430,36 +409,6 @@ export function buildSaddleCrossBearers() {
 
 // Pomost (koniec +x; drugi obrócony o 180°): pomost z blachy ryflowanej nad belką czołową,
 // z barierką. param.slupek_hamulca – słupek pod koło hamulca ręcznego.
-export function buildPlatform(node) {
-  const g = part('pomost');
-  const P = M.paintDark;
-  const x0 = 4.6, x1 = HALF_LEN - 0.01, y0 = UF_TOP, y1 = UF_TOP + 0.025;
-  boxFromTo([x0, x1], [y0, y1], [-SOLE_Z, SOLE_Z], M.paintBody, { r: 0.004, parent: g });
-  // ryflowanie (wypukłe paski)
-  const ribs = [];
-  for (let x = x0 + 0.06; x < x1 - 0.03; x += 0.08) for (let z = -1.3; z < 1.3; z += 0.16) ribs.push(boxGeom(0.03, 0.004, 0.008, [x, y1 + 0.002, z]));
-  merged(ribs, M.paintBody, { parent: g });
-  // barierka: słupki, poręcze górne i środkowe
-  const R = 0.017, zs = 1.34, xe = 5.3, xs = 4.95, yt = 2.15, ym = 1.65;
-  const rails = [];
-  for (const s of [1, -1]) {
-    rails.push(rodGeom([xe, y1, s * zs], [xe, yt, s * zs], R, 12));
-    rails.push(rodGeom([xs, y1, s * zs], [xs, yt, s * zs], R, 12));
-    for (const y of [ym, yt]) rails.push(rodGeom([xs, y, s * zs], [xe, y, s * zs], R, 12));
-  }
-  for (const y of [ym, yt]) rails.push(rodGeom([xe, y, -zs], [xe, y, zs], R, 12));
-  merged(rails, P, { parent: g });
-  // stopy słupków
-  bolts([xe, xs].flatMap((x) => [1, -1].map((s) => ({ pos: [x + 0.03, y1, s * zs], dir: [0, 1, 0] }))), 0.012, M.bolt, { parent: g });
-  if (node?.param?.slupek_hamulca) {
-    // słupek koła hamulca ręcznego (koło – część hamulca zespolonego)
-    const z = node.param.slupek_hamulca;
-    boxFromTo([4.835, 4.885], [y1, 1.89], [z - 0.03, z + 0.03], P, { r: 0.006, parent: g });
-    box(0.12, 0.012, 0.12, P, { pos: [4.86, y1 + 0.006, z], r: 0.003, parent: g });
-  }
-  return g;
-}
-
 // ======================= MECHANIZM OTWIERANIA KLAP =======================
 // Wg instrukcji RCH: klapy zabezpieczone w czasie jazdy 8 zamkami, wszystkie cztery klapy
 // otwierane jednocześnie dźwignią sterującą (położenie 2), zamykane z czoła wagonu (położenie 1),
@@ -543,27 +492,6 @@ export function buildFlapLinks() {
   return g;
 }
 
-// Siłownik pneumatyczny pod ostojnicą – obraca wał przez dźwignię napędową
-export function buildActuator() {
-  const g = part('silownik');
-  const { x0, x1, y, z, r } = CYL;
-  cylinder(r, x1 - x0, M.paintDarkRound, { axis: 'x', pos: [(x0 + x1) / 2, y, z], seg: 28, parent: g });
-  for (const x of [x0, x1]) cylinder(r + 0.012, 0.025, M.paintDark, { axis: 'x', pos: [x, y, z], seg: 28, parent: g });
-  // ściągi pokryw
-  for (const a of [0.8, 2.4, 3.9, 5.5]) {
-    const dy = Math.sin(a) * (r + 0.006), dz = Math.cos(a) * (r + 0.006);
-    rod([x0, y + dy, z + dz], [x1, y + dy, z + dz], 0.005, M.steelRaw, { seg: 6, parent: g });
-  }
-  // tłoczysko z widełkami do dźwigni napędowej
-  cylinder(0.02, DRIVE_X - x1 - 0.02, M.steelMachined, { axis: 'x', pos: [(x1 + DRIVE_X - 0.02) / 2, y, z], seg: 14, parent: g });
-  for (const dz of [-0.03, 0.03]) box(0.06, 0.04, 0.01, M.steelRaw, { pos: [DRIVE_X - 0.03, y, z + dz], r: 0.003, parent: g });
-  // wsporniki do spodu ostojnicy
-  for (const x of [x0 + 0.06, x1 - 0.06]) boxFromTo([x - 0.03, x + 0.03], [y + r - 0.01, UF_BOT - 0.002], [z - 0.03, z + 0.03], M.paintDark, { r: 0.004, parent: g });
-  // przyłącze powietrza z tyłu
-  cylinder(0.014, 0.04, M.steelRaw, { axis: 'x', pos: [x0 - 0.03, y, z], seg: 10, parent: g });
-  return g;
-}
-
 // Blokada w środku wagonu – zabezpieczenie wału w położeniu „zamknięte”
 export function buildLock() {
   const g = part('blokada');
@@ -577,54 +505,27 @@ export function buildLock() {
   return g;
 }
 
-// Zawór sterujący z dźwignią (położenie 1 – zamykanie, 2 – otwieranie), kurek odcinający
-// i przyłącze sprężonego powietrza – na końcu 2 wagonu, po stronie 1.
-export function buildControlValve() {
-  const g = part('zawor_sterujacy');
-  const [x, y, z] = VALVE;
-  box(0.12, 0.12, 0.08, M.paintDark, { pos: [x, y, z], r: 0.012, parent: g });
-  box(0.16, 0.02, 0.1, M.paintDark, { pos: [x, y + 0.07, z], r: 0.004, parent: g });
-  // dźwignia sterująca (skierowana w dół, pod klapą)
-  cylinder(0.018, 0.03, M.steelRaw, { axis: 'z', pos: [x, y + 0.03, z + 0.05], seg: 14, parent: g });
-  rod([x, y + 0.03, z + 0.055], [x - 0.1, y - 0.15, z + 0.055], 0.011, M.paintRed, { seg: 10, parent: g });
-  mesh(new THREE.SphereGeometry(0.02, 12, 8), M.paintRed, { pos: [x - 0.1, y - 0.15, z + 0.055], parent: g });
-  // tabliczka położeń
-  box(0.12, 0.06, 0.004, M.paintWhite, { pos: [x - 0.02, y - 0.02, z + 0.042], r: 0.002, parent: g });
-  // przyłącze powietrza z zewnętrznej instalacji (króciec z głowicą, w dół)
-  cylinder(0.014, 0.08, M.steelRaw, { pos: [x + 0.035, y - 0.1, z], seg: 10, parent: g });
-  box(0.05, 0.05, 0.05, M.steelRaw, { pos: [x + 0.035, y - 0.16, z], r: 0.008, parent: g });
-  return g;
-}
-
-// Przewody sterujące: od zaworu do siłowników obu stron, z kurkiem odcinającym
-export function buildControlPipes() {
-  const g = part('przewody_sterujace');
+// Przewody sterujące: od zaworu do siłowników obu stron, z kurkiem odcinającym.
+// Bryłę buduje wspólny moduł (src/components/wyladunek), Fals podaje trasy rur.
+const PIPES = (() => {
   const [vx, vy, vz] = VALVE;
   const yP = 0.9, zP = 1.3, xR = -4.7;
-  const pipe = (pts) => {
-    const geoms = [];
-    for (let i = 0; i < pts.length - 1; i++) geoms.push(rodGeom(pts[i], pts[i + 1], 0.011, 10));
-    return geoms;
-  };
-  merged([
-    // strona 1: zawór → wzdłuż ostojnicy → siłownik strony 1
-    ...pipe([[vx, vy - 0.06, vz], [vx - 0.12, 0.93, vz], [xR, yP, 1.45], [xR, yP, zP], [CYL.x0 - 0.06, yP, zP], [CYL.x0 - 0.05, CYL.y, CYL.z]]),
-    // strona 2: odgałęzienie pod końcem wagonu na drugą stronę, potem wzdłuż ostojnicy
-    ...pipe([[xR, yP, zP], [xR, 0.86, 1.2], [xR, 0.86, -1.2], [xR, yP, -zP], [-CYL.x0 + 0.06, yP, -zP], [-CYL.x0 + 0.05, CYL.y, -CYL.z]]),
-  ], M.paintDarkRound, { parent: g });
-  // obejmy przewodów pod ostojnicami
-  const clamps = [];
+  const obejmy = [];
   for (const s of [1, -1]) for (const x of [-4.3, -3.2, -2.2, 0, 1.0]) {
     if (s > 0 && x > CYL.x0 - 0.1) continue;
-    clamps.push(boxGeom(0.03, UF_BOT - yP + 0.01, 0.012, [x, (yP + UF_BOT) / 2, s * (zP + 0.02)]));
+    obejmy.push({ x, z: s * (zP + 0.02), y0: yP - 0.005, y1: UF_BOT + 0.005 });
   }
-  merged(clamps, M.paintDark, { parent: g });
-  // kurek odcinający (rękojeść czerwona)
-  const k = [-4.55, 0.916, 1.461];
-  mesh(new THREE.SphereGeometry(0.024, 14, 10), M.paintDark, { pos: k, parent: g });
-  box(0.1, 0.012, 0.012, M.paintRed, { pos: [k[0] - 0.03, k[1] + 0.03, k[2]], r: 0.004, parent: g });
-  return g;
-}
+  return {
+    trasy: [
+      // strona 1: zawór → wzdłuż ostojnicy → siłownik strony 1
+      [[vx, vy - 0.06, vz], [vx - 0.12, 0.93, vz], [xR, yP, 1.45], [xR, yP, zP], [CYL.x0 - 0.06, yP, zP], [CYL.x0 - 0.05, CYL.y, CYL.z]],
+      // strona 2: odgałęzienie pod końcem wagonu na drugą stronę, potem wzdłuż ostojnicy
+      [[xR, yP, zP], [xR, 0.86, 1.2], [xR, 0.86, -1.2], [xR, yP, -zP], [-CYL.x0 + 0.06, yP, -zP], [-CYL.x0 + 0.05, CYL.y, -CYL.z]],
+    ],
+    obejmy,
+    kurek: [-4.55, 0.916, 1.461],
+  };
+})();
 
 // Wszystkie buildery, których potrzebuje Fals (wagon + wspólne podzespoły)
 export const builders = {
@@ -652,8 +553,8 @@ export const builders = {
   wal_fals: buildShaft,
   zamki_fals: buildClaws,
   ciegla_klap_fals: buildFlapLinks,
-  silownik_fals: buildActuator,
+  silownik_fals: (node) => buildActuator(node, { ...CYL, x_dzwigni: DRIVE_X, y_mocowania: UF_BOT }),
   blokada_fals: buildLock,
-  zawor_sterujacy_fals: buildControlValve,
-  przewody_sterujace_fals: buildControlPipes,
+  zawor_sterujacy_fals: (node) => buildControlValve(node, { poz: VALVE }),
+  przewody_sterujace_fals: (node) => buildControlPipes(node, PIPES),
 };

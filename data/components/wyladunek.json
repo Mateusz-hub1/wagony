@@ -1,0 +1,131 @@
+{
+  "uwaga": "Wspólne części i opisy układu wyładunku wagonów samowyładowczych (Fals, Falns…). Siłownik, zawór i przewody sterujące wagon wstawia przez \"ref\": \"components/wyladunek.json#silownik_pneumatyczny\" / \"#zawor_sterujacy\" / \"#przewody_sterujace\" i podaje położenie w \"param\" (silownik: {x0, x1, y, z, r, x_dzwigni, y_mocowania}, zawor: {poz}, przewody: {trasy, obejmy, kurek}) – patrz src/components/wyladunek/index.js. Leje, klapy, zamki i mechanizm buduje plik wagonu (kształt zależy od serii), a ich opisy łączy z tutejszymi przez \"opis_wspolny\": \"components/wyladunek.json#klapa_wyladowcza\" itd.",
+  "opisy": {
+    "silownik_pneumatyczny": {
+      "nazwa_pl": "siłownik pneumatyczny",
+      "nazwa_en": "pneumatic actuator",
+      "funkcja": "Napędza mechanizm otwierania i zamykania klap wyładowczych sprężonym powietrzem (przez dźwignię napędową wału lub układ dźwigni).",
+      "budowa": "Cylinder z tłokiem i tłoczyskiem zakończonym widełkami, pokrywy ściągnięte ściągami, wsporniki przykręcone do ostoi, przyłącze przewodu sterującego.",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzone tłoczysko, zużyte sworznie zawieszenia. Wg GCU: urządzenia sterujące częściami ruchomymi nie mogą mieć widocznych uszkodzeń utrudniających działanie (Zał. 10 pkt 6.4); żadna część układu zamykania i wyładunku nie może być luźna (pkt 6.51). Klapa niezamknięta lub niezaryglowana – usterka 6.6.6.",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterka 6.6.6; GCU Zał. 10 pkt 6.4, 6.50–6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9 (Aneks 1) i Załącznik 10: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Średnica i skok siłownika – brak publicznego źródła; w modelu SZACUNKOWE"
+      ],
+      "status": "do weryfikacji"
+    },
+    "zawor_sterujacy": {
+      "nazwa_pl": "zawór sterujący",
+      "nazwa_en": "control valve",
+      "funkcja": "Kieruje sprężone powietrze do siłowników: jedno położenie dźwigni otwiera klapy, drugie je zamyka.",
+      "budowa": "Korpus zaworu z dźwignią i tabliczką położeń oraz przyłączem sprężonego powietrza z zewnętrznej instalacji.",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzona dźwignia, brak tabliczki położeń. Wg GCU: uszkodzenia urządzeń sterujących częściami ruchomymi (Zał. 10 pkt 6.4); musi być możliwe zamknięcie i zaryglowanie wszystkich zaworów i klap (pkt 6.50).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.50.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9 (Aneks 1) i Załącznik 10: https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "status": "do weryfikacji"
+    },
+    "lej": {
+      "nazwa_pl": "lej wyładowczy",
+      "nazwa_en": "discharge hopper",
+      "funkcja": "Kieruje ładunek sypki grawitacyjnie do otworów wyładowczych, tak aby wagon opróżnił się bez pomocy ładowarki.",
+      "budowa": "Pochyłe blachy ścian leja (dna) z użebrowaniem, wsparte na wiązarach ostoi; na dole otwór zamykany klapą wyładowczą.",
+      "typowe_uszkodzenia": "Wgniecenia i przetarcia blach od ładunku, korozja (zwłaszcza w narożach i przy spoinach), pęknięcia spoin, zaleganie ładunku. Wg GCU: części ruchome i ich mocowania nie mogą być luźne (Zał. 10 pkt 6.51).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6 (wagony samowyładowcze); GCU Zał. 10 pkt 6.50–6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Kąt pochylenia ścian leja – zależy od serii, podać w opisie wagonu ze źródłem",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "klapa_wyladowcza": {
+      "nazwa_pl": "klapa wyładowcza",
+      "nazwa_en": "discharge flap",
+      "funkcja": "Zamyka otwór wyładowczy leja; po otwarciu ładunek wysypuje się z wagonu.",
+      "budowa": "Blacha z użebrowaniem, zawieszona na zawiasach lub dźwigniach; krawędź z listwą uszczelniającą, ucha zamków i cięgieł mechanizmu.",
+      "typowe_uszkodzenia": "Nieszczelność (zabrudzone lub uszkodzone listwy uszczelniające – klapa się nie domyka), odkształcenia, zużyte zawiasy, uszkodzone ucha zamków. Wg katalogu GCU: klapa wyładowcza niezamknięta lub niezaryglowana – usterka 6.6.6.",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.50–6.51 (wszystkie klapy muszą dać się zamknąć i zaryglować; żadna część układu zamykania i wyładunku nie może być luźna).",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "zamki_klap": {
+      "nazwa_pl": "zamki klap",
+      "nazwa_en": "flap locks",
+      "funkcja": "Zabezpieczają klapy przed otwarciem w czasie jazdy; przed otwarciem klap trzeba je zwolnić.",
+      "budowa": "Pazury lub rygle na wale albo dźwigniach mechanizmu, chwytające ucha klap.",
+      "typowe_uszkodzenia": "Zużyte lub wygięte pazury, niepełne zazębienie z uchem klapy. Wg katalogu GCU: klapa niezaryglowana (6.6.6); luźne części zamknięcia (Zał. 10 pkt 6.51).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.50–6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "mechanizm_wyladunku": {
+      "nazwa_pl": "mechanizm otwierania klap",
+      "nazwa_en": "discharge flap operating gear",
+      "funkcja": "Otwiera i zamyka klapy wyładowcze, a w czasie jazdy utrzymuje je zamknięte i zabezpieczone.",
+      "budowa": "Wały lub dźwignie z cięgłami, zamki klap, siłowniki pneumatyczne, zawór sterujący z dźwignią, kurek odcinający i przewody sterujące; zwykle także zabezpieczenie mechaniczne położenia „zamknięte”.",
+      "typowe_uszkodzenia": "Zatarte łożyska wałów, luzy w cięgłach, uszkodzone zamki, nieszczelne siłowniki i przewody. Wg katalogu GCU: klapy niezamknięte lub niezaryglowane (6.6.6); luźne części układu zamykania i wyładunku (Zał. 10 pkt 6.51); widoczne uszkodzenia części ruchomych i ich sterowania, utrudniające działanie (Zał. 10 pkt 6.4).",
+      "przepisy": "GCU Zał. 9 usterka 6.6.6; GCU Zał. 10 pkt 6.4, 6.50–6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    },
+    "przewody_sterujace": {
+      "nazwa_pl": "przewody sterujące",
+      "nazwa_en": "control piping",
+      "funkcja": "Doprowadzają sprężone powietrze od zaworu sterującego do siłowników.",
+      "budowa": "Rury stalowe w obejmach pod ostoją; kurek odcinający z rękojeścią.",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzone obejmy, zamknięty lub uszkodzony kurek. Wg katalogu GCU: luźne części układu wyładunku (Zał. 10 pkt 6.51); uszkodzenia urządzeń sterujących (pkt 6.4).",
+      "przepisy": "GCU Zał. 10 pkt 6.4, 6.51.",
+      "zdjecia": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "status": "do weryfikacji"
+    }
+  },
+  "szablony": {
+    "silownik_pneumatyczny": {
+      "typ": "silownik_pneumatyczny"
+    },
+    "zawor_sterujacy": {
+      "typ": "zawor_sterujacy"
+    },
+    "przewody_sterujace": {
+      "typ": "przewody_sterujace"
+    }
+  }
+}
