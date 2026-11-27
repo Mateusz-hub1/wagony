@@ -56,17 +56,22 @@
       "nazwa_en": "Eanos open wagon",
       "funkcja": "Węglarka czteroosiowa (wagon odkryty wysokoburtowy) o dużej przestrzeni ładunkowej, do ładunków masowych (węgiel, rudy, kruszywa, złom, drewno) i ładunków w sztukach (np. kręgi blach, kontenery, półwyroby stalowe).",
       "budowa": "Pudło stalowe z dwiema parami drzwi dwuskrzydłowych na każdym boku (otwór 1 800 × 1 800 mm), ciągłym pasem górnym z hakami, stałymi ścianami czołowymi i podłogą z blachy stalowej 6 mm; spawana ostoja; dwa wózki Y25; urządzenia cięgłowo-zderzakowe; hamulec zespolony (wersje z hamulcem postojowym i bez). Długość ze zderzakami 15 740 mm, rozstaw czopów skrętu 10 700 mm, długość ładunkowa 14 490 mm, szerokość ładunkowa 2 720 mm, wysokość ładunkowa 2 100 mm, wysokość podłogi 1 240 mm, wysokość całkowita 3 340 mm, powierzchnia ładunkowa 39,4 m², pojemność ok. 82,5–82,7 m³. Masa własna ok. 22,6–25,3 t (zależnie od wersji), prędkość do 120 km/h.",
-      "przepisy": "Oznaczenie literowe wg UIC 438-2.",
+      "przepisy": "Oznaczenie literowe wg UIC 438-2: E – zwykły wagon odkryty wysokoburtowy, a – 4 zestawy kołowe, n – dopuszczalna masa ładunku na linii klasy C ponad 60 t, o – bez wywrotu przez czoło, s – dopuszczony do pociągów do 100 km/h. GCU Zał. 9 usterki 6.1.1 (oznakowanie wagonu: numer, tara, granice obciążenia, długość ze zderzakami, dane posiadacza) i 6.1.2 (tabliczka utrzymania – termin rewizji); GCU Zał. 10 pkt 6.1–6.14; EN 12663-2 (wytrzymałość pudeł wagonów towarowych).",
       "zdjecia": [],
       "zrodla": [
         "Rail Cargo Group – karta wagonu Eanos 5376, 5377, 5380 (2024): https://www.railcargo.com/sl/dam/jcr:747382af-3b8d-4176-8b9e-7e337c8d3ac2/eanos-fs.pdf",
         "DB Cargo – katalog wagonów, Eanos-x 052: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-052-9120444",
-        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448"
+        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Wikipedia – UIC classification of goods wagons (znaczenie liter E, F, a, o, s, n, l): https://en.wikipedia.org/wiki/UIC_classification_of_goods_wagons",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf"
       ],
       "do_sprawdzenia": [
-        "przepisy: oznaczenie literowe wg UIC 438-2 – sprawdzić znaczenie liter",
         "funkcja/budowa: w części wagonów DB dwoje z czworga drzwi jest zaspawanych – sprawdzić, czy uwzględnić",
-        "budowa: położenie drzwi wzdłuż ściany w modelu jest szacunkowe"
+        "budowa: położenie drzwi wzdłuż ściany w modelu jest szacunkowe",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: znaczenie liter wzięte z Wikipedii (bez numeru karty UIC) – potwierdzić w UIC 438-2 / TSI WAG"
       ],
       "status": "do weryfikacji"
     },
@@ -75,15 +80,18 @@
       "nazwa_en": "body",
       "funkcja": "Przestrzeń ładunkowa wagonu; ściany przenoszą parcie ładunku.",
       "budowa": "Podłoga z blachy stalowej, dwie ściany boczne (każda z dwiema parami drzwi dwuskrzydłowych), dwie stałe ściany czołowe, ciągły pas górny po obu stronach. Konstrukcja spawana, przyspawana do ostoi. Wewnątrz pierścienie do mocowania ładunku ok. 200 mm nad podłogą, na zewnątrz pierścienie do mocowania i haki pod pasem górnym.",
-      "typowe_uszkodzenia": "Wgniecenia i wybrzuszenia ścian, pęknięcia spoin słupków, korozja dolnej części ścian.",
+      "typowe_uszkodzenia": "Wgniecenia i wybrzuszenia ścian, pęknięcia spoin słupków, korozja dolnej części ścian. Wg katalogu GCU: uszkodzona część szkieletu pudła – bez naruszenia skrajni (6.1.3.1) lub z naruszeniem skrajni – odstawienie (6.1.3.2); dziurawe lub złamane poszycie ścian (6.1.4); ściany boczne uszkodzone z ryzykiem utraty ładunku lub naruszenia skrajni (6.3.1).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.3–6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2, 6.52 (sprawdzanie skrajni po odkształceniu wg Wytycznych załadunku); EN 12663-2.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo – katalog wagonów, Eanos-x 052: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-052-9120444",
-        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448"
+        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić",
-        "budowa: wzmocnione ściany i podłoga (DB Cargo) – sprawdzić, na czym polega wzmocnienie"
+        "budowa: wzmocnione ściany i podłoga (DB Cargo) – sprawdzić, na czym polega wzmocnienie",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -92,14 +100,17 @@
       "nazwa_en": "steel floor",
       "funkcja": "Przenosi masę ładunku na ostoję.",
       "budowa": "Blachy stalowe grubości 6 mm zespawane ze sobą, oparte na poprzecznicach i belkach ostoi, z podłużnicami usztywniającymi. Góra podłogi 1 240 mm nad główką szyny.",
-      "typowe_uszkodzenia": "Wgniecenia od ładunku (np. złomu), perforacja korozyjna, pęknięcia spoin.",
+      "typowe_uszkodzenia": "Wgniecenia od ładunku (np. złomu), perforacja korozyjna, pęknięcia spoin. Wg katalogu GCU: podłoga uszkodzona bez ryzyka utraty ładunku (6.1.5.1) lub z ryzykiem utraty ładunku (6.1.5.2).",
+      "przepisy": "GCU Zał. 9 usterka 6.1.5; GCU Zał. 10 pkt 6.5.",
       "zdjecia": [],
       "zrodla": [
         "Rail Cargo Group – karta wagonu Eanos 5376, 5377, 5380 (2024): https://www.railcargo.com/sl/dam/jcr:747382af-3b8d-4176-8b9e-7e337c8d3ac2/eanos-fs.pdf",
-        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448"
+        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -108,14 +119,17 @@
       "nazwa_en": "side wall",
       "funkcja": "Zamyka przestrzeń ładunkową z boku i przenosi parcie ładunku.",
       "budowa": "Poszycie z blachy stalowej, słupki pośrednie z profili kapeluszowych, wzmocnione słupki drzwiowe, nadproża nad drzwiami, listwa dolna z pierścieniami do mocowania. Dwa otwory drzwiowe 1 800 × 1 800 mm.",
-      "typowe_uszkodzenia": "Wybrzuszenia poszycia, pęknięte lub odgięte słupki, pęknięcia spoin przy ostoi.",
+      "typowe_uszkodzenia": "Wybrzuszenia poszycia, pęknięte lub odgięte słupki, pęknięcia spoin przy ostoi. Wg katalogu GCU: ściana uszkodzona bez ryzyka (6.3.1.1), z ryzykiem utraty ładunku (6.3.1.2) lub naruszenia skrajni (6.3.1.3); dziurawe lub złamane poszycie (6.1.4).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2, 6.20.",
       "zdjecia": [],
       "zrodla": [
         "Rail Cargo Group – karta wagonu Eanos 5376, 5377, 5380 (2024): https://www.railcargo.com/sl/dam/jcr:747382af-3b8d-4176-8b9e-7e337c8d3ac2/eanos-fs.pdf",
-        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448"
+        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -124,14 +138,17 @@
       "nazwa_en": "double-leaf door",
       "funkcja": "Umożliwiają ręczny wyładunek i czyszczenie wnętrza z boku wagonu.",
       "budowa": "Dwa skrzydła na zawiasach przy słupkach drzwiowych, zamykane ryglami pionowymi zaczepiającymi o podłogę i nadproże. Prześwit otworu 1 800 × 1 800 mm.",
-      "typowe_uszkodzenia": "Wygięte skrzydła, zatarte lub urwane zawiasy, niedomykające się rygle, brak zabezpieczenia zamknięcia.",
+      "typowe_uszkodzenia": "Wygięte skrzydła, zatarte lub urwane zawiasy, niedomykające się rygle, brak zabezpieczenia zamknięcia. Wg katalogu GCU: drzwi niedomknięte lub niezabezpieczone (6.1.6.1); drzwi brakujące lub wypadnięte z prowadzenia (6.1.6.2); uszkodzone zawiasy, zamki, zaczepy, uchwyty lub rama drzwi (6.1.6.3–6.1.6.4); drzwi połamane lub wypaczone – z ryzykiem naruszenia skrajni lub utraty ładunku (6.1.6.5–6.1.6.6).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.6.1–6.1.6.6; GCU Zał. 10 pkt 6.7–6.9 (drzwi muszą dać się całkowicie zamknąć i zaryglować; bez odkształceń i dziur grożących utratą ładunku).",
       "zdjecia": [],
       "zrodla": [
         "Rail Cargo Group – karta wagonu Eanos 5376, 5377, 5380 (2024): https://www.railcargo.com/sl/dam/jcr:747382af-3b8d-4176-8b9e-7e337c8d3ac2/eanos-fs.pdf",
-        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448"
+        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -140,11 +157,15 @@
       "nazwa_en": "door leaf",
       "funkcja": "Ruchoma część drzwi; otwiera się na zewnątrz wagonu.",
       "budowa": "Blacha z ramą i użebrowaniem z profili, trzy zawiasy, rygiel pionowy z dźwignią.",
-      "typowe_uszkodzenia": "Odkształcenia, pęknięcia przy zawiasach, luzy w zawiasach, uszkodzony rygiel.",
+      "typowe_uszkodzenia": "Odkształcenia, pęknięcia przy zawiasach, luzy w zawiasach, uszkodzony rygiel. Wg katalogu GCU: skrzydło połamane lub wypaczone (6.1.6.5–6.1.6.6); uszkodzone zawiasy, rygle, zaczepy lub uchwyty (6.1.6.3).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.6.3, 6.1.6.5–6.1.6.6; GCU Zał. 10 pkt 6.8–6.9.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -153,14 +174,17 @@
       "nazwa_en": "end wall",
       "funkcja": "Zamyka przestrzeń ładunkową od czoła i przejmuje parcie ładunku przy hamowaniu i uderzeniach.",
       "budowa": "Stała, spawana: poszycie z blachy 4 mm, użebrowanie pionowe i poziome z profili na zewnątrz, rama górna, słupki narożne łączące ze ścianami bocznymi. Na jednym końcu (w wersji z hamulcem postojowym) wsporniki koła hamulca ręcznego.",
-      "typowe_uszkodzenia": "Wybrzuszenia od przesuniętego ładunku, pęknięcia słupków narożnych.",
+      "typowe_uszkodzenia": "Wybrzuszenia od przesuniętego ładunku, pęknięcia słupków narożnych. Wg katalogu GCU: dziurawe lub złamane poszycie (6.1.4); uszkodzenie z ryzykiem utraty ładunku lub naruszenia skrajni (6.3.1.2–6.3.1.3).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2.",
       "zdjecia": [],
       "zrodla": [
-        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448"
+        "DB Cargo – katalog wagonów, Eanos-x 056: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-056-9120448",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić",
-        "budowa: źródła nie mówią wprost, że ściany czołowe są stałe (nieuchylne) – potwierdzić"
+        "budowa: źródła nie mówią wprost, że ściany czołowe są stałe (nieuchylne) – potwierdzić",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -169,96 +193,81 @@
       "nazwa_en": "top chord",
       "funkcja": "Usztywnia górną krawędź ściany bocznej; pod nim haki do mocowania plandeki lub lin.",
       "budowa": "Ciągły profil zamknięty przyspawany do poszycia i słupków na całej długości ściany; 20 haków (po 10 na stronę).",
-      "typowe_uszkodzenia": "Wygięcia od chwytaków i urządzeń wyładowczych, pęknięcia, urwane haki, korozja wewnątrz profilu.",
+      "typowe_uszkodzenia": "Wygięcia od chwytaków i urządzeń wyładowczych, pęknięcia, urwane haki, korozja wewnątrz profilu. Wg katalogu GCU: pas górny złamany lub odkształcony – bez naruszenia skrajni (6.3.3.1) lub z naruszeniem skrajni (6.3.3.2).",
+      "przepisy": "GCU Zał. 9 usterka 6.3.3; GCU Zał. 10 pkt 6.23.",
       "zdjecia": [],
       "zrodla": [
-        "DB Cargo – katalog wagonów, Eanos-x 052: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-052-9120444"
+        "DB Cargo – katalog wagonów, Eanos-x 052: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eanos-x-052-9120444",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
     "ostoja_eanos": {
       "nazwa_pl": "ostoja",
       "nazwa_en": "underframe",
+      "opis_wspolny": "components/ostoja.json#ostoja",
       "funkcja": "Nośna konstrukcja wagonu: przenosi masę pudła i ładunku na wózki oraz siły pociągowe i zderzakowe.",
       "budowa": "Spawana rama z dwóch ostojnic, dwóch belek czołowych, dwóch belek skrętowych z czopami skrętu (rozstaw 10 700 mm), belki środkowej i poprzecznic. Na końcach stopnie i poręcze manewrowe.",
-      "typowe_uszkodzenia": "Pęknięcia spoin (zwłaszcza przy belkach skrętowych i czołowych), odkształcenia belek czołowych po uderzeniach, korozja.",
       "zdjecia": [],
       "zrodla": [
         "Rail Cargo Group – karta wagonu Eanos 5376, 5377, 5380 (2024): https://www.railcargo.com/sl/dam/jcr:747382af-3b8d-4176-8b9e-7e337c8d3ac2/eanos-fs.pdf"
-      ],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
       ],
       "status": "do weryfikacji"
     },
     "ostojnica_eanos": {
       "nazwa_pl": "ostojnica",
       "nazwa_en": "sole bar",
+      "opis_wspolny": "components/ostoja.json#ostojnica",
       "funkcja": "Główna podłużna belka ostoi po boku wagonu; podpiera ścianę boczną.",
       "budowa": "Kształtownik (ceownik) z przeponami wewnątrz, przyspawany do belek czołowych, skrętowych i poprzecznic.",
-      "typowe_uszkodzenia": "Pęknięcia, odkształcenia, korozja półki dolnej.",
       "zdjecia": [],
       "zrodla": [],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
-      ],
       "status": "do weryfikacji"
     },
     "belka_czolowa_eanos": {
       "nazwa_pl": "belka czołowa",
       "nazwa_en": "headstock",
+      "opis_wspolny": "components/ostoja.json#belka_czolowa",
       "funkcja": "Zamyka ostoję na końcu wagonu; na niej mocowane są zderzaki i przez nią przechodzi hak cięgłowy.",
       "budowa": "Belka skrzynkowa z blachy czołowej, półek i żeber; nakładki wzmacniające pod zderzaki, otwór haka.",
-      "typowe_uszkodzenia": "Odkształcenia po uderzeniach (najechania), pęknięcia przy mocowaniu zderzaków.",
       "zdjecia": [],
       "zrodla": [],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
-      ],
       "status": "do weryfikacji"
     },
     "belka_skretowa_eanos": {
       "nazwa_pl": "belka skrętowa",
       "nazwa_en": "body bolster",
+      "opis_wspolny": "components/ostoja.json#belka_skretowa",
       "funkcja": "Przenosi masę pudła z ostojnic na czop skrętu i ślizgi boczne wózka.",
       "budowa": "Belka skrzynkowa w poprzek wagonu nad wózkiem; w środku czop skrętu, po bokach przeciwślizgi.",
-      "typowe_uszkodzenia": "Pęknięcia spoin z ostojnicami, zużycie przeciwślizgów.",
       "zdjecia": [],
       "zrodla": [
         "Rail Cargo Group – karta wagonu Eanos 5376, 5377, 5380 (2024): https://www.railcargo.com/sl/dam/jcr:747382af-3b8d-4176-8b9e-7e337c8d3ac2/eanos-fs.pdf"
-      ],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
       ],
       "status": "do weryfikacji"
     },
     "belka_srodkowa_eanos": {
       "nazwa_pl": "belka środkowa",
       "nazwa_en": "centre sill",
+      "opis_wspolny": "components/ostoja.json#belka_srodkowa",
       "funkcja": "Przenosi siły pociągowe i ściskające między końcami wagonu; mieści urządzenie cięgłowe.",
       "budowa": "Dwa ceowniki wzdłuż osi wagonu połączone przewiązkami.",
-      "typowe_uszkodzenia": "Pęknięcia, odkształcenia w rejonie urządzenia cięgłowego.",
       "zdjecia": [],
       "zrodla": [],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
-      ],
       "status": "do weryfikacji"
     },
     "poprzecznice_eanos": {
       "nazwa_pl": "poprzecznice",
       "nazwa_en": "cross bearers",
+      "opis_wspolny": "components/ostoja.json#poprzecznice",
       "funkcja": "Łączą belkę środkową z ostojnicami i podpierają podłogę.",
       "budowa": "Dwuteowniki spawane między belką środkową a ostojnicami.",
-      "typowe_uszkodzenia": "Pęknięcia spoin, korozja.",
       "zdjecia": [],
       "zrodla": [],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić / sprawdzić"
-      ],
       "status": "do weryfikacji"
     }
   },
