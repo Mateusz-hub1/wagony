@@ -1,0 +1,628 @@
+{
+  "seria": "Sgs",
+  "uwagi": "Wzór: Sgs typ 412Z (PKP Cargo). Hamulec: lista części podana tutaj (bez hamulca ręcznego), bo hamulec_reczny = false – wspólne drzewo w components/hamulec.json zawsze zawiera hamulec ręczny.",
+  "szablony": {
+    "belka_skretowa": {
+      "typ": "belka_skretowa_sgs",
+      "ukryj_otoczenie": true,
+      "children": [
+        {
+          "id": "czop_skretu",
+          "ref": "components/ostoja.json#czop_skretu"
+        }
+      ]
+    }
+  },
+  "opisy": {
+    "sgs": {
+      "nazwa_pl": "Sgs",
+      "nazwa_en": "Sgs container flat wagon",
+      "funkcja": "Czteroosiowa platforma do przewozu kontenerów ISO (10', 20', 30', 40') o łącznej długości do 60 stóp; wg katalogu PKP Cargo także do przewozu pojemników wymiennych wg UIC 592-4. Załadunek i wyładunek dźwignicami (suwnice, wozy podsiębierne) – kontener opuszcza się z góry na czopy zaczepów.",
+      "budowa": "Spawana ostoja z rybimi ostojnicami, belką środkową, belkami skrętowymi, poprzecznicami i podłużnicami; podłoga drewniana; zaczepy kontenerowe (trzpienie) – skrajne stałe, pozostałe składane; osłony przeciwiskrowe nad kołami; dwa wózki Y25, urządzenia cięgłowo-zderzakowe, hamulec zespolony. Bez kłonic, bez burt. Wzór wymiarów: Sgs typ 412Z (PKP Cargo) – długość ze zderzakami 19 900 mm, rozstaw czopów skrętu 14 600 mm, długość ładunkowa 18 660 mm, szerokość ładunkowa 2 740 mm, maks. szerokość wagonu 2 940 mm, wysokość podłogi nad główką szyny 1 251 mm, masa własna 22 000 kg, powierzchnia użytkowa 51 m², prędkość maks. 100 km/h, najmniejszy promień łuku 35 m, granica obciążenia S: A 42,0 t, B 50,0 t, C 58,0 t.",
+      "przepisy": "Oznaczenie literowe wg UIC 438-2 (wg katalogu PKP Cargo): S – wagon platforma specjalnej budowy na wózkach (4-osiowy: długość ładunkowa ≥ 18 m, granica obciążenia 50–60 t), g – do transportu kontenerów o łącznej długości do 60 stóp (z wyjątkiem kontenerów średnich), s – przystosowany do jazdy z prędkością 100 km/h. Litera l (bez kłonic) na wagonach z literą g jest nieobowiązkowa. GCU Zał. 9 usterki 6.1.1 (oznakowanie wagonu) i 6.1.2 (tabliczka utrzymania), 6.7 (urządzenia do mocowania jednostek ładunkowych), 7.7.2–7.7.3 (kontenery na czopach); GCU Zał. 10 pkt 4.6 (osłony przeciwiskrowe przy podłodze palnej); karty UIC 571-4 (wagony do transportu kombinowanego), UIC 592 (kontenery i pojemniki wymienne – wg katalogu PKP Cargo).",
+      "zrodla": [
+        "PKP Cargo – katalog wagonów (2019), Sgs typ 412Z i 412Z/Gn, s. 84–85: https://www.pkpcargo.com/media/1002903/pkp-cargo_katalog-wagonow_3008_19.pdf",
+        "PKP Cargo – katalog wagonów (2019), znaczenie liter serii (rodzaj S, litery g, s), s. 7 i 12–13: https://www.pkpcargo.com/media/1002903/pkp-cargo_katalog-wagonow_3008_19.pdf",
+        "William Cook Intermodal – broszura (tabela wymiarów kontenerów ISO: długość L i rozstaw naroży S dla 10', 20', 30', 40'): https://www.william-cook.co.uk/_media/images/client-uploads/Intermodal-Brochure.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wybrano Sgs typ 412Z (PKP Cargo, podłoga drewniana, 24 trzpienie). Odmiany: 412Z/Gn – 24 trzpienie wg ISO, masa 22 400 kg; 412Zd – 16 odchylnych trzpieni ISO, wysokość podłogi 1 251 mm; 412ZaGn – 28 trzpieni wg UIC 571-4, podłoga 1 210 mm. Potwierdzić typ najczęściej spotykany w serwisie",
+        "Katalog PKP Cargo nie podaje typu wózków dla 412Z – w atlasie przyjęto Y25 (założenie projektu); sprawdzić",
+        "Liczba zaczepów w modelu: 20 (10 położeń wyliczonych z wymiarów kontenerów ISO), w katalogu 412Z – 24 trzpienie; rozmieszczenie sprawdzić na wagonie",
+        "Hamulec ręczny: katalog PKP Cargo nie podaje dla 412Z – w modelu pominięty; sprawdzić",
+        "Wysokość osi zderzaków w modelu 1 030 mm – SZACUNKOWE (brak w katalogu)",
+        "przepisy: znaczenie liter wzięte z katalogu PKP Cargo – potwierdzić w UIC 438-2",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "podloga_sgs": {
+      "nazwa_pl": "podłoga drewniana",
+      "nazwa_en": "timber floor",
+      "funkcja": "Pozwala przewozić na platformie także ładunki inne niż kontenery (katalog PKP Cargo: dłużyca, ładunki skupione); kontenery stoją na zaczepach, nie na podłodze.",
+      "budowa": "Deski poprzeczne przykręcone śrubami do ostojnic, podłużnic i belki środkowej; przy zaczepach kontenerowych stalowe listwy z otworami na głowice zaczepów; na brzegach płaskowniki obrzeża. Wysokość podłogi 1 251 mm nad główką szyny, szerokość ładunkowa 2 740 mm, długość ładunkowa 18 660 mm (Sgs 412Z).",
+      "typowe_uszkodzenia": "Pęknięte, złamane, spróchniałe lub brakujące deski, wyrwane śruby, uszkodzenia od wózków widłowych i ładunku. Wg katalogu GCU: podłoga uszkodzona bez ryzyka utraty ładunku (6.1.5.1) lub z ryzykiem utraty ładunku (6.1.5.2).",
+      "wymiary_graniczne": "Żadna deska podłogi nie może brakować, być złamana, pęknięta ani uszkodzona tak, że ładunek mógłby się wysypać lub zawilgocić (GCU Zał. 10 pkt 6.5).",
+      "przepisy": "GCU Zał. 9 usterka 6.1.5; GCU Zał. 10 pkt 6.5, kody prac CU60050–CU60051 (sprawdzenie i naprawa podłogi); GCU Zał. 10 pkt 4.6 – przy podłodze palnej osłony przeciwiskrowe nad hamowanymi kołami.",
+      "zrodla": [
+        "PKP Cargo – katalog wagonów (2019), Sgs typ 412Z i 412Z/Gn, s. 84–85: https://www.pkpcargo.com/media/1002903/pkp-cargo_katalog-wagonow_3008_19.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Szerokość i grubość desek, kierunek ułożenia (poprzecznie) i rozmieszczenie listew stalowych – SZACUNKOWE",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "ostoja_sgs": {
+      "nazwa_pl": "ostoja",
+      "nazwa_en": "underframe",
+      "opis_wspolny": "components/ostoja.json#ostoja",
+      "funkcja": "Nośna konstrukcja platformy: przenosi masę kontenerów (przez zaczepy) i podłogi na wózki oraz siły pociągowe i zderzakowe.",
+      "budowa": "Spawana rama: dwie rybie ostojnice (wyższe w środku wagonu), belka środkowa, dwie belki czołowe, dwie belki skrętowe z czopami, poprzecznice zwykłe i poprzecznice zaczepów, podłużnice pod podłogą, osłony przeciwiskrowe; stopnie i poręcze manewrowe w narożnikach. Rozstaw czopów skrętu 14 600 mm (Sgs 412Z).",
+      "zrodla": [
+        "PKP Cargo – katalog wagonów (2019), Sgs typ 412Z i 412Z/Gn, s. 84–85: https://www.pkpcargo.com/media/1002903/pkp-cargo_katalog-wagonow_3008_19.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Przekroje i wysokości belek ostoi – SZACUNKOWE (kształt ostojnic wg rysunku poglądowego w katalogu PKP Cargo)"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "ostojnica_sgs": {
+      "nazwa_pl": "ostojnica",
+      "nazwa_en": "solebar",
+      "opis_wspolny": "components/ostoja.json#ostojnica",
+      "funkcja": "Główna podłużna belka nośna po boku platformy; przenosi zginanie od ładunku między wózkami.",
+      "budowa": "Blachownica rybia (fish-belly): środnik o wysokości rosnącej ku środkowi wagonu, półka dolna wzdłuż krzywizny, półka górna wysunięta pod brzeg podłogi z kątownikiem obrzeża. Przy zaczepach wycięcia w półce górnej i przekładki pod wsporniki zaczepów; otwory na cięgła hamulca; uchwyty do podnoszenia wagonu przy belkach skrętowych.",
+      "zrodla": [
+        "PKP Cargo – katalog wagonów (2019), Sgs typ 412Z i 412Z/Gn, s. 84–85: https://www.pkpcargo.com/media/1002903/pkp-cargo_katalog-wagonow_3008_19.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Wysokość środnika (w modelu 0,24 m na końcach, 0,47 m w środku) – SZACUNKOWE"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "belka_czolowa_sgs": {
+      "nazwa_pl": "belka czołowa",
+      "nazwa_en": "headstock",
+      "opis_wspolny": "components/ostoja.json#belka_czolowa",
+      "funkcja": "Zamyka ostoję na końcu wagonu; mocowane są do niej zderzaki, przechodzi przez nią hak cięgłowy.",
+      "budowa": "Belka skrzynkowa z blachy czołowej, półek i żeber; nakładki pod zderzaki, otwór haka; na górze stalowa listwa podłogi ze stałymi zaczepami kontenerowymi w pobliżu.",
+      "zrodla": [],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "belka_skretowa_sgs": {
+      "nazwa_pl": "belka skrętowa",
+      "nazwa_en": "body bolster",
+      "opis_wspolny": "components/ostoja.json#belka_skretowa",
+      "funkcja": "Przenosi masę ostoi i ładunku z ostojnic na czop skrętu i ślizgi boczne wózka.",
+      "budowa": "Belka skrzynkowa w poprzek wagonu nad wózkiem, z żebrami; w środku czop skrętu, po bokach przeciwślizgi. Rozstaw czopów skrętu 14 600 mm (Sgs 412Z).",
+      "zrodla": [
+        "PKP Cargo – katalog wagonów (2019), Sgs typ 412Z i 412Z/Gn, s. 84–85: https://www.pkpcargo.com/media/1002903/pkp-cargo_katalog-wagonow_3008_19.pdf"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "belka_srodkowa_sgs": {
+      "nazwa_pl": "belka środkowa",
+      "nazwa_en": "centre sill",
+      "opis_wspolny": "components/ostoja.json#belka_srodkowa",
+      "funkcja": "Przenosi siły pociągowe i ściskające między końcami wagonu; mieści urządzenie cięgłowe; podpiera podłogę.",
+      "budowa": "Dwa ceowniki wzdłuż osi wagonu połączone przewiązkami.",
+      "zrodla": [],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "poprzecznice_sgs": {
+      "nazwa_pl": "poprzecznice",
+      "nazwa_en": "cross bearers",
+      "opis_wspolny": "components/ostoja.json#poprzecznice",
+      "funkcja": "Łączą belkę środkową z ostojnicami i podpierają podłogę; do ich półek dolnych mocowane są elementy hamulca i wieszaki przewodu głównego.",
+      "budowa": "Dwuteowniki spawane między belką środkową a ostojnicami, z szeroką półką dolną.",
+      "zrodla": [],
+      "do_sprawdzenia": [
+        "Liczba i rozstaw poprzecznic – SZACUNKOWE"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "poprzecznice_zaczepow_sgs": {
+      "nazwa_pl": "poprzecznice zaczepów",
+      "nazwa_en": "spigot cross bearers",
+      "funkcja": "Przenoszą na ostoję siły od kontenerów stojących na zaczepach (ciężar, siły wzdłużne przy hamowaniu i uderzeniach).",
+      "budowa": "Blachownice spawane między belką środkową a ostojnicami; część zewnętrzna obniżona – na niej stoi wspornik zaczepu, przyspawany także do ostojnicy.",
+      "typowe_uszkodzenia": "Pęknięcia spoin przy wspornikach zaczepów i przy ostojnicach (GCU 4.1.2, Zał. 10 pkt 4.3); odkształcenia po uderzeniu kontenerem przy załadunku; korozja.",
+      "przepisy": "GCU Zał. 9 usterki 4.1.2, 6.7.1; GCU Zał. 10 pkt 4.2–4.3.",
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Konstrukcja węzła zaczepu (wspornik na poprzecznicy) – SZACUNKOWA, sprawdzić na wagonie",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "podluznice_sgs": {
+      "nazwa_pl": "podłużnice",
+      "nazwa_en": "floor stringers",
+      "funkcja": "Podpierają deski podłogi między ostojnicami a belką środkową; do nich mocowane są osłony przeciwiskrowe i część elementów hamulca.",
+      "budowa": "Dwuteowniki wzdłuż wagonu, oparte na poprzecznicach, przerwane na belkach skrętowych.",
+      "typowe_uszkodzenia": "Pęknięcia spoin z poprzecznicami, korozja pod deskami podłogi. Wg katalogu GCU: pęknięcia ostoi i spoin (4.1.2; Zał. 10 pkt 4.3).",
+      "przepisy": "GCU Zał. 9 usterka 4.1.2; GCU Zał. 10 pkt 4.2–4.3.",
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Czy Sgs 412Z ma podłużnice pod podłogą i ile – SZACUNKOWE",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "oslony_przeciwiskrowe_sgs": {
+      "nazwa_pl": "osłony przeciwiskrowe",
+      "nazwa_en": "spark arrestor plates",
+      "funkcja": "Chronią palną (drewnianą) podłogę i ładunek przed iskrami spod hamowanych kół.",
+      "budowa": "Blachy stalowe nad każdym hamowanym kołem (8 sztuk), z zagiętą krawędzią, zawieszone na płaskownikach pod podłużnicami – nie bezpośrednio pod podłogą.",
+      "typowe_uszkodzenia": "Brak osłony lub przerdzewiała na wylot – GCU 3.4.1 (K + R1 – odłączyć hamulec, kl. 4); osłona luźno zwisająca – 3.4.2 (zdjąć, K + R1, jeśli się nie da – odstawić wagon, kl. 4).",
+      "wymiary_graniczne": "Osłony nie mogą być przesunięte ani przerdzewiałe na wylot; osłony zamocowane bezpośrednio pod podłogą są niedopuszczalne (GCU Zał. 10 pkt 4.6).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 3.4.1–3.4.2; Aneks 5 (3.4.1 – obecna, nieprzerdzewiała na wylot; 3.4.2 – prawidłowo zamocowana); GCU Zał. 10 pkt 4.6 (wagony z podłogą palną, także platformy bez podłogi lub z podłogą szkieletową do kontenerów i naczep); GCU Zał. 7 – osłony przeciwiskrowe jako wymienne części zamienne.",
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 7 (części zamienne wymienne): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Kształt, wymiary i sposób zawieszenia osłon – SZACUNKOWE; sprawdzić na wagonie",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    },
+    "zaczepy_sgs": {
+      "nazwa_pl": "zaczepy kontenerowe",
+      "nazwa_en": "container spigots",
+      "funkcja": "Ustalają położenie kontenerów na wagonie – czopy wchodzą w otwory dolnych naroży kontenerów. Zaczepy składane kładzie się na bok tam, gdzie przy danym układzie kontenerów nie stoi naroże.",
+      "budowa": "Wg katalogu PKP Cargo Sgs 412Z ma 24 trzpienie do mocowania kontenerów. W modelu 20 zaczepów w 10 położeniach wzdłuż wagonu, wyliczonych z wymiarów kontenerów ISO (rozstaw naroży 20' – 5 853 mm, 30' – 8 918 mm, 40' – 11 985 mm): skrajne stałe (układy 3 × 20', 2 × 30', 40' + 20'), pozostałe składane (20' w środku, 2 × 20' lub 40'/45' w środku, 2 × 30').",
+      "typowe_uszkodzenia": "Czop lub płyta oporowa odkształcone (GCU 6.7.1.3 – nieużywany, 6.7.1.4 – używany); ruchome części niezabezpieczone (6.7.5); naroża kontenerów nieosadzone na czopach (7.7.2); czopy płyt uchylnych ani podniesione, ani zabezpieczone (7.7.3).",
+      "przepisy": "GCU Zał. 9 Aneks 1 usterki 6.7.1, 6.7.5, 7.7.2, 7.7.3; GCU Zał. 10 kody prac CU61010–CU61012; UIC 592.",
+      "zrodla": [
+        "PKP Cargo – katalog wagonów (2019), Sgs typ 412Z i 412Z/Gn, s. 84–85: https://www.pkpcargo.com/media/1002903/pkp-cargo_katalog-wagonow_3008_19.pdf",
+        "William Cook Intermodal – broszura (tabela wymiarów kontenerów ISO: długość L i rozstaw naroży S dla 10', 20', 30', 40'): https://www.william-cook.co.uk/_media/images/client-uploads/Intermodal-Brochure.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "DB Cargo – katalog wagonów, Sgns 681 (składane czopy wg UIC 592-1 i 592-2): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/s-bogie-flat-wagons-with-4-wheelsets/Sgns-681-9121290",
+        "Wascosa – karta wagonu 48' (stałe czopy dla 40'/45', uchylne dla 20', UIC 592): https://wascosa.alpha.bag.ch/99-datenobjekte/wagenpark/Typenbl%C3%A4tter/en/intermodalwagen/containertragwagen/containerwagen_48_en_ffs.pdf"
+      ],
+      "do_sprawdzenia": [
+        "Rozmieszczenie i liczba zaczepów – wyliczone (SZACUNKOWE); katalog PKP Cargo: 24 trzpienie, przy 412Z uwaga „trzpienie kontenerowe niezgodne z UIC i TSI”",
+        "Rozstaw poprzeczny czopów 2 259 mm – wartość z ISO 1161, nie potwierdzona w dostępnym źródle (SZACUNKOWE)",
+        "Złożona głowica wystaje w modelu poza ostojnicę (ok. 1,58 m od osi wagonu, przy szerokości wagonu 2 940 mm) – kształt wspólnego modelu zaczepu do sprawdzenia",
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
+      ],
+      "zdjecia": [],
+      "status": "do weryfikacji"
+    }
+  },
+  "drzewo": {
+    "id": "sgs",
+    "typ": "sgs",
+    "children": [
+      {
+        "id": "podloga",
+        "typ": "podloga_sgs"
+      },
+      {
+        "id": "ostoja",
+        "typ": "ostoja_sgs",
+        "param": {
+          "pol_dlugosci": 9.33,
+          "z_ostojnicy": 1.29,
+          "pol_szerokosci": 1.37,
+          "y_ostojnicy": 0.95,
+          "y_poreczy": 1.08,
+          "y_stopnia": 0.45,
+          "porecz_pionowa": "belka",
+          "y_poreczy_belka": [
+            0.86,
+            1.16
+          ]
+        },
+        "children": [
+          {
+            "id": "ostojnica_1",
+            "typ": "ostojnica_sgs",
+            "dopisek": "strona 1"
+          },
+          {
+            "id": "ostojnica_2",
+            "typ": "ostojnica_sgs",
+            "dopisek": "strona 2"
+          },
+          {
+            "id": "belka_czolowa_1",
+            "typ": "belka_czolowa_sgs",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "belka_czolowa_2",
+            "typ": "belka_czolowa_sgs",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "belka_skretowa_1",
+            "szablon": "belka_skretowa",
+            "dopisek": "nr 1"
+          },
+          {
+            "id": "belka_skretowa_2",
+            "szablon": "belka_skretowa",
+            "dopisek": "nr 2"
+          },
+          {
+            "id": "belka_srodkowa",
+            "typ": "belka_srodkowa_sgs"
+          },
+          {
+            "id": "poprzecznice",
+            "typ": "poprzecznice_sgs"
+          },
+          {
+            "id": "poprzecznice_zaczepow",
+            "typ": "poprzecznice_zaczepow_sgs"
+          },
+          {
+            "id": "podluznice",
+            "typ": "podluznice_sgs"
+          },
+          {
+            "id": "oslony_przeciwiskrowe",
+            "typ": "oslony_przeciwiskrowe_sgs"
+          },
+          {
+            "id": "stopien_manewrowy_1",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 1",
+            "param": {
+              "sx": 1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_2",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 2",
+            "param": {
+              "sx": 1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_3",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 3",
+            "param": {
+              "sx": -1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "stopien_manewrowy_4",
+            "ref": "components/ostoja.json#stopien_manewrowy",
+            "dopisek": "narożnik 4",
+            "param": {
+              "sx": -1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_1",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 1",
+            "param": {
+              "sx": 1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_2",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 2",
+            "param": {
+              "sx": 1,
+              "sz": -1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_3",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 3",
+            "param": {
+              "sx": -1,
+              "sz": 1
+            }
+          },
+          {
+            "id": "porecz_manewrowa_4",
+            "ref": "components/ostoja.json#porecz_manewrowa",
+            "dopisek": "narożnik 4",
+            "param": {
+              "sx": -1,
+              "sz": -1
+            }
+          }
+        ]
+      },
+      {
+        "id": "zaczepy",
+        "typ": "zaczepy_sgs",
+        "children": [
+          {
+            "id": "zaczep_1",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_staly",
+            "dopisek": "nr 1 – koniec 1, strona 1"
+          },
+          {
+            "id": "zaczep_2",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_staly",
+            "dopisek": "nr 2 – koniec 1, strona 2"
+          },
+          {
+            "id": "zaczep_3",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 3 – koniec 1, strona 1"
+          },
+          {
+            "id": "zaczep_4",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 4 – koniec 1, strona 2"
+          },
+          {
+            "id": "zaczep_5",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 5 – koniec 1, strona 1"
+          },
+          {
+            "id": "zaczep_6",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 6 – koniec 1, strona 2"
+          },
+          {
+            "id": "zaczep_7",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 7 – koniec 1, strona 1"
+          },
+          {
+            "id": "zaczep_8",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 8 – koniec 1, strona 2"
+          },
+          {
+            "id": "zaczep_9",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 9 – koniec 1, strona 1"
+          },
+          {
+            "id": "zaczep_10",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 10 – koniec 1, strona 2"
+          },
+          {
+            "id": "zaczep_11",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 11 – koniec 2, strona 1"
+          },
+          {
+            "id": "zaczep_12",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 12 – koniec 2, strona 2"
+          },
+          {
+            "id": "zaczep_13",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 13 – koniec 2, strona 1"
+          },
+          {
+            "id": "zaczep_14",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 14 – koniec 2, strona 2"
+          },
+          {
+            "id": "zaczep_15",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 15 – koniec 2, strona 1"
+          },
+          {
+            "id": "zaczep_16",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 16 – koniec 2, strona 2"
+          },
+          {
+            "id": "zaczep_17",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 17 – koniec 2, strona 1"
+          },
+          {
+            "id": "zaczep_18",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_skladany",
+            "dopisek": "nr 18 – koniec 2, strona 2"
+          },
+          {
+            "id": "zaczep_19",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_staly",
+            "dopisek": "nr 19 – koniec 2, strona 1"
+          },
+          {
+            "id": "zaczep_20",
+            "ref": "components/ladunek.json#zaczep_kontenerowy_staly",
+            "dopisek": "nr 20 – koniec 2, strona 2"
+          }
+        ]
+      },
+      {
+        "id": "wozek_1",
+        "ref": "components/y25.json",
+        "dopisek": "nr 1"
+      },
+      {
+        "id": "wozek_2",
+        "ref": "components/y25.json",
+        "dopisek": "nr 2"
+      },
+      {
+        "id": "ciegla_zderzaki_1",
+        "ref": "components/ciegla_zderzaki.json",
+        "dopisek": "koniec 1"
+      },
+      {
+        "id": "ciegla_zderzaki_2",
+        "ref": "components/ciegla_zderzaki.json",
+        "dopisek": "koniec 2"
+      },
+      {
+        "id": "hamulec",
+        "ref": "components/hamulec.json",
+        "param": {
+          "dlugosc": 18.66,
+          "x_wozka": 7.3,
+          "hamulec_reczny": false,
+          "uklad": {
+            "pipeY": 0.93,
+            "pipeZ": 0.32,
+            "valve": [
+              -1.5,
+              0.75,
+              0.6
+            ],
+            "reservoir": [
+              -2.6,
+              0.83,
+              -0.62
+            ],
+            "cyl": [
+              1.275,
+              0.807,
+              0.62
+            ],
+            "loadValve": [
+              -0.8,
+              0.9,
+              0.62
+            ],
+            "release": [
+              -1.9,
+              0.86,
+              -0.35
+            ],
+            "leverY": 0.807,
+            "lever1X": 2.075,
+            "lever2X": 0.625,
+            "leverZ": [
+              0.3,
+              1.0
+            ],
+            "rodZ": 0.95,
+            "slackX": [
+              2.2,
+              3.0
+            ],
+            "mountY": 1.05,
+            "sideZ": 1.37,
+            "pipeHangersX": [
+              -4.5,
+              -1.5,
+              1.5,
+              4.5
+            ]
+          }
+        },
+        "children": [
+          {
+            "id": "zawor_rozrzadczy",
+            "typ": "zawor_rozrzadczy"
+          },
+          {
+            "id": "cylinder_hamulcowy",
+            "typ": "cylinder_hamulcowy",
+            "ukryj_otoczenie": true,
+            "children": [
+              {
+                "id": "tlok_cylindra",
+                "typ": "tlok_cylindra"
+              },
+              {
+                "id": "pokrywa_cylindra",
+                "typ": "pokrywa_cylindra",
+                "zdejmowalny": true
+              }
+            ]
+          },
+          {
+            "id": "nastawiacz",
+            "typ": "nastawiacz"
+          },
+          {
+            "id": "przestawiacz_prozny_ladowny",
+            "typ": "przestawiacz_prozny_ladowny",
+            "children": [
+              {
+                "id": "dzwignia_przestawiacza",
+                "typ": "dzwignia_przestawiacza"
+              }
+            ]
+          },
+          {
+            "id": "luzownik",
+            "typ": "luzownik"
+          },
+          {
+            "id": "zbiornik_pomocniczy",
+            "typ": "zbiornik_pomocniczy"
+          },
+          {
+            "id": "przewod_glowny",
+            "typ": "przewod_glowny"
+          },
+          {
+            "id": "rury_laczace",
+            "typ": "rury_laczace"
+          },
+          {
+            "id": "ciegla_hamulcowe",
+            "typ": "ciegla_hamulcowe"
+          },
+          {
+            "id": "kurek_koncowy_1",
+            "typ": "kurek_koncowy",
+            "dopisek": "koniec 1"
+          },
+          {
+            "id": "kurek_koncowy_2",
+            "typ": "kurek_koncowy",
+            "dopisek": "koniec 2"
+          },
+          {
+            "id": "sprzeg_hamulcowy_1",
+            "typ": "sprzeg_hamulcowy",
+            "dopisek": "koniec 1"
+          },
+          {
+            "id": "sprzeg_hamulcowy_2",
+            "typ": "sprzeg_hamulcowy",
+            "dopisek": "koniec 2"
+          }
+        ]
+      }
+    ]
+  }
+}
