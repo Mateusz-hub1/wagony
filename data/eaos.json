@@ -56,15 +56,19 @@
       "nazwa_en": "Eaos open wagon",
       "funkcja": "Węglarka czteroosiowa (wagon odkryty wysokoburtowy) do przewozu ładunków masowych, np. węgla, kruszyw, złomu.",
       "budowa": "Pudło stalowe z dwiema parami drzwi dwuskrzydłowych na każdym boku, ciągłym pasem górnym i podłogą stalową; spawana ostoja; dwa wózki Y25; urządzenia cięgłowo-zderzakowe; hamulec zespolony. Długość ze zderzakami 14 040 mm, rozstaw czopów skrętu 9 000 mm, długość ładunkowa 12 800 mm, szerokość ładunkowa 2 800 mm, wysokość podłogi ok. 1 200 mm.",
-      "przepisy": "Oznaczenie literowe wg UIC 438-2. GCU – Załącznik 9.",
+      "przepisy": "Oznaczenie literowe wg UIC 438-2: E – zwykły wagon odkryty wysokoburtowy, a – 4 zestawy kołowe, o – bez wywrotu przez czoło, s – dopuszczony do pociągów do 100 km/h. GCU Zał. 9 usterki 6.1.1 (oznakowanie wagonu: numer, tara, granice obciążenia, długość ze zderzakami, dane posiadacza) i 6.1.2 (tabliczka utrzymania – termin rewizji); GCU Zał. 10 pkt 6.1–6.14; EN 12663-2 (wytrzymałość pudeł wagonów towarowych).",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo – katalog wagonów, Eaos-x 051: https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456",
-        "VTG – karta wagonu Eaos B41.072C: https://www.vtg.com/fileadmin/VTG/Dokumente/waggon_datenblaetter/Boxwagen-Eaos-B41.072C.pdf"
+        "VTG – karta wagonu Eaos B41.072C: https://www.vtg.com/fileadmin/VTG/Dokumente/waggon_datenblaetter/Boxwagen-Eaos-B41.072C.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Wikipedia – UIC classification of goods wagons (znaczenie liter E, F, a, o, s, n, l): https://en.wikipedia.org/wiki/UIC_classification_of_goods_wagons",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf"
       ],
       "do_sprawdzenia": [
-        "przepisy: Oznaczenie literowe wg UIC 438-2 – sprawdzić znaczenie liter",
-        "przepisy: GCU – Załącznik 9 – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: znaczenie liter wzięte z Wikipedii (bez numeru karty UIC) – potwierdzić w UIC 438-2 / TSI WAG"
       ],
       "status": "do weryfikacji"
     },
@@ -73,13 +77,16 @@
       "nazwa_en": "body",
       "funkcja": "Przestrzeń ładunkowa wagonu; ściany przenoszą parcie ładunku.",
       "budowa": "Podłoga stalowa, dwie ściany boczne (każda z dwiema parami drzwi dwuskrzydłowych), dwie ściany czołowe, ciągły pas górny po obu stronach. Konstrukcja spawana, przyspawana do ostoi.",
-      "typowe_uszkodzenia": "Wgniecenia i wybrzuszenia ścian, pęknięcia spoin słupków, korozja dolnej części ścian.",
+      "typowe_uszkodzenia": "Wgniecenia i wybrzuszenia ścian, pęknięcia spoin słupków, korozja dolnej części ścian. Wg katalogu GCU: uszkodzona część szkieletu pudła – bez naruszenia skrajni (6.1.3.1) lub z naruszeniem skrajni – odstawienie (6.1.3.2); dziurawe lub złamane poszycie ścian (6.1.4); ściany boczne uszkodzone z ryzykiem utraty ładunku lub naruszenia skrajni (6.3.1).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.3–6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2, 6.52 (sprawdzanie skrajni po odkształceniu wg Wytycznych załadunku); EN 12663-2.",
       "zdjecia": [],
       "zrodla": [
-        "DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny, dwie pary drzwi na stronę, podłoga stalowa): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
+        "DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny, dwie pary drzwi na stronę, podłoga stalowa): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -88,13 +95,16 @@
       "nazwa_en": "steel floor",
       "funkcja": "Przenosi masę ładunku na ostoję.",
       "budowa": "Blachy stalowe zespawane ze sobą, oparte na poprzecznicach i belkach ostoi, z podłużnicami usztywniającymi.",
-      "typowe_uszkodzenia": "Wgniecenia od ładunku (np. złomu), perforacja korozyjna, pęknięcia spoin.",
+      "typowe_uszkodzenia": "Wgniecenia od ładunku (np. złomu), perforacja korozyjna, pęknięcia spoin. Wg katalogu GCU: podłoga uszkodzona bez ryzyka utraty ładunku (6.1.5.1) lub z ryzykiem utraty ładunku (6.1.5.2).",
+      "przepisy": "GCU Zał. 9 usterka 6.1.5; GCU Zał. 10 pkt 6.5.",
       "zdjecia": [],
       "zrodla": [
-        "VTG – karta wagonu Eaos B41.072C (wysokość podłogi 1 200 mm): https://www.vtg.com/fileadmin/VTG/Dokumente/waggon_datenblaetter/Boxwagen-Eaos-B41.072C.pdf"
+        "VTG – karta wagonu Eaos B41.072C (wysokość podłogi 1 200 mm): https://www.vtg.com/fileadmin/VTG/Dokumente/waggon_datenblaetter/Boxwagen-Eaos-B41.072C.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -103,11 +113,15 @@
       "nazwa_en": "side wall",
       "funkcja": "Zamyka przestrzeń ładunkową z boku i przenosi parcie ładunku.",
       "budowa": "Poszycie z blachy stalowej, słupki pośrednie z profili, wzmocnione słupki drzwiowe, listwa dolna z zaczepami. Dwa otwory drzwiowe.",
-      "typowe_uszkodzenia": "Wybrzuszenia poszycia, pęknięte lub odgięte słupki, pęknięcia spoin przy ostoi.",
+      "typowe_uszkodzenia": "Wybrzuszenia poszycia, pęknięte lub odgięte słupki, pęknięcia spoin przy ostoi. Wg katalogu GCU: ściana uszkodzona bez ryzyka (6.3.1.1), z ryzykiem utraty ładunku (6.3.1.2) lub naruszenia skrajni (6.3.1.3); dziurawe lub złamane poszycie (6.1.4).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2, 6.20.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -116,11 +130,15 @@
       "nazwa_en": "double-leaf door",
       "funkcja": "Umożliwiają ręczny wyładunek i czyszczenie wnętrza z boku wagonu.",
       "budowa": "Dwa skrzydła na zawiasach przy słupkach drzwiowych, zamykane ryglami pionowymi zaczepiającymi o podłogę i pas górny.",
-      "typowe_uszkodzenia": "Wygięte skrzydła, zatarte lub urwane zawiasy, niedomykające się rygle, brak zabezpieczenia zamknięcia.",
+      "typowe_uszkodzenia": "Wygięte skrzydła, zatarte lub urwane zawiasy, niedomykające się rygle, brak zabezpieczenia zamknięcia. Wg katalogu GCU: drzwi niedomknięte lub niezabezpieczone (6.1.6.1); drzwi brakujące lub wypadnięte z prowadzenia (6.1.6.2); uszkodzone zawiasy, zamki, zaczepy, uchwyty lub rama drzwi (6.1.6.3–6.1.6.4); drzwi połamane lub wypaczone – z ryzykiem naruszenia skrajni lub utraty ładunku (6.1.6.5–6.1.6.6).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.6.1–6.1.6.6; GCU Zał. 10 pkt 6.7–6.9 (drzwi muszą dać się całkowicie zamknąć i zaryglować; bez odkształceń i dziur grożących utratą ładunku).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -129,11 +147,15 @@
       "nazwa_en": "door leaf",
       "funkcja": "Ruchoma część drzwi; otwiera się na zewnątrz wagonu.",
       "budowa": "Blacha z ramą i użebrowaniem z profili, trzy zawiasy, rygiel pionowy z dźwignią.",
-      "typowe_uszkodzenia": "Odkształcenia, pęknięcia przy zawiasach, luzy w zawiasach, uszkodzony rygiel.",
+      "typowe_uszkodzenia": "Odkształcenia, pęknięcia przy zawiasach, luzy w zawiasach, uszkodzony rygiel. Wg katalogu GCU: skrzydło połamane lub wypaczone (6.1.6.5–6.1.6.6); uszkodzone zawiasy, rygle, zaczepy lub uchwyty (6.1.6.3).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.6.3, 6.1.6.5–6.1.6.6; GCU Zał. 10 pkt 6.8–6.9.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -142,11 +164,15 @@
       "nazwa_en": "end wall",
       "funkcja": "Zamyka przestrzeń ładunkową od czoła i przejmuje parcie ładunku przy hamowaniu i uderzeniach.",
       "budowa": "Poszycie z blachy, użebrowanie pionowe i poziome, rama górna, słupki narożne łączące ze ścianami bocznymi.",
-      "typowe_uszkodzenia": "Wybrzuszenia od przesuniętego ładunku, pęknięcia słupków narożnych.",
+      "typowe_uszkodzenia": "Wybrzuszenia od przesuniętego ładunku, pęknięcia słupków narożnych. Wg katalogu GCU: dziurawe lub złamane poszycie (6.1.4); uszkodzenie z ryzykiem utraty ładunku lub naruszenia skrajni (6.3.1.2–6.3.1.3).",
+      "przepisy": "GCU Zał. 9 usterki 6.1.4, 6.3.1; GCU Zał. 10 pkt 6.1–6.2.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -155,96 +181,81 @@
       "nazwa_en": "top chord",
       "funkcja": "Usztywnia górną krawędź ściany bocznej; nad drzwiami stanowi ich górne oparcie.",
       "budowa": "Ciągły profil zamknięty przyspawany do poszycia i słupków na całej długości ściany.",
-      "typowe_uszkodzenia": "Wygięcia od chwytaków i urządzeń wyładowczych, pęknięcia, korozja wewnątrz profilu.",
+      "typowe_uszkodzenia": "Wygięcia od chwytaków i urządzeń wyładowczych, pęknięcia, korozja wewnątrz profilu. Wg katalogu GCU: pas górny złamany lub odkształcony – bez naruszenia skrajni (6.3.3.1) lub z naruszeniem skrajni (6.3.3.2).",
+      "przepisy": "GCU Zał. 9 usterka 6.3.3; GCU Zał. 10 pkt 6.23.",
       "zdjecia": [],
       "zrodla": [
-        "DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
+        "DB Cargo – katalog wagonów, Eaos-x 051 (ciągły pas górny): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456",
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
       ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
     "ostoja_eaos": {
       "nazwa_pl": "ostoja",
       "nazwa_en": "underframe",
+      "opis_wspolny": "components/ostoja.json#ostoja",
       "funkcja": "Nośna konstrukcja wagonu: przenosi masę pudła i ładunku na wózki oraz siły pociągowe i zderzakowe.",
       "budowa": "Spawana rama z dwóch ostojnic, dwóch belek czołowych, dwóch belek skrętowych z czopami skrętu, belki środkowej i poprzecznic. Na końcach stopnie i poręcze manewrowe.",
-      "typowe_uszkodzenia": "Pęknięcia spoin (zwłaszcza przy belkach skrętowych i czołowych), odkształcenia belek czołowych po uderzeniach, korozja.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo – katalog wagonów, Eaos-x 051 (rozstaw czopów skrętu 9 000 mm): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
-      ],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
       ],
       "status": "do weryfikacji"
     },
     "ostojnica_eaos": {
       "nazwa_pl": "ostojnica",
       "nazwa_en": "sole bar",
+      "opis_wspolny": "components/ostoja.json#ostojnica",
       "funkcja": "Główna podłużna belka ostoi po boku wagonu; podpiera ścianę boczną.",
       "budowa": "Kształtownik (ceownik) z przeponami wewnątrz, przyspawany do belek czołowych, skrętowych i poprzecznic.",
-      "typowe_uszkodzenia": "Pęknięcia, odkształcenia, korozja półki dolnej.",
       "zdjecia": [],
       "zrodla": [],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
-      ],
       "status": "do weryfikacji"
     },
     "belka_czolowa_eaos": {
       "nazwa_pl": "belka czołowa",
       "nazwa_en": "headstock",
+      "opis_wspolny": "components/ostoja.json#belka_czolowa",
       "funkcja": "Zamyka ostoję na końcu wagonu; na niej mocowane są zderzaki i przez nią przechodzi hak cięgłowy.",
       "budowa": "Belka skrzynkowa z blachy czołowej, półek i żeber; nakładki wzmacniające pod zderzaki, otwór haka.",
-      "typowe_uszkodzenia": "Odkształcenia po uderzeniach (najechania), pęknięcia przy mocowaniu zderzaków.",
       "zdjecia": [],
       "zrodla": [],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
-      ],
       "status": "do weryfikacji"
     },
     "belka_skretowa_eaos": {
       "nazwa_pl": "belka skrętowa",
       "nazwa_en": "body bolster",
+      "opis_wspolny": "components/ostoja.json#belka_skretowa",
       "funkcja": "Przenosi masę pudła z ostojnic na czop skrętu i ślizgi boczne wózka.",
       "budowa": "Belka skrzynkowa w poprzek wagonu nad wózkiem; w środku czop skrętu, po bokach przeciwślizgi.",
-      "typowe_uszkodzenia": "Pęknięcia spoin z ostojnicami, zużycie przeciwślizgów.",
       "zdjecia": [],
       "zrodla": [
         "DB Cargo – katalog wagonów, Eaos-x 051 (rozstaw czopów skrętu 9 000 mm): https://gueterwagenkatalog.dbcargo.com/catalogue/by-wagon-category/e-open-wagons/Eaos-x-051-9120456"
-      ],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
       ],
       "status": "do weryfikacji"
     },
     "belka_srodkowa_eaos": {
       "nazwa_pl": "belka środkowa",
       "nazwa_en": "centre sill",
+      "opis_wspolny": "components/ostoja.json#belka_srodkowa",
       "funkcja": "Przenosi siły pociągowe i ściskające między końcami wagonu; mieści urządzenie cięgłowe.",
       "budowa": "Dwa ceowniki wzdłuż osi wagonu połączone przewiązkami.",
-      "typowe_uszkodzenia": "Pęknięcia, odkształcenia w rejonie urządzenia cięgłowego.",
       "zdjecia": [],
       "zrodla": [],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
-      ],
       "status": "do weryfikacji"
     },
     "poprzecznice_eaos": {
       "nazwa_pl": "poprzecznice",
       "nazwa_en": "cross bearers",
+      "opis_wspolny": "components/ostoja.json#poprzecznice",
       "funkcja": "Łączą belkę środkową z ostojnicami i podpierają podłogę.",
       "budowa": "Dwuteowniki spawane między belką środkową a ostojnicami.",
-      "typowe_uszkodzenia": "Pęknięcia spoin, korozja.",
       "zdjecia": [],
       "zrodla": [],
-      "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
-      ],
       "status": "do weryfikacji"
     }
   },
