@@ -2,7 +2,8 @@
 import * as THREE from 'three';
 import { Viewer } from './engine/scene.js';
 import { loadWagonList, loadWagonData, walk } from './engine/dataLoader.js';
-import { buildModel } from './engine/partRegistry.js';
+import { buildModel, materialize } from './engine/partRegistry.js';
+import { perf } from './engine/device.js';
 import { Navigator } from './engine/navigator.js';
 import { Animator, setOpenRotation } from './engine/explode.js';
 import { applyVisibility, applyHighlight } from './engine/visibility.js';
@@ -93,14 +94,18 @@ async function openWagon(w) {
 
     const root = await loadWagonData(w.plik);
     const mod = await import(new URL(w.modul, document.baseURI).href);
-    const model = await buildModel(root, mod.builders);
+    // w trybie ?debug pełny model (żeby sprawdzanie kolizji objęło wszystkie części),
+    // chyba że w adresie jest też &lazy (do sprawdzania leniwego budowania)
+    const q = new URLSearchParams(location.search);
+    const lazy = perf.lazyDetails && (!q.has('debug') || q.has('lazy'));
+    const model = await buildModel(root, mod.builders, { lazy });
     viewer.scene.add(model);
 
     const nav = new Navigator(root);
     const animator = new Animator(root);
     const tree = new TreeView($('#tree'), nav);
     const toolbar = new Toolbar($('#toolbar'), nav, makeActions(nav));
-    current = { root, nav, animator, tree, toolbar, model };
+    current = { root, nav, animator, tree, toolbar, model, builders: mod.builders };
 
     picker ??= new Picker(viewer, nav, { onDoubleClick: (n) => onDoubleClick(n) });
     picker.nav = nav;
@@ -131,11 +136,13 @@ function closeWagon() {
 // ---------- Reakcja na zmiany stanu ----------
 function onChange(kind) {
   const { nav, tree, toolbar } = current;
+  viewer.invalidate(); // każda zmiana stanu zmienia obraz
   if (kind === 'hover') {
     applyHighlight(nav);
     viewer.canvas.style.cursor = nav.hovered ? 'pointer' : '';
     return;
   }
+  buildDetails();
   applyVisibility(nav);
   tree.update();
   toolbar.update();
@@ -172,6 +179,20 @@ function onDoubleClick(node) {
   if (!nav.enter(node)) toast('To pojedyncza część – nie da się jej dalej rozłożyć.');
 }
 
+// Leniwe szczegóły (telefon): części niezbudowane jeszcze (np. łożysko w maźnicy)
+// budujemy, gdy stają się widoczne, czyli gdy ich rodzic jest na ścieżce do bieżącego poziomu.
+function buildDetails() {
+  const cur = current;
+  const todo = [];
+  for (const n of Navigator.chain(cur.nav.focus)) for (const c of n.children) if (c.lazy) todo.push(c);
+  if (!todo.length) return;
+  Promise.all(todo.map((n) => materialize(n, cur.builders))).then(() => {
+    if (current !== cur) return; // w międzyczasie otwarto inny wagon
+    applyVisibility(cur.nav);
+    viewer.invalidate();
+  }).catch((e) => console.error(e));
+}
+
 // Pudełko obejmujące część PO zakończeniu animacji (żeby kamera od razu leciała w dobre miejsce)
 function targetBox(node) {
   const { root } = current;
@@ -203,6 +224,8 @@ function skip(n) {
 // Animacja rozkładania – co klatkę
 function frame(dt) {
   if (!current) return;
+  // dopóki coś się rusza, rysujemy każdą klatkę (rysowanie na żądanie, patrz scene.js)
+  if (current.animator.isMoving()) viewer.invalidate();
   if (current.animator.update(dt)) applyVisibility(current.nav);
 }
 

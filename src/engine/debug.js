@@ -9,6 +9,7 @@
 //   ?debug&open=a/b,c/d             – zdejmij / otwórz części
 //   ?debug&explode                  – rozłóż bieżący poziom
 //   ?debug&cam=x,y,z,tx,ty,tz       – ustaw kamerę (pozycja i punkt, na który patrzy)
+//   ?debug&mobile&lazy              – profil telefonu z leniwym budowaniem szczegółów
 import * as THREE from 'three';
 import { walk } from './dataLoader.js';
 
@@ -32,7 +33,7 @@ export function installDebug({ root, nav, animator }, viewer, params) {
     const [x, y, z, tx, ty, tz] = params.get('cam').split(',').map(Number);
     // po animacji kamery z flyToBox
     viewer.fly = null;
-    viewer.camera.position.set(x, y, z); viewer.controls.target.set(tx, ty, tz); viewer.controls.update();
+    viewer.camera.position.set(x, y, z); viewer.controls.target.set(tx, ty, tz); viewer.controls.update(); viewer.invalidate();
   }
   if (params.has('overlaps')) {
     const list = overlaps(root, { log: false });

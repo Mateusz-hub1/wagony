@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { buildTrack } from '../lib/track.js';
+import { perf } from './device.js';
 
 // Domyślny kierunek patrzenia kamery (skos z góry, z boku wagonu)
 const DEFAULT_DIR = new THREE.Vector3(0.75, 0.45, 1).normalize();
@@ -13,12 +14,14 @@ export class Viewer {
 
     // --- Renderer z tone mappingiem ACES i miękkimi cieniami ---
     this.renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this.renderer.setPixelRatio(perf.pixelRatio); // na telefonie niższa (patrz device.js)
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure = 1.0;
     this.renderer.shadowMap.enabled = true;
-    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.renderer.shadowMap.type = perf.shadowType;
+    // Na telefonie mapa cieni liczona tylko po zmianie sceny (nie przy każdym obrocie kamery)
+    this.renderer.shadowMap.autoUpdate = !perf.staticShadows;
 
     // --- Scena i oświetlenie HDRI (RoomEnvironment) ---
     this.scene = new THREE.Scene();
@@ -31,10 +34,10 @@ export class Viewer {
     this.sun = new THREE.DirectionalLight(0xffffff, 1.6);
     this.sun.position.set(6, 14, 8);
     this.sun.castShadow = true;
-    this.sun.shadow.mapSize.set(2048, 2048);
+    this.sun.shadow.mapSize.set(perf.shadowMapSize, perf.shadowMapSize);
     this.sun.shadow.bias = -0.0004;
     this.sun.shadow.normalBias = 0.02;
-    this.sun.shadow.radius = 4;
+    this.sun.shadow.radius = perf.shadowRadius;
     this.scene.add(this.sun, this.sun.target);
     this.setShadowArea(new THREE.Vector3(), 9);
 
@@ -57,9 +60,14 @@ export class Viewer {
     this.controls.minDistance = 0.15;
     this.controls.maxDistance = 80;
     this.controls.maxPolarAngle = Math.PI * 0.495; // nie schodzimy pod podłogę
+    // dotyk: jeden palec obraca, dwa palce przybliżają i przesuwają
+    this.controls.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_PAN };
 
     this.fly = null;          // trwający przelot kamery
     this.frameCallbacks = [];
+    // Rysowanie na żądanie: klatka jest rysowana tylko wtedy, gdy coś się zmieniło
+    // (ruch kamery, animacja, podświetlenie...). Zmiany zgłasza się przez invalidate().
+    this.dirty = true;
     this.clock = new THREE.Clock();
 
     new ResizeObserver(() => this.resize()).observe(canvas.parentElement);
@@ -74,6 +82,13 @@ export class Viewer {
     this.renderer.setSize(w, h, false);
     this.camera.aspect = w / h;
     this.camera.updateProjectionMatrix();
+    this.invalidate();
+  }
+
+  // Zgłoszenie, że obraz trzeba narysować od nowa (razem z cieniami)
+  invalidate() {
+    this.dirty = true;
+    this.renderer.shadowMap.needsUpdate = true;
   }
 
   // Ustawia obszar, w którym liczone są cienie (mniejszy = ostrzejsze cienie)
@@ -85,6 +100,7 @@ export class Viewer {
     cam.updateProjectionMatrix();
     this.sun.target.position.copy(center);
     this.sun.position.copy(center).add(new THREE.Vector3(6, 14, 8).setLength(25));
+    this.invalidate();
   }
 
   // Płynny przelot kamery, tak żeby cały obszar (box) był widoczny
@@ -109,6 +125,7 @@ export class Viewer {
   // Pętla animacji: przelot kamery + funkcje dopięte przez resztę programu
   tick() {
     const dt = Math.min(this.clock.getDelta(), 0.1);
+    const flying = !!this.fly;
     if (this.fly) {
       const f = this.fly;
       f.t = Math.min(1, f.t + dt / f.duration);
@@ -118,7 +135,10 @@ export class Viewer {
       if (f.t >= 1) this.fly = null;
     }
     for (const cb of this.frameCallbacks) cb(dt);
-    this.controls.update();
+    // update() zwraca true, gdy kamera się ruszyła (obrót, przybliżanie, wygaszanie ruchu)
+    const moved = this.controls.update();
+    if (!(this.dirty || flying || moved)) return; // nic się nie zmieniło – nie rysujemy
+    this.dirty = false;
     this.renderer.render(this.scene, this.camera);
   }
 }
