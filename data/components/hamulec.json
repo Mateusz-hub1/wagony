@@ -91,14 +91,19 @@
       "nazwa_en": "air brake (automatic brake)",
       "funkcja": "Hamuje wagon razem z całym pociągiem; działa samoczynnie – spadek ciśnienia w przewodzie głównym (także przy rozerwaniu pociągu) powoduje hamowanie.",
       "budowa": "Przewód główny z kurkami końcowymi i sprzęgami hamulcowymi, zawór rozrządczy, zbiornik pomocniczy, cylinder hamulcowy, przestawiacz próżny/ładowny, luzownik, nastawiacz skoku tłoka, cięgła i dźwignie do wózków, hamulec ręczny (w części wagonów).",
-      "typowe_uszkodzenia": "Nieszczelności, uszkodzone węże, niesprawny zawór rozrządczy lub luzownik, źle ustawiony przestawiacz, nieprawidłowy skok tłoka.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "typowe_uszkodzenia": "Nieszczelności, uszkodzone węże, niesprawny zawór rozrządczy lub luzownik, źle ustawiony przestawiacz, nieprawidłowy skok tłoka. W katalogu GCU: niesprawny kurek odcinający lub niejasne położenie (3.1.3), niesprawny przestawiacz próżny/ładowny lub G/P (3.1.4), urwane cięgło luzownika (3.1.5), niesprawny przewód główny (3.3.1), uszkodzony lub brakujący sprzęg hamulcowy (3.3.2), niesprawny kurek końcowy (3.3.5), hamulec niesprawny, a nie oznaczony (3.3.4), niesprawny hamulec ręczny (3.5.1).",
+      "przepisy": "EN 14198 (układ hamulcowy pociągów prowadzonych lokomotywą), EN 15355 (zawory rozrządcze), EN 14531 (obliczanie drogi hamowania); UIC 540 / UIC 541 (hamulce pneumatyczne); UIC 543-1 (próba hamulca przy naprawach wg GCU Zał. 10 pkt 3.19); GCU Zał. 9 usterki 3.1–3.5; GCU Zał. 10 pkt 3.1–3.21 (prace przy pneumatycznych częściach hamulca tylko za zgodą posiadacza – pkt 3.14).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 14198 – wymagania dla układu hamulcowego pociągów prowadzonych lokomotywą; EN 15355 – zawory rozrządcze i urządzenia odcinające; EN 15624 – przestawiacze próżny/ładowny; EN 15625 – samoczynna regulacja siły hamowania zależna od obciążenia; EN 15807 – sprzęgi pneumatyczne (półsprzęgi); EN 16241 – nastawiacz skoku tłoka; EN 14531 – obliczanie drogi hamowania"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu",
+        "przepisy: UIC 540 / 541 – brak linku do publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -107,13 +112,18 @@
       "nazwa_en": "distributor (control valve)",
       "funkcja": "Steruje napełnianiem i opróżnianiem cylindra hamulcowego w zależności od zmian ciśnienia w przewodzie głównym; napełnia zbiornik pomocniczy.",
       "budowa": "Korpus z mechanizmem zaworowym na płycie przyłączeniowej, z rękojeścią przestawiacza G/P (pociąg towarowy / osobowy).",
-      "typowe_uszkodzenia": "Nieszczelności, zbyt wolne lub zbyt szybkie luzowanie, zabrudzenia.",
-      "przepisy": "EN 15355; UIC 540",
+      "typowe_uszkodzenia": "Nieszczelności, zbyt wolne lub zbyt szybkie luzowanie, zabrudzenia; niesprawny przestawiacz G/P (GCU 3.1.4).",
+      "przepisy": "EN 15355 (zawory rozrządcze i urządzenia odcinające); UIC 540; GCU Zał. 9 usterka 3.1.4; GCU Zał. 10 pkt 3.2 (rękojeści przestawiaczy muszą być czytelnie oznaczone), 3.14 (naprawy i wymiana zaworu tylko za zgodą posiadacza).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 14198 – wymagania dla układu hamulcowego pociągów prowadzonych lokomotywą; EN 15355 – zawory rozrządcze i urządzenia odcinające; EN 15624 – przestawiacze próżny/ładowny; EN 15625 – samoczynna regulacja siły hamowania zależna od obciążenia; EN 15807 – sprzęgi pneumatyczne (półsprzęgi); EN 16241 – nastawiacz skoku tłoka; EN 14531 – obliczanie drogi hamowania"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: UIC 540 – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: UIC 540 – brak linku do publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -123,14 +133,16 @@
       "funkcja": "Zamienia ciśnienie powietrza na siłę, która przez dźwignie i cięgła dociska klocki do kół.",
       "budowa": "Korpus z tylną pokrywą, tłok z uszczelnieniem, tłoczysko, sprężyna powrotna, pokrywa przednia.",
       "typowe_uszkodzenia": "Nieszczelność uszczelnienia tłoka, uszkodzona sprężyna powrotna, korozja.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "przepisy": "UIC 540; GCU Zał. 10 pkt 3.14 (naprawy i wymiana cylindra tylko za zgodą posiadacza).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: Skok tłoka – uzupełnić",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia",
+        "wymiary_graniczne: skok tłoka – brak publicznego źródła – potwierdzić z doświadczenia",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -143,7 +155,7 @@
       "zdjecia": [],
       "zrodla": [],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -156,7 +168,7 @@
       "zdjecia": [],
       "zrodla": [],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia"
       ],
       "status": "do weryfikacji"
     },
@@ -165,14 +177,18 @@
       "nazwa_en": "slack adjuster",
       "funkcja": "Samoczynnie kasuje luz powstający przez zużycie wstawek hamulcowych, dzięki czemu skok tłoka pozostaje stały.",
       "budowa": "Korpus z gwintowanym wrzecionem i mechanizmem regulacyjnym, włączony w cięgło hamulcowe, z dźwignią sterującą.",
-      "typowe_uszkodzenia": "Zablokowanie, niewłaściwa regulacja, uszkodzenia mechaniczne.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "typowe_uszkodzenia": "Zablokowanie, niewłaściwa regulacja (nastawiacz nie utrzymuje stałego luzu między wstawką a kołem), uszkodzenia mechaniczne. Po wymianie wstawek lub zestawów kołowych sprawdza się regulację i działanie nastawiacza (GCU Zał. 10 pkt 1.37, 3.21).",
+      "wymiary_graniczne": "Nastawiacz nie może pochłaniać więcej niż 2 kN siły hamowania; wokół nastawiacza co najmniej 15 mm wolnej przestrzeni (ERA/TD/2012-05/INT).",
+      "przepisy": "EN 16241 (nastawiacz skoku tłoka); ERA/TD/2012-05/INT (specyfikacja nastawiaczy); GCU Zał. 10 pkt 1.37, 3.21.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "ERA/TD/2012-05/INT – Specifications on slack adjusters (nastawiacz nie może pochłaniać więcej niż 2 kN siły hamowania; min. 15 mm luzu wokół nastawiacza): https://www.era.europa.eu/system/files/2022-11/Specifications%20on%20slack%20adjusters.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -181,15 +197,19 @@
       "nazwa_en": "empty/load changeover device",
       "funkcja": "Zmienia siłę hamowania zależnie od tego, czy wagon jest próżny, czy ładowny (żeby nie blokować kół wagonu próżnego i skutecznie hamować ładowny).",
       "budowa": "Zawór przełączający przy cylindrze / zaworze rozrządczym, z dźwignią wyprowadzoną na bok wagonu i tabliczką położeń.",
-      "typowe_uszkodzenia": "Dźwignia w złym położeniu, zatarcie, brak lub nieczytelna tabliczka.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "typowe_uszkodzenia": "Dźwignia w złym położeniu, zatarcie, brak lub nieczytelna tabliczka; przestawiacz niesprawny – etykieta K i odcięcie hamulca R1 (GCU 3.1.4).",
+      "przepisy": "EN 15624 (przestawiacze próżny/ładowny), EN 15625 (samoczynna regulacja siły hamowania zależna od obciążenia); GCU Zał. 9 usterka 3.1.4; GCU Zał. 10 pkt 3.2.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 14198 – wymagania dla układu hamulcowego pociągów prowadzonych lokomotywą; EN 15355 – zawory rozrządcze i urządzenia odcinające; EN 15624 – przestawiacze próżny/ładowny; EN 15625 – samoczynna regulacja siły hamowania zależna od obciążenia; EN 15807 – sprzęgi pneumatyczne (półsprzęgi); EN 16241 – nastawiacz skoku tłoka; EN 14531 – obliczanie drogi hamowania"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: Masa przestawienia – z napisów na wagonie",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "wymiary_graniczne: masa przestawienia – z napisów na wagonie",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -198,11 +218,15 @@
       "nazwa_en": "changeover lever",
       "funkcja": "Ręczne przełączanie położenia próżny / ładowny z boku wagonu.",
       "budowa": "Wałek z rękojeścią przy ostojnicy i tabliczka położeń.",
-      "typowe_uszkodzenia": "Wygięta lub zablokowana dźwignia, brak tabliczki.",
+      "typowe_uszkodzenia": "Wygięta lub zablokowana dźwignia, brak tabliczki; położenia muszą być łatwe do rozpoznania (GCU Zał. 10 pkt 3.2); niesprawny przestawiacz (Zał. 9 usterka 3.1.4).",
+      "przepisy": "GCU Zał. 9 usterka 3.1.4; GCU Zał. 10 pkt 3.2.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -211,14 +235,16 @@
       "nazwa_en": "release valve",
       "funkcja": "Pozwala ręcznie odluźnić hamulec wagonu (np. odstawionego bez powietrza w przewodzie głównym).",
       "budowa": "Zawór przy zbiorniku / zaworze rozrządczym z cięgłem wyprowadzonym na oba boki wagonu, zakończonym uchwytami.",
-      "typowe_uszkodzenia": "Nieszczelność, urwane lub zablokowane cięgło.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "typowe_uszkodzenia": "Nieszczelność, urwane lub zablokowane cięgło; cięgło luzownika urwane lub brak – etykieta K i odcięcie hamulca R1 (GCU 3.1.5; Zał. 10 pkt 3.20: wymienić).",
+      "przepisy": "GCU Zał. 9 usterka 3.1.5; GCU Zał. 10 pkt 3.20.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -228,14 +254,16 @@
       "funkcja": "Gromadzi sprężone powietrze, które przy hamowaniu trafia do cylindra hamulcowego.",
       "budowa": "Stalowy zbiornik z wypukłymi dennicami, mocowany opaskami do ostoi, z korkiem spustowym.",
       "typowe_uszkodzenia": "Korozja, nieszczelności, uszkodzone opaski.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "przepisy": "GCU Zał. 10 pkt 3.14 (prace przy częściach pneumatycznych tylko za zgodą posiadacza).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "wymiary_graniczne: Pojemność – uzupełnić",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "typowe_uszkodzenia: brak publicznego źródła – potwierdzić z doświadczenia",
+        "wymiary_graniczne: pojemność – brak publicznego źródła – potwierdzić z doświadczenia",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -244,14 +272,18 @@
       "nazwa_en": "brake pipe",
       "funkcja": "Biegnie przez cały pociąg; zasila hamulce wagonów i przekazuje sygnał hamowania (spadek ciśnienia).",
       "budowa": "Rura stalowa wzdłuż wagonu, mocowana obejmami do ostoi, zakończona kurkami końcowymi.",
-      "typowe_uszkodzenia": "Nieszczelności połączeń, korozja, uszkodzone obejmy.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "typowe_uszkodzenia": "Nieszczelności połączeń, korozja, uszkodzone obejmy; przewód główny niesprawny – odstawienie wagonu (GCU 3.3.1.1).",
+      "przepisy": "EN 14198; GCU Zał. 9 usterka 3.3.1; GCU Zał. 10 pkt 3.3 (przewód główny musi zapewniać ciągłość zasilania wzdłuż pociągu).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 14198 – wymagania dla układu hamulcowego pociągów prowadzonych lokomotywą; EN 15355 – zawory rozrządcze i urządzenia odcinające; EN 15624 – przestawiacze próżny/ładowny; EN 15625 – samoczynna regulacja siły hamowania zależna od obciążenia; EN 15807 – sprzęgi pneumatyczne (półsprzęgi); EN 16241 – nastawiacz skoku tłoka; EN 14531 – obliczanie drogi hamowania"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -260,11 +292,18 @@
       "nazwa_en": "branch pipes",
       "funkcja": "Łączą przewód główny z zaworem rozrządczym oraz zawór z cylindrem, zbiornikiem i przestawiaczem.",
       "budowa": "Rury stalowe z połączeniami gwintowanymi, kurek odcinający na odgałęzieniu do zaworu.",
-      "typowe_uszkodzenia": "Nieszczelności, pęknięcia, uszkodzenia mechaniczne.",
+      "typowe_uszkodzenia": "Nieszczelności, pęknięcia, uszkodzenia mechaniczne; kurek odcinający hamulec niesprawny (GCU 3.1.3.1) albo z niejasnym położeniem (3.1.3.2).",
+      "wymiary_graniczne": "Rękojeść kurka odcinającego hamulec skierowana pionowo w dół, gdy hamulec jest włączony; odcięcie obrotem rękojeści maks. o 90° (GCU Zał. 10 pkt 3.1).",
+      "przepisy": "EN 15355 (zawory rozrządcze i urządzenia odcinające); GCU Zał. 9 usterka 3.1.3; GCU Zał. 10 pkt 3.1.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 14198 – wymagania dla układu hamulcowego pociągów prowadzonych lokomotywą; EN 15355 – zawory rozrządcze i urządzenia odcinające; EN 15624 – przestawiacze próżny/ładowny; EN 15625 – samoczynna regulacja siły hamowania zależna od obciążenia; EN 15807 – sprzęgi pneumatyczne (półsprzęgi); EN 16241 – nastawiacz skoku tłoka; EN 14531 – obliczanie drogi hamowania"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem"
       ],
       "status": "do weryfikacji"
     },
@@ -273,14 +312,16 @@
       "nazwa_en": "brake rigging",
       "funkcja": "Przenoszą siłę z cylindra hamulcowego na układy hamulcowe obu wózków.",
       "budowa": "Dźwignia cylindrowa i dźwignia stała połączone cięgłem; od każdej z nich cięgło do dźwigni hamulca wózka.",
-      "typowe_uszkodzenia": "Zużyte sworznie i tuleje, brak zabezpieczeń sworzni, skrzywione cięgła.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "typowe_uszkodzenia": "Zużyte sworznie i tuleje, brak zabezpieczeń sworzni, skrzywione cięgła; części zwisające lub złamane (GCU 3.1.1), nieskuteczne strzemię bezpieczeństwa (3.1.2), ocieranie o oś (1.6.3).",
+      "przepisy": "GCU Zał. 9 usterki 1.6.3, 3.1.1–3.1.2; GCU Zał. 10 pkt 1.24, 3.5, 3.13, 3.18.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -289,14 +330,16 @@
       "nazwa_en": "end cock",
       "funkcja": "Zamyka lub otwiera przewód główny na końcu wagonu (przy łączeniu i rozłączaniu wagonów).",
       "budowa": "Zawór kulowy z rękojeścią; rękojeść wzdłuż przewodu – kurek otwarty.",
-      "typowe_uszkodzenia": "Nieszczelność, zablokowana lub urwana rękojeść.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "typowe_uszkodzenia": "Nieszczelność, zablokowana lub urwana rękojeść; kurek niesprawny, nieszczelny, odkształcony albo bez rękojeści – odstawienie wagonu (GCU 3.3.5.1); brak lub uszkodzony ogranicznik położenia (3.3.5.2).",
+      "przepisy": "GCU Zał. 9 usterka 3.3.5; GCU Zał. 10 pkt 3.12 (kurki muszą działać, każdy z ogranicznikiem w skrajnym położeniu).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -305,14 +348,19 @@
       "nazwa_en": "brake hose coupling",
       "funkcja": "Łączy przewody główne sąsiednich wagonów.",
       "budowa": "Gumowy wąż z opaskami i głowicą z uszczelką.",
-      "typowe_uszkodzenia": "Pęknięcia i starzenie gumy, uszkodzona uszczelka głowicy, przetarcia.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "typowe_uszkodzenia": "Pęknięcia i starzenie gumy, uszkodzona uszczelka głowicy, przetarcia; sprzęg uszkodzony lub brak (GCU 3.3.2.1), nieużywany sprzęg luźno zwisający (3.3.2.2), niesprawny wieszak sprzęgu (3.3.3), nieszczelność (Zał. 10 pkt 3.10).",
+      "wymiary_graniczne": "Żadna część sprzęgu hamulcowego nie może zwisać niżej niż 140 mm nad główką szyny (GCU Zał. 10 pkt 3.11).",
+      "przepisy": "EN 15807 (sprzęgi pneumatyczne); GCU Zał. 9 usterki 3.3.2–3.3.3; GCU Zał. 10 pkt 3.9–3.11, 3.17.",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "Lista norm zharmonizowanych (BAV, wg (UE) 2016/797, zm. (UE) 2025/424) – tytuły norm EN: https://www.bav.admin.ch/dam/fr/sd-web/zRspOx5XGvj8/Liste%20der%20Harmonisierten%20Normen%20(nach%20(EU)%202016_797-%20zuletzt%20ge%C3%A4ndert%20durch%20(EU)%202025_424).pdf",
+        "Tytuły norm wg listy BAV: EN 14198 – wymagania dla układu hamulcowego pociągów prowadzonych lokomotywą; EN 15355 – zawory rozrządcze i urządzenia odcinające; EN 15624 – przestawiacze próżny/ładowny; EN 15625 – samoczynna regulacja siły hamowania zależna od obciążenia; EN 15807 – sprzęgi pneumatyczne (półsprzęgi); EN 16241 – nastawiacz skoku tłoka; EN 14531 – obliczanie drogi hamowania"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     },
@@ -321,14 +369,16 @@
       "nazwa_en": "hand brake",
       "funkcja": "Zabezpiecza odstawiony wagon przed zbiegnięciem. Występuje tylko w części wagonów.",
       "budowa": "Koło ręczne na ścianie czołowej, przekładnia, cięgło do dźwigni hamulca wagonu.",
-      "typowe_uszkodzenia": "Zatarta przekładnia, urwane cięgło, brak koła.",
-      "przepisy": "UIC 540 / UIC 541 (hamulce pneumatyczne), EN 14531, EN 15355 (zawory rozrządcze); GCU / VPI.",
+      "typowe_uszkodzenia": "Zatarta przekładnia, urwane cięgło, brak koła; hamulec wyraźnie niesprawny – etykieta K i R1 (GCU 3.5.1); brak lub nieczytelny napis o sile hamowania hamulca postojowego (6.1.1.5).",
+      "przepisy": "GCU Zał. 9 usterki 3.5.1, 6.1.1.5; GCU Zał. 10 pkt 3.15 (niesprawny hamulec ręczny/postojowy trzeba naprawić), 6.14 (napis z masą hamującą hamulca ręcznego).",
       "zdjecia": [],
-      "zrodla": [],
+      "zrodla": [
+        "GCU (wydanie 1.01.2022) – Załącznik 9, Aneks 1: katalog usterek z kodami (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf",
+        "GCU (wydanie 1.01.2022) – Załącznik 10: warunki minimalne i wymiary graniczne przy naprawie (punkty podane w opisie): https://lineas.net/media/5ssf3p1j/20220101_gcu_en_full.pdf"
+      ],
       "do_sprawdzenia": [
-        "typowe_uszkodzenia: uzupełnić",
-        "przepisy: EN 15355 (zawory rozrządcze) – sprawdzić numery i rozdziały",
-        "przepisy: GCU / VPI – uzupełnić"
+        "Wartości i kody wg GCU 2022. Od 2026 część Zał. 9 przeniesiono do IRS 40436 „TTI-25” (https://css0.uic.org/com/enews/article/publication-of-irs-40436-alignment-of-gcu-provisions-with-the-eu-regulatory) – porównać z aktualnym wydaniem",
+        "przepisy: VPI – nie znaleziono publicznego tekstu"
       ],
       "status": "do weryfikacji"
     }
