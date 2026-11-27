@@ -2,7 +2,7 @@
 
 Interaktywna strona do nauki i sprawdzania budowy wagonów towarowych (węglarki, wagony samowyładowcze, platformy). Wybierasz typ wagonu, a potem klikasz jego części w widoku 3D i rozkładasz je coraz głębiej, aż do pojedynczych elementów, np. wagon › wózek Y25 › zestaw kołowy › maźnica › łożysko. Przy każdej części jest opis: do czego służy, z czego się składa, typowe uszkodzenia, wymiary graniczne i przepisy.
 
-Strona jest przeznaczona dla pracowników biurowych serwisu naprawy wagonów – na komputer z myszką (Chrome lub Edge).
+Strona jest przeznaczona dla pracowników biurowych serwisu naprawy wagonów – na komputer z myszką (Chrome lub Edge), działa też na telefonie (iPhone, Android, pionowo i poziomo).
 
 **Strona:** https://mateusz-hub1.github.io/wagony/
 
@@ -34,7 +34,8 @@ Wspólne podzespoły (wózek Y25, urządzenia cięgłowo-zderzakowe, hamulec zes
 - ścieżka nawigacji (np. Eaos › Wózek Y25 › Zestaw kołowy › Maźnica) z cofaniem,
 - drzewo części w bocznym panelu, zsynchronizowane z widokiem 3D,
 - ukrywanie części i „Pokaż tylko tę”,
-- zdejmowanie elementów (np. pokrywy maźnicy, sworznia przegubu) i otwieranie klap.
+- zdejmowanie elementów (np. pokrywy maźnicy, sworznia przegubu) i otwieranie klap,
+- na telefonie: widok 3D na cały ekran, drzewo części w menu ☰, opis w karcie wysuwanej od dołu, przycisk „‹ Wstecz”; jeden palec obraca, dwa palce przybliżają i przesuwają, dotknięcie zaznacza, podwójne dotknięcie rozkłada.
 
 ## Uruchomienie lokalne
 

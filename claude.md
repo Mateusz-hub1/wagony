@@ -7,7 +7,7 @@ Przykład zagłębiania: wagon → wózek Y25 → zestaw kołowy → maźnica �
 
 Użytkownicy
 Pracownicy biurowi serwisu naprawy wagonów towarowych (nie mechanicy).
-Komputery biurowe, przeglądarka (Chrome/Edge), myszka. Widok mobilny nie jest priorytetem.
+Komputery biurowe, przeglądarka (Chrome/Edge), myszka. Od etapu 8 strona działa też na telefonach (iPhone, Android, pionowo i poziomo); zmiany dla telefonu nie mogą psuć wersji na komputer. Układ telefonu: css/style.css (@media (max-width: 760px), (max-height: 520px)) i src/ui/mobile.js; profil wydajności: src/engine/device.js (w adresie ?mobile / ?desktop wymusza profil).
 Właściciel projektu (Mateusz) uczy się programowania. Na razie ma po prostu działać, kod tłumaczymy później. Pisz czytelny kod z krótkimi komentarzami po polsku.
 Zakres
 Wagony w wersji „typowej” (bez wariantów producentów), na wózkach Y25.
